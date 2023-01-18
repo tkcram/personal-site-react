@@ -1,4 +1,3 @@
-import classnames from 'classnames'
 import { projectInfo } from './project-info'
 import css from './ProjectModal.module.css'
 

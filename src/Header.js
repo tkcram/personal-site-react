@@ -47,7 +47,7 @@ const Header = () => {
 				</nav>
 			</div>
 
-			{pathname != "/" && <div className={css.bar}/>}
+			{pathname !== "/" && <div className={css.bar}/>}
 
 		</header>
 	);

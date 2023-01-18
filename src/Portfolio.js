@@ -1,4 +1,3 @@
-import classnames from 'classnames'
 import Header from './Header'
 import Blurb from './Blurb'
 import Footer from './Footer'
@@ -17,13 +16,13 @@ const Portfolio = () => {
 				{Object.values(caseStudies).map((study) => (
 					study?.isVisible &&
 						<div className={css.section} key={study.id} >
-							<img className={css.image} src={study.image}/>
+							<img className={css.image} src={study.image} alt=""/>
 							<div className={css.content}>
 								<h2>{study.title}</h2>
 								<p>{study.blurb}</p>
 								<div className={css.links}>
 									<a href={"/portfolio/" + study.id} className="button">Case Study</a>
-									<a href={study.link} target="_blank" className="button">Project</a>
+									<a href={study.link} target="_blank" className="button" el="noreferrer">Project</a>
 								</div>
 							</div>
 						</div>

@@ -13,7 +13,6 @@ function App() {
       <Routes>
         <Route path="/portfolio/:title" element={<Study />} />
         <Route path="/portfolio" element={<Portfolio />} />
-        // <Route path="/projects/:title" element={<Study />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/about" element={<About />} />
         <Route path="/error" element={<Error />} />

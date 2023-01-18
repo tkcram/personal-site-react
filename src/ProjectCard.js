@@ -1,4 +1,3 @@
-import classnames from 'classnames'
 import css from './Projects.module.css'
 
 const ProjectCard = ({shortTitle, image, link, inPortfolio, id, openModal }) => {

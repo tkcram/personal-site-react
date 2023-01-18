@@ -1,10 +1,8 @@
-import { createElement } from 'react'
 import css from './Study.module.css'
 import Diet from './WingspanDiet'
 import Lifecycle from './WingspanLifecycle'
 import Range from './WingspanRange'
 import Wingspan from './WingspanWingspan'
-import * as d3 from 'd3'
 
 
 export const caseStudies = {
@@ -18,9 +16,9 @@ export const caseStudies = {
 		isVisible: true,
 		markup: (
 			<>
-			<img src="/images/study-wingspan-banner.jpg" className={css.banner}></img>
+			<img src="/images/study-wingspan-banner.jpg" className={css.banner} alt=""></img>
 			<h1 id="introduction">Creating an Avian Information Dashboard Based on the Wingspan Boardgame</h1>
-			<a className="button" target="_blank" href="https://shiny-mandazi-9bf1d7.netlify.app">View the Dashboard</a>
+			<a className="button" target="_blank" href="https://shiny-mandazi-9bf1d7.netlify.app" rel="noreferrer">View the Dashboard</a>
 			<p>Intro intro intro</p>
 			
 			<h2 id="background">Background</h2>
@@ -39,19 +37,19 @@ export const caseStudies = {
 			<h2 id="methodology">Methodology</h2>
 			<h3>Design: Wingspan</h3>
 			<div className={css.textLogo}>
-				<img className={css.logo} src="https://cf.geekdo-images.com/yLZJCVLlIx4c7eJEWUNJ7w__opengraph/img/d5aVUcak3R6QOHz5y-fvQdc8pwU=/fit-in/1200x630/filters:strip_icc()/pic4458123.jpg"/>
+				<img alt="" className={css.logo} src="https://cf.geekdo-images.com/yLZJCVLlIx4c7eJEWUNJ7w__opengraph/img/d5aVUcak3R6QOHz5y-fvQdc8pwU=/fit-in/1200x630/filters:strip_icc()/pic4458123.jpg"/>
 				<p>As the cards create a facsimile to the birds, so too does this visualisation create a facsimile to the cards. The visualisation is designed as a dashboard, with each module roughly correlating to a mechanical/graphical aspect of the card. This allows users to get a wide overview of the information, even at a glance, as they orient themselves based on the game pieces. The interactive elements allow the user to dig deeper into the information, learning more about specific parts of the data, or create additional insights. </p>
 			</div>
 
 			<h3>Base Case: D3</h3>
 			<div className={css.textLogo}>
-				<img className={css.logo} src="https://raw.githubusercontent.com/d3/d3-logo/master/d3.png"/>
+				<img alt="" className={css.logo} src="https://raw.githubusercontent.com/d3/d3-logo/master/d3.png"/>
 				<p>Each module was built using D3.js, which allowed for easier creation of the visualisations. Sometimes it could be hard to write things in a D3 way though [...]</p>
 			</div>
 
 			<h3>Generalisation: React</h3>
 			<div className={css.textLogo}>
-				<img className={css.logo} src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"/>
+				<img alt="" className={css.logo} src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"/>
 				<p>Once all the modules had been completed, and were shown to work with the sample data, the next step was to generalise it for any bird species. To accomplish this, the code was split out using the React JavaScript Library. This allowed me to create a template page that could be populated by filtering the data for the specific bird species. Doing so also helped solved the issue with searching, as users could be directed to the appropriate page based on their input, or receive error handling.</p>
 			</div>
 
@@ -59,7 +57,7 @@ export const caseStudies = {
 			<h2 id="results">Results</h2>
 
 			<figure className={css.figure}>
-				<img className={css.figureImage} src="/images/study-wingspan-dashboard.png" alt="Luke, I am your caption..."/>
+				<img alt="" className={css.figureImage} src="/images/study-wingspan-dashboard.png" alt="Luke, I am your caption..."/>
 				<figcaption className={css.caption}>Screen capture of the dashboard for a Bald Eagle</figcaption>
 			</figure>
 			<p>Once you look up a specific bird you’re greeted with five unique modules: Biography; Diet; Lifecycle; Range; Wingspan. Each one representing a different aspect of the card, and including the iconography as an indicator. Each module is designed to stand alone, with basic information on the topic at a glance and a pop-up modal for a more detailed view.</p>
@@ -178,7 +176,7 @@ export const caseStudies = {
 		nav: "D&D API",
 		markup: (
 			<>
-			<img id="banner"></img>
+			<img alt="" id="banner"></img>
 			<h1 id="introduction">DnD API</h1>
 			<p></p>
 			<h2 id="background">Background</h2>
@@ -241,7 +239,7 @@ export const caseStudies = {
 		nav: "Data Sovereignty",
 		markup: (
 			<>
-			<img id="banner"></img>
+			<img alt="" id="banner"></img>
 			<h1 id="introduction">IDS vs OMD</h1>
 			<p></p>
 
@@ -315,7 +313,7 @@ export const caseStudies = {
 		nav: "NY Philharmonic",
 		markup: (
 			<>
-			<img id="banner"></img>
+			<img id="banner" alt=""></img>
 			<h1 id="introduction">NY PHIL</h1>
 			<p>The New York Philharmonic is one of the city’s most prestigious institutions, and its archive represents over 180 years of cultural heritage. In 2011, the Philharmonic founded the Shelby White & Leon Levy Digital Archive to undertake the herculean effort of digitising the contents, including thousands of scores, programs, and photographs, and making them publicly accessible. 10 years on, the Digital Archive contains over six million pages of material. The interface, however, remains the same. This project works with users to explore both what makes the Digital Archives interface wonderful, and also to identify ways that it can be improved, as they seek to revitalise the entire site.</p>
 			<a className="button" href="https://shiny-mandazi-9bf1d7.netlify.app">Read the Report</a>
@@ -424,7 +422,7 @@ export const caseStudies = {
 		nav: "NYC Parks",
 		markup: (
 			<>
-			<img id="banner"></img>
+			<img alt="" id="banner"></img>
 			<h1 id="introduction">NYC Parks</h1>
 			<p></p>
 			<h2 id="background">Background</h2>
@@ -456,7 +454,7 @@ export const caseStudies = {
 			<p></p>
 			<h2 id="future">Future Work</h2>
 			<p></p>
-			<h2 id="references"></h2>
+			<h2 id="references">References</h2>
 			</>
 			),
 		headings: [
@@ -498,115 +496,4 @@ export const caseStudies = {
 			},
 		]
 	},
-	// "wingspan2": {
-	// 	markup: [
-	// 		createElement(
-	// 			'h1',
-	// 			{},
-	// 			"Wingspan"
-	// 		),
-	// 		createElement(
-	// 			'h3',
-	// 			{},
-	// 			"Background",
-	// 		),
-	// 		createElement(
-	// 			'p',
-	// 			{},
-	// 			"Wingspan is a card/boardgame wherein the player is tasked with assembling a collection of birds whose effects can chain together to create increasingly powerful turns. Each bird is represented on a unique card that displays both gameplay and factual data. In fact even the gameplay data is designed to mimic the way the bird is in real life (e.g. if the bird eats berries in real life, the game card will consume berry tokens). The goal of this project was to use these cards, and their approximation to the natural world, as a jumping off point for people to learn more about any specific birds they found interesting.",
-	// 		),
-	// 		createElement(
-	// 			'h2',
-	// 			{},
-	// 			"Methodology"
-	// 		),
-	// 		createElement(
-	// 			'h4',
-	// 			{},
-	// 			"Design: Wingspan"
-	// 		),
-	// 		createElement(
-	// 			'p',
-	// 			{},
-	// 			"While the cards create a facsimile to the birds, so too does this visualisation create a facsimile to the cards. The visualisation is designed as a dashboard, with each module roughly correlating to a mechanical/graphical aspect of the card. This allows users to get a wide overview of the information, even at a glance, as they orient themselves based on the game pieces. The interactive elements allow the user to dig deeper into the information, learning more about specific parts of the data, or create additional insights. It would have been nice to do more with the interaction, specifically with creating a follow through from the visualisation to deeper sources of information.",
-
-	// 		),
-	// 		createElement(
-	// 			'h4',
-	// 			{},
-	// 			"Base Case: D3",
-	// 		),
-	// 		createElement(
-	// 			'p',
-	// 			{},
-	// 			"",
-	// 		),
-	// 		createElement(
-	// 			'h4',
-	// 			{},
-	// 			"Generalisation: React",
-	// 		),
-	// 		createElement(
-	// 			'p',
-	// 			{},
-	// 			"From a technical standpoint, the entire dashboard is built in node. This allowed me to create a generic template page for how it should look, and have it be populated/filtered based on the specific bird that the user is looking for. It would be possible to accomplish a similar effect in D3, but only with significantly more work, and it would also lose out on the ability to save data.",
-
-	// 		),
-	// 		createElement(
-	// 			'p',
-	// 			{},
-	// 			"The landing page is a simple introduction to the topic, as well as a search field to look for specific birds. As will be a recurring theme, time became the limiting option when building this out. Ideally it would have had a certain level of autocomplete, and perhaps some way of filtering results. But I decided that my priority should be on the D3 portion of the workload, and while the usability of the homepage isn’t great, it does at least work.",	
-	// 		),
-	// 		createElement(
-	// 			'h2',
-	// 			{},
-	// 			"Results",
-	// 		),
-	// 		createElement(
-	// 			'h4',
-	// 			{},
-	// 			"Todo",
-	// 		),
-	// 		createElement(
-	// 			'p',
-	// 			{},
-	// 			"Homepage! Game SVGs",
-	// 		),
-	// 		createElement(
-	// 			'p',
-	// 			{},
-	// 			"Once you look up a specific bird (I’ve been using the Bald Eagle for a lot of my testing) you’re greeted with six unique modules: Image; Biography; Diet; Lifecycle; Range; Wingspan. Each one representing a different aspect of the card, and including the iconography as an indicator (Or at least, it might by the time you’re reading this. As of this writing they’re only text fields). Beyond their relationship to the bird overall, the modules don’t have much else in common, so I’ll dive in to them individually.",
-	// 		),
-	// 		createElement(
-	// 			'h2',
-	// 			{},
-	// 			"Biography",
-	// 		),
-	// 		createElement(
-	// 			'h4',
-	// 			{},
-	// 			"Todo",
-	// 		),
-	// 		createElement(
-	// 			'p',
-	// 			{},
-	// 			"Rework the body text and hero images from a more generalised datasource. Also improve the aesthetics",
-	// 		),
-	// 		createElement(
-	// 			'figure',
-	// 			{},
-	// 			createElement(
-	// 				'img',
-	// 				{'src': '/images/reports-whs.png', 'alt': "Luke, I am your caption..."},
-	// 			),
-	// 			createElement(
-	// 				'figcaption',
-	// 				{},
-	// 				"Luke, I am your caption..."
-	// 			)
-	// 		),
-	// 	]
-	// }
-
-
 }

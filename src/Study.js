@@ -1,8 +1,7 @@
-import classnames from 'classnames'
-import { useParams, Link } from 'react-router-dom' 
+import useParams from 'react-router-dom' 
 import Header from './Header'
 import Footer from './Footer'
-import { caseStudies } from './case-studies'
+import caseStudies from './case-studies'
 import css from './Study.module.css'
 
 

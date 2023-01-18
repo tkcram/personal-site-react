@@ -1,4 +1,3 @@
-import classnames from 'classnames'
 import css from './Projects.module.css'
 import Footer from './Footer'
 import Blurb from './Blurb'
