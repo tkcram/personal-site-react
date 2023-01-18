@@ -14,7 +14,7 @@ const ProjectModal = ({ projectId, closeModal }) => {
 				<button className={css.close} onClick={closeModal}>x</button>
 				<img className={css.image} src={project.image} alt=""/>
 				<div className={css.text}>
-					<a className={css.title} href={project.link} target="_blank"><h2>{project.fullTitle}</h2></a>
+					<a className={css.title} href={project.link} target="_blank" rel="noreferrer"><h2>{project.fullTitle}</h2></a>
 					<dl>
 						<dt><h3>The Project</h3></dt>
 						<dd><p>{project.abstract}</p></dd>
@@ -31,7 +31,7 @@ const ProjectModal = ({ projectId, closeModal }) => {
 						<dt><h3>Additional Links</h3></dt>
 						<dd><p>
 							{project.additionalLinks.map((link, idx) => 
-								<a key={link.text.replace(' ', '-')} href={link.url} target="_blank">{link.text}{(idx < project.additionalLinks.length - 1) && ', '} </a>
+								<a key={link.text.replace(' ', '-')} href={link.url} target="_blank" rel="noreferrer">{link.text}{(idx < project.additionalLinks.length - 1) && ', '} </a>
 							)}
 						</p></dd>
 

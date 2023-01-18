@@ -57,7 +57,7 @@ export const caseStudies = {
 			<h2 id="results">Results</h2>
 
 			<figure className={css.figure}>
-				<img alt="" className={css.figureImage} src="/images/study-wingspan-dashboard.png" alt="Luke, I am your caption..."/>
+				<img className={css.figureImage} src="/images/study-wingspan-dashboard.png" alt="Luke, I am your caption..."/>
 				<figcaption className={css.caption}>Screen capture of the dashboard for a Bald Eagle</figcaption>
 			</figure>
 			<p>Once you look up a specific bird you’re greeted with five unique modules: Biography; Diet; Lifecycle; Range; Wingspan. Each one representing a different aspect of the card, and including the iconography as an indicator. Each module is designed to stand alone, with basic information on the topic at a glance and a pop-up modal for a more detailed view.</p>
