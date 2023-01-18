@@ -1,0 +1,68 @@
+.wrapper {
+  display: flex;
+  flex: auto;
+  padding-bottom: 0;
+}
+
+.item {
+  border-right: 4px solid #1A1110;;
+  border-top: 4px solid #1A1110;
+  flex: 1;
+}
+
+.item:last-child {
+  border-right: none;
+}
+
+.link {
+  align-items: center;
+  display: flex;
+  height: calc(100% - 50px);
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.text {
+  color: black;
+  font-family: 'Raleway', sans-serif;
+  font-size: 8vh;
+  font-weight: 700;
+  margin: 0;
+  position: absolute;
+  text-shadow: 1px 1px 1px #fff;
+  writing-mode: vertical-lr;
+  text-orientation: upright; 
+}
+
+.image {
+  background-repeat: repeat-y;
+  background-size: contain;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.overlay {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.item:hover .overlay{
+  opacity: 0.5;
+}
+
+/*Landing Images*/
+#portfolio {
+  background-image: url('./images/landing-reports.png');
+}
+
+#projects {
+  background-image: url('./images/landing-projects.png');
+}
+
+#about {
+  background-image: url('./images/landing-about.png');
+}

@@ -1,0 +1,70 @@
+.top {
+	display: flex;
+}
+
+.left{
+	width: 25vw;
+}
+.skips{
+	position: sticky;
+	top: 35%;
+	padding-left: 30%;
+	list-style: inside;
+}
+
+.skip{
+	margin: 10px;
+}
+.skip:hover{
+	font-weight: bold;
+}
+
+.content{
+	width: 50vw;
+}
+
+.banner{
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	object-position: 50% 25%;
+}
+
+.figure{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.figureImage{
+	width: 100%;
+}
+
+.caption{
+	font-style: italic;
+}
+
+.d3module{
+	height: 255px;
+	width: 255px;
+	border: 2px solid var(--colour);
+	border-radius: 2px;	
+}
+
+.textLogo + *{
+	clear: both;
+}
+
+.logo{
+	float: left;
+	border-radius: 10%;
+	border: none;
+	width: 150px;
+	height: 150px;
+	margin-right: 20px;
+}
+
+.refList{
+	list-style: none;
+	padding: 0;
+}

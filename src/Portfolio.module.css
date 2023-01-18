@@ -1,0 +1,26 @@
+.section {
+	display: flex;
+	padding: 30px;
+}
+
+.image {
+	width: 30vw;
+	object-fit: cover;
+	max-height: 15vw;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 0 50px;
+}
+
+.links {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.section:nth-of-type(2n) {
+	flex-direction: row-reverse;
+}

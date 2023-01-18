@@ -1,0 +1,82 @@
+.header {
+	display: flex;
+	flex:  none;
+	justify-content: space-between;
+}
+
+/**Logo**/
+.title {
+	color: black;
+	float: left;
+	font-family: 'Raleway', sans-serif;
+	font-size: 42px;
+	margin: 0;
+	margin-left: 20px;
+	text-decoration: none;
+}
+
+/**Nav**/
+.navigation {
+	display: flex;
+	font-family: 'Raleway', sans-serif;
+	justify-content: flex-end;
+	list-style: none;
+	margin: 0;
+	margin-right: 10px; 
+}
+
+.text {
+	color: black;
+	display: block;
+	padding: 1em;
+	text-decoration: none;
+}
+
+.item{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+/*Dropdown*/
+.dropdown {
+	background-color: #f9f9f9;
+	box-shadow: -10px 10px 16px 0px rgba(0,0,0,0.2);
+	display: none;
+	list-style: none;
+	padding:  0;
+	position: absolute;
+	z-index: 1;
+	top: 50px;
+}
+
+.portfolio:hover .dropdown {
+	display: block;
+}
+
+.about:hover .dropdown {
+	display: block;
+}
+
+/*Hover*/
+.item:hover>.text {
+	color: white;
+}
+
+.portfolio:hover {
+	background-color: var(--portfolio);
+}
+
+.projects:hover {
+	background-color: var(--projects);
+}
+
+.about:hover {
+	background-color: var(--about);
+}
+
+.bar {
+  height: 20px;
+  width: 100%;
+  background-color: var(--colour);
+}

@@ -1,0 +1,14 @@
+.footer {
+  flex: none;
+  background:#1A1110;
+  bottom:0;
+  color: white;
+  height:50px;
+  width:100%;
+  position: absolute;
+}
+
+.text {
+  padding-left: 20px;
+  color: white;
+}
