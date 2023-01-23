@@ -6,8 +6,6 @@ import Range from './WingspanRange'
 import Wingspan from './WingspanWingspan'
 import { projectInfo } from './project-info'
 import Card from './Card'
-import ProjectModal from './ProjectModal'
-
 
 export const caseStudies = {
 	"wingspan": {
@@ -650,7 +648,7 @@ export const caseStudies = {
 				<p></p>
 
 				<h2 id="profiles">Step 1: User Profiles</h2>
-				<a className="button" target="_blank" href="" rel="noreferrer">PDF</a>
+				<a className="button" target="_blank" href="/" rel="noreferrer">PDF</a>
 				<h3>Methodology</h3>
 				<p></p>
 
@@ -658,7 +656,7 @@ export const caseStudies = {
 				<p></p>
 
 				<h2 id="sitemap">Step 2: Sitemap</h2>
-				<a className="button" target="_blank" href="" rel="noreferrer">PDF</a>
+				<a className="button" target="_blank" href="/" rel="noreferrer">PDF</a>
 				<h3>Methodology</h3>
 				<p></p>
 
@@ -666,7 +664,7 @@ export const caseStudies = {
 				<p></p>
 
 				<h2 id="wireframes">Step 3: Wireframes</h2>
-				<a className="button" target="_blank" href="" rel="noreferrer">PDF</a>
+				<a className="button" target="_blank" href="/" rel="noreferrer">PDF</a>
 				<h3>Methodology</h3>
 				<p></p>
 
@@ -674,7 +672,7 @@ export const caseStudies = {
 				<p></p>
 
 				<h2 id="prototype">Step 4: Final Prototype</h2>
-				<a className="button" target="_blank" href="" rel="noreferrer">PDF</a>
+				<a className="button" target="_blank" href="/" rel="noreferrer">PDF</a>
 				<h3>Methodology</h3>
 				<p></p>
 

@@ -731,7 +731,7 @@ export const articles = {
 				<p>Impressions of the site as a whole, however, were mixed. As discussed in Methodology, participants were asked what words they would use to describe the Digital Archives in the post-test survey, and their words illustrate this mixed-reaction well.</p>
 
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-nyp-1.png"/>
+					<img className={css.figureImage} src="/images/article-nyp-1.png" alt=""/>
 					<figcaption className={css.caption}>Figure 1: Word cloud generated from user responses to the post-test survey.</figcaption>
 				</figure>
 
@@ -756,7 +756,7 @@ export const articles = {
 				<p>In attempting to interact with these elements, however, users ran into several issues. If solved, these revamped elements could improve the user experience of the site as a whole.</p>
 
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-nyp-2.png"/>
+					<img className={css.figureImage} src="/images/article-nyp-2.png" alt=""/>
 					<figcaption className={css.caption}>Figure 2: Main navigation and search bars on the homepage.</figcaption>
 				</figure>
 
@@ -770,7 +770,7 @@ export const articles = {
 				<p>While most users read and commented positively on the explanatory text offered under “Search the Digital Archives” about the collection’s offerings, users who were less experienced with searching archival sites, or with the New York Philharmonic, often did not understand that the Digital Archives specifically offers access to resources related to the New York Philharmonic, not traveling orchestras or other musical institutions. This confusion resulted in later issues with searching for and filtering through search results.</p>
 
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-nyp-3.png"/>
+					<img className={css.figureImage} src="/images/article-nyp-3.png" alt=""/>
 					<figcaption className={css.caption}>Figure 3: Screenshots of the first view of Homepage and Search Results pages.</figcaption>
 				</figure>
 
@@ -783,7 +783,7 @@ export const articles = {
 				</aside>
 
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-nyp-4.png"/>
+					<img className={css.figureImage} src="/images/article-nyp-4.png" alt=""/>
 					<figcaption className={css.caption}>Figure 4: Annotated mockup of recommendations to improve the usability of the navigation bar.</figcaption>
 				</figure>
 
@@ -807,7 +807,7 @@ export const articles = {
 				</aside>
 
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-nyp-5.png"/>
+					<img className={css.figureImage} src="/images/article-nyp-5.png" alt=""/>
 					<figcaption className={css.caption}>Figure 5: Screenshot of a carousel slide demonstrating hard-to-see navigation buttons.</figcaption>
 				</figure>
 
@@ -821,7 +821,7 @@ export const articles = {
 				</aside>
 
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-nyp-6.png"/>
+					<img className={css.figureImage} src="/images/article-nyp-6.png" alt=""/>
 					<figcaption className={css.caption}>Figure 6: Annotated mockup of recommendations to improve the usability of the carousel.</figcaption>
 				</figure>
 
@@ -839,7 +839,7 @@ export const articles = {
 				<p>Two key issue areas arose: one with the results page’s layout preventing users easily navigating and filtering search results, and the other with users obtaining inconsistent content in search results, such as receiving zero and/or incorrect results when searching for “nutcracker ballet.” The first issue we address below, and the second we discuss on page 20 as an area for further investigation. Both areas highlight a disconnect between users’ expected and actual experience obtaining search results; if addressed, this could streamline all site visitors’ ability to find specific information from the Digital Archives.</p>
 
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-nyp-7.png"/>
+					<img className={css.figureImage} src="/images/article-nyp-7.png" alt=""/>
 					<figcaption className={css.caption}>Figure 7: A search for “william lincer photo” displaying two key issues with the layout of the Search Results page.</figcaption>
 				</figure>
 
@@ -855,7 +855,7 @@ export const articles = {
 				</aside>
 
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-nyp-8.png"/>
+					<img className={css.figureImage} src="/images/article-nyp-8.png" alt=""/>
 					<figcaption className={css.caption}>Figure 8: Annotated mockup of search result recommendations.</figcaption>
 				</figure>
 
@@ -885,7 +885,7 @@ export const articles = {
 				<h3>Recommendation 4: Move pop-up modal underneath each filter and introduce a search bar for the filter options when opened.</h3>
 
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-nyp-9.png"/>
+					<img className={css.figureImage} src="/images/article-nyp-9.png" alt=""/>
 					<figcaption className={css.caption}>Figure 9: A search filter displaying three problems discussed in this section: 1) There are 200 pages of filter results to navigate through, 2) Clicking on the artists’ name makes a dropdown menu with work both relevant and not relevant to the larger search appear, and 3) The pop-up modal overlays the majority of the users’ screen, hiding the search results and the search bar.</figcaption>
 				</figure>
 
@@ -897,7 +897,7 @@ export const articles = {
 				<p>Additionally, when the user clicked on a soloist, conductor, or composer/work they were seeking in the Sort and Filter list, another drop-down appeared listing options that were, and were not, related to the larger search being conducted. The user was then required to find and click on the option that related to their overall search in order to be redirected back to filtered search results. Users expected to be able to click on a soloist, conductor, or composer/work to be immediately directed back to a filtered search. This process added extra steps that created confusion for several users as they were narrowing search results and trying to reach their end goal.</p>
 
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-nyp-10.png"/>
+					<img className={css.figureImage} src="/images/article-nyp-10.png" alt=""/>
 					<figcaption className={css.caption}>Figure 10: Annotated mockup of recommendations to streamline Sort and Filter menu.</figcaption>
 				</figure>
 
@@ -936,7 +936,7 @@ export const articles = {
 					<tr><td>Search Results</td><td>Query “First female musician” lead to failure point</td><td>Include Digital Archives articles and exhibits in search results</td></tr>
 					<tr><td>Image Results</td><td>Users were unable to associate names with individuals in photos</td><td>Ensure name order matches image and/or label individuals on image</td></tr>
 					<tr><td>Performance History</td><td>Virtual performances are tagged inconsistently in event type</td><td>Review virtual performances for correct tags</td></tr>
-					<tr><td rowspan="4">User Interface</td><td>Homepage</td><td>At narrow viewport sizes, ‘explore’ button is hidden behind footer <img className={css.figureImage} src="/images/article-nyp-3.png"/></td><td>Ensure the carousel expands to fit all text content</td></tr>
+					<tr><td rowspan="4">User Interface</td><td>Homepage</td><td>At narrow viewport sizes, ‘explore’ button is hidden behind footer <img className={css.figureImage} src="/images/article-nyp-3.png" alt=""/></td><td>Ensure the carousel expands to fit all text content</td></tr>
 					<tr><td>Image Results</td><td>Users clicked multiple times on an image in order to open modal</td><td>Make ‘loading’ message more prominent</td></tr>
 					<tr><td>Image Results</td><td>Users confused by the mismatch between stated number of images and image thumbnails</td><td>Provide feedback for images that are present in results, but yet to load e.g. thumbnail frame</td></tr>
 					<tr><td>Search Results</td><td>Users confused why their filters disappeared when looking between document types</td><td>Unify and persist filters</td></tr>
@@ -1124,12 +1124,12 @@ export const articles = {
 
 				<h4>System Usability Scale Calculations and Results</h4>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-nyp-d1.png"/>
-					<img className={css.figureImage} src="/images/article-nyp-d2.png"/>
-					<img className={css.figureImage} src="/images/article-nyp-d3.png"/>
-					<img className={css.figureImage} src="/images/article-nyp-d4.png"/>
-					<img className={css.figureImage} src="/images/article-nyp-d5.png"/>
-					<img className={css.figureImage} src="/images/article-nyp-d6.png"/>
+					<img className={css.figureImage} src="/images/article-nyp-d1.png" alt=""/>
+					<img className={css.figureImage} src="/images/article-nyp-d2.png" alt=""/>
+					<img className={css.figureImage} src="/images/article-nyp-d3.png" alt=""/>
+					<img className={css.figureImage} src="/images/article-nyp-d4.png" alt=""/>
+					<img className={css.figureImage} src="/images/article-nyp-d5.png" alt=""/>
+					<img className={css.figureImage} src="/images/article-nyp-d6.png" alt=""/>
 				</figure>
 
 				<h3>Appendix E: Consent and Pre-test Forms</h3>
@@ -1200,20 +1200,20 @@ export const articles = {
 
 				<h3>Appendix F: Inspirations</h3>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-nyp-f1.jpg"/>
+					<img className={css.figureImage} src="/images/article-nyp-f1.jpg" alt=""/>
 					<figcaption className={css.caption}>Figure F1 (top): Example of a pop-up filter modal from the Pratt Library. Demonstrates multiple filter selects, scrolling (non-paginated) results, and ordering filters by result count.</figcaption>
 				</figure>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-nyp-f2.jpg"/>
+					<img className={css.figureImage} src="/images/article-nyp-f2.jpg" alt=""/>
 					<figcaption className={css.caption}>Figure F2 (right): Example of a drop down filter menu from the Pratt Library. Demonstrates date slider, collapsable filter categories, ordering filters by result count, and limiting total filters immediately viewable, with an option to show full list (Figure F1).</figcaption>
 				</figure>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-nyp-f3.png"/>
+					<img className={css.figureImage} src="/images/article-nyp-f3.png" alt=""/>
 					<figcaption className={css.caption}>Figure F3: Screenshot of The Metropolitan Museum home page taken on December 13, 2022. Here, instead of a carousel, the Met provides a few different pieces of content: a scrolling list of modules that display current exhibitions, location information, and a list of modules that feature current special items like exhibitions, events, and more. A scrolling list of modules like this may work well for the Digital Archives to feature information that is currently hidden in the carousel. Moving this information into a scrolling list may also help the Digital Archives more prominently highlight its main feature: search.</figcaption>
 				</figure>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-nyp-f4.png"/>
-					<img className={css.figureImage} src="/images/article-nyp-f5.png"/>
+					<img className={css.figureImage} src="/images/article-nyp-f4.png" alt=""/>
+					<img className={css.figureImage} src="/images/article-nyp-f5.png" alt=""/>
 					<figcaption className={css.caption}>Figure F4: Screenshots of the interactive carousel from the Museum of Science and Industry in Chicago’s website (https://www.msichicago.org/), taken on December 13, 2022. Note the “pause” button surrounded by a circle above the buttons. This layout, with the clearly shown vertical buttons and timer directly above them, is an example of an accessibility feature that gives users immediate temporal feedback and context for the changing carousel slides, as well as an option to pause their movement.</figcaption>
 				</figure>
 
