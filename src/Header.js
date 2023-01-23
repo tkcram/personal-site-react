@@ -1,7 +1,7 @@
 import classnames from 'classnames'
 import { NavLink, useLocation } from "react-router-dom";
 import css from './Header.module.css'
-import { caseStudies } from './case-studies'
+import { caseStudies } from './study-info'
 
 
 const Header = () => {
@@ -19,7 +19,7 @@ const Header = () => {
 							{Object.values(caseStudies).map(caseStudies => (
 								caseStudies?.isVisible && 
 								<li key={caseStudies.id} className={classnames(css.portfolio, css.item)}>
-									<NavLink to={`/portfolio/${caseStudies.id}`} className={css.text}>{caseStudies.nav}</NavLink>
+									<NavLink to={`/portfolio/${caseStudies.id}`} className={css.text}>{caseStudies.title}</NavLink>
 								</li>
 							))}
 							</ul>
@@ -36,7 +36,7 @@ const Header = () => {
 									<NavLink to="/about" className={css.text}>Biography</NavLink>
 								</li>
 								<li className={classnames(css.about, css.item)}>
-									<a href="Pdfs/Tk_Cram_Resume.pdf" target="_blank" className={css.text}>Resume</a>
+									<a href="documents/resume.pdf" target="_blank" className={css.text}>Resume</a>
 								</li>
 								<li className={classnames(css.about, css.item)}>
 									<a href="mailto:scram142@pratt.edu" className={css.text}>Contact</a>

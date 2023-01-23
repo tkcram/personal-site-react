@@ -28,10 +28,13 @@ const ProjectModal = ({ projectId, closeModal }) => {
 							</ul>
 						</dd>
 
-						<dt><h3>Additional Links</h3></dt>
+						{project.citation && <dt><h3>Citation</h3></dt>}
+						{project.citation && <dd><p>{project.citation}</p></dd>}
+
+						<dt><h3>Links</h3></dt>
 						<dd><p>
 							{project.additionalLinks.map((link, idx) => 
-								<a key={link.text.replace(' ', '-')} href={link.url} target="_blank" rel="noreferrer">{link.text}{(idx < project.additionalLinks.length - 1) && ', '} </a>
+								<a key={link.text.replace(' ', '-')} href={link.url} target="_blank" rel="noreferrer">{link.text}{(idx < project.additionalLinks.length - 1) && '; '}</a>
 							)}
 						</p></dd>
 

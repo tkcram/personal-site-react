@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom' 
 import Header from './Header'
 import Footer from './Footer'
-import { caseStudies } from './case-studies'
+import { caseStudies } from './study-info'
 import css from './Study.module.css'
 
 

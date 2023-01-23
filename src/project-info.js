@@ -1,30 +1,46 @@
 export const sections = {
 	VIZ: "Data Visualisation",
 	ANAL: "Data Analysis",
-	CODE: "Programming",
-	THOUGHT: "Thought Pieces",
+	CODE: "Technology",
+	THOUGHT: "Research",
 	UX: "User Experience",
 	DESIGN: "Design",
-	CIRCUS: "Circus"
+	CIRCUS: "Performing Arts"
 }
 
 export const projectInfo = {
-
 	// Data Viz
 
 	"wingspan": {
 		id: "wingspan",
-		image: "",
+		image: "/images/project-wingspan.png",
 		fullTitle: "The Birds of Wingspan",
 		shortTitle: "Wingspan",
 		abstract: "",
-		contributions: [],
+		contributions: [
+			"Curated a series of datasets",
+			"Built the modules in d3",
+			"Put it all together in React"
+			],
 		section: sections.VIZ,
-		isVisible: false,
+		isVisible: true,
 		citation: "",
 		link: "https://shiny-mandazi-9bf1d7.netlify.app",
-		additionalLinks: [],
-		tags: []
+		additionalLinks: [
+			{
+				text: "Project",
+				url: "https://shiny-mandazi-9bf1d7.netlify.app"
+			},
+			{
+				text: "Case Study",
+				url: "/portfolio/wingspan"
+			},
+			{
+				text: "Github",
+				url: "https://github.com/tkcram/bird-viz"
+			},
+		],
+		tags: ["HTML", "CSS", "JavaScript", "D3","React","Data Visualisation","Data Manipulation","Pratt"]
 	},
 
 	"bird-map": {
@@ -44,19 +60,23 @@ export const projectInfo = {
 		link: "https://ivs22.netlify.app/",
 		additionalLinks: [
 		{
-			text: "Full Report",
-			url: "https://studentwork.prattsi.org/infovis/visualization/mapping-bird-sightings-in-new-zealand/"
+			text: "Project",
+			url: "https://ivs22.netlify.app/"
 		},
 		{
-			text: "Github Repo",
+			text: "Report",
+			url: "/projects/bird-map"
+		},
+		{
+			text: "Github",
 			url: "https://github.com/tkcram/ivs22"
 		},
 		{
-			text: "Data Source",
+			text: "Data",
 			url: "https://ebird.org/science/use-ebird-data"
 		}
 		],
-		tags: ["HTML", "CSS", "JS", "D3", "Python", "Data Visualisation", "Data Manipulation", "User Research", "GIS", "Pratt"]
+		tags: ["HTML", "CSS", "JavaScript", "D3", "Python", "Data Visualisation", "Data Manipulation", "User Research", "GIS", "Pratt"]
 	},
 
 	"bird-network": {
@@ -76,11 +96,11 @@ export const projectInfo = {
 		link: "https://i0.wp.com/studentwork.prattsi.org/infovis/wp-content/uploads/sites/3/2022/04/test1-1.jpg?resize=768%2C811&ssl=1",
 		additionalLinks: [
 		{
-			text: "Full Report",
-			url: "https://studentwork.prattsi.org/infovis/visualization/birds-of-a-feather-are-connected-together/"
+			text: "Report",
+			url: "/projects/bird-network"
 		},
 		{
-			text: "Data Source",
+			text: "Data",
 			url: "https://catalogue.data.govt.nz/dataset/bird-plant-interactions"
 		}
 		],
@@ -103,34 +123,46 @@ export const projectInfo = {
 		citation: "",
 		link: "https://public.tableau.com/app/profile/tk.cram/viz/MedianNZWeeklyRent/Dashboard1",
 		additionalLinks: [
-		{
-			text: "Full Report",
-			url: "https://studentwork.prattsi.org/infovis/labs/charts/median-weekly-rent-in-new-zealand/"
-		},
-		{
-			text: "Data Source",
-			url: "https://catalogue.data.govt.nz/dataset/census-rent-and-household-income"
-		}
+			{
+				text: "Project",
+				url: "https://public.tableau.com/app/profile/tk.cram/viz/MedianNZWeeklyRent/Dashboard1"
+			},
+			{
+				text: "Report",
+				url: "/projects/nz-rent"
+			},
+			{
+				text: "Data",
+				url: "https://catalogue.data.govt.nz/dataset/census-rent-and-household-income"
+			}
 		],
 		tags: ["Data Analysis", "Data Visualisation", "GIS", "Tableau", "Charts & Graphs", "Pratt"]
 	},
 
 	"colour-history": {
 		id: "colour-history",
-		image: "",
+		image: "/images/project-colour.png",
 		fullTitle: "A (Very Brief) History of Colour Theory",
 		shortTitle: "History of Colours",
 		abstract: "Ever since Grecian times philosophers such as Aristotle have pondered the nature of colour. Many have followed in their footsteps, from Ibn al-Haytham to Leonardo da Vinci. However in 1704 our conceptualisation of colour shifted dramatically with Newton’s “Opticks” and their revolutionary colour wheel. This shift inspired many to see if a model could be created to account for all the colours a human could perceive. In the 300 years since, this model has taken many shapes, and been used to explain many phenomena from the physical to the emotional, and even the spiritual. This timeline serves as an overview of a handful of the most significant developments in that time, and as a launching point into one of the world’s most colourful histories.",
 		contributions: [],
 		section: sections.VIZ,
-		isVisible: false,
+		isVisible: true,
 		citation: "",
 		link: "https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=10IEKECW-7KBUyKdeAOsn2Y5Yqr9VJdEiPw2q3NabjoQ&font=Default&lang=en&initial_zoom=2&height=650",
 		additionalLinks: [
-		{
-			text: "Full Report",
-			url: "https://studentwork.prattsi.org/infovis/labs/a-brief-history-of-modern-colour-models/"
-		},
+			{
+				text: "Project",
+				url: "https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=10IEKECW-7KBUyKdeAOsn2Y5Yqr9VJdEiPw2q3NabjoQ&font=Default&lang=en&initial_zoom=2&height=650"
+			},
+			{
+				text: "Report",
+				url: "/projects/colour-history"
+			},
+			{
+				text: "Data",
+				url: "https://docs.google.com/spreadsheets/d/10IEKECW-7KBUyKdeAOsn2Y5Yqr9VJdEiPw2q3NabjoQ/edit#gid=0"
+			},
 		],
 		tags: ["Data Analysis", "Data Visualisation", "GIS", "Tableau", "Charts & Graphs", "Pratt"]
 	},
@@ -153,14 +185,18 @@ export const projectInfo = {
 		citation: "",
 		link: "https://puis22.netlify.app/",
 		additionalLinks: [
-		{
-			text: "Github Repo",
-			url: "https://github.com/tkcram/puis22"
-		},
-		{
-			text: "Data Source",
-			url: "https://www.dnd5eapi.co/"
-		}
+			{
+				text: "Project",
+				url: "https://puis22.netlify.app/"
+			},
+			{
+				text: "Github",
+				url: "https://github.com/tkcram/puis22"
+			},
+			{
+				text: "Data",
+				url: "https://www.dnd5eapi.co/"
+			}
 		],
 		tags: ["JavaScript", "HTML", "CSS", "Github", "Web Development", "Pratt"]
 	},
@@ -181,16 +217,44 @@ export const projectInfo = {
 		citation: "",
 		link: "",
 		additionalLinks: [
-		{
-			text: "Github Repo",
-			url: "https://github.com/tkcram/pfchs22"
-		},
-		{
-			text: "Data Source",
-			url: "https://www.dnd5eapi.co/"
-		}
+			{
+				text: "Github",
+				url: "https://github.com/tkcram/pfchs22"
+			},
+			{
+				text: "Data",
+				url: "https://www.dnd5eapi.co/"
+			}
 		],
 		tags: ["Python", "Flask", "Heroku", "Pratt"]
+	},
+
+	"personal-site": {
+		id: "personal-site",
+		image: "/images/project-portfolio.png",
+		fullTitle: "Personal Site",
+		shortTitle: "Personal Site",
+		abstract: "",
+		contributions: [
+			"Design",
+			"React",
+			"Content"
+			],
+		section: sections.CODE,
+		isVisible: true,
+		citation: "",
+		link: "https://tkcram.com",
+		additionalLinks: [
+			{
+				text: "Project",
+				url: "/"
+			},
+			{
+				text: "Github",
+				url: "https://github.com/tkcram/personal-site-react"
+			},
+		],
+		tags: ["HTML", "CSS", "JavaScript", "Pratt"]
 	},
 
 	"dog-ui": {
@@ -209,19 +273,50 @@ export const projectInfo = {
 		citation: "",
 		link: "https://scram142.neocities.org/",
 		additionalLinks: [
-		{
-			text: "Github Repo",
-			url: "https://github.com/tkcram/puis22"
-		},
-		{
-			text: "Data Source",
-			url: "https://www.dnd5eapi.co/"
-		}
+			{
+				text: "Project",
+				url: "https://scram142.neocities.org/"
+			},
+			{
+				text: "Github",
+				url: "https://github.com/tkcram/itf21"
+			},
 		],
 		tags: ["HTML", "CSS", "JavaScript", "Pratt"]
 	},
 
 	// Analysis
+	"lego-colours": {
+		id: "lego-colours",
+		image: "/images/project-lego.png",
+		fullTitle: "Following the Yellow Brick Road",
+		shortTitle: "Lego Colours",
+		abstract: "LEGO, produced by The LEGO Group, is a line of construction toys primarily comprising of interlocking plastic components (parts). These parts range from the ubiquitous bricks and figures through to gears and axles, all in a variety of colours. Parts are collected and sold as sets, which themselves are grouped into themes. It is these themes that this paper examines. Specifically: What factors may be involved in determining the colour palette of a LEGO theme.",
+		contributions: [
+			"Developed a series of research questions about LEGO to be investigating using a mix of quantitative and qualitative methodologies",
+			"Transformed ~10,000 rows of data using SQL to be analysed",
+			"Conducted a k-means analysis to compare and contrast the LEGO data and their related images"
+			],
+		section: sections.ANAL,
+		isVisible: true,
+		citation: "",
+		link: "/projects/lego-colours",
+		additionalLinks: [
+			{
+				text: "Report",
+				url: "/projects/lego-colours"
+			},
+			{
+				text: "PDF",
+				url: "/documents/lego.pdf"
+			},
+			{
+				text: "Data",
+				url: "https://rebrickable.com/downloads/"
+			},
+		],
+		tags: ["Microsoft Excel", "Apple Pages", "Adobe Illustrator", "R", "Data Analytics", "SQLite", "Statistical Analysis", "Python", "Pratt"]
+	},
 
 	"awhi-atu": {
 		id: "awhi-atu",
@@ -237,8 +332,13 @@ export const projectInfo = {
 		section: sections.ANAL,
 		isVisible: true,
 		citation: "Cram, F., Cram, S., Munro, M. & Tawhai, S. (2021). Awhi mai, awhi atu: Giving and receiving support during the 2020 COVID-19 lockdown. Report for Building Better Homes, Towns and Cities, Affordable Housing for Generations, June 2021, Wellington: BBHTC.",
-		link: "https://www.buildingbetter.nz/reports/homes_spaces/Cram_et_al_Jun2021_awhi_mai_awhi_atu_giving_receiving_support_covid19.pdf",
-		additionalLinks: [],
+		link: "https://www.buildingbetter.nz/publications/homes_spaces/Cram_et_al_Jun2021_awhi_mai_awhi_atu_giving_receiving_support_covid19.pdf",
+		additionalLinks: [
+			{
+				text: "PDF",
+				url: "https://www.buildingbetter.nz/publications/homes_spaces/Cram_et_al_Jun2021_awhi_mai_awhi_atu_giving_receiving_support_covid19.pdf"
+			},
+		],
 		tags: ["Microsoft Excel", "Adobe InDesign", "Data Analysis", "Data Visualisation", "Infographic Design", "Katoa"]
 	},
 
@@ -259,30 +359,6 @@ export const projectInfo = {
 		link: "",
 		additionalLinks: [],
 		tags: ["Microsoft Excel", "Microsoft Word", "Tableau", "Data Analysis", "Data Visualisation", "Katoa"]
-	},
-
-	"lego-colours": {
-		id: "lego-colours",
-		image: "/images/project-lego.png",
-		fullTitle: "Following the Yellow Brick Road",
-		shortTitle: "Lego Colours",
-		abstract: "LEGO, produced by The LEGO Group, is a line of construction toys primarily comprising of interlocking plastic components (parts). These parts range from the ubiquitous bricks and figures through to gears and axles, all in a variety of colours. Parts are collected and sold as sets, which themselves are grouped into themes. It is these themes that this paper examines. Specifically: What factors may be involved in determining the colour palette of a LEGO theme.",
-		contributions: [
-			"Developed a series of research questions about LEGO to be investigating using a mix of quantitative and qualitative methodologies",
-			"Transformed ~10,000 rows of data using SQL to be analysed",
-			"Conducted a k-means analysis to compare and contrast the LEGO data and their related images"
-			],
-		section: sections.ANAL,
-		isVisible: true,
-		citation: "",
-		link: "file:///Users/tkcram/Documents/GitHub/personal-site-old/Pdfs/Yellow_Brick_Road_Tk_Cram.pdf",
-		additionalLinks: [
-		{
-			text: "Data Source",
-			url: "https://rebrickable.com/downloads/"
-		}
-		],
-		tags: ["Microsoft Excel", "Apple Pages", "Adobe Illustrator", "R", "Data Analytics", "SQLite", "Statistical Analysis", "Python", "Pratt"]
 	},
 
 	"whakapakari-ai": {
@@ -319,7 +395,12 @@ export const projectInfo = {
 		isVisible: true,
 		citation: "Cram, F. & Munro, M. (2020). Life when renting for older Māori. AlterNative: An International Journal of Indigenous Peoples, 16(1), 64-75.",
 		link: "https://www.buildingbetter.nz/reports/homes_spaces/Cram_Munro_2020_life_when_renting_for_older_maori_alternative_jrnl.pdf",
-		additionalLinks: [],
+		additionalLinks: [
+			{
+				text: "PDF",
+				url: "https://www.buildingbetter.nz/reports/homes_spaces/Cram_Munro_2020_life_when_renting_for_older_maori_alternative_jrnl.pdf"
+			},
+		],
 		tags: ["Microsoft Excel", "Microsoft Word", "Data Analysis", "Data Entry", "Katoa"]
 	},
 
@@ -338,7 +419,12 @@ export const projectInfo = {
 		isVisible: true,
 		citation: "Cram, F., Samu, T., Theodore, R. & Trotman, R. (2020). Māori whānau talk about whānau success: Findings from Round 1 of Ngā Tau Tuangahuru—the Māori and Pacific Education Initiative (MPEI) longitudinal study. Evaluation Matters—He Take Tō Te Aromatawai, 6, 146-174.",
 		link: "https://www.nzcer.org.nz/system/files/journals/evaluation-maters/downloads/EM2020_146.pdf",
-		additionalLinks: [],
+		additionalLinks: [
+			{
+				text: "PDF",
+				url: "https://www.nzcer.org.nz/system/files/journals/evaluation-maters/downloads/EM2020_146.pdf"
+			},
+		],
 		tags: ["Microsoft Excel", "LaTeX", "Data Analysis", "Data Entry", "Katoa"]
 	},
 
@@ -352,24 +438,47 @@ export const projectInfo = {
 		abstract: "In the age of big data an array of questions are being asked as how our data is created, controlled, and distributed. Two movements that have manifested to answer these questions are Indigenous Data Sovereignty (IDS) and the Open Data Movement (ODM). IDS examines these questions through an indigenous perspective, focusing on the reclamation of data about, with, or by indigenous peoples. ODM, on the other hand, believes that data should be freely available without restrictions. While both of these movements come with lofty ambitions, the ways they approach data may not inherently be harmonious. The goal of this paper then, is to examine what tensions exist between these two movements, as well as what steps can be taken to have them coexist and potentially bolster one another.",
 		contributions: [],
 		section: sections.THOUGHT,
-		isVisible: false,
+		isVisible: true,
 		citation: "",
-		link: "",
-		additionalLinks: [],
+		link: "/documents/ids.pdf",
+		additionalLinks: [
+			{
+				text: "Case Study",
+				url: "/portfolio/ids"
+			},
+			{
+				text: "Report",
+				url: "/projects/ids"
+			},
+			{
+				text: "PDF",
+				url: "/documents/ids.pdf"
+			},
+		],
 		tags: ["Apple Pages", "Literature Review", "Zotero", "Pratt"]
 	},
+
 	"guardian-viz": {
 		id: "guardian-viz",
-		image: "",
+		image: "/images/project-guardian.png",
 		fullTitle: "Guardian Gay Rights Viz",
 		shortTitle: "Gay Rights Viz",
 		abstract: "",
 		contributions: [],
 		section: sections.THOUGHT,
-		isVisible: false,
+		isVisible: true,
 		citation: "",
-		link: "",
-		additionalLinks: [],
+		link: "/projects/guardian-viz",
+		additionalLinks: [
+			{
+				text: "Report",
+				url: "/projects/guardian-viz"
+			},
+			{
+				text: "PDF",
+				url: "/documents/guardian.pdf"
+			},
+		],
 		tags: []
 	},
 
@@ -387,39 +496,56 @@ export const projectInfo = {
 		section: sections.THOUGHT,
 		isVisible: true,
 		citation: "",
-		link: "",
+		link: "commons.pratt.edu/vras",
 		additionalLinks: [
-		{
-			text: "Full Report",
-			url: "/Pdfs/VR_Tk_Cram.pdf"
-		},
-		{
-			text: "Mirror",
-			url: "https://itf21.wordpress.com/"
-		}
+			{
+				text: "Project",
+				url: "commons.pratt.edu/vras"
+			},
+			{
+				text: "Mirror",
+				url: "https://itf21.wordpress.com/"
+			},
+			{
+				text: "Report",
+				url: "/projects/vras"
+			},
+			{
+				text: "PDF",
+				url: "/documents/vras.pdf"
+			},
 		],
 		tags: ["Content Writing", "Research", "Wordpress", "InDesign", "Pratt"]
 	},
 
 	"ai-ip": {
 		id: "ai-ip",
-		image: "",
+		image: "/images/project-ai.png",
 		fullTitle: "Artificial Intellectual Property",
 		shortTitle: "AI x IP",
 		abstract: "",
 		contributions: [],
 		section: sections.THOUGHT,
-		isVisible: false,
+		isVisible: true,
 		citation: "",
-		link: "",
-		additionalLinks: [],
+		link: "/projects/ai-ip",
+		additionalLinks: [
+			{
+				text: "Report",
+				url: "/projects/ai-ip"
+			},
+			{
+				text: "PDF",
+				url: "/documents/aiip.pdf"
+			},
+		],
 		tags: []
 	},
 
 	// UX
 	"nyphil-eval": {
 		id: "nyphil-eval",
-		image: "",
+		image: "/images/project-nyp.png",
 		fullTitle: "NY Phil Archives",
 		shortTitle: "NY Phil Archives",
 		abstract: "",
@@ -427,69 +553,146 @@ export const projectInfo = {
 		section: sections.UX,
 		isVisible: true,
 		citation: "",
-		link: "",
-		additionalLinks: [],
+		link: "/projects/nyphil-eval",
+		additionalLinks: [
+			{
+				text: "Case Study",
+				url: "/portfolio/nyphil-eval"
+			},
+			{
+				text: "Report",
+				url: "/projects/nyphil-eval"
+			},
+			{
+				text: "PDF",
+				url: "/documents/nyphil.pdf"
+			},
+			{
+				text: "Presentation",
+				url: "/documents/nyphil-presentation.pdf"
+			},
+			{
+				text: "Website",
+				url: "https://archives.nyphil.org/"
+			},
+		],
 		tags: []
 	},
 
-	"food-eval": {
-		id: "food-eval",
-		image: "",
-		fullTitle: "FoodNetwork.com",
-		shortTitle: "FoodNetwork.com",
-		abstract: "",
-		contributions: [],
-		section: sections.UX,
-		isVisible: false,
-		citation: "",
-		link: "",
-		additionalLinks: [],
-		tags: []
-	},	
-
 	"wak-eval": {
 		id: "wak-eval",
-		image: "",
+		image: "/images/project-wak.png",
 		fullTitle: "WeAreKnitters.com",
 		shortTitle: "WeAreKnitters.com",
 		abstract: "",
 		contributions: [],
 		section: sections.UX,
-		isVisible: false,
+		isVisible: true,
 		citation: "",
-		link: "",
-		additionalLinks: [],
+		link: "/projects/wak-eval",
+		additionalLinks: [
+			{
+				text: "Report",
+				url: "/projects/wak-eval"
+			},
+			{
+				text: "PDF",
+				url: "/documents/wak.pdf"
+			},
+			{
+				text: "Website",
+				url: "https://www.weareknitters.com/"
+			},
+		],
 		tags: []
 	},
 
+	"food-eval": {
+		id: "food-eval",
+		image: "/images/project-foodnetwork.png",
+		fullTitle: "FoodNetwork.com",
+		shortTitle: "FoodNetwork.com",
+		abstract: "",
+		contributions: [],
+		section: sections.UX,
+		isVisible: true,
+		citation: "",
+		link: "/projects/food-eval",
+		additionalLinks: [
+			{
+				text: "Report",
+				url: "/projects/food-eval"
+			},
+			{
+				text: "PDF",
+				url: "/documents/foodnetwork.pdf"
+			},
+			{
+				text: "Website",
+				url: "https://www.foodnetwork.com/"
+			},
+		],
+		tags: []
+	},	
+
 	"bnz-eval": {
 		id: "bnz-eval",
-		image: "",
+		image: "/images/project-bnz.jpg",
 		fullTitle: "BNZ Mobile",
 		shortTitle: "BNZ Mobile",
 		abstract: "",
 		contributions: [],
 		section: sections.UX,
-		isVisible: false,
+		isVisible: true,
 		citation: "",
-		link: "",
-		additionalLinks: [],
+		link: "/projects/bnz-eval",
+		additionalLinks: [
+			{
+				text: "Report",
+				url: "/projects/bnz-eval"
+			},
+			{
+				text: "PDF",
+				url: "/documents/bnz.pdf"
+			},
+			{
+				text: "App",
+				url: "https://apps.apple.com/nz/app/bnz-mobile/id443045792"
+			},
+		],
 		tags: []
 	},
 
 	// Design
 	"nyc-parks": {
 		id: "nyc-parks",
-		image: "",
+		image: "/images/project-parks.png",
 		fullTitle: "nycgovparks.org",
 		shortTitle: "nycgovparks.org",
 		abstract: "",
 		contributions: [],
 		section: sections.DESIGN,
-		isVisible: false,
+		isVisible: true,
 		citation: "",
-		link: "",
-		additionalLinks: [],
+		link: "https://www.figma.com/proto/xmNITLhxfF5bXdZQ643M8g/Prototypes?node-id=122%3A18202&scaling=scale-down&page-id=117%3A17343&starting-point-node-id=122%3A18202",
+		additionalLinks: [
+			{
+				text: "Case Study",
+				url: "/portfolio/nyc-parks"
+			},
+			{
+				text: "Project (Desktop)",
+				url: "https://www.figma.com/proto/xmNITLhxfF5bXdZQ643M8g/Prototypes?node-id=122%3A18202&scaling=scale-down&page-id=117%3A17343&starting-point-node-id=122%3A18202"
+			},
+			{
+				text: "Project (Mobile)",
+				url: "https://www.figma.com/proto/xmNITLhxfF5bXdZQ643M8g/Prototypes?node-id=67%3A14014&scaling=scale-down&page-id=1%3A110&starting-point-node-id=67%3A14014"
+			},
+			{
+				text: "Website",
+				url: "https://www.nycgovparks.org/"
+			},
+		],
 		tags: []
 	},
 
@@ -536,7 +739,12 @@ export const projectInfo = {
 		isVisible: true,
 		citation: "",
 		link: "https://www.youtube.com/playlist?list=PLggwqVX6zAGds1doyf9kEp3tmxeiMFa8W",
-		additionalLinks: [],
+		additionalLinks: [
+			{
+				text: "Video",
+				url: "https://www.youtube.com/playlist?list=PLggwqVX6zAGds1doyf9kEp3tmxeiMFa8W"
+			},
+		],
 		tags: ["Circus", "Cast", "Aerials", "Trapeze", "Singles Trapeze", "Lucky Thirteen", "Carnaval de la Noche"]
 	},
 
@@ -552,10 +760,14 @@ export const projectInfo = {
 		citation: "",
 		link: "https://www.youtube.com/playlist?list=PLggwqVX6zAGfX_PXFe0btwtVL8CEsQJVx",
 		additionalLinks: [
-		{
-			text: "Photos",
-			url: "https://www.facebook.com/media/set/?set=a.10157853677332516"
-		}
+			{
+				text: "Video",
+				url: "https://www.youtube.com/playlist?list=PLggwqVX6zAGfX_PXFe0btwtVL8CEsQJVx"
+			},
+			{
+				text: "Photos",
+				url: "https://www.facebook.com/media/set/?set=a.10157853677332516"
+			},
 		],
 		tags: ["Circus", "Cast", "Aerials", "Trapeze", "Doubles Trapeze", "Silver Circle"]
 	},
@@ -572,14 +784,18 @@ export const projectInfo = {
 		citation: "",
 		link: "https://www.youtube.com/playlist?list=PLggwqVX6zAGfItwyv-rsXQK0xfrrWXEpA",
 		additionalLinks: [
-		{
-			text: "Photos - Jennings",
-			url: "https://www.flickr.com/photos/80568331@N04/albums/72157674574258745"
-		},
-		{
-			text: "Photos - Marks",
-			url: "https://www.facebook.com/media/set/?set=a.1220882574694949"
-		}
+			{
+				text: "Video",
+				url: "https://www.youtube.com/playlist?list=PLggwqVX6zAGfItwyv-rsXQK0xfrrWXEpA"
+			},
+			{
+				text: "Photos (Jennings)",
+				url: "https://www.flickr.com/photos/80568331@N04/albums/72157674574258745"
+			},
+			{
+				text: "Photos (Marks)",
+				url: "https://www.facebook.com/media/set/?set=a.1220882574694949"
+			},
 		],
 		tags: ["Circus", "Cast", "Acrobatics", "Stunting", "Silver Circle"]
 	},
@@ -596,14 +812,18 @@ export const projectInfo = {
 		citation: "",
 		link: "https://www.youtube.com/playlist?list=PLggwqVX6zAGffRK936pAS2OiLDuND4zIm",
 		additionalLinks: [
-		{
-			text: "Photos - Jennings",
-			url: "https://www.flickr.com/photos/80568331@N04/albums/72157648565762883"
-		},
-		{
-			text: "Photos - Marks",
-			url: "https://www.facebook.com/media/set/?set=a.717167561733122"
-		}
+			{
+				text: "Video",
+				url: "https://www.youtube.com/playlist?list=PLggwqVX6zAGffRK936pAS2OiLDuND4zIm"
+			},
+			{
+				text: "Photos (Jennings)",
+				url: "https://www.flickr.com/photos/80568331@N04/albums/72157648565762883"
+			},
+			{
+				text: "Photos (Marks)",
+				url: "https://www.facebook.com/media/set/?set=a.717167561733122"
+			}
 		],
 		tags: ["Circus", "Crew", "Stage Manager", "Silver Circle"]
 	},
@@ -620,14 +840,18 @@ export const projectInfo = {
 		citation: "",
 		link: "https://www.youtube.com/playlist?list=PLggwqVX6zAGdptZpfZtv-L2kBquEAg8M2",
 		additionalLinks: [
-		{
-			text: "Photos - Jennings",
-			url: "https://www.flickr.com/photos/80568331@N04/albums/72157641448979673"
-		},
-		{
-			text: "Photos - Marks",
-			url: "https://www.facebook.com/media/set/?set=a.519651071484773"
-		}
+			{
+				text: "Video",
+				url: "https://www.youtube.com/playlist?list=PLggwqVX6zAGdptZpfZtv-L2kBquEAg8M2"
+			},
+			{
+				text: "Photos (Jennings)",
+				url: "https://www.flickr.com/photos/80568331@N04/albums/72157641448979673"
+			},
+			{
+				text: "Photos (Marks)",
+				url: "https://www.facebook.com/media/set/?set=a.519651071484773"
+			}
 		],
 		tags: ["Circus", "Cast", "Acrobatics", "Stunting", "Silver Circle"]
 	},

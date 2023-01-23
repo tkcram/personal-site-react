@@ -2,7 +2,7 @@ import css from './Projects.module.css'
 import Footer from './Footer'
 import Blurb from './Blurb'
 import Header from './Header'
-import ProjectCard from './ProjectCard'
+import Card from './Card'
 import ProjectModal from './ProjectModal'
 import { sections, projectInfo } from './project-info'
 import { useState } from 'react';
@@ -41,7 +41,7 @@ const Projects = (props) => {
 								<h2>{section}</h2>
 								<ul className={css.items}>
 									{projectsBySection[section].map(project => (
-										project?.isVisible && <ProjectCard key={project.id} {...project} openModal={setModalId}/>
+										project?.isVisible && <Card key={project.id} {...project} openModal={setModalId}/>
 									))}
 								</ul>
 							</div>

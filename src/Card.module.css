@@ -1,0 +1,33 @@
+.item {
+  box-shadow: 1px 1px 5px grey;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2px;
+}
+
+.image { 
+  height: 250px;
+  object-fit: cover;
+  width: 230px;
+  border-radius: 2px 2px 0 0;
+}
+
+.banner {
+  align-items: center;
+  background-color: var(--colour);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  border-radius: 0 0 2px 2px;
+}
+
+.modal {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.download {
+  margin-right: 4px;
+}

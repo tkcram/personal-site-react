@@ -1,7 +1,7 @@
 import Header from './Header'
 import Blurb from './Blurb'
 import Footer from './Footer'
-import { caseStudies } from './case-studies'
+import { caseStudies } from './study-info'
 import css from './Portfolio.module.css'
 
 const Portfolio = () => {
@@ -19,6 +19,7 @@ const Portfolio = () => {
 							<img className={css.image} src={study.image} alt=""/>
 							<div className={css.content}>
 								<h2>{study.title}</h2>
+								<h3>{study.subtitle}</h3>
 								<p>{study.blurb}</p>
 								<div className={css.links}>
 									<a href={"/portfolio/" + study.id} className="button" rel="noreferrer">Case Study</a>
