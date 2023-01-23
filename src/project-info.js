@@ -10,7 +10,6 @@ export const sections = {
 
 export const projectInfo = {
 	// Data Viz
-
 	"wingspan": {
 		id: "wingspan",
 		image: "/images/project-wingspan.png",
@@ -25,11 +24,11 @@ export const projectInfo = {
 		section: sections.VIZ,
 		isVisible: true,
 		citation: "",
-		link: "https://shiny-mandazi-9bf1d7.netlify.app",
+		link: "https://ivf22.netlify.app",
 		additionalLinks: [
 			{
 				text: "Project",
-				url: "https://shiny-mandazi-9bf1d7.netlify.app"
+				url: "https://ivf22.netlify.app"
 			},
 			{
 				text: "Case Study",

@@ -14,13 +14,13 @@ export const caseStudies = {
 		subtitle:"Creating an Avian Information Dashboard Based on the Wingspan Boardgame",
 		blurb: "A data visualisation project",
 		image:"/images/study-wingspan-banner.jpg",
-		link: "https://shiny-mandazi-9bf1d7.netlify.app",
+		link: "https://ivf22.netlify.app",
 		isVisible: true,
 		markup: (
 			<>
 				<img src="/images/study-wingspan-banner.jpg" className={css.banner} alt=""/>
 				<h1 id="introduction">Birds of Wingspan: Creating an Avian Information Dashboard Based on the Wingspan Boardgame</h1>
-				<a className="button" target="_blank" href="https://shiny-mandazi-9bf1d7.netlify.app" rel="noreferrer">View the Dashboard</a>
+				<a className="button" target="_blank" href="https://ivf22.netlify.app" rel="noreferrer">View the Dashboard</a>
 				<p>Intro intro intro</p>
 				
 				<h2 id="background">Background</h2>
