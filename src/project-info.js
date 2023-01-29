@@ -99,7 +99,7 @@ export const projectInfo = {
 			url: "/projects/bird-network"
 		},
 		{
-			text: "Data",
+			text: "Data (TBD)",
 			url: "https://catalogue.data.govt.nz/dataset/bird-plant-interactions"
 		}
 		],
@@ -185,6 +185,10 @@ export const projectInfo = {
 		link: "https://puis22.netlify.app/",
 		additionalLinks: [
 			{
+				text: "Case Study",
+				url: "/portfolio/dnd-ui"
+			},
+			{
 				text: "Project",
 				url: "https://puis22.netlify.app/"
 			},
@@ -216,6 +220,10 @@ export const projectInfo = {
 		citation: "",
 		link: "",
 		additionalLinks: [
+			{
+				text: "Case Study",
+				url: "/portfolio/dnd-ui"
+			},
 			{
 				text: "Github",
 				url: "https://github.com/tkcram/pfchs22"
@@ -273,7 +281,7 @@ export const projectInfo = {
 		link: "https://scram142.neocities.org/",
 		additionalLinks: [
 			{
-				text: "Project",
+				text: "Project (Rehost to Netlify)",
 				url: "https://scram142.neocities.org/"
 			},
 			{
@@ -337,6 +345,10 @@ export const projectInfo = {
 				text: "PDF",
 				url: "https://www.buildingbetter.nz/publications/homes_spaces/Cram_et_al_Jun2021_awhi_mai_awhi_atu_giving_receiving_support_covid19.pdf"
 			},
+			{
+				text: "Infographic (TBD)",
+				url: ""
+			},
 		],
 		tags: ["Microsoft Excel", "Adobe InDesign", "Data Analysis", "Data Visualisation", "Infographic Design", "Katoa"]
 	},
@@ -356,7 +368,12 @@ export const projectInfo = {
 		isVisible: true,
 		citation: "Cram, F. & Cram, S. (2021). Te Wairoa housing survey report. Prepared for Te Wairoa Housing Group. Auckland: Katoa Ltd.",
 		link: "",
-		additionalLinks: [],
+		additionalLinks: [
+			{
+				text: "todo",
+				url: ""
+			},
+		],
 		tags: ["Microsoft Excel", "Microsoft Word", "Tableau", "Data Analysis", "Data Visualisation", "Katoa"]
 	},
 
@@ -375,7 +392,12 @@ export const projectInfo = {
 		isVisible: true,
 		citation: "Cram, F. & Were, L. (2022). Final Evaluation Report: Whakapakari ai ngā Rangatahi, delivered by Te Poari Manaaki o Raukawa (Raukawa Charitable Trust) with Te Ao Auahatanga Hauora Māori funding from the Ministry of Health. Prepared for Te Poari Manaaki o Raukawa & the Ministry of Health. Auckland: Katoa Ltd & Te Awamutu: Tuakana Teina Evaluation Collective.",
 		link: "",
-		additionalLinks: [],
+		additionalLinks: [
+			{
+				text: "todo",
+				url: ""
+			},
+		],
 		tags: ["Microsoft Excel", "Data Analysis", "Data Entry", "Katoa"]
 	},
 
@@ -397,7 +419,7 @@ export const projectInfo = {
 		additionalLinks: [
 			{
 				text: "PDF",
-				url: "https://www.buildingbetter.nz/reports/homes_spaces/Cram_Munro_2020_life_when_renting_for_older_maori_alternative_jrnl.pdf"
+				url: "https://www.buildingbetter.nz/publications/homes_spaces/Cram_Munro_2020_life_when_renting_for_older_maori_alternative_jrnl.pdf"
 			},
 		],
 		tags: ["Microsoft Excel", "Microsoft Word", "Data Analysis", "Data Entry", "Katoa"]
@@ -428,7 +450,6 @@ export const projectInfo = {
 	},
 
 	// Thought PIeces
-
 	"ids": {
 		id: "ids",
 		image: "/images/project-ids.png",
@@ -446,7 +467,7 @@ export const projectInfo = {
 				url: "/portfolio/ids"
 			},
 			{
-				text: "Report",
+				text: "Report (todo)",
 				url: "/projects/ids"
 			},
 			{
@@ -499,15 +520,15 @@ export const projectInfo = {
 		additionalLinks: [
 			{
 				text: "Project",
-				url: "commons.pratt.edu/vras"
+				url: "https://commons.pratt.edu/vras"
 			},
 			{
-				text: "Mirror",
-				url: "https://itf21.wordpress.com/"
+				text: "Mirror (Zip)",
+				url: "/documents/vras.zip"
 			},
 			{
 				text: "Report",
-				url: "/projects/vras"
+				url: "/projects/vr-as"
 			},
 			{
 				text: "PDF",
@@ -530,7 +551,7 @@ export const projectInfo = {
 		link: "/projects/ai-ip",
 		additionalLinks: [
 			{
-				text: "Report",
+				text: "Report (todo)",
 				url: "/projects/ai-ip"
 			},
 			{
@@ -651,10 +672,6 @@ export const projectInfo = {
 				url: "/projects/bnz-eval"
 			},
 			{
-				text: "PDF",
-				url: "/documents/bnz.pdf"
-			},
-			{
 				text: "App",
 				url: "https://apps.apple.com/nz/app/bnz-mobile/id443045792"
 			},
@@ -706,7 +723,12 @@ export const projectInfo = {
 		isVisible: true,
 		citation: "",
 		link: "",
-		additionalLinks: [],
+		additionalLinks: [
+			{
+				text: "todo",
+				url: ""
+			},
+		],
 		tags: ["Design", "InDesign", "Layout"]
 	},
 
@@ -721,12 +743,16 @@ export const projectInfo = {
 		isVisible: true,
 		citation: "Cram, F. & Tawhai, S. (2021). Place-Based Housing and Urban Development Pilot – Hastings: Reducing the number of tamariki living in unhealthy homes or at risk of homelessness. Evaluation report. Prepared for Hawke’s Bay District Health Board. Auckland: Katoa Ltd.",
 		link: "",
-		additionalLinks: [],
+		additionalLinks: [
+			{
+				text: "todo",
+				url: ""
+			},
+		],
 		tags: ["Design", "InDesign", "Layout"]
 	},
 
 	// Circus
-
 	"your-move": {
 		id: "your-move",
 		image: "/images/project-move.png",

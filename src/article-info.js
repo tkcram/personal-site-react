@@ -379,6 +379,219 @@ export const articles = {
 		] 
 	},
 
+	"food-eval":{ 		
+		id:"food-eval", 
+		markup: ( 
+			<>
+				<img src="/images/article-food-banner.png" className={css.banner} alt=""/>
+				<h1 className={css.title}>FoodNetwork.com: Heuristic Evaluation Report</h1>
+				{/*<p className={css.byline}>Originally published on <a href="http://ixd.prattsi.org/2022/09/design-critique-bnz-iphone-app/">IXD@Pratt</a> on Septermber 13, 2022</p>*/}
+				
+				<h2 id="summary">Summary</h2>
+				<p>The Food Network website, foodnetwork.com, is the second most highly trafficked cooking website on the internet. Boasting thousands of recipes from hundreds of chefs, it provides an invaluable resource to cooks around the world. However, this wellspring of information can make finding exactly what you’re looking for a difficult task. What’s more, a recipe is only good if you’re able to use it. This evaluation is aimed at improving what is already a wonderful reason.</p>
+				<p>The heuristic evaluation was undertaken by following a loosely guided user flow. Specifically, the three evaluators were tasked with landing on the foodnetwork.com homepage, navigating to Alton Brown’s “The Chewy” cookie, reviewing the ingredients they had available to them, and substitution/purchasing those that they did not. Along their journey, evaluators noted anything that violated Neilsen’s “Ten Usability Heuristics”. Notes from all three evaluators were then compiled, consulted, and analysed, and the following key recommendations were extracted:</p>
+				<ol>
+					<li><p>Allow users to directly link to the list of chefs from the Navigation bar </p></li>
+					<li><p>Improve the users ability to make ingredient substitutions</p></li>
+					<li><p>Better integrate the “Buy ingredients online” widget onto the page</p></li>
+				</ol>
+				<p>What follows in this report is a breakdown of how the problem areas were identified, details on the specific issues, as well as proposals and mock-ups for potential solutions.				</p>
+				
+				<h2 id="introduction">Introduction</h2>
+				<p>The Food Network website, foodnetwork.com, is the second most highly trafficked cooking website on the internet. Boasting thousands of recipes from hundreds of chefs, it provides an invaluable resource to cooks around the world. However, this wellspring of information can make finding exactly what you’re looking for a difficult task. What’s more, a recipe is only good if you’re able to use it. This evaluation is aimed at improving what is already a wonderful reason.</p>
+
+				<h2 id="methodology">Methodology</h2>
+				<h3>Heuristic Evaluation</h3>
+				<p>In order to identify areas for improvement on the FoodNetwork.com website, a heuristic evaluation was undertaken. This is a type of usability inspection method wherein a small group of experts examine the interface while consulting a list of ‘heuristics’, or rules of thumb, of good interface design. Specifically, this test uses Jakob’s Ten Heuristics for User Interface (See appendix), a widely used set of heuristics designed specifically for this type of testing.</p>
+				<p>By using a formal list of heuristics, evaluators are able to quickly and easily identify problem areas, as well as consolidate their notes. This method also requires a small number of expert evaluators, typically 3-5, allowing the testing to be done quickly and at minimal cost. One drawback of this method however is that while the heuristics are broad, they are not all encompassing, and some issues may be missed due to poor or no matching.</p>
+
+				<h3>Tasks</h3>
+				<p>Three evaluators were given three tasks to complete on the FoodNetwork.com website. As tasks were completed, evaluators took note of any violations of as well as their severity, with 1 being inconvenient, and 4 being severe. Tasks were completed with no restrictions other restrictions such as time or number of clicks:</p>
+				<figure className={css.figure}>
+					<p>You're hungry and have decided that the only thing that can fill you up is freshly baked cookies, and you know exactly the recipe: The Chewy by Alton Brown. You saw him make it on his show and now is the time to try it yourself. Go to foodnetwork.com and, without using the search functionality, try to accomplish the following</p>
+					<ol>
+						<li><p>Navigate to Alton Brown's chef page</p></li>
+						<li><p>Navigate to The Chewy recipe (Hint: it's his second highest rated recipe)</p></li>
+						<li><p>How much is it going to cost to get all the ingredients?</p></li>
+						<li><p>Wait, you have a dairy allergy. What can we substitute for the Milk and Butter? How much? 5) (Optional) Make the cookies</p></li>
+					</ol>
+				</figure>
+
+				<h3>Analysis</h3>
+				<p>After all three evaluators had completed their testing, their notes on heuristic violations and severity were submitted to the lead researcher. The notes were then consolidated into a single table (see appendix) where problem areas were grouped, and their overall severity was determined by inspection. Once potential areas for improvement were identified, domain knowledge was used to create a series of three recommendations. These recommendations suggest ways in which the interface can be changed in order to no longer violate the heuristics identified in testing.</p>
+
+				<h2 id="insights">Insights & Recommendations</h2>
+				<h3>1. Differentiate between hubs and “see all” in the navigation bar</h3>
+				<h4>The Issue:</h4>
+				<p>Within the navigation bar, the “See all x” within the dropdown menu categories currently links to the hub page for the category. For example, “See all chefs” directs the user to the “Chefs and Hosts” page. This is not what the user may expect, and requires users to recall specific user flows rather than recognise them, a violation of heuristic 6. Additionally, the links to the true “See all” pages are often buried towards the bottom of the hub pages, and written in a small, low contrast font. This can be problematic for both the same reason as the previous issue (heuristic 6), but also becomes an aesthetic issue (heuristic 8)</p>
+				<h4>Quick Fix:</h4>
+				<p>Create an additional button within the dropdown linking to the hub pages, and link the “See all x” to the associated page (see figures below).</p>
+				<h4>Long term:</h4>
+				<p>A reorganisation of the hub pages should be considered. There is a high amount of overlap between “Chefs” and “Shows” in the top half of the pages, that might better serve as standalone content, and redesigning the pages with more specific content.</p>
+				
+				<figure className={css.figure}>
+					<img className={css.figureImage} src="/images/article-food-1a.png" alt=""/>
+					<figcaption className={css.caption}>Current Navigation Dropdown. “See all chefs” button (1a) doesn’t lead to expected result.</figcaption>
+				</figure>
+
+				<figure className={css.figure}>
+					<img className={css.figureImage} src="/images/article-food-1b.png" alt=""/>
+					<figcaption className={css.caption}>Proposed Navigation Dropdown. Added a “chef’s homepage” button (1b). “See all chefs” skips to chef index.</figcaption>
+				</figure>
+
+				<h3>2. Restyle the “Ingredient Substitution” flow</h3>
+				<h4>The Issue:</h4>
+				<p>The current “Ingredient Substitutions” button links to a generic page about what substitutions can be made. However given that it’s linked to from a specific recipe, and that it is in the style as the “Add to shopping list” button, this doesn’t meet user expectations of knowing what/how much to substitute in the recipe. This is a violation of heuristic 6 (recognition rather than recall), and can also lead users into an error state, a violation of heuristic 5.</p>
+				<h4>Quick Fix:</h4>
+				<p>Restyle the button so that it is less similar to the “Add to shopping list” button. Rewrite the body test of the ingredient substitution guide to ensure all items are presented uniformly.</p>
+				<h4>Long term:</h4>
+				<p>It may be worth implementing an ingredient substitution calculator. Such a thing could load in recipes or custom ingredients, and allow direct conversions of the ingredients, and export the new recipe.</p>
+				
+				<figure className={css.figure}>
+					<img className={css.figureImage} src="/images/article-food-2a.png" alt=""/>
+					<figcaption className={css.caption}>Current Substitutions Button. “Ingredient Substitutions” (2a) is identical to other buttons, suggesting identical function</figcaption>
+				</figure>
+
+				<figure className={css.figure}>
+					<img className={css.figureImage} src="/images/article-food-2b.png" alt=""/>
+					<figcaption className={css.caption}>Proposed Substitutions Button. “Ingredient Substitutions” (2b) is not distinguished from other buttons Current Substitutions Button. “Ingredient Substitutions” (2a) is identical to other buttons, suggesting identical function</figcaption>
+				</figure>
+
+				<h3>3. Reconsider the use of the “Buy Ingredients Online” widget</h3>
+				<h4>The Issue:</h4>
+				<p>During the evaluation, using the “Buy Ingredients Online” widget was consistently the highest pain point. Reasons included ambiguous wording of “per serve” (Heuristic 2, match between system and real world), the fact it was unusable within the page itself as all links/buttons opened a new window (heuristic 4, consistency and standards), and the general confusion about if it was part of the website or an ad (heuristic 5, error prevention).</p>
+				<h4>Quick Fix:</h4>
+				<p>Until such a time as the widget can be significantly improved, it may be worth considering removing it from the recipes page. This may be different from the shopping list page however.</p>
+				<h4>Long term:</h4>
+				<p>The widget would better serve the user if it was usable entirely within the page, either as a sidebar or a modal. While the final checkout can be done via an external site, all steps leading up to that should be done locally. In addition, better signifiers as to what the widget done should be implemented, as should a better way to display the “price”</p>
+				
+				<figure className={css.figure}>
+					<img className={css.figureImage} src="/images/article-food-3.png" alt=""/>
+					<figcaption className={css.caption}>Current Substitutions Button. “Ingredient Substitutions” (2a) is identical to other buttons, suggesting identical function</figcaption>
+				</figure>
+
+				<h2 id="conclusion">Conclusion</h2>
+				<p>FoodNetwork.com is a wonderful repository of recipes from some of the best chefs in the world, and is used by millions of people of all walks of life. In order to best serve this multitude of users, a team of domain experts came together to undertake a Heuristic evaluation - completing a series of tasks while noting any items that violated Jakob’s Ten Usability Heuristics. All notes were then collated, and an analysis was undertaken to examine key areas for improvement. Three recommendations were provided based on this analysis:</p>
+				<ol>
+					<li><p>Differentiate between hubs and “see all” in the navigation bar </p></li>
+					<li><p>Restyle the “Ingredient Substitution” flow</p></li>
+					<li><p>Reconsider the use of the “Buy Ingredients Online” widget</p></li>
+				</ol>
+				<p>All three of these recommendations aim primarily at reducing violations of Heuristic 6: Recognition rather than Recall. This will allow users to better navigate the site, and prepare many more delicious meals.</p>
+			
+				<h2 id="appendix">Appendix</h2>
+				<figure className={css.figure}>
+					<table>
+						<tr><th>Problem Description Heuristic</th><th>E1 </th><th>E2 </th><th>E3</th><th>Severity</th></tr>
+						<tr><td>“All chefs and hosts” nav link does not direct the user to all chefs and hosts page</td><td>H6, H10</td><td>4</td><td>4</td><td>4</td><td>4</td></tr>
+						<tr><td>Link to list of all chefs/hosts highly obfuscated</td><td>H6</td><td>4</td><td>4</td><td></td><td>4</td></tr>
+						<tr><td>Substitutions cannot be made on the recipe page/ related to specific recipe</td><td>H6, H7, H9</td><td>2</td><td>3</td><td>3</td><td>3</td></tr>
+						<tr><td>Substitution amounts cannot be calculated</td><td>H7, H8, H10</td><td>3</td><td>2</td><td>4</td><td>3</td></tr>
+						<tr><td>Substitutions do not account for allergens (e.g. milk is subbed with yoghurt or sour cream)</td><td>H6</td><td>2</td><td></td><td>2</td></tr>
+						<tr><td>Ingredient cost calculator takes the user to an external service</td><td>H7, H8</td><td>4</td><td>3</td><td>2</td><td>3</td></tr>
+						<tr><td>Ingredient cost calculator calculates per portion, unclear what that means</td><td>H2, H6</td><td>2</td><td></td><td></td><td>2</td></tr>
+					</table>
+					<figcaption className={css.caption}>Final Heuristic Violations</figcaption>
+				</figure>
+			</>
+		), 
+		headings: [
+			{	 
+				text: "Summary", 
+				ref: "#summary" 
+			},
+			{	text: "Introduction",
+				ref: "#introduction" 
+			},
+			{	text: "Methodlogy",
+				ref: "#methodolgy" 
+			},
+			{	text: "Insights & Recommendations",
+				ref: "#insights"
+			},
+			{	text: "Conclusion",
+				ref: "#conclusion"
+			},
+			{	
+				text: "Appendix",
+				ref: "#appendix"
+			},
+		] 
+	},
+
+	"guardian-viz":{ 
+		id:"guardian-viz", 
+		markup: ( 
+			<>
+				<h1 className={css.title} id="introduction">Visualisation Critique: The Guardian Gay Rights Radial Chart</h1>
+				<p className={css.byline}>Originally published on <a href="https://studentwork.prattsi.org/infovis/labs/a-brief-history-of-modern-colour-models/">Information Visualization</a> on February 3, 2022</p>
+				<p>Within the United States gay rights have been a contentious issue. Often, legislation about said rights is left to the discretion of the individual state, making it difficult to understand who can do what, where. In 2012, The Guardian produced a series of interactive radial data visualisations comparing seven key gay rights across the country.[<a href="https://www.theguardian.com/world/interactive/2012/may/08/gay-rights-united-states">1</a>][<a href="https://www.theguardian.com/news/datablog/2012/may/10/data-visualisation-us-gay-rights">2</a>] In the following years, as legislation changed, the visualisations. The last of these updates was in 2015, when the US Supreme Court ruled that the constitution guarantees a right to same-sex marriage.[<a href="https://www.nytimes.com/2015/06/27/us/supreme-court-same-sex-marriage.html">3</a>]</p>
+				<p>This critique is intended to examine the most recent version of this data visualisation with a critical eye, and will be broken down into three parts. Part 1 will examine the type of visualisation used and its efficacy at displaying the data. Part 2 will explore the design decisions that were made, including colour and interactivity. Finally part 3 will discuss the overall narrative function of the chart, and the ways it tells that story. All parts will draw on current expertise on the subject, as well as by comparing it to Kerry Rodden’s 2021 D3 redux of the visualisation.[<a href="https://observablehq.com/@kerryrodden/equal-area-radial-matrix-of-lgbt-rights">4</a>]</p>
+
+				<h2 id="visualisation">Visualisation</h2>
+				<p>Radial graphs are a category of data visualisations that represent data in circular form. Common types include radial trees and sunburst diagrams. Specifically, this visualisation uses a matrix style chart, with heat map style categorical data. These types of visualisations offer several advantages[<a href="https://observablehq.com/@observablehq/why-use-a-radial-data-visualization">5</a>], including being compact and suggesting the each slice is part of a whole.</p>
+				<p>If we deconstruct it further, this visualisation is fundamentally a chart warped around a point. But in doing so, and compacting the chart, it allows for the reader to better perceive the whole without the need to either scroll or zoom out to such a point that the data becomes illegible. It also allows for the key and explanation tooltip to exist closer to the chart itself. Unfortunately this warping creates a skew in the individual cells, with the innermost ones seeming smaller, and thus potentially less significant, than the outermost. Kerry Rodden attempts to fix this issue by using a “radial scale”, which ensures that each cell has an equal total area with the inner cells being tall/skinny and the outer flat/wide. While this seems to be a batter approach, it may not solve the issue entirely.</p>
+				<p>There is some question over the efficacy of heat map categories. Beyond the design issues (see next section), it may be unclear how to interpret the marks without closer examination of the data. While it does provide a tooltip to explain itself, it may still be better to only have a binary categorisation. Alternatively, it may be possible to use colour categories across all rungs of the chart (e.g. a traffic light system), but that may end up causing further issue.</p>
+
+				<h2 id="design">Design</h2>
+				<h3>Colour</h3>
+				<p>The colours themselves only play an aesthetic role in the visualisation, and are in no way signifiers of what they represent. The Guardian uses something akin to a CAT10 colour scheme, which does its job of making each rung feel distinct, but is otherwise uninspired. Rodden uses the lack of colour signifier to their advantage, and instead opts for a rainbow scheme to tie into the LGBT theme. The lack of reliance on colour signifiers is also good from an accessibility standpoint, as a reader with colour deficiency would be able to extract all the same information from the visualisation. This is also bolstered by the key, which is curved to match the shape of the visualisation and make the association more overt.</p>
+				<p>On the topic of accessibility, contrast is an issue that plagues visualisation. When viewing the “Partial” cells against the grey background the colours can be difficult to distinguish, failing a “squint test”. With the “Partial” and “Maximum” cells, the change in saturation can be distinguished when the cells abut, but is not always obvious when they’re separated by a grey square. Some sort of additional markings on the “Partial” cells would help this issue. Other minor contrast issues include the grey text on the white background, and the “Banned” symbols on the observable viz.</p>
+				
+				<h3>Ordering</h3>
+				<p>From a purely design perspective, the regional groupings for the columns feels strange. This may be due to a non-americas perspective, but when trying to find a particular state it can be somewhat ambiguous where to find it. This is exasperated by the lack of coherent sorting within the regions. Perhaps the ability to sort the columns alphabetically would be of use. However, the groupings do seem to track from a narrative perspective (see next section), and the rotation/ordering of the regions to match the cardinal points is a good choice.</p>
+				<p>Turning now to the rungs, it’s not entirely clear how they’re ordered. Given “Marriage” is on the outermost ring, with it being legal in all states, it suggests that they’re ordered by number of states wherein its legal, but adoption seems to be legal in more places than hospital visits. If there is some sort of weighting (due to adoption being banned in some places) it isn’t apparent. It is possible that this is an artefact of the dataset that was used when the visualisation was initially created.</p>
+				
+				<h3>Interactivity</h3>
+				<p>The visualisation relies heavily on the interactivity to both provide context to the individual markings, and to allow the user to highlight a specific state, which can be otherwise difficult to read vertically. When hovering over a state, sidebar provides additional context on the cells (e.g. hate crimes are only addressed when relating to sexual orientation and not gender). Rodden’s version instead opts to provide tooltips for each individual cell. This direct association with the data allows the user to see what the cell contains (e.g. Minnesota: Adoption, maximum) even if other facets can be hard to distinguish. This could also provide useful to users using a screen reader, allowing them to navigate the visualisation the same way they might navigate a table.</p>
+				<p>Both the Guardian’s and Rodden’s versions provide ways to manipulate the visualisation, although these are mostly novel. The Guardian allows users to resize columns proportional to state population, providing a truly horrifying visage that also reinforces the narrative. Rodden provides a rotational slider for the visualisation, which is a boon to all radial charts, as well as the ability to reverse the category order.</p>
+				
+				<h3>Narrative</h3>
+				<p>There are two key narratives provided by the visualisation. Firstly, it provides context for how much more progress is still to be made in the fight for equality. While many of the cells are now filled in, especially compared to previous versions, it is the use of negative space provides just as much information. Secondly the grouping by regions demonstrates the disparity of rights across the country. This likely would have been less overt if the states were listed in a simple alphabetical order. Overall the visualisation is compelling, and gets across the messages it’s trying to convey.</p>
+
+				<h2 id="appendix">Appendix</h2>
+				<h3>Guardian Verion</h3>
+				<figure className={css.figure}>
+					<img className={css.figureImage} src="/images/article-guardian-guardian-1.png" alt=""/>
+					<figcaption className={css.caption}>Default View (Equal Scale)</figcaption>
+				</figure>
+
+				<figure className={css.figure}>
+					<img className={css.figureImage} src="/images/article-guardian-guardian-2.png" alt=""/>
+					<figcaption className={css.caption}>States scaled proportionally</figcaption>
+				</figure>
+
+				<h3>Kerry Rodden Version</h3>
+
+				<figure className={css.figure}>
+					<img className={css.figureImage} src="/images/article-guardian-rodden-1.png" alt=""/>
+					<figcaption className={css.caption}>Default View</figcaption>
+				</figure>
+
+				<figure className={css.figure}>
+					<img className={css.figureImage} src="/images/article-guardian-rodden-2.png" alt=""/>
+					<figcaption className={css.caption}>Inverted Colour View</figcaption>
+				</figure>
+
+			</>
+		), 
+		headings: [
+			{	 
+				text: "Introduction", 
+				ref: "#introduction" 
+			},
+			{	text: "Visualisation",
+				ref: "#visualisation" 
+			},
+			{	text: "Design",
+				ref: "#design" 
+			},
+			{	text: "Appendix",
+				ref: "#appendix"
+			},
+		] 
+	},
+
 	"lego-colours":{ 
 		id:"lego-colours", 
 		markup: ( 
@@ -619,8 +832,8 @@ export const articles = {
 		markup: ( 
 			<>
 				<img src="/images/article-nyp-banner.png" className={css.banner} alt=""/>
-				<h1 className={css.title} id="introduction">The New York Philharmonic Shelby White & Leon Levy Digital Archives: Moderated User Testing</h1>
-				<p>By Anna Feldman, Sayali Nikumbh, Tess Porter, Tk Cram</p>
+				<h1 className={css.title}>The New York Philharmonic Shelby White & Leon Levy Digital Archives: Moderated User Testing</h1>
+				<p>By Tk Cram, Anna Feldman, Sayali Nikumbh, Tess Porter</p>
 				<p className={css.byline}>Originally submitted as a PDF and Presentation on December 13, 2022</p>
 				<a className="button" href="/documents/nyphil.pdf" target="_blank" rel="noreferrer">PDF</a>
 				<a className="button" href="/documents/nyphil-presentation.pdf" target="_blank" rel="noreferrer">Slide Deck</a>
@@ -664,7 +877,7 @@ export const articles = {
 					<li><p>Explorers: Young professionals with some exposure to the New York Philharmonic who are exploring what the archives have to offer.</p></li>
 					<li><p>Professors: Researchers highly familiar with online archives and the Digital Archives site; specifically, those who want to do deep dive research into a subject or person.</p></li>
 				</ul>
-				<p>Our team focused primarily on Amateurs (first time users) and Professors (those with site familiarity and longtime expert researchers). Explorers, while slightly more familiar with the Philharmonic, but not the archives specifically, were a secondary target group that we identified as able to potentially provide us with unique user experience insights. In recruiting across these three groups, we aimed for purposive sampling that would yield a group of test participants who were representative of all of the Digital Archives’ intended audiences (Rubin Chisnell, 2008). For moderated user testing to result in valid and useful insights, best practice is to aim for at least five user tests, but with our target user groups in mind, we aimed for roughly twice that amount in order to obtain the most robust feedback in the time we had (Nielsen, 2012). Our final user profiles can be found in Appendix A (page 28).</p>
+				<p>Our team focused primarily on Amateurs (first time users) and Professors (those with site familiarity and longtime expert researchers). Explorers, while slightly more familiar with the Philharmonic, but not the archives specifically, were a secondary target group that we identified as able to potentially provide us with unique user experience insights. In recruiting across these three groups, we aimed for purposive sampling that would yield a group of test participants who were representative of all of the Digital Archives’ intended audiences (Rubin Chisnell, 2008). For moderated user testing to result in valid and useful insights, best practice is to aim for at least five user tests, but with our target user groups in mind, we aimed for roughly twice that amount in order to obtain the most robust feedback in the time we had (<a href="http://www.nngroup.com/articles/ten-usability-heuristics/">Nielsen, 2012</a>). Our final user profiles can be found in Appendix A (page 28).</p>
 
 				<h3>Recruitment</h3>
 				<p>Our goal was to test between six and ten participants in total, including two to three from each target user group, especially focusing on Amateurs and Professors. To reach this goal, our recruitment strategy involved broadly calling for participants from Pratt Institute via listservs and from student groups that visited the New York Philharmonic during the recruitment period. Our call for participants included a brief description of the purpose for the study as well as the incentive of a $10 Amazon gift card for participating. Our interest form collected basic contact information and career/study fields, as well as gauged expertise generally with the internet, research, digital exhibitions, the New York Philharmonic, and specifically with their Digital Archives site. Once the team reviewed responses and classified each respondent by target user group, we followed up with those who met our criteria in order to schedule their tests and ensure they completed our consent to participate and a pre-test questionnaire. These pre-test materials can be found in Appendix E (page 41–42).</p>
@@ -1324,6 +1537,353 @@ export const articles = {
 				ref: "#reflections"
 			},
 		] 
+	},
+
+	"vr-as":{ 		
+		id:"vr-as", 
+		markup: ( 
+			<>
+				<img src="/images/article-vras-banner.png" className={css.banner} alt=""/>
+				<h1 className={css.title}>WeAreKnitters.com: Remote User Testing Report</h1>
+				{/*<p className={css.byline}>Originally published on <a href="http://ixd.prattsi.org/2022/09/design-critique-bnz-iphone-app/">IXD@Pratt</a> on Septermber 13, 2022</p>*/}
+				<p>Tk Cram, Sara Kim, Ziqi Wang, Jiacheng (?)</p>
+
+				<h2>The Project</h2>
+				<p>VR is an emergent and multifaceted technology. So often the conversation revolves either around its uses in gaming or, in recent times, Facebook’s foray into the future of social media. While both of these develop- ments are fascinating, we believe that VR has potential to be used across all facets of our society, from arts and entertainment, to new ways to educate and aid individuals, and even to help push humans forward into the final frontier. We will create a website to explore and communicate many of these potential facets. Each member will choose 1-2 topics around VR and research/develop content for a standalone page.</p>
+				<h2>The Authors</h2>
+				<div className={css.textLogo}>
+					<img alt="" className={css.logo} src="/images/article-vras-ziqi.png"/>
+					<h3>Ziqi</h3>
+					<p>Recent graduate from journalism school and now learning DAV. Cat person who dreams about retiring.</p>
+				</div>
+				<div className={css.textLogo}>
+					<img alt="" className={css.logo} src="/images/article-vras-jiacheng.png"/>
+					<h3>Jiacheng</h3>
+					<p>Statistics undergraduate degree with IST minor, current DAV student.</p>
+				</div>
+				<div className={css.textLogo}>
+					<img alt="" className={css.logo} src="/images/article-vras-sara.png"/>
+					<h3>Sara</h3>
+					<p>Journalist and former dog mother currently searching for her kitty-daughter. Graduate student in DAV.</p>
+				</div>
+				<div className={css.textLogo}>
+					<img alt="" className={css.logo} src="/images/article-vras-tk.png"/>
+					<h3>Tk</h3>
+					<p>Philosophy & CS graduate turned Analyst. Now a DAV student with a love for fonts and colours.</p>
+				</div>
+
+				<h2>The Technology</h2>
+				<p>The base of the website is built on wordpress and hosted on the Pratt commons to better enable content management. The theme we selected from wordpress was altered with custom CSS to match our topic. We also considered accessibility when it comes to fonts, color, multimedia elements, and the organization of the website. We also used the functions on wordpress to embed YouTube videos as well as Tweets to serve the content that we are proceeding.</p>
+				
+				<h2>The Design</h2>
+				<p>The base deisgn we used was the Paperio Child theme created by themezaa. From there we tweaked the original colour pallete to create a more unified red/black.white experience. A custom logo was created in illustrator. An off white was chosen as the background colour for the body in order to better differentiate it from the navigation menu. We also opted for a flat navigation spread in order to make the site easier to use. Some cutsom CSS was added to the footer in order to make the font visible with the chosen coloud scheme</p>
+				
+				<h2>The Reflections</h2>
+				<p>There were some initial concerns surrounding producing a website as a group, since with multiple people decisionmaking always has the potential to become fraught. However, we found that, thanks to fluid ideating sessions and continual, transparent communication, we were able to divvy up the work and that the workflow from beginning to end was smooth.</p>
+				<p>One issue that we talked about when creating the website was the lack of access to VR headsets. It is very difficult to try to explain these contents knowing that most of our audiences for this website probably do not have VR headsets at home. How do we best explain VR to them, so it’s not just a concept? Our solution was to use videos of actual content you can see in VR, actual people using VR, and actual creation happening in VR so that our audiences can make sense of what we are talking about. We had discussions about if we can rent out a VR headset, and jokingly said that it would be great if the website can also be viewed in a VR headset with cool effects. Even though these thoughts seem impossible right now, we still hope that in the future, as VR becomes more accessible, our talks can become reality.</p>
+				<p>This website only scratches the surface of the topics that we picked, but we hope that it gives people a different perspective when thinking and talking about VR. VR is a piece of technology, but more importantly, VR is art, a new space, a new way of looking and learning, a new way of collaborating and designing, new ways of healing. It introduces us to different worlds and stories, new experiences and feelings.</p>
+
+				<h2>The Content</h2>
+				<h3>Introduction - Tk Cram</h3>
+				<p>This page acts as not only an introduction to the world of VR, but also as a jumping off point for the rest of the webstie. It’s comprised of three major components. The first is a general breakdown of terms on what VR in, and some links if the user wants to learn more. The second it a timeline of developments in VR, mostly from the technological point of view as including pop culture references became combersome (Sorry wachowskis). Thirdly it provides an overview of the major players currently on the market what they offer. We end off with a prompt to click through to other pages on the site and explore more of what VR has to offer</p>
+				
+				<h3>as Art - Ziqi Wang</h3>
+				<p>Artists in different fields are using VR in different ways to assist their immersive and interactive art projects. It aims to give the audiences some ideas on how VR is connected to arts in different ways and how this technology is pushing the boundaries of arts. VR paint brushes and sculpting programs alow artists to create art in 3D spaces, without the space limits for just 2D canvas. VR is also a place for artists to exhibit their arts, which allows them to experiment with different ways of presenting their projects and pieces, allowing more audiences to engage with their art works. For art galleries and museums, VR can help them experiment with different ways of presenting their projects and pieces, allowing more audiences to engage with their art works. Two videos are added to the page, and hopefully they will give people an idea of how VR technology is being used under different circumstances, and that they are more than just a piece of technology.</p>
+				 
+				<h3>as Education - Sara Kim</h3>
+				<p>VR can be a helpful learning tool in classrooms. For students learning such math as the 3D Cartesian coordinate system in which there are x, y, and z axes, VR offers a clearer understanding of how these three axes interact with one another in comparison to using a traditional 2D medium. Students can also immerse themselves in such worlds as the ocean to learn about marine biology, a computer-simulated interior of the human body in a biology class, or in space to learn about the universe in a physics and astronomy class. In higher education, students can utilize VR in a variety of disciplines. For example, in electrical engineering education, students can carry out such tasks as comparing structural differences between devices and assembling and disassembling machines and testing them under extreme conditions that would otherwise be too dangerous in a real-world experiment. There are even projects that allow users to step back in time to experience such situations as a particular sociopolitical climate from our past such as the Oakland Virtual Reality Project that allows anyone with access to a VR headset or a mobile phone in a VR cardboard case setup to experience the Black Panther Party’s 1968 office in Oakland, CA, a time of great racial and class tension in the US. Some organizations even use VR to educate their employees on a variety of issues, such as safety by immersing workers in situations that simulate real life.</p>
+				
+				<h3>as Entertainment - Jiacheng Chen</h3>
+				<p>Personal VR devices were initially introduced to the public as an entertainment tool. Its immersive interaction led to applications in gaming, travel and cinema, and completely changed the public’s perception of these fields. Experience and immersion are essential elements of VR gaming. Players can see things in a virtual environment with unlimited 360-degree views, and can also access sensory simulations such as sight, sound, and touch as if they were actually there. VR movies expand the boundaries of traditional cinema, allowing the user to be not only a viewer, but also a participant. Virtual reality tourism allows people to experience the landscape freely, without the restrictions of the real world. It gives people more perspectives than ever before and brings a whole new experience to the journey.</p>
+				  
+				<h3>as Teleoperations - Tk Cram</h3>
+				<p>Since the early days of VR, it has had military applications. Mcdonnel Douglas created an early prototype of VR head mounted displays to train pilots. Since then it has been used to train infantrymen, construction works, and doctors, all in a safe training environment. But with the develoment of robotics and communications technologies, an exciting development is the ability to hook up these VR simulations directly into real world agents. We’ve all seen the video of them performing surgery on a grape, and that was only a proof of concept. This has promising applications in cleaning up areas contaminated with radiation or providing expert skills anywhere in the world. Perhaps most exciting is the ability for astronauts to run robotic missions, such as exploring planetary surfaces or doing external satellite maintenence all while in the safety of their spacecraft.</p>
+				
+				<h3>as Social Media - Ziqi Wang</h3>
+				<p>VR technology provides people with a variety of social platforms and people are using them for different purposes. Some of the platforms are purely for social interactions and function like social media in the real world, and others like gaming platforms on VR can also act as social platforms. These programs allow people to create their own avatar, interact with friends in the virtual world. These places not only allow people to socialize and interact with each other, but also allow creative collaborations between people. Artists use these platforms to create as well as present their work. During the Covid-19 pandemic, many companies also moved their working spaces there, so that their employees can do their work more efficiently. This also helps people to feel less lonely, giving them the psychological support that they need. Video on how to create a virtual movie theater to watch movies with friends to demonstrate just how much VR can mimic the physical world and allows actual conversation to happen. There is also the latest news of a couple being the first to get married in the Metaverse, which further proves how VR brings people together.</p>
+				  
+				<h3>as Viewing - Jiacheng Chen</h3>
+				<p>VR is a much more natural and immersive form of media that transfers real-world objects into virtual environments. Its properties as a medium in a commercial context increase expression efficiency and reduce the gap between creators and consumers. For example, by immersing themselves in a virtual replica of their work, architects are able to create more compelling scenes. With VR headsets and controllers, designers can view and modify the details of their designs in a more intuitive way. And it’s not just designers who are benefiting from VR technology; clients are also using the same tool to make better decisions. In the real estate market, clients can experience the details of a building in a 3D environment before it is built, helping them make more informed purchase decisions.</p>
+				
+				<h3>as Wellbeing - Sara Kim</h3>
+				<p>Virtual reality exposure therapy (VRET) is a treatment option for those struggling with issues such as phobias, anxiety, and PTSD. Using a VR headset, the patient works with an experienced therapist to confront their fears through experiential learning without being exposed to the possibility of real physical danger and/or an emotional meltdown in front of onlookers. While one potential fallback can be the unrealistic feeling of computer-rendered digital worlds, some therapists use virtual reality cameras to record real-life situations, locations, etc, for a more realistic experience. Examples of patients using VRET are soldiers who’ve experienced war and people who have a variety of phobias, such as a fear of heights, flying, public speaking, etc. VR immersion for meditation is another tactic used to calm anxieties in general VR users as well as patients who suffer from anxiety and mood disorders.</p>
+				  
+				<h2>The References</h2>
+				<h3>Videos</h3>
+				<ul>
+					<li><p>Anna dream brush. Bird Gamayun Virtual reality painting (Tilt Brush), 2018. https://www.youtube.com/ watch?v=HUW49IKs1kE</p></li>
+					<li><p>Atlas Bay VR. High-End Virtual Reality for Real Estate Full, 2017. https://www.youtube.com/ watch?v=8l9qRDMVNRY.</p></li>
+					<li><p>Dezeen. Virtual Reality Offers Architects “a Whole New Way of Designing,” 2016. https://www.youtube.com/ watch?v=SLfW2WbpIHE.</p></li>
+					<li><p>Futurism. Practice Operating Heavy Contruction Equipment in VR, 2017. https://www.youtube.com/ watch?v=huzIkUzX0tI</p></li>
+					<li><p>HTC VIVE. Mona Lisa: Beyond the Glass at The Louvre I HTC VIVE ARTS, 2019. https://www.youtube.com/ watch?v=Au_UpzhzHwk</p></li>
+					<li><p>IGN. Steven Spielberg Directing Ready Player One Using a VR Headset, 2018. https://www.youtube.com/ watch?v=trUexo_Tvkg.</p></li>
+					<li><p>“Learn More About Virtual Reality (VR) Collaboration Platforms”. G2.Com, https://www.g2.com/categories/ vr-collaboration</p></li>
+					<li><p>LSToast. Attempting RUSH E AGAIN in Beat Saber, 2021. https://www.youtube.com/watch?v=VGzfZRyS7B0.</p></li>
+					<li><p>PaleBlue. Virtual Reality ROV Underwater Robot Steering, 2020. https://www.youtube.com/watch?v=OH-0_IhOwis</p></li>
+					<li><p>sky100. Sky100: VR Time Travel: Step into Old Hong Kong 天際100: VR 時光倒流香港遊 2019. https://www.youtube.com/watch?v=ZbSHIQFYdTk.</p></li>
+					<li><p>UNSW eLearning. MATH1131 Mathematics 1A — Introduction to the Vector Geometry Virtual Reality Experience, 2018. https://www.youtube.com/watch?v=FVEs4ctwkcY</p></li>
+					<li><p>VRScout. How to Watch TV & MOVIES With Friends On OCULUS QUEST 2!, 2020. https://www.youtube. com/watch?v=_B_6e72AN1w</p></li>
+					<li><p>OPB. Can Virtual Reality Replace Opioids As Pain Treatment?, 2019. https://www.youtube.com/watch?v=O0yRL4AOZII</p></li>
+				</ul>     
+
+				<h3>Articles:</h3>
+				<ul>
+					<li><p>“Air Force Unmanned Aerial Vehicle (UAV) Pilots Use Virtual Reality For Training And Mission Rehearsal”. Militaryaerospace.Com, 2021, https://www.militaryaerospace.com/computers/article/14204624/virtual-reality-unmanned-training.</p></li>
+					<li><p>Barreda-Ángeles, Miguel, and Tilo Hartmann. “Psychological Benefits Of Using Social Virtual Reality Platforms During The Covid-19 Pandemic: The Role Of Social And Spatial Presence”. Computers In Human Behavior, vol 127, 2021, p. 107047. Elsevier BV, doi:10.1016/j.chb.2021.107047.</p></li>
+					<li><p>“Black Panther Party”. Klapty, https://tour.klapty.com/7Zm0sdyhfv/?deeplinking=true&startscene=0&startactions=lookat(5.86,0,60.5,0,0);.</p></li>
+					<li><p>Blum, Dani. “Virtual Reality Therapy Plunges Patients Back Into Trauma. Here Is Why Some Swear By It.”. Nytimes, 2021, https://www.nytimes.com/2021/06/03/well/mind/vr-therapy.html.</p></li>
+					<li><p>Brody, Jane E. “Virtual Reality As Therapy For Pain (Published 2019)”. Nytimes, 2019, https://www.nytimes. com/2019/04/29/well/live/virtual-reality-as-therapy-for-pain.html.</p></li>
+					<li><p>Coates, Charlotte. “Virtual Reality Is A Big Trend In Museums, But What Are The Best Examples Of Museums Using VR?”. Museumnext, 2021, https://www.museumnext.com/article/how-museums-are-using-virtual-reality/.</p></li>
+					<li><p>Coghlan, A. and Lewis Carter, L. “New Product Design: Creating a Digital VR Game to Promote the Conservation of Nature-Based Tourism Attractions.” Emerald Publishing Limited, 2020. https://doi.org/10.1108/978-183982-688-720201011.</p></li>
+					<li><p>Dirk Eitzen. “The Problems and Potentials of VR for Documentary Storytelling.” Cinergie, no. 19 (August 1, 2021): 43–55. https://doi.org/10.6092/issn.2280-9481/12212.</p></li>
+					<li><p>Gordon, Rachel. “Teleoperating Robots With Virtual Reality | MIT CSAIL”. Csail.Mit.Edu, 2021, https://www. csail.mit.edu/news/teleoperating-robots-virtual-reality.</p></li>
+					<li><p>Higginbottom, Justin. “Virtual Reality Is Booming In The Workplace Amid The Pandemic. Here’S Why”.</p></li>
+					<li><p>CNBC, 2020, https://www.cnbc.com/2020/07/04/virtual-reality-usage-booms-in-the-workplace-amid-the-pan-demic.html. Accessed 14 Dec 2021.</p></li>
+					<li><p>Kamińska, D., Zwoliński, G., Wiak, S. et al. “Virtual Reality-Based Training: Case Study in Mechatronics.” Tech Know Learn 26, 1043–1059 (2021). https://doi.org/10.1007/s10758-020-09469-z</p></li>
+					<li><p>Kim, Joo-heon. “Seoul To Provide Safety Education Using Virtual Reality Technologies”. Ajudaily.Com, 2021, https://www.ajudaily.com/view/20211029163342759.</p></li>
+					<li><p>NIDA. “Part 1: The Connection Between Substance Use Disorders and Mental Illness.” National Institute on Drug Abuse, 13 Apr. 2021, https://www.drugabuse.gov/publications/research-reports/common-comorbidities-substance-use-disorders/part-1-connection-between-substance-use-disorders-mental-illness</p></li>
+					<li><p>“Recovery Centers Of America Collaborates With Johns Hopkins Healthcare Solutions To Introduce Virtual Reality Treatment Enhancement At Two Maryland Facilities”. Prnewswire.Com, 2021, https://www.prnewswire. com/news-releases/recovery-centers-of-america-collaborates-with-johns-hopkins-healthcare-solutions-to-introduce-virtual-reality-treatment-enhancement-at-two-maryland-facilities-301405324.html.</p></li>
+					<li><p>Surowidjojo, Arya. “VR Gives Oregon Patients And Doctors An Alternative To Opioids”. Opb, 2018, https:// www.opb.org/news/article/virtual-reality-pain-treatment-opioids-providence-legacy-health/. Accessed 14 Dec 2021.</p></li>
+					<li><p>“U.S. FDA Authorizes Virtual Reality System For Reducing Back Pain”. Reuters, 2021, https://www.reuters.com/ business/healthcare-pharmaceuticals/us-fda-authorizes-virtual-reality-system-reducing-back-pain-2021-11-16/.</p></li>
+					<li><p>Vichitvejpaisal, P. ( 1 ), N. ( 2 ) Porwongsawang, and P. ( 3 ) Ingpochai. “Relive History: VR Time Travel at the World Heritage Site.” In Proceedings VRCAI 2019: 17th ACM SIGGRAPH International Conference on Virtual-Reality Continuum and Its Applications in Industry. Association for Computing Machinery, Inc, 2019. https:// doi.org/10.1145/3359997.3365733.</p></li>
+            	</ul>
+			</>
+		), 
+		headings: [
+			{	 
+				text: "Summary", 
+				ref: "#summary" 
+			},
+			{	text: "Introduction",
+				ref: "#introduction" 
+			},
+			{	text: "Methodlogy",
+				ref: "#methodolgy" 
+			},
+			{	text: "Recommendations",
+				ref: "#recommendations"
+			},
+			{	text: "Conclusion",
+				ref: "#conclusion"
+			},
+			{	
+				text: "Appendix",
+				ref: "#appendix"
+			},
+			{	
+				text: "References",
+				ref: "#references"
+			},
+		]
+	},
+
+	"wak-eval":{ 		
+		id:"wak-eval", 
+		markup: ( 
+			<>
+				<img src="/images/article-wak-banner.png" className={css.banner} alt=""/>
+				<h1 className={css.title}>WeAreKnitters.com: Remote User Testing Report</h1>
+				{/*<p className={css.byline}>Originally published on <a href="http://ixd.prattsi.org/2022/09/design-critique-bnz-iphone-app/">IXD@Pratt</a> on Septermber 13, 2022</p>*/}
+				<p>Tk Cram, Sandy Leegumjorn, Roey Wang</p>
+
+				<h2 id="summary">Summary</h2>
+				<p>We Are Knitters sells knitting kits and supplies, such as needles, wools, and yarn. What sets We Are Knitters apart from other knit websites is that it gives detailed tutorials specifically for the kits along with rated levels from beginner to advanced, and a knit community where people can join. While the interface as a whole is well designed, additional iteration of the design is important to both keep up with modern best practices, and continuing to improve the user experience</p>
+				<p>In order to identify areas for improvement on the site, the research team conducted Unmoderated Remote User Testing (URUT). URUT is a testing method that does not require researchers to attend the usability testing session, but instead, participants that fit the target audience of an interface are the ones doing the tasks and answering the follow-up questions. This test is done through a software application that provides instructions, tasks, and questions, while recording their action and screen real-time.</p>
+				<p>This particular testing was done via UserTesting.com, a platformed connecting potentially users to user researchers. In total, nine participants were recruited to complete four seperate tasks, as well as answer three follow up questions. These tasks we designed to move the user through three key areas of the site: Purchasing a product, accessing resources, and joining the community. Overall participants were complimentary of the interface, but did encounter several issues. It is these issues that this report investigates, and offers potential approaches on how to improve them. Namely:</p>
+				<ol>	
+					<li><p>Provide more information on the kit options page.</p></li>
+					<li><p>Create a “Knitting Parties” tab in the navigation bar.</p></li>
+					<li><p>Re-order and reduce the number of pop-up modals.</p></li>
+				</ol>
+				
+				<h2 id="introduction">Introduction</h2>
+				<p>We are knitters is an eCommerce website specialising in DIY fibre arts kits. You select the item you want to make, and they send you all the materials, tools, and instructions you need to create it. They also host online resources including video tutorials and community forums. The company also has a deep commitment to sustainability and renewability, ensuring all their products meet a certain standard.</p>
+				<p>Of their approximately 400,000 customers, almost a third of them have never knitted before in their life. Being such a significant proportion of their base, it is important that these users have a positive experience, and ideally become return customers. This study focuses in on those users, and follows their journey as they take their first steps with We Are Knitters. Along the way, we examine possible difficulties they may encounter, and usability issues that might dissuade them from continuing.</p>
+				
+				<h2 id="methodology">Methodology</h2>
+				<h3>Unmoderated Remote User Testing</h3>
+				<p>User testing is an umbrella term for a wide variety of tests that aim to put the user as the focal point for designing interfaces. These tests can take place anywhere from the users natural environment to a controlled lab setting, can be performed in person or via teleconferencing software, and researchers can involve themselves as little or as much as they desire.</p>
+				<p>While traditional user testing that takes place in a lab, having participants perform tasks while being observed by researchers, unmoderated remote user testing (URUT) allows researchers to examine users in their natural environment by employing screen-sharing software. It offers the benefits of observing and getting user feedback without the high overhead costs and time burden of running face-to- face studies. This method was selected in order to gain qualitative insights from potential real-life users.</p>
+				<p>For this study, the team utilised tools available on Usertesting.com to recruit participants, record the tests, and present post-test questions.</p>
+				
+				<h3>Users & Tasks</h3>
+				<p>Three evaluators were given three tasks to complete on the FoodNetwork.com website. As tasks were completed, evaluators took note of any violations of as well as their severity, with 1 being inconvenient, and 4 being severe. Tasks were completed with no restrictions other restrictions such as time or number of clicks:</p>
+				<p>The team selected participants with the following characteristics:</p>
+				<ol>
+					<li><p>Age: 18-65+ years old</p></li>
+					<li><p>Household Income: $19,999 - $99,999</p></li>
+					<li><p>Gender: Any</p></li>
+					<li><p>Web Browsers: Chrome</p></li>
+					<li><p>Country: Any</p></li>
+					<li><p>Operating System: Any</p></li>
+				</ol>
+				<p>We also set a screener question to filter our participants. People who answer “Yes” to the question “Have you ever completed a fibre arts project (e.g., knitting, crocheting?)” will be selected to do the next round of tasks.</p>
+				<h4>Scenario</h4>
+				<p>You want to give your friend a winter sweater this Christmas, which you want to knit yourself to show how appreciative you are of the friendship. You are trying to learn how to knit a sweater on weareknitters.com.</p>
+				<h4>Tasks:</h4>
+				<ol>
+					<li><p>Find any sweater kit that would be appropriate for a complete novice. Feel free to change colors/sizing based on someone you know, then add it to your cart. Move on the next task.</p></li>
+					<li><p>In your own words, tell us what the item you selected contains. Is there anything that's unclear?</p></li>
+					<li><p>While you wait for the order to arrive, you decide to get a head start on learning what you need to do. Find the tutorials specific to the skills used in the kit you selected.</p></li>
+					<li><p>Perhaps you learn better by receiving in person instruction. Without leaving the website, find out where you can go to work on your project in a group setting.</p></li>
+				</ol>
+				<h4>Post-test questionnaire:</h4>
+				<ol>
+					<li><p>Tell us about your overall experience after completing the web tasks. What’s your first impression of this website?</p></li>
+					<li><p>What did you like about the site? Is there anything that confused you during the process? What suggestions will you give to improve this website’s browsing experience?</p></li>
+					<li><p>How likely are you to recommend this site to a friend or colleague (0=Not at all likely, and 10=Very likely)?</p></li>
+				</ol>
+
+				<h3>Analysis</h3>
+				<p>Once the user tests had been completed, the videos were reviewed by the researchers, taking note of any issues the participant encountered, or suggestions they made. These notes were then collated into a single spreadsheet using a ‘rainbow style’ in order to compare and contrast the various participants. The team then collectively analysed these results in order to determine which issues most needed to be addressed, and how that could be accomplished.</p>
+
+				<h2 id="recommendations">Recommendations</h2>
+				<p>Users were pleased with the site overall and the parts of the interface that were tested. One user stated “I liked the organisation of the site. Nothing confused me.” The issues that were noted typically involved minor tweaks, such as font size/colour, or finding specific pieces of information. All participants successfully completed the first two tasks, involving the main shopping flow, and only one failed to find tutorial information. However users typically struggled with the fourth task, involving community events, which recommendation 3 directly discusses.</p>
+				<h3>1) Provide More Information On The Kit Options Page</h3>
+				<h4>Issue:</h4>
+				<p>The current kit options page don’t include detailed information, like the needle’s difference, wool quality descriptions, or available yarn colour choices, which make users confused during their shopping process.</p>
+				<h4>Solution:</h4>
+				<p>To provide more information to help users decide which needle size is suitable for them, adding a question mark indicator beside “Needle” option will be appropriate. When users click on it, it can expand to show details (Fig.1). On the browsing page, including a line of available yarn colour options will allow users to know what they can choose at their first glance (Fig.2). The wool quality descriptions can be included in the “Product Details” section to let users learn more about the kit they are going to buy (Fig.3). All of the above options will allow users to be better informed about what it is they’re purchasing, and prevent any confusion that may interfere with purchasing the product.</p>
+				
+				<figure className={css.figure}>
+					<img className={css.figureImage} src="/images/article-wak-1.png" alt=""/>
+					<figcaption className={css.caption}>FIG.1 ADD AN EXPLANATION INDICATOR BESIDE “NEEDLE”</figcaption>
+				</figure>
+
+				<figure className={css.figure}>
+					<img className={css.figureImage} src="/images/article-wak-2.png" alt=""/>
+					<figcaption className={css.caption}>FIG.2 ADD AVAILABLE COLOUR OPTIONS</figcaption>
+				</figure>
+
+				<figure className={css.figure}>
+					<img className={css.figureImage} src="/images/article-wak-3.png" alt=""/>
+					<figcaption className={css.caption}>FIG.3 WOOL QUALITY DESCRIPTION</figcaption>
+				</figure>
+
+				<h4>Further recommendations:</h4>
+				<p> Creating good documentation and tooltips across the entire site is recommended. As We Are Knitters targets a moderately novice demographic, striking the balance is a must between providing them all the information they need while not overloading them.</p>
+
+				<h3>2) Create a “Knitting Parties” tab in the navigation bar.</h3>
+				<h4>Issue:</h4>
+				<p>The option to join the community and look up events is difficult to find. “Knitting Parties” is under “Tutorials” which is not the best categorisation as users missed out the option entirely. The button does not look like a link and there is no signifier. “Knitting Parties” looks like a photo caption instead of a link and it is far to the right side which most users looked over that option (Fig 3).</p>
+				<h4>Solution:</h4>
+				<p>Adding its own section labeled as “Knitting Parties” in the navigation bar will allow users to find an option to join the community and look up knitting events. There is a signifier which is a hover, along with a drop down with 3 subcategories – Join a Party, Host a Party, and #knittingparties (Fig 4). Having a hover and drop down will allow users to know that the button is interactive as well as knowing where it will take them and what are the subcategories. Being able to drive community engagement is vital when building a brand, and this recommendation seeks to put that community front and centre.</p>
+				
+				<figure className={css.figure}>
+					<img className={css.figureImage} src="/images/article-wak-4.png" alt=""/>
+					<figcaption className={css.caption}>FIG. 4: CURRENT “KNITTING PARTIES” LOCATION</figcaption>
+				</figure>
+
+				<figure className={css.figure}>
+					<img className={css.figureImage} src="/images/article-wak-5.png" alt=""/>
+					<figcaption className={css.caption}>FIG. 5: MOCK-UP OF ‘KNITTING PARTIES’ AS PART OF THE NAVIGATION BAR</figcaption>
+				</figure>
+
+				<h4>Future Recommendations:</h4>
+				<p>All links should be designed in a way that users know that it is interactive as well as knowing where it will take them. Categories should be arranged in a way that makes sense to the users and the placement of a link or button should be where it is easy to find. Additional testing of the site map is recommended, such as via a Card Sort.</p>
+					
+				<h3>3) Re-order and reduce the number of pop-up modals.</h3>
+				<h4>Issue:</h4>
+				<p>Currently, when a new user first lands on the website they are required to interact with 3 pop-up modals before they can engage with the content. Although these can contain important information, users can become frustrated by the experience and become inclined to leave the website. This issue is exacerbated by the fact that it is not always clear that the modal needs to be interacted with in a specific way, leaving the user confused as to why they cannot interact with the content.</p>
+				<h4>Solution:</h4>
+				<p>The simplest solution to these issues is to allow the user to either ignore the modal (in the case of the cookies) or dismiss them by interacting outside of their bounding box (in the case of preferences/promotions). Alternatively, if the regional preferences are mandatory, ensure they are the first to load when a user lands on the site. It is typically easier to understand that a pop-up is blocking interaction than a cookie menu. If a user is met with significant difficulty, or worse errors, when visiting a site for the first time, they’re likely leave. The goal of this recommendation is to eliminate those pain points, and get the users shopping as fast as possible.</p>
+				
+				<figure className={css.figure}>
+					<img className={css.figureImage} src="/images/article-wak-6.png" alt=""/>
+					<img className={css.figureImage} src="/images/article-wak-7.png" alt=""/>
+					<img className={css.figureImage} src="/images/article-wak-7.png" alt=""/>
+					<img className={css.figureImage} src="/images/article-wak-9.png" alt=""/>
+					<figcaption className={css.caption}>Modals for (1) Cookies (2) Preferences (3) Call to Action before finally reaching (4) Content</figcaption>
+				</figure>
+
+				<h4>Future Recommendations:</h4>
+				<p>Consider the need for each of the modals in turn. While cookie management is mandatory in several jurisdictions, location preferences can simply be inferred from an IP address, and the option to change it can be presented later. The call to action could be removed, or at least moved to later in the user flow (e.g. during checkout). It may also be beneficial to instantiate it as a banner, rather than a pop-up.</p>
+
+				<h2 id="conclusion">Conclusion</h2>
+				<p>We Are Knitters website’s main purpose is to sell knitting kits and supplies, as well as giving tutorials based on each customer’s level – beginner to advanced. This website is also a way for users that like knitting to join the knitting community. However, this website contains some major usability issues that need to be fixed. After conducting an unmoderated remote user testing with a total of 9 participants, we have come up with 3 key recommendations to further improve the website and its key features.</p>
+				<ol>	
+					<li><p>Provide more information on the kit options page</p></li>
+					<li><p>Create a “Knitting Parties” tab in the navigation bar.</p></li>
+					<li><p>Re-order and reduce the number of pop-up modals.</p></li>
+				</ol>
+				<p>The goal of the Unmoderated Remote User Testing of We Are Knitters is to fix the interface in a way to allow users to fully utilise the key features of this website. With these recommendations, the website will be able to give its users a better usability experience which will lead to a better knitting experience, which we believe is We Are Knitters’s primary goal.</p>
+
+				<h2 id="appendix">Appendix</h2>
+				<h3>Table of Participants</h3>
+				<table>
+					<tr><th>Participant</th><th>Age</th><th>Gender</th><th>Household Income</th><th>Duration</th></tr>
+					<tr><td>1</td><td>39</td><td>Female</td><td>less than $19,999</td><td>12:17</td></tr>
+					<tr><td>2</td><td>18</td><td>Male</td><td>$200,000+</td><td>5:28</td></tr>
+					<tr><td>3</td><td>57</td><td>Female</td><td>$60,000 - $79,999</td><td>23:13</td></tr>
+					<tr><td>4</td><td>20</td><td>Female</td><td>less than $19,999</td><td>6:54</td></tr>
+					<tr><td>5</td><td>24</td><td>Female</td><td>$80,000 - $99,999</td><td>14:20</td></tr>
+					<tr><td>6</td><td>30</td><td>Male</td><td>less than $19,999</td><td>12:31</td></tr>
+					<tr><td>7</td><td>25</td><td>Non-binary</td><td>$19,999</td><td>20:29</td></tr>
+					<tr><td>8</td><td>31</td><td>Male</td><td>$20,000 - $39,999</td><td>12:30</td></tr>
+					<tr><td>9</td><td>19</td><td>Male</td><td>$20,000 - $39,999</td><td>12:27</td></tr>
+				</table>
+
+				<h3>Participant task completion</h3>
+				<table>
+					<th>Participant</th><th>Task 1: Find any sweater kit that would be appropriate for a complete novice. Feel free to change colors/sizing based on someone you know, then add it to your cart. Move on the next task.</th><th>Task 2: In your own words, tell us what the item you selected contains. Is there anything that's unclear?</th><th>Task 3: While you wait for the order to arrive, you decide to get a head start on learning what you need to do. Find the tutorials specific to the skills used in the kit you selected.</th><th>Task 4: Perhaps you learn better by receiving in person instruction. Without leaving the website, find out where you can go to work on your project in a group setting.</th>
+					<tr><td>1</td><td>Success</td><td>Success</td><td>Success - but takes some time</td><td>Success</td></tr>
+					<tr><td>2</td><td>Success</td><td>Success - but feel confused about the function of the stitch holder</td><td>Success</td><td>Success</td></tr>
+					<tr><td>3</td><td>Success</td><td>Success</td><td>Success - but takes a long time</td><td>Failure - the navigation is pool and cannot find the right place</td></tr>
+					<tr><td>4</td><td>Success</td><td>Success</td><td>Success</td><td>Failure - missed out the option entirely.</td></tr>
+					<tr><td>5</td><td>Success</td><td>Success - lack of needles and other materials description for beginners.</td><td>Success but the tutorials are not helpful for beginners.</td><td>Success - some difficulties when looking for "knitting parties".</td></tr>
+					<tr><td>6</td><td>Success</td><td>Success</td><td>Success but missed out the tutorial section entirely at first</td><td>Failure - didn't find the option</td></tr>
+					<tr><td>7</td><td>Success</td><td>Success - lack of wool material descriptions</td><td>Failure - search outside of the original website</td><td>Failure -didn't realize that he can find the information without leaving the website</td></tr>
+					<tr><td>8</td><td>Success</td><td>Success - n/a</td><td>Success</td><td>Failure -didn't find the right place/ thought the "home school" was the right one</td></tr>
+					<tr><td>9</td><td>Failure - didn't find a sweater kit for novice</td><td>Success</td><td>Success</td><td>Failure -thought "join the community" was the right option</td></tr>
+				</table>
+
+				<h3>Post-Test Responses</h3>
+				<table>
+					<tr><th>Participant</th><th>Post-test Question 1: Tell us about your overall experience after completing the web tasks. What’s your first impression of this website?</th><th>"Post-test Question 2: What did you like about the site? Is there anything that confused you during the process? What suggestions will you give to improve this website’s browsing experience?</th><th>Post-test Question 3: How likely are you to recommend this site to a friend or colleague (0=Not at all likely, and 10=Very likely)?</th></tr>
+					<tr><td>1</td><td>I liked the large images and the images in the colors sections. I think this made it easy to choose an item. I like that the site offers tutorials as well as a party hosting platform to bring knitters together.</td><td>I wish the first link I clicked on for the "We are Knitters" page took me to the same page as the second link I clicked on for that page. It also might be helpful to include a clearer description of the differences between the patterns formats or maybe separate the digital and physical items. I would change the item details page so that the details and images share an equal amount of space on the page. The current details take up most of the page and it looks a little uneven. I'd also streamline the we are knitters page and organize the videos there into a menu so you don't have to scroll through so many video thumbnails.</td><td>2</td></tr>
+					<tr><td>2</td><td>Very easy to use and a very organized UI</td><td>Nothing its a very easy to use site, It could just use a little more clarity on the addons, like adding definitions to them.</td><td>8</td></tr>
+					<tr><td>3</td><td>What I like or more like loved about this site is the colors and the awesome quality photos. I also loved the products offered.</td><td>The most frustrating thing about this site is the tiny words. It's difficult to see and not friendly to those who have a seeing disability. Make the lettering much better for those who are impaired. Most people who knit tend to wear glasses. And, I still don't know where to go for the 1/1 knitting instruction session. The navigation is a bit troublesome.</td><td>5</td></tr>
+					<tr><td>4</td><td>The first impression I had was that this website is very organized. It was really easy to find what I needed.</td><td>I liked the organization of the site. Nothing confused me.</td><td>10</td></tr>
+					<tr><td>5</td><td>The pop ups that kept appearing when I first got to the site and was trying to navigate it were frustrating. I felt it was harder to stay focused on where I was clicking. The general UI felt a bit clunky and disorganized.</td><td>I liked under the product page there were icons being used to represent what I was purchasing which was helpful. I will say that when I searched by level, I didn't see any filters to define that I only wanted to look for sweaters. I would've liked that rather than having to scroll and look at every item that was on the screen and not even a sweater.</td><td>8</td></tr>
+					<tr><td>6</td><td>I could not find the last task, working with other people. Also wish there was a category for specific items people wanted to make like the sweater. Everything else seemed to run smoothly like a standard website.</td><td>I liked the layout of the crochet knits. I was a little confused on how to find the tutorials at first, thought they would be on the product page for the sweater. I would link tutorials maybe on each product page for tutorials.</td><td>6</td></tr>
+					<tr><td>7</td><td>I really liked the idea of the store, I believe my people would love to consume from them. I am happy with the site experience I feel good about it. Just the note about seeing more consumer content</td><td>Not really, just maybe adding some of the experience of the making and final results, but further than that is a well made site</td><td>Maybe a 6, I have a couple friends who would love the idea of the store, but I did not saw any international shipping.</td></tr>
+					<tr><td>8</td><td>Very clean cut website. maybe needs a tiny bit more style to make it just that tiny bit more unique</td><td>where to find the tutorials</td><td>10 with a little bit of touches to make it look that little bit more unique</td></tr>
+					<tr><td>9</td><td>My overall experience with this website was great they show a lot of information and tutorials and guides on how to knit for beginners and new learners with also quality knitting accessories</td><td>When i first was on the website it was a little confusing but after i got the hang of it i was fine</td><td>A 9 I would recommended definitely to family and friends as this is an amazing website with a lot of quality attributes</td></tr>
+				</table>
+
+				<h2 id="references">References</h2>
+				<p>Cabrera-Mieles, Z. (2019). The Rainbow Sheet: A Visual Method for Research Analysis. UX Collective. - rainbow table</p>
+				<p>Oleo-shop (n.d.). eCommerce success: the story of We Are Knitters. https://www.oleoshop.com/ en/blog/ecommerce-success-the-story-of-we-are-knitters-2</p>
+				<p>UserTesting.com (n.d.). http://usertesting.com</p>
+				<p>We Are Knitters (n.d.). https://www.weareknitters.com</p>
+			</>
+		), 
+		headings: [
+			{	 
+				text: "Summary", 
+				ref: "#summary" 
+			},
+			{	text: "Introduction",
+				ref: "#introduction" 
+			},
+			{	text: "Methodlogy",
+				ref: "#methodolgy" 
+			},
+			{	text: "Recommendations",
+				ref: "#recommendations"
+			},
+			{	text: "Conclusion",
+				ref: "#conclusion"
+			},
+			{	
+				text: "Appendix",
+				ref: "#appendix"
+			},
+			{	
+				text: "References",
+				ref: "#references"
+			},
+		]
 	},
 }
 

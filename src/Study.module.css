@@ -49,9 +49,23 @@
 	gap: 2px;
 }
 
-.figureImage{
+.figureObject{
+  border: 2px solid var(--colour);
+  border-radius: 2px;
+  box-sizing: border-box;
+  margin: 5px;
 	max-width: 100%;
 	max-height: 50vh;
+}
+
+.figureText{
+  font-size: 10px;
+  padding: 5px;
+}
+
+.figureCaption{
+	font-style: italic;
+	font-size:14px;
 }
 
 .figMulti {
@@ -68,15 +82,54 @@
 	width: 33%;
 }
 
-.caption{
-	font-style: italic;
+.drawerBody{
+	overflow: scroll;
+	border: 2px solid var(--colour);
+	border-radius: 0 2px 2px 2px;
+	max-height: 50vh;
+/*	margin: 0 40px;*/
+}
+
+.buttonExpanded {
+    border-radius: 2px 2px 0 0 !important;
+}
+
+.drawerHeader{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.drawerTitle{
+	margin:0;
+}
+
+.drawerTable {
+	width: 100%;
+	font-size: 10px;
+	white-space:nowrap;
+	border-collapse: collapse;
+}
+
+.drawerTable tbody tr:hover{
+	background-color: var(--colour);
+}
+
+.drawerTable th, td{
+	padding: 5px;
+}
+
+.drawerTable td{
+	border-left: 1px solid #00000010;
+}
+
+.drawerTable td:first-child{
+	border-left: none;
 }
 
 .codeModule{
 	height: 255px;
-	width: 255px;
-	border: 2px solid var(--colour);
-	border-radius: 2px;	
+	width: 50vw;
 }
 
 .textLogo + *{
