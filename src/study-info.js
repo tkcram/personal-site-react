@@ -310,7 +310,7 @@ export const caseStudies = {
                         <div className={css.codeModule}>  
                             <button className="button">Output</button> 
                             <button className="button">Code</button> 
-                            <a href="">Github</a>            
+                            <a href="/">Github</a>            
                         </div>
                         <CodeBlock language="jsx" showLineNumbers={true} text={"This will eventually be a JSON blob called from the code"}/>
                         <CodeBlock language="python" showLineNumbers={true} text={"This will eventually be the Python code, with a button to switch between"}/>
@@ -325,7 +325,7 @@ export const caseStudies = {
                         <div className={css.codeModule}>  
                             <button className="button">Output</button> 
                             <button className="button">Code</button> 
-                            <a href="">Github</a>            
+                            <a href="/">Github</a>            
                         </div>
                         <CodeBlock language="jsx" showLineNumbers={true} text={"This will eventually be a JSON blob called from the code"}/>
                         <CodeBlock language="python" showLineNumbers={true} text={"This will eventually be the Python code, with a button to switch between"}/>
@@ -341,7 +341,7 @@ export const caseStudies = {
                         <div className={css.codeModule}>  
                             <button className="button">Output</button> 
                             <button className="button">Code</button> 
-                            <a href="">Github</a>            
+                            <a href="/">Github</a>            
                         </div>
                         <CodeBlock language="jsx" showLineNumbers={true} text={"This will eventually be a JSON blob called from the code"}/>
                         <CodeBlock language="python" showLineNumbers={true} text={"This will eventually be the Python code, with a button to switch between"}/>
@@ -356,7 +356,7 @@ export const caseStudies = {
                         <div className={css.codeModule}>  
                             <button className="button">Output</button> 
                             <button className="button">Code</button> 
-                            <a href="">Github</a>            
+                            <a href="/">Github</a>            
                         </div>
                         <CodeBlock language="jsx" showLineNumbers={true} text={"This will eventually be a JSON blob called from the code"}/>
                         <CodeBlock language="python" showLineNumbers={true} text={"This will eventually be the Python code, with a button to switch between"}/>
