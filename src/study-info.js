@@ -98,7 +98,7 @@ export const caseStudies = {
                             </table>
                         </Drawer>
                         <p>Most of the top banner is pulled from a wingspan dataset, compiled by a fan from the original game data. It’s missing a few key pieces of information, such as when abilities were activated, but proved sufficeint for our purposes. Given the time to expand on the project, entering more information into the dataset from the game would allow for more detailed mechanical descriptions.</p>
-                        <p>The long form descritions and imagesof the birds were taken from <a href="https://www.allaboutbirds.org/ rel="noreferrer"">All About Birds</a> by Cornell. As they don't expose a public API, the data was scraped by hand for the selected sample of birds. To expand on the project, either a more robust scraping or an alternate datasource would be in order.</p>
+                        <p>The long form descritions and imagesof the birds were taken from <a href="https://www.allaboutbirds.org/" rel="noreferrer">All About Birds</a> by Cornell. As they don't expose a public API, the data was scraped by hand for the selected sample of birds. To expand on the project, either a more robust scraping or an alternate datasource would be in order.</p>
                         <h4>The Viz</h4>
                         <p>There were two references I used when trying to decide how to display this information. The first comes from the book “Celebrating birds” which is a companion guide to the game itself. The second is All About Birds by Cornell</p>
                     </section>
