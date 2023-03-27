@@ -1,4 +1,4 @@
-import css from './Projects.module.css'
+import css from './Archive.module.css'
 import Footer from './Footer'
 import Blurb from './Blurb'
 import Header from './Header'
@@ -7,8 +7,8 @@ import ProjectModal from './ProjectModal'
 import { sections, projectInfo } from './project-info'
 import { useState } from 'react';
 
-const Projects = (props) => {
-	document.documentElement.style.setProperty('--colour','var(--projects)')
+const Archive = (props) => {
+	document.documentElement.style.setProperty('--colour','var(--archive)')
 	const [modalId, setModalId] = useState(null);
 	const projectsBySection = {};
 
@@ -54,4 +54,4 @@ const Projects = (props) => {
 	)
 }
 
-export default Projects;
+export default Archive;

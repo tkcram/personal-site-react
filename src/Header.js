@@ -25,8 +25,8 @@ const Header = () => {
 							</ul>
 						</li>
 
-						<li className={classnames(css.projects, css.item)}>
-							<NavLink to="/projects" className={({isActive}) => classnames(css.text, {"projects": isActive})}>Projects</NavLink>
+						<li className={classnames(css.archive, css.item)}>
+							<NavLink to="/archive" className={({isActive}) => classnames(css.text, {"archive": isActive})}>Archive</NavLink>
 						</li>
 
 						<li className={classnames(css.about, css.item)}>

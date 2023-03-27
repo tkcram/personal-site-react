@@ -24,6 +24,7 @@ const Portfolio = () => {
 								<div className={css.links}>
 									<a href={"/portfolio/" + study.id} className="button" rel="noreferrer">Case Study</a>
 									<a href={study.link} target="_blank" className="button" rel="noreferrer">Project</a>
+									{study.code && <a href={study.code} target="_blank" className="button" rel="noreferrer">Github</a>}
 								</div>
 							</div>
 						</div>

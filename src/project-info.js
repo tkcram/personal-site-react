@@ -1,9 +1,9 @@
 export const sections = {
 	VIZ: "Data Visualisation",
 	ANAL: "Data Analysis",
-	CODE: "Technology",
-	THOUGHT: "Research",
+	CODE: "User Interface",
 	UX: "User Experience",
+	THOUGHT: "Research",
 	DESIGN: "Design",
 	CIRCUS: "Performing Arts"
 }
@@ -64,7 +64,7 @@ export const projectInfo = {
 		},
 		{
 			text: "Report",
-			url: "/projects/bird-map"
+			url: "/article/bird-map"
 		},
 		{
 			text: "Github",
@@ -96,7 +96,7 @@ export const projectInfo = {
 		additionalLinks: [
 		{
 			text: "Report",
-			url: "/projects/bird-network"
+			url: "/article/bird-network"
 		},
 		{
 			text: "Data (TBD)",
@@ -128,7 +128,7 @@ export const projectInfo = {
 			},
 			{
 				text: "Report",
-				url: "/projects/nz-rent"
+				url: "/article/nz-rent"
 			},
 			{
 				text: "Data",
@@ -156,7 +156,7 @@ export const projectInfo = {
 			},
 			{
 				text: "Report",
-				url: "/projects/colour-history"
+				url: "/article/colour-history"
 			},
 			{
 				text: "Data",
@@ -236,6 +236,38 @@ export const projectInfo = {
 		tags: ["Python", "Flask", "Heroku", "Pratt"]
 	},
 
+	"nyc-parks": {
+		id: "nyc-parks",
+		image: "/images/project-parks.png",
+		fullTitle: "nycgovparks.org",
+		shortTitle: "nycgovparks.org",
+		abstract: "",
+		contributions: [],
+		section: sections.CODE,
+		isVisible: true,
+		citation: "",
+		link: "https://www.figma.com/proto/xmNITLhxfF5bXdZQ643M8g/Prototypes?node-id=122%3A18202&scaling=scale-down&page-id=117%3A17343&starting-point-node-id=122%3A18202",
+		additionalLinks: [
+			{
+				text: "Case Study",
+				url: "/portfolio/nyc-parks"
+			},
+			{
+				text: "Project (Desktop)",
+				url: "https://www.figma.com/proto/xmNITLhxfF5bXdZQ643M8g/Prototypes?node-id=122%3A18202&scaling=scale-down&page-id=117%3A17343&starting-point-node-id=122%3A18202"
+			},
+			{
+				text: "Project (Mobile)",
+				url: "https://www.figma.com/proto/xmNITLhxfF5bXdZQ643M8g/Prototypes?node-id=67%3A14014&scaling=scale-down&page-id=1%3A110&starting-point-node-id=67%3A14014"
+			},
+			{
+				text: "Website",
+				url: "https://www.nycgovparks.org/"
+			},
+		],
+		tags: []
+	},
+
 	"personal-site": {
 		id: "personal-site",
 		image: "/images/project-portfolio.png",
@@ -293,6 +325,23 @@ export const projectInfo = {
 	},
 
 	// Analysis
+	"lego-history": {
+		id: "lego-history",
+		image: "",
+		fullTitle: "",
+		shortTitle: "",
+		abstract:"",
+		contributions: [
+			],
+		section: sections.ANAL,
+		isVisible: false,
+		citation: "",
+		link: "",
+		additionalLinks: [
+		],
+		tags: []
+	},
+
 	"lego-colours": {
 		id: "lego-colours",
 		image: "/images/project-lego.png",
@@ -307,11 +356,11 @@ export const projectInfo = {
 		section: sections.ANAL,
 		isVisible: true,
 		citation: "",
-		link: "/projects/lego-colours",
+		link: "/article/lego-colours",
 		additionalLinks: [
 			{
 				text: "Report",
-				url: "/projects/lego-colours"
+				url: "/article/lego-colours"
 			},
 			{
 				text: "PDF",
@@ -468,7 +517,7 @@ export const projectInfo = {
 			},
 			{
 				text: "Report (todo)",
-				url: "/projects/ids"
+				url: "/article/ids"
 			},
 			{
 				text: "PDF",
@@ -488,11 +537,11 @@ export const projectInfo = {
 		section: sections.THOUGHT,
 		isVisible: true,
 		citation: "",
-		link: "/projects/guardian-viz",
+		link: "/article/guardian-viz",
 		additionalLinks: [
 			{
 				text: "Report",
-				url: "/projects/guardian-viz"
+				url: "/article/guardian-viz"
 			},
 			{
 				text: "PDF",
@@ -528,7 +577,7 @@ export const projectInfo = {
 			},
 			{
 				text: "Report",
-				url: "/projects/vr-as"
+				url: "/article/vr-as"
 			},
 			{
 				text: "PDF",
@@ -548,11 +597,11 @@ export const projectInfo = {
 		section: sections.THOUGHT,
 		isVisible: true,
 		citation: "",
-		link: "/projects/ai-ip",
+		link: "/article/ai-ip",
 		additionalLinks: [
 			{
 				text: "Report (todo)",
-				url: "/projects/ai-ip"
+				url: "/article/ai-ip"
 			},
 			{
 				text: "PDF",
@@ -573,7 +622,7 @@ export const projectInfo = {
 		section: sections.UX,
 		isVisible: true,
 		citation: "",
-		link: "/projects/nyphil-eval",
+		link: "/article/nyphil-eval",
 		additionalLinks: [
 			{
 				text: "Case Study",
@@ -581,7 +630,7 @@ export const projectInfo = {
 			},
 			{
 				text: "Report",
-				url: "/projects/nyphil-eval"
+				url: "/article/nyphil-eval"
 			},
 			{
 				text: "PDF",
@@ -609,11 +658,11 @@ export const projectInfo = {
 		section: sections.UX,
 		isVisible: true,
 		citation: "",
-		link: "/projects/wak-eval",
+		link: "/article/wak-eval",
 		additionalLinks: [
 			{
 				text: "Report",
-				url: "/projects/wak-eval"
+				url: "/article/wak-eval"
 			},
 			{
 				text: "PDF",
@@ -637,11 +686,11 @@ export const projectInfo = {
 		section: sections.UX,
 		isVisible: true,
 		citation: "",
-		link: "/projects/food-eval",
+		link: "/article/food-eval",
 		additionalLinks: [
 			{
 				text: "Report",
-				url: "/projects/food-eval"
+				url: "/article/food-eval"
 			},
 			{
 				text: "PDF",
@@ -665,11 +714,11 @@ export const projectInfo = {
 		section: sections.UX,
 		isVisible: true,
 		citation: "",
-		link: "/projects/bnz-eval",
+		link: "/article/bnz-eval",
 		additionalLinks: [
 			{
 				text: "Report",
-				url: "/projects/bnz-eval"
+				url: "/article/bnz-eval"
 			},
 			{
 				text: "App",
@@ -680,34 +729,36 @@ export const projectInfo = {
 	},
 
 	// Design
-	"nyc-parks": {
-		id: "nyc-parks",
-		image: "/images/project-parks.png",
-		fullTitle: "nycgovparks.org",
-		shortTitle: "nycgovparks.org",
-		abstract: "",
-		contributions: [],
+	"lego-typeface": {
+		id: "lego-typeface",
+		image: "",
+		fullTitle: "",
+		shortTitle: "",
+		abstract:"",
+		contributions: [
+			],
 		section: sections.DESIGN,
-		isVisible: true,
+		isVisible: false,
 		citation: "",
-		link: "https://www.figma.com/proto/xmNITLhxfF5bXdZQ643M8g/Prototypes?node-id=122%3A18202&scaling=scale-down&page-id=117%3A17343&starting-point-node-id=122%3A18202",
+		link: "",
 		additionalLinks: [
-			{
-				text: "Case Study",
-				url: "/portfolio/nyc-parks"
-			},
-			{
-				text: "Project (Desktop)",
-				url: "https://www.figma.com/proto/xmNITLhxfF5bXdZQ643M8g/Prototypes?node-id=122%3A18202&scaling=scale-down&page-id=117%3A17343&starting-point-node-id=122%3A18202"
-			},
-			{
-				text: "Project (Mobile)",
-				url: "https://www.figma.com/proto/xmNITLhxfF5bXdZQ643M8g/Prototypes?node-id=67%3A14014&scaling=scale-down&page-id=1%3A110&starting-point-node-id=67%3A14014"
-			},
-			{
-				text: "Website",
-				url: "https://www.nycgovparks.org/"
-			},
+		],
+		tags: []
+	},
+
+	"caribou-coffee": {
+		id: "caribou-coffee",
+		image: "",
+		fullTitle: "",
+		shortTitle: "",
+		abstract:"",
+		contributions: [
+			],
+		section: sections.DESIGN,
+		isVisible: false,
+		citation: "",
+		link: "",
+		additionalLinks: [
 		],
 		tags: []
 	},

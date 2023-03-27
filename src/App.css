@@ -3,7 +3,7 @@
 :root {
   --portfolio: #ff595e;
 /*  --yellow: #ffca3a;*/
-  --projects: #8ac926;
+  --archive: #8ac926;
   --about: #1982c4;
   --colour: black;
   scroll-behavior: smooth;
@@ -14,8 +14,8 @@
   color: white;
 }
 
-.projects {
-  background-color: var(--projects);
+.archive {
+  background-color: var(--archive);
   color: white;
 }
 

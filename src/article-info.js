@@ -20,7 +20,7 @@ export const articles = {
 					<li>To create something that was visually interesting even beyond the context of the data</li>
 				</ol>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-birdmap-tableau.webp" alt=""/>
+					<img className={css.figureObject} src="/images/article-birdmap-tableau.webp" alt=""/>
 					<figcaption className={css.caption}>Lab 4 – Bird Sightings in NZ. Available at <a href="https://public.tableau.com/app/profile/tk.cram/viz/BirdSightingsinNewZealand2021/Sheet1">Tableau Public</a></figcaption>
 				</figure>
 
@@ -28,7 +28,7 @@ export const articles = {
 				<p>As mentioned above, the amount of bird data available is sizeable, with the global dataset measuring ~137GB for decades’ worth of information. Even by limiting the scope to a single country for a single year, the over one million data points would be incomprehensible if mapped directly. During a previous lab, the data was separated into one month increments, and although that did help make it easier to visualise there were still several concerns. For one, users had to switch through the various maps in order to get a feel for how it changed over time, which proved cumbersome. For another, displaying all the points at once put more emphasis on where people were watching birds, rather than where the birds themselves were at any particular moment. For example it was impossible to distinguish observations between multiple unique birds vs. a single bird travelling.</p>
 				<p>Some thought was given to aggregating the birds themselves. eBirds provides examples of how this can be done by using density maps to display abundances. The decision was made that, while this is useful when discussing a single bird species, trying to place multiple density maps onto a single visualisation would lower legibility.</p>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="https://i0.wp.com/is-ebird-wordpress-prod-s3.s3.amazonaws.com/wp-content/uploads/sites/55/2021/11/barswa-abundance-map-weekly-2021-en-1024.gif?w=840&ssl=1" alt=""/>
+					<img className={css.figureObject} src="https://i0.wp.com/is-ebird-wordpress-prod-s3.s3.amazonaws.com/wp-content/uploads/sites/55/2021/11/barswa-abundance-map-weekly-2021-en-1024.gif?w=840&ssl=1" alt=""/>
 					<figcaption className={css.caption}>Abundance animations from <a href="https://ebird.org/science/status-and-trends/abundance-animations">eBird Online</a></figcaption>
 				</figure>
 
@@ -36,14 +36,14 @@ export const articles = {
 				<p>	Birds display a wide variety of characteristics. Some birds prefer coastal areas, others mountainous ones. Some prefer to flock together, while others prefer solitude. This project aims to provide insight into some of these characteristics, and give users the ability to learn more about them. Mapping the data over time allows users to explore these characteristics for themselves. They can watch the birds locations change over time, note what types of birds are seen in what locations, and examine how large a flock of birds may be. Resources were also to be provided should the user wish to gain more information.</p>
 				<p>	Inspiration came from the density maps seen above that show migratory patterns. Maps of shipping routes were also drawn upon, as they allow the user to explore characteristics such as ports, coast lines, and canals in a similar way.</p>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-birdmap-shipping.webp" alt=""/>
+					<img className={css.figureObject} src="/images/article-birdmap-shipping.webp" alt=""/>
 					<figcaption className={css.caption}>Global shipping routes from <a href="https://www.shipmap.org/">https://www.shipmap.org</a></figcaption>
 				</figure>
 
 				<h3>Birdy night</h3>
 				<p>	Although the primary demographic of the project was people who already had an interest in ornithology, it was also designed to be visually interesting beyond the context of the data. The idea was for there to be a sense of wonderment as the data moved in front of them, akin to stars twinkling in the sky. The hope is that if the visualisation can draw in a user in who might not otherwise be interested, then it might inspire them to learn.</p>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="https://i0.wp.com/c.tenor.com/0WtO3Sy6mtEAAAAM/aesthetic-stars.gif?w=840&ssl=1" alt=""/>
+					<img className={css.figureObject} src="https://i0.wp.com/c.tenor.com/0WtO3Sy6mtEAAAAM/aesthetic-stars.gif?w=840&ssl=1" alt=""/>
 				</figure>
 
 				<h2 id="methodology">Methodology</h2>
@@ -59,9 +59,9 @@ export const articles = {
 				</ul>
 				<figure className={css.figure}>
 					<div className={classnames(css.figMulti, css.figTriple)}>
-						<img className={css.figureImage} src="/images/article-birdmap-python-1.webp" alt=""/>
-						<img className={css.figureImage} src="/images/article-birdmap-python-2.webp" alt=""/>
-						<img className={css.figureImage} src="/images/article-birdmap-python-3.webp" alt=""/>
+						<img className={css.figureObject} src="/images/article-birdmap-python-1.webp" alt=""/>
+						<img className={css.figureObject} src="/images/article-birdmap-python-2.webp" alt=""/>
+						<img className={css.figureObject} src="/images/article-birdmap-python-3.webp" alt=""/>
 					</div>
 					<figcaption className={css.caption}>Input, processing, and output of the data manipulation</figcaption>
 				</figure>
@@ -69,14 +69,14 @@ export const articles = {
 				<h3>D3</h3>
 				<p>	The next step was to represent the data visually, for which the <a href="https://d3js.org/">D3.js</a> framework was used. This allowed the project to be animated programmatically, as well as uploaded to the web for users to interact with. Fortunately a <a href="https://techblog.assignar.com/plotting-data-points-on-interactive-map-visualisation-using-d3js/">tutorial</a> was available that demonstrated how to plot points on a map. A map of New Zealand was downloaded from <a href="https://geojson-maps.ash.ms/">GEOJSON</a>, and a working prototype was created.</p>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="https://i0.wp.com/techblog.assignar.com/assets/images/interactive_map-9d99c22b45cac441e6ad02db008ee0cb.webp?w=840&ssl=1" alt=""/>
+					<img className={css.figureObject} src="https://i0.wp.com/techblog.assignar.com/assets/images/interactive_map-9d99c22b45cac441e6ad02db008ee0cb.webp?w=840&ssl=1" alt=""/>
 					<figcaption className={css.caption}>Plotting point […] by <a href="https://techblog.assignar.com/plotting-data-points-on-interactive-map-visualisation-using-d3js/">Nikita Sharman</a></figcaption>
 				</figure>
 				<p>	The key functionality that was added beyond the tutorial was to read the data sequentially to allow the points to appear in time. This was done by nesting the svg generation inside of a for loop with a delay. With the data ordered hour by hour, a 1000ms delay on the loop would cause the data to show one hour every second. Initially all the points of that hour appeared at once, which lead to a strange pulsing effect. Instead each point was given a delay based on the minute of the observation, and a duration set to match the length of the observation.</p>
 				<figure className={css.figure}>
 					<div className={classnames(css.figMulti, css.figDouble)}>
-						<img className={css.figureImage} src="/images/article-birdmap-d3-1.webp" alt=""/>
-						<img className={css.figureImage} src="/images/article-birdmap-d3-2.webp" alt=""/>
+						<img className={css.figureObject} src="/images/article-birdmap-d3-1.webp" alt=""/>
+						<img className={css.figureObject} src="/images/article-birdmap-d3-2.webp" alt=""/>
 					</div>
 					<figcaption className={css.caption}>Code snippet for animating the points on a map</figcaption>
 				</figure>
@@ -85,7 +85,7 @@ export const articles = {
 				<p>	With the map and the points now working, additional features were added to the interface. A clock was placed at the top of the screen to give the user feedback on where they were in the data, and play/pause/fast forward buttons were added to give the user additional control. It is worth nothing that the pause functionality has some odd behaviour, including latency and different speed settings, due to D3 working with CSS transitions rather than CSS animations.</p>
 				<p>	An advanced controls module was also added, which allowed the user to filter what birds appeared by their order. Given that there are some 40 different orders, it seemed futile to give each one a unique and meaningful colour, so instead users were given the option to colour the orders as they saw fit. A colour shuffle button was also added if specific colouring wasn’t important. The controls also include a link to an external resource for more information about each of the orders.</p>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-birdmap-interface.webp" alt=""/>
+					<img className={css.figureObject} src="/images/article-birdmap-interface.webp" alt=""/>
 					<figcaption className={css.caption}>Final project interface</figcaption>
 				</figure>
 
@@ -136,7 +136,7 @@ export const articles = {
 					</ul>
 				</ul>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-birdmap-zoom.webp" alt=""/>
+					<img className={css.figureObject} src="/images/article-birdmap-zoom.webp" alt=""/>
 					<figcaption className={css.caption}>A UX Interview over zoom</figcaption>
 				</figure>
 				<p>	Overall, participants enjoyed the visualisation. The layout was well received and the controls were generally intuitive. The initial impact of the birds appearing on the screen was one of the key goals for the project and seems to have been achieved. The biggest surprise was the participants want for additional information, as the initial design was intentionally minimal in order to avoid overwhelming the user. However, this didn’t seem to be a concern as the participants were able to control how much data they were being presented with at any given time. The overall design also shifted from a proof-of-concept for a world map to committing to only New Zealand, which while allowing for more specific data about the avian population, requires additional context for those not from the region.</p>
@@ -175,14 +175,14 @@ export const articles = {
 
 				<h2 id="data">Data</h2>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="https://i0.wp.com/besjournals.onlinelibrary.wiley.com/cms/asset/1317874c-9c70-41e3-ab9a-8ebcaf0c37db/fec12773-fig-0002-m.jpg" alt=""/>
+					<img className={css.figureObject} src="https://i0.wp.com/besjournals.onlinelibrary.wiley.com/cms/asset/1317874c-9c70-41e3-ab9a-8ebcaf0c37db/fec12773-fig-0002-m.jpg" alt=""/>
 					<figcaption className={css.caption}>Wood et al. “Interaction network for native bird (top) and plant (bottom) families, South Island, New Zealand</figcaption>
 				</figure>
 				<p><a href="https://catalogue.data.govt.nz/dataset/bird-plant-interactions">The data</a> was sourced from data.govt.nz, created by <a href="https://besjournals.onlinelibrary.wiley.com/doi/10.1111/1365-2435.12773">Wood et al.</a> to study the relationship between birds (including several extinct species) and the plants they consume. The dataset contains a list of 34 bird species (and family) found in New Zealand’s South Island, along with each plant species (and family) they consume. This data was imported into Excel and three subsets were created (1) listed plants by species (2) listed plants by family and (3) listed plants by family with duplicate plant/bird pairs removed.</p>
 				<figure className={css.figure}>
 					<div className={classnames(css.figMulti, css.figDouble)}>
-						<img className={css.figureImage} src="/images/article-network-data.webp" alt=""/>
-						<img className={css.figureImage} src="/images/article-network-python.webp" alt=""/>
+						<img className={css.figureObject} src="/images/article-network-data.webp" alt=""/>
+						<img className={css.figureObject} src="/images/article-network-python.webp" alt=""/>
 					</div>
 					<figcaption className={css.caption}>Raw Data (left) Python code snippet to used to transform the dataset (Right)</figcaption>
 				</figure>
@@ -191,26 +191,26 @@ export const articles = {
 				<h2 id="create">Creating the Network</h2>
 				<figure className={css.figure}>
 					<div className={classnames(css.figMulti, css.figTriple)}>
-						<img className={css.figureImage} src="/images/article-network-test-species.webp" alt=""/>
-						<img className={css.figureImage} src="/images/article-network-test-family.webp" alt=""/>
-						<img className={css.figureImage} src="/images/article-network-test-family-reduced.webp" alt=""/>
+						<img className={css.figureObject} src="/images/article-network-test-species.webp" alt=""/>
+						<img className={css.figureObject} src="/images/article-network-test-family.webp" alt=""/>
+						<img className={css.figureObject} src="/images/article-network-test-family-reduced.webp" alt=""/>
 					</div>
 					<figcaption className={css.caption}>Bird network data for the three datasets (Species, Family, Family (No duplicates)) displayed using Fruchterman Reingold layout, coloured by modularity.</figcaption>
 				</figure>
 				<p>Once each of the three subsets of the data had been transformed, they were then imported into Gephi to transformed into network diagrams. Several statistics were also generated for each graph, including degree, density, and modularity (seen above as a colour facet), and each graph was set to a Fruchterman Reingold layout for comparison. Given all of the above, it was decided that the plant species subset would be the sole focus of future efforts as it created the richest data and network.</p>
 				<figure className={css.figure}>
 					<div className={classnames(css.figMulti, css.figTriple)}>
-						<img className={css.figureImage} src="/images/article-network-layout-ord.webp" alt=""/>
-						<img className={css.figureImage} src="/images/article-network-layout-atlas.webp" alt=""/>
-						<img className={css.figureImage} src="/images/article-network-layout-yifan.webp" alt=""/>
+						<img className={css.figureObject} src="/images/article-network-layout-ord.webp" alt=""/>
+						<img className={css.figureObject} src="/images/article-network-layout-atlas.webp" alt=""/>
+						<img className={css.figureObject} src="/images/article-network-layout-yifan.webp" alt=""/>
 					</div>
 					<figcaption className={css.caption}>Alternate layouts: Open Ord, Force Atlas 2, Yifan Hu</figcaption>
 				</figure>
 				<p>Other experimentation was done in Gephi. This included alternate layouts (see below), different resolution for the modularity, and colouring different aspects. Ultimately, however, the initial build seemed to offer the best insight into the network.</p>
 				<figure className={css.figure}>
 					<div className={classnames(css.figMulti, css.figDouble)}>
-						<img className={css.figureImage} src="/images/article-network-example-drozd.webp" alt=""/>
-						<img className={css.figureImage} src="/images/article-network-example-gooden.webp" alt=""/>
+						<img className={css.figureObject} src="/images/article-network-example-drozd.webp" alt=""/>
+						<img className={css.figureObject} src="/images/article-network-example-gooden.webp" alt=""/>
 					</div>
 					<figcaption className={css.caption}>(Left) Exploring the Dynamic Network of Harry Potter Characters by <a href="https://studentwork.prattsi.org/infovis/author/jdrozd25/">Jessica Drozd</a></figcaption>
 					<figcaption className={css.caption}>(Right) Networking the New York Times Bestseller List by <a href="https://studentwork.prattsi.org/infovis/author/lgooden/">Lillian Gooden</a></figcaption>
@@ -219,12 +219,12 @@ export const articles = {
 
 				<h2 id="results">Results</h2>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-network-result.webp" alt=""/>
+					<img className={css.figureObject} src="/images/article-network-result.webp" alt=""/>
 					<figcaption className={css.caption}>Final Output</figcaption>
 				</figure>
 				<p>Poor Blue Duck is out on their lonesome as they consume only a single food source and it’s unique to them. This could likely be explained by incomplete data, and an educated guess would put them in the Blue modularity class, which also contains the Black Duck and Black Swan. Although that same class also contains the Brown Kiwi and two species of now extinct <a href="https://en.wikipedia.org/wiki/Moa">Moa</a> so the exact definition is uncertain. Our other four classes are comprised of smaller birds such as Robins and Pippits (Yellow) that prey mostly on berries, omnivorous small birds such as the Fantail (Green), Medium sized birds such as the Kereru and Kokako (Red), and two parrots and a swamp hen which seem to eat pretty much anything (Pink).</p>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-network-vertex.webp" alt=""/>
+					<img className={css.figureObject} src="/images/article-network-vertex.webp" alt=""/>
 					<figcaption className={css.caption}>Vertex Data</figcaption>
 				</figure>
 				<p>A key limitation of the data is that it is limited only to plant based food sources. Many birds within New Zealand consume bugs, and some (such as the falcon) consume other birds or fish. This additional information would likely delineate the Blue group. It would also be worth exploring the effect range and population has on the weighting of the nodes, as birds such as Tui or Kereru are significantly more populous than the Kiwi. One final factor might be due to the size of the country as a whole, allowing for much more homogeneity amongst the bird population.</p>
@@ -232,11 +232,11 @@ export const articles = {
 				<h2 id="discussion">Discussion</h2>
 				<p>Let’s first turn our attention to the Moa in the room: the connectedness of this graph. The graph has a density of 55% which is decidedly high. It also had a diameter of 3 and average degree of 18.2, meaning that it wasn’t only a few central vertices pulling them together. Even when trying other layouts the problem would shift rather than be solved. For instance a Force Atlas layout better spacing of the vertices, but lowered visual acuity of the edges (and also required significantly more user input to achieve something legible). Additional research, and possibly additional data, may be required.</p>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-network-final.webp" alt=""/>
+					<img className={css.figureObject} src="/images/article-network-final.webp" alt=""/>
 				</figure>
 				<p>Some time was spent outside of Gephi attempting to format the diagram and provide additional context, but in the end it didn’t seem to add anything of value. If this lab were to be started again from scratch, a different, less connected dataset would be chosen. Perhaps instead a family tree. However, I’m still satisfied with the overall methodology.</p>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="https://i0.wp.com/www.researchgate.net/profile/Corey-Callaghan/publication/330363427/figure/fig3/AS:902973089673217@1592296969257/Reproduced-phylogenetic-tree-Jetz-et-al-2012-of-our-477-species-Supplementary.png?resize=589%2C577&ssl=1" alt=""/>
+					<img className={css.figureObject} src="https://i0.wp.com/www.researchgate.net/profile/Corey-Callaghan/publication/330363427/figure/fig3/AS:902973089673217@1592296969257/Reproduced-phylogenetic-tree-Jetz-et-al-2012-of-our-477-species-Supplementary.png?resize=589%2C577&ssl=1" alt=""/>
 					<figcaption className={css.caption}>Reproduced phylogenetic tree by <a href="https://www.researchgate.net/figure/profile/Corey-Callaghan">Corey T. Callaghan</a></figcaption>
 				</figure>
 				<p>Update: Post class discussion, the following insights have been made: Force Atlas is perhaps a better view for this particular network, and part of the difficulty in rendering it previously was due to the unconnected vertex being flung far from the main network. Due to the relative density of the network, opting instead for an interactive approach may be preferable, allowing users to explore the data and highlight specific nodes and edges for easier viewing.</p>
@@ -274,7 +274,7 @@ export const articles = {
 				
 				<h2 id="login">Log-in screen</h2>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-bnz-login.jpg" alt=""/>
+					<img className={css.figureObject} src="/images/article-bnz-login.jpg" alt=""/>
 				</figure>
 				<p>Upon loading the app, the user is presented with a heavily constrained login screen. The majority is taken up by a number pad, which presents familiar signifiers to both the physical (an ATM) and digital (a phones lock screen) worlds.</p>
 				<p>As the user inputs their passcode, the circles become filled, providing feedback. The code is automatically attempted once the correct number of characters has been input, and provides further input depending on whether the code was correct (proceeding to another screen) or incorrect (screen shake and the circles become unfilled).</p>
@@ -283,21 +283,21 @@ export const articles = {
 			
 				<h2 id="landing">Landing Screen</h2>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-bnz-landing.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-bnz-landing.png" alt=""/>
 				</figure>
 				<p>Once the user has logged in, the main landing presents a minimal amount of information. Perhaps user testing has revealed the primary activity on the app is reviewing the users accounts, which are presented with a brief summary (name and amounts). This layout is also to a iconographic interface found on an iPhone, signifying that the icons afford interaction. The users mental model would suggest that this would present additional information about the account.</p>
 				<p>Like the app overall, actions are highly constrained. Other signifiers include a quick link to transfer money, a hamburger style icon signifying additional menu items, a bell with an alert icon signifying notifications, and an ellipsis signifying more options. Much like the symbols on the login page, these latter three are familiar to those who have experience with other digital apps. All links immediately bring up either a modal or another screen, giving the user feedback. It is also possible that a new user may be presented with a tutorial flow, demonstrating what the icons signify. This would allow the app to forgo text with the icons, but was unable to be tested at this point.</p>
 
 				<h2 id="landing">Activity Screen</h2>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-bnz-activity.jpg" alt=""/>
+					<img className={css.figureObject} src="/images/article-bnz-activity.jpg" alt=""/>
 				</figure>
 				<p>Another signifier on the landing page, the blue line beneath “accounts”, suggest that it is the tab the user is currently on. This also signifies that “activity” affords interaction. Some confusion might arise in the users mental model at this point, as “activity” and “notifications” are sometimes used interchangeably. But if the user sees the bell as representing notifications, it becomes unclear what “activity” might represent. Much like the icons, effective labelling is a difficult task. Alternative terms may be used, such as “your activity” and “recent notifications”.</p>
 				<p>Once the user switches to the “activity” tab, they are presented with 2.5 items (the third being cut off suggests that the user is able to scroll down for additional items). Even at this point the uncertainty may persist, as the brevity of the descriptions presents little knowledge in the world that the user can utilise. Perhaps they’re articles on managing your money, or tips on how to track spending. In reality, each leads to a small dashboard with information about the users spending habits. The app however does a good job of immediately showing the user what exists on each page, and allowing them to quickly step back, meaning that a trial and error approach to investigating content has minimal pain points.</p>
 			
 				<h2 id="hamburger">Hamburger Menu</h2>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-bnz-menu.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-bnz-menu.png" alt=""/>
 				</figure>
 				<p>Those are the obviously afforded options available to the user from the home screen, but it theory a bank offers many more. This leads to a discoverability problem. The application enabled a streamlined experience by obfuscating many of its features. These features are hidden in the menu accessed by the hamburger symbol, which assumes a certain amount of digital literacy.</p>
 				<p>However once the menu is accessed, the discoverability concerns abate. Each menu item contains both a symbolic representation as well as a label. This includes card management, transferring funds internally and externally, and providing statements. While this critique won’t dive into them all, they each follow the highly constrained design philosophy seen throughout the rest of the app. Although, in rare instances, they instead open a browser window pointing to the much more comprehensive web portal.</p>
@@ -332,21 +332,21 @@ export const articles = {
 				<p className={css.byline}>Originally published on <a href="https://studentwork.prattsi.org/infovis/labs/a-brief-history-of-modern-colour-models/">Information Visualization</a> on February 3, 2022</p>
 				<p>Ever since Grecian times philosophers such as Aristotle have pondered the nature of colour. Many have followed in their footsteps, from Ibn al-Haytham to Leonardo da Vinci. However in 1704 our conceptualisation of colour shifted dramatically with Newton’s “Opticks” and their revolutionary colour wheel. This shift inspired many to see if a model could be created to account for all the colours a human could perceive. In the 300 years since, this model has taken many shapes, and been used to explain many phenomena from the physical to the emotional, and even the spiritual. This timeline serves as an overview of a handful of the most significant developments in that time, and as a launching point into one of the world’s most colourful histories.</p>			
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-timeline-result.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-timeline-result.png" alt=""/>
 					<figcaption className={css.caption}>To view the timeline, click <a href="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=10IEKECW-7KBUyKdeAOsn2Y5Yqr9VJdEiPw2q3NabjoQ&font=Default&lang=en&initial_zoom=2&height=650">here</a>.</figcaption>
 				</figure>
 
 				<h2 id="methods">Methods</h2>
 				<p>For this project a timeline was constructed using TimelineJS, which allowed for automatic generation of the graphic from a Google Sheets template. The dataset for the project was created by hand based on readings around colour theory. These readings include <a href="https://library.si.edu/exhibition/color-in-a-new-light/science">The Smithsonian</a>, <a href="https://programmingdesignsystems.com/color/a-short-history-of-color-theory/#fn6">Programming Design Systems</a>, <a href="https://en.wikipedia.org/wiki/Color_theory">Wikipedia</a>, and <a href="https://pigment-pool.com/the-history-of-color-theory-must-know-facts-for-creatives/#_ftn26">Pigment Pool</a>. A list of possible entries was compiled and then shortlisted down to ten, based on criteria such as contribution to the field, historic impact, and creating an overarching narrative. Once the shortlist was completed, it was entered into the TimelineJS template, along with an appropriate image and a brief blurb as to it’s relevance. Lastly, aesthetic decisions were made as to the timeline itself, including fonts and colours, in order to create a more appealing visual.</p>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-timeline-data.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-timeline-data.png" alt=""/>
 					<figcaption className={css.caption}>To view the raw data, click. <a href="https://docs.google.com/spreadsheets/d/10IEKECW-7KBUyKdeAOsn2Y5Yqr9VJdEiPw2q3NabjoQ/edit#gid=0">here</a>.</figcaption>
 				</figure>
 
 				<h2 id="discussion">Discussion</h2>
 				<p>Attempting to distill a topic as large as colour theory down to a few key moments is no small feat, so several decisions were made to help limit the scope of the project. Firstly, Newton was chosen as the starting point for the timeline, which informed the focus on the colour wheel/model itself rather than colour theory as a whole. Secondly, the list was created using singular publications, as condensing someone’s life work to a single slide seemed disingenuous, and also allowed for posthumous works. Lastly, some consideration was given to the distance in time between each item in order to better tell a continuous story, although several large gaps still appear.</p>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="https://i0.wp.com/images-na.ssl-images-amazon.com/images/I/41-Qiyia9IL._SY485_BO1,204,203,200_.jpg?w=840&ssl=1" alt=""/>
+					<img className={css.figureObject} src="https://i0.wp.com/images-na.ssl-images-amazon.com/images/I/41-Qiyia9IL._SY485_BO1,204,203,200_.jpg?w=840&ssl=1" alt=""/>
 					<figcaption className={css.caption}>The Art of Color by Johannes Itten.</figcaption>
 				</figure>
 				<p>In some cases the choice of image to accompany each slide was obvious, such as Newton or Goethe. However for others it was less so. The depiction of Munsell’s colour model comes from a much later edition than was initially published, but better articulates the point they were trying to make. Albers was a prolific artist, so while their colour triangle may not be their most prominent work, it better fits the theme of the timeline.</p>
@@ -356,7 +356,7 @@ export const articles = {
 				<p>While this is a fascinating topic, the breadth of it combined with the practical limitations (e.g. time and space constraints) left the project trying to strike a difficult balance of brevity and accuracy. While the project was able to present a brief overview on the topic, the majority of information collected was not included in the final version. This is only amplified by the authors inexperience with the topic at hand, meaning more time needed to be dedicated to sourcing information. Being able to dedicate more time to the project to better understand and explain the topic, including diving into the primary sources, would be a boon.</p>
 				<p>TimelineJS is a wonderful tool hindered by two key factors. The first is that what it gains in ease of use it loses in functionality. Often times changing a single thing, such as background colour, would trigger unintended consequences. Some custom CSS was injected, such as for line breaks, to help alleviate the issue. The second is that due to it’s online nature latency can become an issue. Often times changes would be made but would take a noticeable amount of time to appear, leading to some frustrations.</p>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="https://i0.wp.com/www.colorsystem.com/wp-content/uploads/17che/01che.jpg?w=840&ssl=1" alt=""/>
+					<img className={css.figureObject} src="https://i0.wp.com/www.colorsystem.com/wp-content/uploads/17che/01che.jpg?w=840&ssl=1" alt=""/>
 					<figcaption className={css.caption}>The Art of Color by Johannes Itten.</figcaption>
 				</figure>
 
@@ -430,12 +430,12 @@ export const articles = {
 				<p>A reorganisation of the hub pages should be considered. There is a high amount of overlap between “Chefs” and “Shows” in the top half of the pages, that might better serve as standalone content, and redesigning the pages with more specific content.</p>
 				
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-food-1a.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-food-1a.png" alt=""/>
 					<figcaption className={css.caption}>Current Navigation Dropdown. “See all chefs” button (1a) doesn’t lead to expected result.</figcaption>
 				</figure>
 
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-food-1b.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-food-1b.png" alt=""/>
 					<figcaption className={css.caption}>Proposed Navigation Dropdown. Added a “chef’s homepage” button (1b). “See all chefs” skips to chef index.</figcaption>
 				</figure>
 
@@ -448,12 +448,12 @@ export const articles = {
 				<p>It may be worth implementing an ingredient substitution calculator. Such a thing could load in recipes or custom ingredients, and allow direct conversions of the ingredients, and export the new recipe.</p>
 				
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-food-2a.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-food-2a.png" alt=""/>
 					<figcaption className={css.caption}>Current Substitutions Button. “Ingredient Substitutions” (2a) is identical to other buttons, suggesting identical function</figcaption>
 				</figure>
 
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-food-2b.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-food-2b.png" alt=""/>
 					<figcaption className={css.caption}>Proposed Substitutions Button. “Ingredient Substitutions” (2b) is not distinguished from other buttons Current Substitutions Button. “Ingredient Substitutions” (2a) is identical to other buttons, suggesting identical function</figcaption>
 				</figure>
 
@@ -466,7 +466,7 @@ export const articles = {
 				<p>The widget would better serve the user if it was usable entirely within the page, either as a sidebar or a modal. While the final checkout can be done via an external site, all steps leading up to that should be done locally. In addition, better signifiers as to what the widget done should be implemented, as should a better way to display the “price”</p>
 				
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-food-3.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-food-3.png" alt=""/>
 					<figcaption className={css.caption}>Current Substitutions Button. “Ingredient Substitutions” (2a) is identical to other buttons, suggesting identical function</figcaption>
 				</figure>
 
@@ -552,24 +552,24 @@ export const articles = {
 				<h2 id="appendix">Appendix</h2>
 				<h3>Guardian Verion</h3>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-guardian-guardian-1.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-guardian-guardian-1.png" alt=""/>
 					<figcaption className={css.caption}>Default View (Equal Scale)</figcaption>
 				</figure>
 
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-guardian-guardian-2.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-guardian-guardian-2.png" alt=""/>
 					<figcaption className={css.caption}>States scaled proportionally</figcaption>
 				</figure>
 
 				<h3>Kerry Rodden Version</h3>
 
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-guardian-rodden-1.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-guardian-rodden-1.png" alt=""/>
 					<figcaption className={css.caption}>Default View</figcaption>
 				</figure>
 
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-guardian-rodden-2.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-guardian-rodden-2.png" alt=""/>
 					<figcaption className={css.caption}>Inverted Colour View</figcaption>
 				</figure>
 
@@ -618,23 +618,23 @@ export const articles = {
 				<h4>Lego Dataset</h4>
 				<p>The data for the LEGO parts is available from the Rebrickable database. Rebrickable is a website whose primary purpose is to “show you which LEGO sets you can build from the sets and parts you already own.” (Rebrickable, n.d.) It contains an extensive list of parts, sets, and other details from LEGO’s catalogue (Fig. 1).</p>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-lego-schema.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-lego-schema.png" alt=""/>
 					<figcaption className={css.caption}>Fig. 1 - Rebrickable Schema</figcaption>
 				</figure>
 				<p>The most recently available snapshot of the database was downloaded on the 3rd of November, 2021. The inventory, inventory_parts, colors, sets, and themes tables were joined together using SQLite, producing 903,791 rows of data. A filter was added to only display sets released in the previous five years in order to mitigate the impact of historical changes in production or design philosophy. This period accounts for approximately 25% of all sets available in the database. The data was then grouped by both colour and theme (sub-themes were rolled into their parent theme), and summed for the total number of parts for each combination. The final result was 2,397 rows of data (Fig. 2).</p>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-lego-output.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-lego-output.png" alt=""/>
 					<figcaption className={css.caption}>Fig. 2 - Database Output</figcaption>
 				</figure>
 				<p>The outputted SQLite data was imported into Microsoft Excel and the table pivoted to create a square data frame with 68 colour rows and 61 theme columns. These were compared against what themes were listed by LEGO.com, and retired themes were filtered out. Additional filtering was applied to themes and colours with minimal entries. The result was 56 colours and 20 themes. (Fig. 3)</p>
 				<p>On average, each theme contained 34631 parts, with a minimum of 2355 (Trolls: World Tour), a maximum of 99012 (Star Wars). For colours, the average number of parts was 12509, with a minimum of 245 (Yellowish Green) and a maximum of 131124 (Black). On average, each theme used 44 different colours. 14 colours appeared at least once in every theme, with another 7 appearing in all but one. 4 colours appeared in only 9 themes, which was the lowest incidence.</p>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-lego-sample.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-lego-sample.png" alt=""/>
 					<figcaption className={css.caption}>Fig. 3 - Initial results sample</figcaption>
 				</figure>
 				<p>In order to determine the average saturation and lightness of a theme, the data set was imported and summarised R and the results noted. The average saturation of a LEGO theme was 47%, with a range from 32% - 60%. The average lightness was 51%, with a range from 35% - 64% (Fig. 4).</p>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-lego-averages.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-lego-averages.png" alt=""/>
 					<figcaption className={css.caption}>Fig. 4 average saturation and light of LEGO themes</figcaption>
 				</figure>
 
@@ -717,12 +717,12 @@ export const articles = {
 				<h4>Overall</h4>
 				<p>During the analysis, an observation was made that a certain subset of colours were present across all themes, which were dubbed the ‘monochrome group’. This grouping consists of four colours: ‘Black’, ‘Dark Bluish Gray’, ʻLight Bluish Gray’ and ‘White’. Combined, these four colours accounted for 52.7% of all LEGO parts in the data set (Fig. 5). Some thought went into whether to exclude this data due to its universality, but upon further inspection themes such as ‘Star Wars’ (73.5% monochrome) and ‘Batman’ (72.9 monochrome) leaned heavily on these colours for their identity. The decision was made to keep the data in, but to delineate it from the most common colours.</p>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-lego-pie.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-lego-pie.png" alt=""/>
 					<figcaption className={css.caption}>Fig. 5 - Total proportion of all LEGO colours</figcaption>
 				</figure>
 				<p>In addition to the monochrome group, the 5 most frequently occurring colours were selected for each theme (5C). (Fig. 6). Five colours (Red; Tan; Reddish Brown; Yellow; Blue) appeared in >50% of all 5C lists, while all other colours (19 in total) appeared in {'<'}25%, and 11 appearing in only 1. ’Architecture’, ‘Disney’, and ‘Trolls: World Tour’ each had two colours that appeared in no other list.</p>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-lego-colours.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-lego-colours.png" alt=""/>
 					<figcaption className={css.caption}>Fig. 6 - The monochrome group + colours amongst the 5 most common for a theme</figcaption>
 				</figure>
 				<p>On average, the monochrome group and a theme’s 5C group accounted for 75.3% of the total parts in a theme, suggesting that this was largely representative of what was available in the theme. However in four cases (‘Trolls: World Tour”; ‘Friends’; ‘Classic’; ‘Disney Princess’) the proportion of parts in the 5C and monochrome groups were each lower than the the proportion of all other parts. In no case was the proportion of all other parts >50%.</p>
@@ -735,7 +735,7 @@ export const articles = {
 				<p>In regards to the colours themselves, the YM targeted themes all have 'Red’ and ‘Blue’ in their top colours, with ‘Yellow’, ‘Tan’, and ‘Reddish Brown’ also featuring. These colours make up the bulk of colours across all themes (Excl. the monochrome group). For the YF themes, ‘Reddish Brown’ and ‘Tan’ appear in both, and ‘Yellow’ is the only other colour appearing amongst the most common colours overall. This suggests that The LEGO Group is taking steps to create themes explicitly tailored to the YF demographic, whereas the YM demographic is encapsulated by LEGO’s more general design philosophy.</p>
 							
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-lego-sat.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-lego-sat.png" alt=""/>
 					<figcaption className={css.caption}>Fig. 7 - Representation of saturation (top) and lightness (bottom) distribution with static hue</figcaption>
 				</figure>
 
@@ -752,12 +752,12 @@ export const articles = {
 				<p>The average ΔS for across all franchised themes was 7.8, and the ΔL slightly higher at 9.7. When factoring direction of change, the results become -6.7 (ranging from -18.8 to 2.8) and -4.7 (range -16.9 to 16.1) respectively. i.e. the franchise media was, on average, less saturated and less light than its LEGO counterpart. 8/11 themes had franchise media with a lower saturation, 7/11 for lightness. From this we can say that LEGO uses more saturated colours than found in the franchise media, with the same assertion being made in a weaker form regarding lightness.</p>
 				<p>Examining individual themes, ‘Disney’ and ‘Super Mario’ had a {'<'}5 point difference in both saturation and lightness compared to their franchise media. ‘Batman’, ‘Star Wars’, ‘DC’, and ‘Marvel’ each had either saturation OR lightness with {'<'}5 points difference. ‘Minions’ fared the worst, with >15 points on both categories. ’Disney Princess’, ‘Harry Potter’, and ‘Trolls’ each had only one category >15 points. (Fig. 8)</p>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-lego-ksat.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-lego-ksat.png" alt=""/>
 					<figcaption className={css.caption}>Fig. 8 - Difference in Saturation and Lightness: K-means vs LEGO</figcaption>
 				</figure>
 				<p>When comparing the list of colours sampled from the franchise media to those that appear in the LEGO themes (5C + monochrome), themes averaged a 39.1% match. ’Minecraft’, ‘Minions’, and ‘Trolls’ only had a single colour match, whereas ‘Disney Princess’ and ‘Harry Potter’ had >5. (Fig. 9).</p>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-lego-kcolour.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-lego-kcolour.png" alt=""/>
 					<figcaption className={css.caption}>Fig. 9 - Colour Matching k-means vs LEGO</figcaption>
 				</figure>
 				<p>The initial assumption was that colours associated with a franchise would be equally as prominent in the franchise media as they would be in a LEGO theme. While this may be the case, this analysis is unable to speak to the veracity of the claim. Upon examining all themes to see what colours were being matched, ‘Light Bluish Gray’ was matched 8 times, ‘Tan’ 6,  ‘Reddish Brown’ 4, and ‘Red’/‘Dark Tan’/‘Black’ 3 each. The only notable exception to this is the ‘Disney Princess’ theme that, excluding the colours mentioned above, matched with additional 4 colours. Overall, it can not be concluded that the colour matching between these two datasets is significant.</p>
@@ -944,7 +944,7 @@ export const articles = {
 				<p>Impressions of the site as a whole, however, were mixed. As discussed in Methodology, participants were asked what words they would use to describe the Digital Archives in the post-test survey, and their words illustrate this mixed-reaction well.</p>
 
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-nyp-1.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-nyp-1.png" alt=""/>
 					<figcaption className={css.caption}>Figure 1: Word cloud generated from user responses to the post-test survey.</figcaption>
 				</figure>
 
@@ -969,7 +969,7 @@ export const articles = {
 				<p>In attempting to interact with these elements, however, users ran into several issues. If solved, these revamped elements could improve the user experience of the site as a whole.</p>
 
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-nyp-2.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-nyp-2.png" alt=""/>
 					<figcaption className={css.caption}>Figure 2: Main navigation and search bars on the homepage.</figcaption>
 				</figure>
 
@@ -983,7 +983,7 @@ export const articles = {
 				<p>While most users read and commented positively on the explanatory text offered under “Search the Digital Archives” about the collection’s offerings, users who were less experienced with searching archival sites, or with the New York Philharmonic, often did not understand that the Digital Archives specifically offers access to resources related to the New York Philharmonic, not traveling orchestras or other musical institutions. This confusion resulted in later issues with searching for and filtering through search results.</p>
 
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-nyp-3.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-nyp-3.png" alt=""/>
 					<figcaption className={css.caption}>Figure 3: Screenshots of the first view of Homepage and Search Results pages.</figcaption>
 				</figure>
 
@@ -996,7 +996,7 @@ export const articles = {
 				</aside>
 
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-nyp-4.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-nyp-4.png" alt=""/>
 					<figcaption className={css.caption}>Figure 4: Annotated mockup of recommendations to improve the usability of the navigation bar.</figcaption>
 				</figure>
 
@@ -1020,7 +1020,7 @@ export const articles = {
 				</aside>
 
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-nyp-5.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-nyp-5.png" alt=""/>
 					<figcaption className={css.caption}>Figure 5: Screenshot of a carousel slide demonstrating hard-to-see navigation buttons.</figcaption>
 				</figure>
 
@@ -1034,7 +1034,7 @@ export const articles = {
 				</aside>
 
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-nyp-6.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-nyp-6.png" alt=""/>
 					<figcaption className={css.caption}>Figure 6: Annotated mockup of recommendations to improve the usability of the carousel.</figcaption>
 				</figure>
 
@@ -1052,7 +1052,7 @@ export const articles = {
 				<p>Two key issue areas arose: one with the results page’s layout preventing users easily navigating and filtering search results, and the other with users obtaining inconsistent content in search results, such as receiving zero and/or incorrect results when searching for “nutcracker ballet.” The first issue we address below, and the second we discuss on page 20 as an area for further investigation. Both areas highlight a disconnect between users’ expected and actual experience obtaining search results; if addressed, this could streamline all site visitors’ ability to find specific information from the Digital Archives.</p>
 
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-nyp-7.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-nyp-7.png" alt=""/>
 					<figcaption className={css.caption}>Figure 7: A search for “william lincer photo” displaying two key issues with the layout of the Search Results page.</figcaption>
 				</figure>
 
@@ -1068,7 +1068,7 @@ export const articles = {
 				</aside>
 
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-nyp-8.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-nyp-8.png" alt=""/>
 					<figcaption className={css.caption}>Figure 8: Annotated mockup of search result recommendations.</figcaption>
 				</figure>
 
@@ -1098,7 +1098,7 @@ export const articles = {
 				<h3>Recommendation 4: Move pop-up modal underneath each filter and introduce a search bar for the filter options when opened.</h3>
 
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-nyp-9.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-nyp-9.png" alt=""/>
 					<figcaption className={css.caption}>Figure 9: A search filter displaying three problems discussed in this section: 1) There are 200 pages of filter results to navigate through, 2) Clicking on the artists’ name makes a dropdown menu with work both relevant and not relevant to the larger search appear, and 3) The pop-up modal overlays the majority of the users’ screen, hiding the search results and the search bar.</figcaption>
 				</figure>
 
@@ -1110,7 +1110,7 @@ export const articles = {
 				<p>Additionally, when the user clicked on a soloist, conductor, or composer/work they were seeking in the Sort and Filter list, another drop-down appeared listing options that were, and were not, related to the larger search being conducted. The user was then required to find and click on the option that related to their overall search in order to be redirected back to filtered search results. Users expected to be able to click on a soloist, conductor, or composer/work to be immediately directed back to a filtered search. This process added extra steps that created confusion for several users as they were narrowing search results and trying to reach their end goal.</p>
 
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-nyp-10.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-nyp-10.png" alt=""/>
 					<figcaption className={css.caption}>Figure 10: Annotated mockup of recommendations to streamline Sort and Filter menu.</figcaption>
 				</figure>
 
@@ -1149,7 +1149,7 @@ export const articles = {
 					<tr><td>Search Results</td><td>Query “First female musician” lead to failure point</td><td>Include Digital Archives articles and exhibits in search results</td></tr>
 					<tr><td>Image Results</td><td>Users were unable to associate names with individuals in photos</td><td>Ensure name order matches image and/or label individuals on image</td></tr>
 					<tr><td>Performance History</td><td>Virtual performances are tagged inconsistently in event type</td><td>Review virtual performances for correct tags</td></tr>
-					<tr><td rowspan="4">User Interface</td><td>Homepage</td><td>At narrow viewport sizes, ‘explore’ button is hidden behind footer <img className={css.figureImage} src="/images/article-nyp-3.png" alt=""/></td><td>Ensure the carousel expands to fit all text content</td></tr>
+					<tr><td rowspan="4">User Interface</td><td>Homepage</td><td>At narrow viewport sizes, ‘explore’ button is hidden behind footer <img className={css.figureObject} src="/images/article-nyp-3.png" alt=""/></td><td>Ensure the carousel expands to fit all text content</td></tr>
 					<tr><td>Image Results</td><td>Users clicked multiple times on an image in order to open modal</td><td>Make ‘loading’ message more prominent</td></tr>
 					<tr><td>Image Results</td><td>Users confused by the mismatch between stated number of images and image thumbnails</td><td>Provide feedback for images that are present in results, but yet to load e.g. thumbnail frame</td></tr>
 					<tr><td>Search Results</td><td>Users confused why their filters disappeared when looking between document types</td><td>Unify and persist filters</td></tr>
@@ -1337,12 +1337,12 @@ export const articles = {
 
 				<h4>System Usability Scale Calculations and Results</h4>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-nyp-d1.png" alt=""/>
-					<img className={css.figureImage} src="/images/article-nyp-d2.png" alt=""/>
-					<img className={css.figureImage} src="/images/article-nyp-d3.png" alt=""/>
-					<img className={css.figureImage} src="/images/article-nyp-d4.png" alt=""/>
-					<img className={css.figureImage} src="/images/article-nyp-d5.png" alt=""/>
-					<img className={css.figureImage} src="/images/article-nyp-d6.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-nyp-d1.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-nyp-d2.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-nyp-d3.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-nyp-d4.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-nyp-d5.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-nyp-d6.png" alt=""/>
 				</figure>
 
 				<h3>Appendix E: Consent and Pre-test Forms</h3>
@@ -1413,20 +1413,20 @@ export const articles = {
 
 				<h3>Appendix F: Inspirations</h3>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-nyp-f1.jpg" alt=""/>
+					<img className={css.figureObject} src="/images/article-nyp-f1.jpg" alt=""/>
 					<figcaption className={css.caption}>Figure F1 (top): Example of a pop-up filter modal from the Pratt Library. Demonstrates multiple filter selects, scrolling (non-paginated) results, and ordering filters by result count.</figcaption>
 				</figure>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-nyp-f2.jpg" alt=""/>
+					<img className={css.figureObject} src="/images/article-nyp-f2.jpg" alt=""/>
 					<figcaption className={css.caption}>Figure F2 (right): Example of a drop down filter menu from the Pratt Library. Demonstrates date slider, collapsable filter categories, ordering filters by result count, and limiting total filters immediately viewable, with an option to show full list (Figure F1).</figcaption>
 				</figure>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-nyp-f3.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-nyp-f3.png" alt=""/>
 					<figcaption className={css.caption}>Figure F3: Screenshot of The Metropolitan Museum home page taken on December 13, 2022. Here, instead of a carousel, the Met provides a few different pieces of content: a scrolling list of modules that display current exhibitions, location information, and a list of modules that feature current special items like exhibitions, events, and more. A scrolling list of modules like this may work well for the Digital Archives to feature information that is currently hidden in the carousel. Moving this information into a scrolling list may also help the Digital Archives more prominently highlight its main feature: search.</figcaption>
 				</figure>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-nyp-f4.png" alt=""/>
-					<img className={css.figureImage} src="/images/article-nyp-f5.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-nyp-f4.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-nyp-f5.png" alt=""/>
 					<figcaption className={css.caption}>Figure F4: Screenshots of the interactive carousel from the Museum of Science and Industry in Chicago’s website (https://www.msichicago.org/), taken on December 13, 2022. Note the “pause” button surrounded by a circle above the buttons. This layout, with the clearly shown vertical buttons and timer directly above them, is an example of an accessibility feature that gives users immediate temporal feedback and context for the changing carousel slides, as well as an option to pause their movement.</figcaption>
 				</figure>
 
@@ -1491,23 +1491,23 @@ export const articles = {
 				<h2 id="methods">Methods</h2>
 				<p>The <a href="https://www.google.com/search?client=safari&rls=en&q=nz+census&ie=UTF-8&oe=UTF-8">New Zealand Census</a> was used as the primary source of information for this project. It includes questions not only about the dwelling itself, but also the owners and occupiers (See <a href="https://www.stats.govt.nz/assets/Reports/2018-census-design-of-forms/2018-Census-Design-of-forms.pdf">here</a> for a full breakdown). Taken every 5 years[<a href="https://nzhistory.govt.nz/page/census-held-after-two-year-delay">1</a>] the data allows us to inspect what trends may be occurring in the data. A curated dataset was available from the <a href="http://data.govt.nz/">New Zealand open data portal</a>, which was downloaded and imported into Tableau.</p>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-rent-data.webp" alt=""/>
+					<img className={css.figureObject} src="/images/article-rent-data.webp" alt=""/>
 					<figcaption className={css.caption}>Full datasource available <a href="https://catalogue.data.govt.nz/dataset/8bd0c4c9-9c0a-4153-b5a4-6311f18179a9/resource/89089be6-5165-4582-9a07-0e105126a4e2/download/census-weekly-rent.csv">here</a></figcaption>
 				</figure>
 				<p>Using Tableau to inspect the data, the trend was simple and obvious: rent is ever increasing. Of course the rate of this change does depend on a number of factors, several of which are baked into the data. Both the type of landlord and the household dynamic of the residents were mapped to time series charts, which is the tried and true method when presenting this sort of data:</p>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-rent-search.webp" alt=""/>
+					<img className={css.figureObject} src="/images/article-rent-search.webp" alt=""/>
 					<figcaption className={css.caption}>A quick Google image search for “NZ Housing Market”</figcaption>
 				</figure>
 				<p>Both Landlord and Household types had limited categories once filtered and grouped (4 and 6, respectively). However when attempting to plot the data broken down by region, it became somewhat unwieldily:</p>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-rent-test.webp" alt=""/>
+					<img className={css.figureObject} src="/images/article-rent-test.webp" alt=""/>
 					<figcaption className={css.caption}>Due to its long, slender geography, it is traditional to list New Zealand regions north to south rather than alphabetically.</figcaption>
 				</figure>
 				<p>Thankfully, when searching for other examples of how similar data has been visualised, <a href="https://upload.wikimedia.org/wikipedia/commons/1/1e/NZ_regional_average_price_change_2014_2019.png">this</a> example was found which provided the inspiration for how to better show this sort of data. Four charts were then created using tableau mapping module, filtered for each census. A side effect of this was that it determined at what regional level the data would be shown, as the built in map didn’t allow for finer granulation found in the data.</p>
 				<p>The four maps and two time series charts were then placed into a tableau dashboard, with the maps in sequence and the time series below. Titles were made and legends were positioned where appropriate. While the dashboard was designed to stand alone as an image, several interactive filters were added to further explore the data: The ability to select regions to filter by location (and a prompt to indicate this was possible) as well as filters for the Household and Landlord types. Click filtering was not enabled for the time series as it filtered by the exact point rather than the category. The final result being:</p>
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-rent-final.webp" alt=""/>
+					<img className={css.figureObject} src="/images/article-rent-final.webp" alt=""/>
 					<figcaption className={css.caption}>To view the interactive dashboard, click <a href="https://public.tableau.com/app/profile/tk.cram/viz/MedianNZWeeklyRent/Dashboard1">here</a></figcaption>
 				</figure>
 
@@ -1746,17 +1746,17 @@ export const articles = {
 				<p>To provide more information to help users decide which needle size is suitable for them, adding a question mark indicator beside “Needle” option will be appropriate. When users click on it, it can expand to show details (Fig.1). On the browsing page, including a line of available yarn colour options will allow users to know what they can choose at their first glance (Fig.2). The wool quality descriptions can be included in the “Product Details” section to let users learn more about the kit they are going to buy (Fig.3). All of the above options will allow users to be better informed about what it is they’re purchasing, and prevent any confusion that may interfere with purchasing the product.</p>
 				
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-wak-1.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-wak-1.png" alt=""/>
 					<figcaption className={css.caption}>FIG.1 ADD AN EXPLANATION INDICATOR BESIDE “NEEDLE”</figcaption>
 				</figure>
 
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-wak-2.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-wak-2.png" alt=""/>
 					<figcaption className={css.caption}>FIG.2 ADD AVAILABLE COLOUR OPTIONS</figcaption>
 				</figure>
 
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-wak-3.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-wak-3.png" alt=""/>
 					<figcaption className={css.caption}>FIG.3 WOOL QUALITY DESCRIPTION</figcaption>
 				</figure>
 
@@ -1770,12 +1770,12 @@ export const articles = {
 				<p>Adding its own section labeled as “Knitting Parties” in the navigation bar will allow users to find an option to join the community and look up knitting events. There is a signifier which is a hover, along with a drop down with 3 subcategories – Join a Party, Host a Party, and #knittingparties (Fig 4). Having a hover and drop down will allow users to know that the button is interactive as well as knowing where it will take them and what are the subcategories. Being able to drive community engagement is vital when building a brand, and this recommendation seeks to put that community front and centre.</p>
 				
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-wak-4.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-wak-4.png" alt=""/>
 					<figcaption className={css.caption}>FIG. 4: CURRENT “KNITTING PARTIES” LOCATION</figcaption>
 				</figure>
 
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-wak-5.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-wak-5.png" alt=""/>
 					<figcaption className={css.caption}>FIG. 5: MOCK-UP OF ‘KNITTING PARTIES’ AS PART OF THE NAVIGATION BAR</figcaption>
 				</figure>
 
@@ -1789,10 +1789,10 @@ export const articles = {
 				<p>The simplest solution to these issues is to allow the user to either ignore the modal (in the case of the cookies) or dismiss them by interacting outside of their bounding box (in the case of preferences/promotions). Alternatively, if the regional preferences are mandatory, ensure they are the first to load when a user lands on the site. It is typically easier to understand that a pop-up is blocking interaction than a cookie menu. If a user is met with significant difficulty, or worse errors, when visiting a site for the first time, they’re likely leave. The goal of this recommendation is to eliminate those pain points, and get the users shopping as fast as possible.</p>
 				
 				<figure className={css.figure}>
-					<img className={css.figureImage} src="/images/article-wak-6.png" alt=""/>
-					<img className={css.figureImage} src="/images/article-wak-7.png" alt=""/>
-					<img className={css.figureImage} src="/images/article-wak-7.png" alt=""/>
-					<img className={css.figureImage} src="/images/article-wak-9.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-wak-6.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-wak-7.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-wak-7.png" alt=""/>
+					<img className={css.figureObject} src="/images/article-wak-9.png" alt=""/>
 					<figcaption className={css.caption}>Modals for (1) Cookies (2) Preferences (3) Call to Action before finally reaching (4) Content</figcaption>
 				</figure>
 

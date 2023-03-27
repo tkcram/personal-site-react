@@ -7,7 +7,7 @@ import css from './Study.module.css'
 
 const Article = () => {
 	const { title } = useParams();
-	document.documentElement.style.setProperty('--colour','var(--projects)')
+	document.documentElement.style.setProperty('--colour','var(--archive)')
 	
 	return(
 		<>

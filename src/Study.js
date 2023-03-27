@@ -4,7 +4,6 @@ import Footer from './Footer'
 import { caseStudies } from './study-info'
 import css from './Study.module.css'
 
-
 const Study = () => {
 	const { title } = useParams();
 	document.documentElement.style.setProperty('--colour','var(--portfolio)')
@@ -27,7 +26,7 @@ const Study = () => {
 				<div className={css.content}>
 					{caseStudies[title].markup}
 				</div>
-				<div className={css.right}></div>
+				{/*<div className={css.right}></div>*/}
 			</main>
 			<Footer/>
 		</>

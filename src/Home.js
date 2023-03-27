@@ -15,10 +15,10 @@ const Home = () => (
 				</a>
 			</div>
 			<div className={css.item}>
-				<a className={css.link} href="projects">
-					<div className={classnames(css.overlay, 'projects')}/>
-					<div id={css.projects} className={css.image}/>
-					<p className={css.text}>PROJECTS</p>
+				<a className={css.link} href="archive">
+					<div className={classnames(css.overlay, 'archive')}/>
+					<div id={css.archive} className={css.image}/>
+					<p className={css.text}>ARCHIVE</p>
 				</a>
 			</div>
 			<div className={css.item}>

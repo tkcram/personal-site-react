@@ -1,6 +1,7 @@
 .section {
 	display: flex;
 	padding: 30px;
+/*	align-items: center;*/
 }
 
 .image {
@@ -11,6 +12,11 @@
 
 .content {
 	padding: 0 50px;
+	width: 70vw;
+}
+
+.content h2{
+	margin: 0;
 }
 
 .links {

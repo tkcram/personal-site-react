@@ -67,8 +67,8 @@
 	background-color: var(--portfolio);
 }
 
-.projects:hover {
-	background-color: var(--projects);
+.archive:hover {
+	background-color: var(--archive);
 }
 
 .about:hover {

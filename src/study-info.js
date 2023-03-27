@@ -14,215 +14,243 @@ export const caseStudies = {
         id: "wingspan",
         title: "The Birds of Wingspan",
         subtitle:"Creating an Avian Information Dashboard Based on the Wingspan Boardgame",
-        blurb: "A data visualisation project",
+        blurb: "The Birds of Wingspan is a technology driven data visualization project. Built using React and D3.js, the project uses the boardgame Wingspan as a starting point for users to explore the world of ornithology. The apps draws on learnings from previous work in information visualization to build out a compelling dashboard featuring a breakdown of a species diet and lifespan, biographical and game mechanic descriptions, and a map of millions of self-reported sightings.  ",
         image:"/images/study-wingspan-banner.jpg",
         link: "https://ivf22.netlify.app",
+        code: "https://github.com/tkcram/bird-viz",
         isVisible: true,
         markup: (
             <>
                 <img src="/images/study-wingspan-banner.jpg" className={css.banner} alt=""/>
-                <h1 id="introduction">Birds of Wingspan: Creating an Avian Information Dashboard Based on the Wingspan Boardgame</h1>
-                <a className="button" target="_blank" href="https://ivf22.netlify.app" rel="noreferrer">View the Dashboard</a>
-                <p>Intro intro intro</p>
+
+                <section id="introduction">
+                    <h1>Birds of Wingspan: Creating an Avian Information Dashboard Based on the Wingspan Boardgame</h1>
+                    <a className="button" target="_blank" href="https://ivf22.netlify.app" rel="noreferrer">View the Dashboard</a>
+                    <p>A personal favourite, Wingspan is a boardgame based around collecting a variety of bird species. Each bird comes with several different datapoints, including diet, range, and nesting behaviour. But what if we wanted to find out more? This project aims to use Wingspan as a jumping off point to learn more about the beautiful birds that exist in the world around us, and hopefully increase appreciation of our feathered friends.</p>
+                </section>
                 
-                <h2 id="background">Background</h2>
-                <h3>The Project</h3>
-                <p>This project was originally created for INFO 616: Programming Interactive Visualization. The goal of the project was to use D3.js to create a web-based data visualisation with an interactive component. Specifically, I opted to create an online dashboard where you could learn more about a specific bird species. This allowed me to bring together multiple disparate datasets, including aviandietdb and cornell ebird, demostrate a range of technical skills, and discuss a topic I personally enjoy. In order to tie it all together, I drew upon the boardgame Wingspan - this provided an entry point for users as well as a framing device for how the dashboard should be laid out</p>
-                <p>For inclusion in this portfolio, the project was later expanded upon in three key ways. The first was to generalise the datasets to include a siginificantly wider selection of bird species. The second was to create modals for each module, allowing for more in depth exploration and drawing on previous work from INFO 658: Information Visualization. Thirdly, additional polish has been done to improve both the interface and the code that belies it.</p>
-                
-                <h3>Wingspan</h3>
-                <div className={css.textLogo}>
-                    <img alt="" className={css.logo} src="https://cf.geekdo-images.com/yLZJCVLlIx4c7eJEWUNJ7w__opengraph/img/d5aVUcak3R6QOHz5y-fvQdc8pwU=/fit-in/1200x630/filters:strip_icc()/pic4458123.jpg"/>
-                    <p>Wingspan is a "competitive, medium-weight, card-driven, engine-building board game" designed by Elizabeth Hargrave and published by Stonemaier Games. The aim of the game is to collect a vairety of bird species and combine their unique abilities to create powerful effects. Each bird is represented on a card, which includes its biographical information, gameplay statistics and abilities, and a beautiful illustration by Natalia Rojas & Ana Maria Martinez Jaramillo. In game characteristics are designed to facsimile the real world attributes of the species, such as diet and habitat.</p>
-                </div>
-
-                <figure className={css.figure}>
-                    <img className={css.figureObject} src="/images/study-wingspan-cards.jpg" alt="https://www.birdcollective.com/products/wingspan-board-game"/>
-                    <figcaption className={css.figureCaption}>Example of a wingspan bird cards</figcaption>
-                </figure>
-                
-                <h2 id="methodology">Methodology</h2>
-                <h3>Design: Wingspan</h3>
-                <div className={css.textLogo}>
-                    <img alt="" className={css.logo} src="https://cf.geekdo-images.com/yLZJCVLlIx4c7eJEWUNJ7w__opengraph/img/d5aVUcak3R6QOHz5y-fvQdc8pwU=/fit-in/1200x630/filters:strip_icc()/pic4458123.jpg"/>
-                    <p>As the cards create a facsimile to the birds, so too does this visualisation create a facsimile to the cards. The visualisation is designed as a dashboard, with each module roughly correlating to a mechanical/graphical aspect of the card. This allows users to get a wide overview of the information, even at a glance, as they orient themselves based on the game pieces. The interactive elements allow the user to dig deeper into the information, learning more about specific parts of the data, or create additional insights. </p>
-                </div>
-
-                <h3>Base Case: D3</h3>
-                <div className={css.textLogo}>
-                    <img alt="" className={css.logo} src="https://raw.githubusercontent.com/d3/d3-logo/master/d3.png"/>
-                    <p>Each module was built using D3.js, which allowed for easier creation of the visualisations. Sometimes it could be hard to write things in a D3 way though [...]</p>
-                </div>
-
-                <h3>Generalisation: React</h3>
-                <div className={css.textLogo}>
-                    <img alt="" className={css.logo} src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"/>
-                    <p>Once all the modules had been completed, and were shown to work with the sample data, the next step was to generalise it for any bird species. To accomplish this, the code was split out using the React JavaScript Library. This allowed me to create a template page that could be populated by filtering the data for the specific bird species. Doing so also helped solved the issue with searching, as users could be directed to the appropriate page based on their input, or receive error handling.</p>
-                </div>
-
-                
-                <h2 id="results">Results</h2>
-
-                <figure className={css.figure}>
-                    <img className={css.figureObject} src="/images/study-wingspan-dashboard.png" alt="Luke, I am your caption..."/>
-                    <figcaption className={css.figureCaption}>Screen capture of the dashboard for a Bald Eagle</figcaption>
-                </figure>
-                <p>Once you look up a specific bird you’re greeted with five unique modules: Biography; Diet; Lifecycle; Range; Wingspan. Each one representing a different aspect of the card, and including the iconography as an indicator. Each module is designed to stand alone, with basic information on the topic at a glance and a pop-up modal for a more detailed view.</p>
-                
-                <h3>Module 1: Biography</h3>
-                <Drawer title="The Data" buttonTextCollapsed="View Data ›" buttonTextExpanded="Hide Data ⌄" linkText="Download" linkURL="">
-                    <table className={css.drawerTable}>
-                        <thead>
-                            <tr><th>Common name</th><th>Scientific name</th><th>Color</th><th>Power Category</th><th>Power text</th><th>Predator</th><th>Flocking</th><th>Bonus card</th><th>Victory points</th><th>Nest type</th><th>Egg capacity</th><th>Wingspan</th><th>Forest</th><th>Grassland</th><th>Wetland</th><th>Invertebrate</th><th>Seed</th><th>Fish</th><th>Fruit</th><th>Rodent</th><th>Wild (food)</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>Abbott's Booby</td><td>Papasula abbotti</td><td>White</td><td></td><td>Draw 3 bonus cards, then discard 2. You may discard bonus cards you did not draw this turn.</td><td></td><td></td><td>X</td><td>5</td><td>Platform</td><td>1</td><td>190</td><td></td><td></td><td>X</td><td></td><td></td><td>2</td><td></td><td></td><td></td></tr>
-                            <tr><td>Acorn Woodpecker</td><td>Melanerpes formicivorus</td><td>Brown</td><td>Caching Food</td><td>Gain 1 [seed] from the birdfeeder (if available). You may cache it on this card.</td><td></td><td></td><td></td><td>5</td><td>Cavity</td><td>4</td><td>46</td><td>X</td><td></td><td></td><td></td><td>3</td><td></td><td></td><td></td><td></td></tr>
-                            <tr><td>American Avocet</td><td>Recurvirostra americana</td><td>Pink</td><td>Egg-laying</td><td>When another player takes the "lay eggs" action, this bird lays 1 [egg] on another bird with a [ground] nest.</td><td></td><td></td><td></td><td>6</td><td>Ground</td><td>2</td><td>79</td><td></td><td></td><td>X</td><td>2</td><td>1</td><td></td><td></td><td></td><td></td></tr>
-                            <tr><td>American Bittern</td><td>Botaurus lentiginosus</td><td>Brown</td><td>Card-drawing</td><td>Player(s) with the fewest [wetland] birds: draw 1 [card].</td><td></td><td></td><td></td><td>7</td><td>Platform</td><td>2</td><td>107</td><td></td><td></td><td>X</td><td>1</td><td></td><td>1</td><td></td><td>1</td><td></td></tr>
-                            <tr><td>American Coot</td><td>Fulica americana</td><td>Brown</td><td>Flocking</td><td>Tuck a [card] from your hand behind this bird. If you do, draw 1 [card].</td><td></td><td>X</td><td></td><td>3</td><td>Platform</td><td>5</td><td>61</td><td></td><td></td><td>X</td><td></td><td>1</td><td></td><td></td><td></td><td>1</td></tr>
-                            <tr><td>American Crow</td><td>Corvus brachyrhynchos</td><td>Brown</td><td>Food from Supply</td><td>Discard 1 [egg] from any of your other birds to gain 1 [wild] from the supply.</td><td></td><td></td><td></td><td>4</td><td>Platform</td><td>2</td><td>99</td><td>X</td><td>X</td><td>X</td><td></td><td></td><td></td><td></td><td></td><td>1</td></tr>
-                        </tbody>
-                    </table>
-                </Drawer>
-                <p>(Wingspan) Most of the top banner is pulled from a wingspan dataset that a fan created. It’s missing a few key pieces of information, but does a better job than trying to compile it myself. Would want to amend a few things if I continue to work on this project though, notably some missing data points around game actions.</p>
-                <p>(Biography)</p>
-                <h4>The Viz</h4>
-                <p>There were two references I used when trying to decide how to display this information. The first comes from the book “Celebrating birds” which is a companion guide to the game itself. The second is All About Birds by Cornell</p>
-
-                <h3>Module 2: Diet</h3>
-                <figure className={css.figure}>
-                    <div className={css.figureObject}>
-                        <Diet/>
+                <section id="background">
+                    <h2>Background</h2>
+                    <h3>The Project</h3>
+                    <p>This project was originally created for INFO 616: Programming Interactive Visualization. The goal of the project was to use D3.js to create a web-based data visualisation with an interactive component. Specifically, I opted to create an online dashboard where you could learn more about a specific bird species. This allowed me to bring together multiple disparate datasets, including aviandietdb and cornell ebird, demostrate a range of technical skills, and discuss a topic I personally enjoy. In order to tie it all together, I drew upon the boardgame Wingspan - this provided an entry point for users as well as a framing device for how the dashboard should be laid out</p>
+                    {/*<p>For inclusion in this portfolio, the project was later expanded upon in three key ways. The first was to generalise the datasets to include a significantly wider selection of bird species. The second was to create modals for each module, allowing for more in depth exploration and drawing on previous work from INFO 658: Information Visualization. Thirdly, additional polish has been done to improve both the interface and the code that belies it.</p>*/}
+                    
+                    <h3>Wingspan</h3>
+                    <div className={css.textLogo}>
+                        <img alt="" className={css.logo} src="https://cf.geekdo-images.com/yLZJCVLlIx4c7eJEWUNJ7w__opengraph/img/d5aVUcak3R6QOHz5y-fvQdc8pwU=/fit-in/1200x630/filters:strip_icc()/pic4458123.jpg"/>
+                        <p>Wingspan is a "competitive, medium-weight, card-driven, engine-building board game" designed by Elizabeth Hargrave and published by Stonemaier Games. The aim of the game is to collect a vairety of bird species and combine their unique abilities to create powerful effects. Each bird is represented on a card, which includes its biographical information, gameplay statistics and abilities, and a beautiful illustration by Natalia Rojas & Ana Maria Martinez Jaramillo. In game characteristics are designed to facsimile the real world attributes of the species, such as diet and habitat.</p>
                     </div>
-                    <figcaption className={css.figureCaption}>Try me!</figcaption>
-                </figure>
-                <Drawer title="The Data" buttonTextCollapsed="View Data ›" buttonTextExpanded="Hide Data ⌄" linkText="Download" linkURL="">
-                    <table className={css.drawerTable}>
-                        <thead>
-                            <tr><th>Common name</th><th>Scientific name</th><th>Color</th><th>Power Category</th><th>Power text</th><th>Predator</th><th>Flocking</th><th>Bonus card</th><th>Victory points</th><th>Nest type</th><th>Egg capacity</th><th>Wingspan</th><th>Forest</th><th>Grassland</th><th>Wetland</th><th>Invertebrate</th><th>Seed</th><th>Fish</th><th>Fruit</th><th>Rodent</th><th>Wild (food)</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>Abbott's Booby</td><td>Papasula abbotti</td><td>White</td><td></td><td>Draw 3 bonus cards, then discard 2. You may discard bonus cards you did not draw this turn.</td><td></td><td></td><td>X</td><td>5</td><td>Platform</td><td>1</td><td>190</td><td></td><td></td><td>X</td><td></td><td></td><td>2</td><td></td><td></td><td></td></tr>
-                            <tr><td>Acorn Woodpecker</td><td>Melanerpes formicivorus</td><td>Brown</td><td>Caching Food</td><td>Gain 1 [seed] from the birdfeeder (if available). You may cache it on this card.</td><td></td><td></td><td></td><td>5</td><td>Cavity</td><td>4</td><td>46</td><td>X</td><td></td><td></td><td></td><td>3</td><td></td><td></td><td></td><td></td></tr>
-                            <tr><td>American Avocet</td><td>Recurvirostra americana</td><td>Pink</td><td>Egg-laying</td><td>When another player takes the "lay eggs" action, this bird lays 1 [egg] on another bird with a [ground] nest.</td><td></td><td></td><td></td><td>6</td><td>Ground</td><td>2</td><td>79</td><td></td><td></td><td>X</td><td>2</td><td>1</td><td></td><td></td><td></td><td></td></tr>
-                            <tr><td>American Bittern</td><td>Botaurus lentiginosus</td><td>Brown</td><td>Card-drawing</td><td>Player(s) with the fewest [wetland] birds: draw 1 [card].</td><td></td><td></td><td></td><td>7</td><td>Platform</td><td>2</td><td>107</td><td></td><td></td><td>X</td><td>1</td><td></td><td>1</td><td></td><td>1</td><td></td></tr>
-                            <tr><td>American Coot</td><td>Fulica americana</td><td>Brown</td><td>Flocking</td><td>Tuck a [card] from your hand behind this bird. If you do, draw 1 [card].</td><td></td><td>X</td><td></td><td>3</td><td>Platform</td><td>5</td><td>61</td><td></td><td></td><td>X</td><td></td><td>1</td><td></td><td></td><td></td><td>1</td></tr>
-                            <tr><td>American Crow</td><td>Corvus brachyrhynchos</td><td>Brown</td><td>Food from Supply</td><td>Discard 1 [egg] from any of your other birds to gain 1 [wild] from the supply.</td><td></td><td></td><td></td><td>4</td><td>Platform</td><td>2</td><td>99</td><td>X</td><td>X</td><td>X</td><td></td><td></td><td></td><td></td><td></td><td>1</td></tr>
-                        </tbody>
-                    </table>
-                </Drawer>
-                <div></div>
-                <p>(Source: Avian Diet Database) The data lacks any sort of consistency however, with some birds listing prey only by weight, others by item, others both. And sometimes the taxonomy was either listed at the wrong level (species in the class level) or simply not useful (“Unidentified Animalia”).</p>
-                <Drawer title="The Viz" buttonTextCollapsed="View Code ›" buttonTextExpanded="Hide Code ⌄" linkText="Github" linkURL="">
-                    <CodeBlock language="jsx" showLineNumbers={true} text={DietSnippet}/>
-                </Drawer>
-                <p>TBD what the pop-up is gonna look like</p>   
+
+                    <figure className={css.figure}>
+                        <img className={css.figureObject} src="/images/study-wingspan-cards.jpg" alt="https://www.birdcollective.com/products/wingspan-board-game"/>
+                        <figcaption className={css.figureCaption}>Example of a wingspan bird cards</figcaption>
+                    </figure>
+                </section>
                 
-                <h3>Module 3: Lifecycle</h3>
-                <figure className={css.figure}>
-                    <div className={css.figureObject}>
-                        <Lifecycle/>
+                <section id="methodology">
+                    <h2>Methodology</h2>
+                    <h3>Design: Wingspan</h3>
+                    <div className={css.textLogo}>
+                        <img alt="" className={css.logo} src="https://cf.geekdo-images.com/yLZJCVLlIx4c7eJEWUNJ7w__opengraph/img/d5aVUcak3R6QOHz5y-fvQdc8pwU=/fit-in/1200x630/filters:strip_icc()/pic4458123.jpg"/>
+                        <p>As the cards create a facsimile to the birds, so too does this visualisation create a facsimile to the cards. The visualisation is designed as a dashboard, with each module roughly correlating to a mechanical/ graphical aspect of the card. This allows users to get a wide overview of the information, even at a glance, as they orient themselves based on the game pieces. The interactive elements allow the user to dig deeper into the information, learning more about specific parts of the data, or create additional insights. </p>
                     </div>
-                    <figcaption className={css.figureCaption}>Try me!</figcaption>
-                </figure>
-                <Drawer title="The Data" buttonTextCollapsed="View Data ›" buttonTextExpanded="Hide Data ⌄" linkText="Download" linkURL="">
-                    <table className={css.drawerTable}>
-                        <thead>
-                            <tr><th>Common name</th><th>Scientific name</th><th>Color</th><th>Power Category</th><th>Power text</th><th>Predator</th><th>Flocking</th><th>Bonus card</th><th>Victory points</th><th>Nest type</th><th>Egg capacity</th><th>Wingspan</th><th>Forest</th><th>Grassland</th><th>Wetland</th><th>Invertebrate</th><th>Seed</th><th>Fish</th><th>Fruit</th><th>Rodent</th><th>Wild (food)</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>Abbott's Booby</td><td>Papasula abbotti</td><td>White</td><td></td><td>Draw 3 bonus cards, then discard 2. You may discard bonus cards you did not draw this turn.</td><td></td><td></td><td>X</td><td>5</td><td>Platform</td><td>1</td><td>190</td><td></td><td></td><td>X</td><td></td><td></td><td>2</td><td></td><td></td><td></td></tr>
-                            <tr><td>Acorn Woodpecker</td><td>Melanerpes formicivorus</td><td>Brown</td><td>Caching Food</td><td>Gain 1 [seed] from the birdfeeder (if available). You may cache it on this card.</td><td></td><td></td><td></td><td>5</td><td>Cavity</td><td>4</td><td>46</td><td>X</td><td></td><td></td><td></td><td>3</td><td></td><td></td><td></td><td></td></tr>
-                            <tr><td>American Avocet</td><td>Recurvirostra americana</td><td>Pink</td><td>Egg-laying</td><td>When another player takes the "lay eggs" action, this bird lays 1 [egg] on another bird with a [ground] nest.</td><td></td><td></td><td></td><td>6</td><td>Ground</td><td>2</td><td>79</td><td></td><td></td><td>X</td><td>2</td><td>1</td><td></td><td></td><td></td><td></td></tr>
-                            <tr><td>American Bittern</td><td>Botaurus lentiginosus</td><td>Brown</td><td>Card-drawing</td><td>Player(s) with the fewest [wetland] birds: draw 1 [card].</td><td></td><td></td><td></td><td>7</td><td>Platform</td><td>2</td><td>107</td><td></td><td></td><td>X</td><td>1</td><td></td><td>1</td><td></td><td>1</td><td></td></tr>
-                            <tr><td>American Coot</td><td>Fulica americana</td><td>Brown</td><td>Flocking</td><td>Tuck a [card] from your hand behind this bird. If you do, draw 1 [card].</td><td></td><td>X</td><td></td><td>3</td><td>Platform</td><td>5</td><td>61</td><td></td><td></td><td>X</td><td></td><td>1</td><td></td><td></td><td></td><td>1</td></tr>
-                            <tr><td>American Crow</td><td>Corvus brachyrhynchos</td><td>Brown</td><td>Food from Supply</td><td>Discard 1 [egg] from any of your other birds to gain 1 [wild] from the supply.</td><td></td><td></td><td></td><td>4</td><td>Platform</td><td>2</td><td>99</td><td>X</td><td>X</td><td>X</td><td></td><td></td><td></td><td></td><td></td><td>1</td></tr>
-                        </tbody>
-                    </table>
-                </Drawer>
-                <p>I was unable to find a single dataset with all the information that this module needed publically available. For prototyping purposes, data was sourced manually and entered into a spreadsheet. Early stages of development were found at AllAboutBirds, but they didn't codify later stages such as mating or lifespan, which had to be sought out on google. I was serendipitously gifted an encyclopaedia on birds, which provided all the information the module needed. The book itself is slightly dated, as taxonomies are ever shifting, but it provides good enough information for this project. Unfortunately, it being a paper book meant a significant amout of manual data entry.</p>
-                <p>Should probably write something about the tooltip info</p>
-                <Drawer title="The Viz" buttonTextCollapsed="View Code ›" buttonTextExpanded="Hide Code ⌄" linkText="Github" linkURL="">
-                    <CodeBlock language="jsx" showLineNumbers={true} text={LifecycleSnippet}/>
-                </Drawer>
-                <p>This module is the one that was changed most frequently during development. The first attempt involved using a tree diagram and pruning it until it resembled a timeline. The second involved using a newtwork graph, which proved completely off base. The final approach was to use a one-dimensional scatterplot. The dates are scaled on a log, as early stages in development are measured in weeks, whereas later stages can take decades, and a log allowed them to be draw with less space in between</p>    
-                <p>I wonder what the pop-up for this one will look like. Probably rolling the tooltips into it</p>      
 
-                <h3>Module 4: Range</h3>
-                <figure className={css.figure}>
-                    <div className={css.figureObject}><Range/></div>
-                    <figcaption className={css.figureCaption}>Try me!</figcaption>
-                </figure>
-                <Drawer title="The Data" buttonTextCollapsed="View Data ›" buttonTextExpanded="Hide Data ⌄" linkText="Download" linkURL="">
-                    <table className={css.drawerTable}>
-                        <thead>
-                            <tr><th>Common name</th><th>Scientific name</th><th>Color</th><th>Power Category</th><th>Power text</th><th>Predator</th><th>Flocking</th><th>Bonus card</th><th>Victory points</th><th>Nest type</th><th>Egg capacity</th><th>Wingspan</th><th>Forest</th><th>Grassland</th><th>Wetland</th><th>Invertebrate</th><th>Seed</th><th>Fish</th><th>Fruit</th><th>Rodent</th><th>Wild (food)</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>Abbott's Booby</td><td>Papasula abbotti</td><td>White</td><td></td><td>Draw 3 bonus cards, then discard 2. You may discard bonus cards you did not draw this turn.</td><td></td><td></td><td>X</td><td>5</td><td>Platform</td><td>1</td><td>190</td><td></td><td></td><td>X</td><td></td><td></td><td>2</td><td></td><td></td><td></td></tr>
-                            <tr><td>Acorn Woodpecker</td><td>Melanerpes formicivorus</td><td>Brown</td><td>Caching Food</td><td>Gain 1 [seed] from the birdfeeder (if available). You may cache it on this card.</td><td></td><td></td><td></td><td>5</td><td>Cavity</td><td>4</td><td>46</td><td>X</td><td></td><td></td><td></td><td>3</td><td></td><td></td><td></td><td></td></tr>
-                            <tr><td>American Avocet</td><td>Recurvirostra americana</td><td>Pink</td><td>Egg-laying</td><td>When another player takes the "lay eggs" action, this bird lays 1 [egg] on another bird with a [ground] nest.</td><td></td><td></td><td></td><td>6</td><td>Ground</td><td>2</td><td>79</td><td></td><td></td><td>X</td><td>2</td><td>1</td><td></td><td></td><td></td><td></td></tr>
-                            <tr><td>American Bittern</td><td>Botaurus lentiginosus</td><td>Brown</td><td>Card-drawing</td><td>Player(s) with the fewest [wetland] birds: draw 1 [card].</td><td></td><td></td><td></td><td>7</td><td>Platform</td><td>2</td><td>107</td><td></td><td></td><td>X</td><td>1</td><td></td><td>1</td><td></td><td>1</td><td></td></tr>
-                            <tr><td>American Coot</td><td>Fulica americana</td><td>Brown</td><td>Flocking</td><td>Tuck a [card] from your hand behind this bird. If you do, draw 1 [card].</td><td></td><td>X</td><td></td><td>3</td><td>Platform</td><td>5</td><td>61</td><td></td><td></td><td>X</td><td></td><td>1</td><td></td><td></td><td></td><td>1</td></tr>
-                            <tr><td>American Crow</td><td>Corvus brachyrhynchos</td><td>Brown</td><td>Food from Supply</td><td>Discard 1 [egg] from any of your other birds to gain 1 [wild] from the supply.</td><td></td><td></td><td></td><td>4</td><td>Platform</td><td>2</td><td>99</td><td>X</td><td>X</td><td>X</td><td></td><td></td><td></td><td></td><td></td><td>1</td></tr>
-                        </tbody>
-                    </table>
-                </Drawer>
-                <p>A Cornell Lab of Ornithology project, eBird allows users to document bird sightings, which are then collected for use by registered users. [something something more about the data].</p>
-                <p>During prototyping I manually downloaded the sightings for ~20 birds over 2021. Aggregating the data was all done using a python script that would loop through all the files, and sum up the number of sighting instances for a given county code. Unfortunately the location data included isn't an exact match to standard FIPS encoding, e.g. instead of 01143 it uses AZ-143. This had to be changed in order to properly reference the positioning on the map.</p>
-                <p>However when trying to generalise the project, it became apparent that pre-processing the entire dataset wouldn't be suitable. If nothing else, even when narrowing the raw data to only the USA for a single year, it was over 100gb in size. Instead I switched to using the eBird API. The upside of this was that it allowed for lightweight access to the dataset. The downside was that a) it required more processing on the dashboard itself, lowering performance and b) it only provides the last 30 days worth of sighting, making it incomplete for migratory species</p>
-                <Drawer title="The Viz" buttonTextCollapsed="View Code ›" buttonTextExpanded="Hide Code ⌄" linkText="Github" linkURL="">
-                    <CodeBlock language="jsx" showLineNumbers={true} text={RangeSnippet}/>
-                </Drawer>
-                <p>The initial plan for this module involved converting all the points into a single shape file to represent the range, and overlaying it atop the map. Although possible, the amount of manual work meant the approach was unsuitable for generalisation. Instead, upon consultation with a classmate, I instead opted to aggregate the data into regions, and use D3's built in mapping functionality to create a chloropleth. Some discussion was had about whether to aggregate to the county or state level, but the former felt better suited. Scale was also much debated, as the data ranged from single sightings to tens of thousands, and so a log scale was chosen to show that granularity.</p>
-                <p>The map used for the base layer was 10m</p>
-                <p>The addition of a pop-up modal provided the opportunity for significantly more user interaction, such as the ability to zoom and filter by time. This also provided the ability to switch between aggregate and descrete points (that the data provided). With that, i integrated work from [a previous project] to not only display the points, but also allow the user to view them in a sped up real time (???)</p>
-                
-                <h3>Module 5: Wingspan</h3>
-                <figure className={css.figure}>
-                    <div className={css.figureObject}><Wingspan/></div>
-                    <figcaption className={css.figureCaption}>Try me!</figcaption>
-                </figure>           
-                <Drawer title="The Data" buttonTextCollapsed="View Data ›" buttonTextExpanded="Hide Data ⌄" linkText="Download" linkURL="">
-                    <table className={css.drawerTable}>
-                        <thead>
-                            <tr><th>Common name</th><th>Scientific name</th><th>Color</th><th>Power Category</th><th>Power text</th><th>Predator</th><th>Flocking</th><th>Bonus card</th><th>Victory points</th><th>Nest type</th><th>Egg capacity</th><th>Wingspan</th><th>Forest</th><th>Grassland</th><th>Wetland</th><th>Invertebrate</th><th>Seed</th><th>Fish</th><th>Fruit</th><th>Rodent</th><th>Wild (food)</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>Abbott's Booby</td><td>Papasula abbotti</td><td>White</td><td></td><td>Draw 3 bonus cards, then discard 2. You may discard bonus cards you did not draw this turn.</td><td></td><td></td><td>X</td><td>5</td><td>Platform</td><td>1</td><td>190</td><td></td><td></td><td>X</td><td></td><td></td><td>2</td><td></td><td></td><td></td></tr>
-                            <tr><td>Acorn Woodpecker</td><td>Melanerpes formicivorus</td><td>Brown</td><td>Caching Food</td><td>Gain 1 [seed] from the birdfeeder (if available). You may cache it on this card.</td><td></td><td></td><td></td><td>5</td><td>Cavity</td><td>4</td><td>46</td><td>X</td><td></td><td></td><td></td><td>3</td><td></td><td></td><td></td><td></td></tr>
-                            <tr><td>American Avocet</td><td>Recurvirostra americana</td><td>Pink</td><td>Egg-laying</td><td>When another player takes the "lay eggs" action, this bird lays 1 [egg] on another bird with a [ground] nest.</td><td></td><td></td><td></td><td>6</td><td>Ground</td><td>2</td><td>79</td><td></td><td></td><td>X</td><td>2</td><td>1</td><td></td><td></td><td></td><td></td></tr>
-                            <tr><td>American Bittern</td><td>Botaurus lentiginosus</td><td>Brown</td><td>Card-drawing</td><td>Player(s) with the fewest [wetland] birds: draw 1 [card].</td><td></td><td></td><td></td><td>7</td><td>Platform</td><td>2</td><td>107</td><td></td><td></td><td>X</td><td>1</td><td></td><td>1</td><td></td><td>1</td><td></td></tr>
-                            <tr><td>American Coot</td><td>Fulica americana</td><td>Brown</td><td>Flocking</td><td>Tuck a [card] from your hand behind this bird. If you do, draw 1 [card].</td><td></td><td>X</td><td></td><td>3</td><td>Platform</td><td>5</td><td>61</td><td></td><td></td><td>X</td><td></td><td>1</td><td></td><td></td><td></td><td>1</td></tr>
-                            <tr><td>American Crow</td><td>Corvus brachyrhynchos</td><td>Brown</td><td>Food from Supply</td><td>Discard 1 [egg] from any of your other birds to gain 1 [wild] from the supply.</td><td></td><td></td><td></td><td>4</td><td>Platform</td><td>2</td><td>99</td><td>X</td><td>X</td><td>X</td><td></td><td></td><td></td><td></td><td></td><td>1</td></tr>
-                        </tbody>
-                    </table>
-                </Drawer>
-                <p>The Wingspan Dataset used through the project contains datapoints for the literal wingspan of each species, which was piped directly into the viz.</p>
-                <Drawer title="The Viz" buttonTextCollapsed="View Code ›" buttonTextExpanded="Hide Code ⌄" linkText="Github" linkURL="">
-                    <CodeBlock language="jsx" showLineNumbers={true} text={WingspanSnippet}/>
-                </Drawer>
-                <p>This module provided the most hands on work with SVGs. The basic shape is courtesy of Jennifer Cahalane, and was manipulated through various transform effects. Although it may not be readily apparent, the width of the svg is a 1-to-1 match between the cm measurement of the wingspan to the pixel width of the SVG. In order to provide a relative size reference, the California Condor and Hummingbird, the largest and smallest birds in the dataset, were overlaid in the module. This had the added benefit of not having to worry about SVGs overlapping in strange ways, as they would always fall between those two points.</p>
-                 <p>The idea of relative size was expanded upon in the pop-up modal, providing references against [other species] </p>
-                
-                <h2 id="reflections">Reflections</h2>
-                <h3>Understimation</h3>
-                <p>This project was a lot more work that expected. Mainly because every single dataset I worked with came with its own unique challenges and quirks</p>
-                
-                <h2 id="future">Future Work</h2>
-                <h3>AR</h3>
-                <p>Being able to pipe in the actual cards to land on a page would be fun</p>
+                    <h3>Base Case: D3</h3>
+                    <div className={css.textLogo}>
+                        <img alt="" className={css.logo} src="https://raw.githubusercontent.com/d3/d3-logo/master/d3.png"/>
+                        <p>Each module was built using D3.js, a JavaScript library primarily used for creating dynamic, interactive data visualisations on the web. The library contains many useful fuctions for our purposes, including a csv reader, templates for standard charts and maps, and the ability to easily implement interactive elements such as tooltips and filters. </p>
+                    </div>
 
-                <h3>Collaboartion</h3>
-                <p>It would be amazing to be able to work with the Wingspan game team to help inform the project and the things that they think would work well. Having their asset library would also be a great boon</p>
+                    <h3>Generalisation: React</h3>
+                    <div className={css.textLogo}>
+                        <img alt="" className={css.logo} src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"/>
+                        <p>Once all the modules had been completed with the sample data, the next step was to generalise it for any bird species. To accomplish this, the code was split out using the React JavaScript Library. This allowed me to create a template page that could be populated by filtering the data for the specific bird species. Doing so also helped solved the issue with searching, as users could be directed to the appropriate page based on their input, or receive error handling.</p>
+                    </div>
+                </section>
                 
-                <h2 id="related">Other Data Viz Projects</h2>
-                <ul className={css.related}>
-                    <Card key={"bird-map"} {...projectInfo["bird-map"]}/>   
-                    <Card key={"bird-network"} {...projectInfo["bird-network"]}/>   
-                    <Card key={"nz-rent"} {...projectInfo["nz-rent"]}/> 
-                </ul>   
+                <section id="results">
+                    <h2>Results</h2>
+
+                    <section>
+                        <p>In all, two seperate web pages were created. The first being a simple landing screen containing information about the project, and instructions on how to interact with it. For the initial submission, the only way to find a bird was to enter its name into the search field, and see if it returned a result. Later iterations switched to an autocomlete field, as well as providing tiles for several example bird species.</p>
+                        <figure className={css.figure}>
+                            <img className={css.figureObject} src="/images/study-wingspan-dashboard.png" alt="Luke, I am your caption..."/>
+                            <figcaption className={css.figureCaption}>Screen capture of the dashboard for a Bald Eagle</figcaption>
+                        </figure>
+                        <p>Once you look up a specific bird you’re greeted with five unique modules: Biography; Diet; Lifecycle; Range; Wingspan. Each one representing a different aspect of the card, and including the iconography as an indicator. Each module is designed to stand alone, with basic information on the topic at a glance and a pop-up modal for a more detailed view.</p>
+                    </section>
+
+                    <section>
+                        <h3>Module 1: Biography</h3>
+                        <Drawer title="The Data" buttonTextCollapsed="View Data ›" buttonTextExpanded="Hide Data ⌄" linkText="Download" linkURL="">
+                            <table className={css.drawerTable}>
+                                <thead>
+                                    <tr><th>Common name</th><th>Scientific name</th><th>Color</th><th>Power Category</th><th>Power text</th><th>Predator</th><th>Flocking</th><th>Bonus card</th><th>Victory points</th><th>Nest type</th><th>Egg capacity</th><th>Wingspan</th><th>Forest</th><th>Grassland</th><th>Wetland</th><th>Invertebrate</th><th>Seed</th><th>Fish</th><th>Fruit</th><th>Rodent</th><th>Wild (food)</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Abbott's Booby</td><td>Papasula abbotti</td><td>White</td><td></td><td>Draw 3 bonus cards, then discard 2. You may discard bonus cards you did not draw this turn.</td><td></td><td></td><td>X</td><td>5</td><td>Platform</td><td>1</td><td>190</td><td></td><td></td><td>X</td><td></td><td></td><td>2</td><td></td><td></td><td></td></tr>
+                                    <tr><td>Acorn Woodpecker</td><td>Melanerpes formicivorus</td><td>Brown</td><td>Caching Food</td><td>Gain 1 [seed] from the birdfeeder (if available). You may cache it on this card.</td><td></td><td></td><td></td><td>5</td><td>Cavity</td><td>4</td><td>46</td><td>X</td><td></td><td></td><td></td><td>3</td><td></td><td></td><td></td><td></td></tr>
+                                    <tr><td>American Avocet</td><td>Recurvirostra americana</td><td>Pink</td><td>Egg-laying</td><td>When another player takes the "lay eggs" action, this bird lays 1 [egg] on another bird with a [ground] nest.</td><td></td><td></td><td></td><td>6</td><td>Ground</td><td>2</td><td>79</td><td></td><td></td><td>X</td><td>2</td><td>1</td><td></td><td></td><td></td><td></td></tr>
+                                    <tr><td>American Bittern</td><td>Botaurus lentiginosus</td><td>Brown</td><td>Card-drawing</td><td>Player(s) with the fewest [wetland] birds: draw 1 [card].</td><td></td><td></td><td></td><td>7</td><td>Platform</td><td>2</td><td>107</td><td></td><td></td><td>X</td><td>1</td><td></td><td>1</td><td></td><td>1</td><td></td></tr>
+                                    <tr><td>American Coot</td><td>Fulica americana</td><td>Brown</td><td>Flocking</td><td>Tuck a [card] from your hand behind this bird. If you do, draw 1 [card].</td><td></td><td>X</td><td></td><td>3</td><td>Platform</td><td>5</td><td>61</td><td></td><td></td><td>X</td><td></td><td>1</td><td></td><td></td><td></td><td>1</td></tr>
+                                    <tr><td>American Crow</td><td>Corvus brachyrhynchos</td><td>Brown</td><td>Food from Supply</td><td>Discard 1 [egg] from any of your other birds to gain 1 [wild] from the supply.</td><td></td><td></td><td></td><td>4</td><td>Platform</td><td>2</td><td>99</td><td>X</td><td>X</td><td>X</td><td></td><td></td><td></td><td></td><td></td><td>1</td></tr>
+                                </tbody>
+                            </table>
+                        </Drawer>
+                        <p>Most of the top banner is pulled from a wingspan dataset, compiled by a fan from the original game data. It’s missing a few key pieces of information, such as when abilities were activated, but proved sufficeint for our purposes. Given the time to expand on the project, entering more information into the dataset from the game would allow for more detailed mechanical descriptions.</p>
+                        <p>The long form descritions and imagesof the birds were taken from <a src="https://www.allaboutbirds.org/">All About Birds</a> by Cornell. As they don't expose a public API, the data was scraped by hand for the selected sample of birds. To expand on the project, either a more robust scraping or an alternate datasource would be in order.</p>
+                        <h4>The Viz</h4>
+                        <p>There were two references I used when trying to decide how to display this information. The first comes from the book “Celebrating birds” which is a companion guide to the game itself. The second is All About Birds by Cornell</p>
+                    </section>
+
+                    <section>
+                        <h3>Module 2: Diet</h3>
+                        <figure className={css.figure}>
+                            <div className={css.figureObject}>
+                                <Diet/>
+                            </div>
+                            <figcaption className={css.figureCaption}>Try me!</figcaption>
+                        </figure>
+                        <Drawer title="The Data" buttonTextCollapsed="View Data ›" buttonTextExpanded="Hide Data ⌄" linkText="Download" linkURL="">
+                            <table className={css.drawerTable}>
+                                <thead>
+                                    <tr><th>Common name</th><th>Scientific name</th><th>Color</th><th>Power Category</th><th>Power text</th><th>Predator</th><th>Flocking</th><th>Bonus card</th><th>Victory points</th><th>Nest type</th><th>Egg capacity</th><th>Wingspan</th><th>Forest</th><th>Grassland</th><th>Wetland</th><th>Invertebrate</th><th>Seed</th><th>Fish</th><th>Fruit</th><th>Rodent</th><th>Wild (food)</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Abbott's Booby</td><td>Papasula abbotti</td><td>White</td><td></td><td>Draw 3 bonus cards, then discard 2. You may discard bonus cards you did not draw this turn.</td><td></td><td></td><td>X</td><td>5</td><td>Platform</td><td>1</td><td>190</td><td></td><td></td><td>X</td><td></td><td></td><td>2</td><td></td><td></td><td></td></tr>
+                                    <tr><td>Acorn Woodpecker</td><td>Melanerpes formicivorus</td><td>Brown</td><td>Caching Food</td><td>Gain 1 [seed] from the birdfeeder (if available). You may cache it on this card.</td><td></td><td></td><td></td><td>5</td><td>Cavity</td><td>4</td><td>46</td><td>X</td><td></td><td></td><td></td><td>3</td><td></td><td></td><td></td><td></td></tr>
+                                    <tr><td>American Avocet</td><td>Recurvirostra americana</td><td>Pink</td><td>Egg-laying</td><td>When another player takes the "lay eggs" action, this bird lays 1 [egg] on another bird with a [ground] nest.</td><td></td><td></td><td></td><td>6</td><td>Ground</td><td>2</td><td>79</td><td></td><td></td><td>X</td><td>2</td><td>1</td><td></td><td></td><td></td><td></td></tr>
+                                    <tr><td>American Bittern</td><td>Botaurus lentiginosus</td><td>Brown</td><td>Card-drawing</td><td>Player(s) with the fewest [wetland] birds: draw 1 [card].</td><td></td><td></td><td></td><td>7</td><td>Platform</td><td>2</td><td>107</td><td></td><td></td><td>X</td><td>1</td><td></td><td>1</td><td></td><td>1</td><td></td></tr>
+                                    <tr><td>American Coot</td><td>Fulica americana</td><td>Brown</td><td>Flocking</td><td>Tuck a [card] from your hand behind this bird. If you do, draw 1 [card].</td><td></td><td>X</td><td></td><td>3</td><td>Platform</td><td>5</td><td>61</td><td></td><td></td><td>X</td><td></td><td>1</td><td></td><td></td><td></td><td>1</td></tr>
+                                    <tr><td>American Crow</td><td>Corvus brachyrhynchos</td><td>Brown</td><td>Food from Supply</td><td>Discard 1 [egg] from any of your other birds to gain 1 [wild] from the supply.</td><td></td><td></td><td></td><td>4</td><td>Platform</td><td>2</td><td>99</td><td>X</td><td>X</td><td>X</td><td></td><td></td><td></td><td></td><td></td><td>1</td></tr>
+                                </tbody>
+                            </table>
+                        </Drawer>
+                        <div></div>
+                        <p>(Source: Avian Diet Database) The data lacks any sort of consistency however, with some birds listing prey only by weight, others by item, others both. And sometimes the taxonomy was either listed at the wrong level (species in the class level) or simply not useful (“Unidentified Animalia”).</p>
+                        <Drawer title="The Viz" buttonTextCollapsed="View Code ›" buttonTextExpanded="Hide Code ⌄" linkText="Github" linkURL="">
+                            <CodeBlock language="jsx" showLineNumbers={true} text={DietSnippet}/>
+                        </Drawer>
+                        <p>TBD what the pop-up is gonna look like</p>   
+                    </section>
+
+                    <section>
+                        <h3>Module 3: Lifecycle</h3>
+                        <figure className={css.figure}>
+                            <div className={css.figureObject}>
+                                <Lifecycle/>
+                            </div>
+                            <figcaption className={css.figureCaption}>Try me!</figcaption>
+                        </figure>
+                        <Drawer title="The Data" buttonTextCollapsed="View Data ›" buttonTextExpanded="Hide Data ⌄" linkText="Download" linkURL="">
+                            <table className={css.drawerTable}>
+                                <thead>
+                                    <tr><th>Common name</th><th>Scientific name</th><th>Color</th><th>Power Category</th><th>Power text</th><th>Predator</th><th>Flocking</th><th>Bonus card</th><th>Victory points</th><th>Nest type</th><th>Egg capacity</th><th>Wingspan</th><th>Forest</th><th>Grassland</th><th>Wetland</th><th>Invertebrate</th><th>Seed</th><th>Fish</th><th>Fruit</th><th>Rodent</th><th>Wild (food)</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Abbott's Booby</td><td>Papasula abbotti</td><td>White</td><td></td><td>Draw 3 bonus cards, then discard 2. You may discard bonus cards you did not draw this turn.</td><td></td><td></td><td>X</td><td>5</td><td>Platform</td><td>1</td><td>190</td><td></td><td></td><td>X</td><td></td><td></td><td>2</td><td></td><td></td><td></td></tr>
+                                    <tr><td>Acorn Woodpecker</td><td>Melanerpes formicivorus</td><td>Brown</td><td>Caching Food</td><td>Gain 1 [seed] from the birdfeeder (if available). You may cache it on this card.</td><td></td><td></td><td></td><td>5</td><td>Cavity</td><td>4</td><td>46</td><td>X</td><td></td><td></td><td></td><td>3</td><td></td><td></td><td></td><td></td></tr>
+                                    <tr><td>American Avocet</td><td>Recurvirostra americana</td><td>Pink</td><td>Egg-laying</td><td>When another player takes the "lay eggs" action, this bird lays 1 [egg] on another bird with a [ground] nest.</td><td></td><td></td><td></td><td>6</td><td>Ground</td><td>2</td><td>79</td><td></td><td></td><td>X</td><td>2</td><td>1</td><td></td><td></td><td></td><td></td></tr>
+                                    <tr><td>American Bittern</td><td>Botaurus lentiginosus</td><td>Brown</td><td>Card-drawing</td><td>Player(s) with the fewest [wetland] birds: draw 1 [card].</td><td></td><td></td><td></td><td>7</td><td>Platform</td><td>2</td><td>107</td><td></td><td></td><td>X</td><td>1</td><td></td><td>1</td><td></td><td>1</td><td></td></tr>
+                                    <tr><td>American Coot</td><td>Fulica americana</td><td>Brown</td><td>Flocking</td><td>Tuck a [card] from your hand behind this bird. If you do, draw 1 [card].</td><td></td><td>X</td><td></td><td>3</td><td>Platform</td><td>5</td><td>61</td><td></td><td></td><td>X</td><td></td><td>1</td><td></td><td></td><td></td><td>1</td></tr>
+                                    <tr><td>American Crow</td><td>Corvus brachyrhynchos</td><td>Brown</td><td>Food from Supply</td><td>Discard 1 [egg] from any of your other birds to gain 1 [wild] from the supply.</td><td></td><td></td><td></td><td>4</td><td>Platform</td><td>2</td><td>99</td><td>X</td><td>X</td><td>X</td><td></td><td></td><td></td><td></td><td></td><td>1</td></tr>
+                                </tbody>
+                            </table>
+                        </Drawer>
+                        <p>I was unable to find a single dataset with all the information that this module needed publically available. For prototyping purposes, data was sourced manually and entered into a spreadsheet. Early stages of development were found at AllAboutBirds, but they didn't codify later stages such as mating or lifespan, which had to be sought out on google. I was serendipitously gifted an encyclopaedia on birds, which provided all the information the module needed. The book itself is slightly dated, as taxonomies are ever shifting, but it provides good enough information for this project. Unfortunately, it being a paper book meant a significant amout of manual data entry.</p>
+                        <p>Should probably write something about the tooltip info</p>
+                        <Drawer title="The Viz" buttonTextCollapsed="View Code ›" buttonTextExpanded="Hide Code ⌄" linkText="Github" linkURL="">
+                            <CodeBlock language="jsx" showLineNumbers={true} text={LifecycleSnippet}/>
+                        </Drawer>
+                        <p>This module is the one that was changed most frequently during development. The first attempt involved using a tree diagram and pruning it until it resembled a timeline. The second involved using a newtwork graph, which proved completely off base. The final approach was to use a one-dimensional scatterplot. The dates are scaled on a log, as early stages in development are measured in weeks, whereas later stages can take decades, and a log allowed them to be draw with less space in between</p>    
+                        <p>I wonder what the pop-up for this one will look like. Probably rolling the tooltips into it</p>      
+                   </section>
+
+                    <section>
+                        <h3>Module 4: Range</h3>
+                        <figure className={css.figure}>
+                            <div className={css.figureObject}><Range/></div>
+                            <figcaption className={css.figureCaption}>Try me!</figcaption>
+                        </figure>
+                        <Drawer title="The Data" buttonTextCollapsed="View Data ›" buttonTextExpanded="Hide Data ⌄" linkText="Download" linkURL="">
+                            <table className={css.drawerTable}>
+                                <thead>
+                                    <tr><th>Common name</th><th>Scientific name</th><th>Color</th><th>Power Category</th><th>Power text</th><th>Predator</th><th>Flocking</th><th>Bonus card</th><th>Victory points</th><th>Nest type</th><th>Egg capacity</th><th>Wingspan</th><th>Forest</th><th>Grassland</th><th>Wetland</th><th>Invertebrate</th><th>Seed</th><th>Fish</th><th>Fruit</th><th>Rodent</th><th>Wild (food)</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Abbott's Booby</td><td>Papasula abbotti</td><td>White</td><td></td><td>Draw 3 bonus cards, then discard 2. You may discard bonus cards you did not draw this turn.</td><td></td><td></td><td>X</td><td>5</td><td>Platform</td><td>1</td><td>190</td><td></td><td></td><td>X</td><td></td><td></td><td>2</td><td></td><td></td><td></td></tr>
+                                    <tr><td>Acorn Woodpecker</td><td>Melanerpes formicivorus</td><td>Brown</td><td>Caching Food</td><td>Gain 1 [seed] from the birdfeeder (if available). You may cache it on this card.</td><td></td><td></td><td></td><td>5</td><td>Cavity</td><td>4</td><td>46</td><td>X</td><td></td><td></td><td></td><td>3</td><td></td><td></td><td></td><td></td></tr>
+                                    <tr><td>American Avocet</td><td>Recurvirostra americana</td><td>Pink</td><td>Egg-laying</td><td>When another player takes the "lay eggs" action, this bird lays 1 [egg] on another bird with a [ground] nest.</td><td></td><td></td><td></td><td>6</td><td>Ground</td><td>2</td><td>79</td><td></td><td></td><td>X</td><td>2</td><td>1</td><td></td><td></td><td></td><td></td></tr>
+                                    <tr><td>American Bittern</td><td>Botaurus lentiginosus</td><td>Brown</td><td>Card-drawing</td><td>Player(s) with the fewest [wetland] birds: draw 1 [card].</td><td></td><td></td><td></td><td>7</td><td>Platform</td><td>2</td><td>107</td><td></td><td></td><td>X</td><td>1</td><td></td><td>1</td><td></td><td>1</td><td></td></tr>
+                                    <tr><td>American Coot</td><td>Fulica americana</td><td>Brown</td><td>Flocking</td><td>Tuck a [card] from your hand behind this bird. If you do, draw 1 [card].</td><td></td><td>X</td><td></td><td>3</td><td>Platform</td><td>5</td><td>61</td><td></td><td></td><td>X</td><td></td><td>1</td><td></td><td></td><td></td><td>1</td></tr>
+                                    <tr><td>American Crow</td><td>Corvus brachyrhynchos</td><td>Brown</td><td>Food from Supply</td><td>Discard 1 [egg] from any of your other birds to gain 1 [wild] from the supply.</td><td></td><td></td><td></td><td>4</td><td>Platform</td><td>2</td><td>99</td><td>X</td><td>X</td><td>X</td><td></td><td></td><td></td><td></td><td></td><td>1</td></tr>
+                                </tbody>
+                            </table>
+                        </Drawer>
+                        <p>A Cornell Lab of Ornithology project, eBird allows users to document bird sightings, which are then collected for use by registered users. [something something more about the data].</p>
+                        <p>During prototyping I manually downloaded the sightings for ~20 birds over 2021. Aggregating the data was all done using a python script that would loop through all the files, and sum up the number of sighting instances for a given county code. Unfortunately the location data included isn't an exact match to standard FIPS encoding, e.g. instead of 01143 it uses AZ-143. This had to be changed in order to properly reference the positioning on the map.</p>
+                        <p>However when trying to generalise the project, it became apparent that pre-processing the entire dataset wouldn't be suitable. If nothing else, even when narrowing the raw data to only the USA for a single year, it was over 100gb in size. Instead I switched to using the eBird API. The upside of this was that it allowed for lightweight access to the dataset. The downside was that a) it required more processing on the dashboard itself, lowering performance and b) it only provides the last 30 days worth of sighting, making it incomplete for migratory species</p>
+                        <Drawer title="The Viz" buttonTextCollapsed="View Code ›" buttonTextExpanded="Hide Code ⌄" linkText="Github" linkURL="">
+                            <CodeBlock language="jsx" showLineNumbers={true} text={RangeSnippet}/>
+                        </Drawer>
+                        <p>The initial plan for this module involved converting all the points into a single shape file to represent the range, and overlaying it atop the map. Although possible, the amount of manual work meant the approach was unsuitable for generalisation. Instead, upon consultation with a classmate, I instead opted to aggregate the data into regions, and use D3's built in mapping functionality to create a chloropleth. Some discussion was had about whether to aggregate to the county or state level, but the former felt better suited. Scale was also much debated, as the data ranged from single sightings to tens of thousands, and so a log scale was chosen to show that granularity.</p>
+                        <p>The map used for the base layer was 10m</p>
+                        <p>The addition of a pop-up modal provided the opportunity for significantly more user interaction, such as the ability to zoom and filter by time. This also provided the ability to switch between aggregate and descrete points (that the data provided). With that, i integrated work from [a previous project] to not only display the points, but also allow the user to view them in a sped up real time (???)</p>
+                    </section>
+
+                    <section>
+                        <h3>Module 5: Wingspan</h3>
+                        <figure className={css.figure}>
+                            <div className={css.figureObject}><Wingspan/></div>
+                            <figcaption className={css.figureCaption}>Try me!</figcaption>
+                        </figure>           
+                        <Drawer title="The Data" buttonTextCollapsed="View Data ›" buttonTextExpanded="Hide Data ⌄" linkText="Download" linkURL="">
+                            <table className={css.drawerTable}>
+                                <thead>
+                                    <tr><th>Common name</th><th>Scientific name</th><th>Color</th><th>Power Category</th><th>Power text</th><th>Predator</th><th>Flocking</th><th>Bonus card</th><th>Victory points</th><th>Nest type</th><th>Egg capacity</th><th>Wingspan</th><th>Forest</th><th>Grassland</th><th>Wetland</th><th>Invertebrate</th><th>Seed</th><th>Fish</th><th>Fruit</th><th>Rodent</th><th>Wild (food)</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Abbott's Booby</td><td>Papasula abbotti</td><td>White</td><td></td><td>Draw 3 bonus cards, then discard 2. You may discard bonus cards you did not draw this turn.</td><td></td><td></td><td>X</td><td>5</td><td>Platform</td><td>1</td><td>190</td><td></td><td></td><td>X</td><td></td><td></td><td>2</td><td></td><td></td><td></td></tr>
+                                    <tr><td>Acorn Woodpecker</td><td>Melanerpes formicivorus</td><td>Brown</td><td>Caching Food</td><td>Gain 1 [seed] from the birdfeeder (if available). You may cache it on this card.</td><td></td><td></td><td></td><td>5</td><td>Cavity</td><td>4</td><td>46</td><td>X</td><td></td><td></td><td></td><td>3</td><td></td><td></td><td></td><td></td></tr>
+                                    <tr><td>American Avocet</td><td>Recurvirostra americana</td><td>Pink</td><td>Egg-laying</td><td>When another player takes the "lay eggs" action, this bird lays 1 [egg] on another bird with a [ground] nest.</td><td></td><td></td><td></td><td>6</td><td>Ground</td><td>2</td><td>79</td><td></td><td></td><td>X</td><td>2</td><td>1</td><td></td><td></td><td></td><td></td></tr>
+                                    <tr><td>American Bittern</td><td>Botaurus lentiginosus</td><td>Brown</td><td>Card-drawing</td><td>Player(s) with the fewest [wetland] birds: draw 1 [card].</td><td></td><td></td><td></td><td>7</td><td>Platform</td><td>2</td><td>107</td><td></td><td></td><td>X</td><td>1</td><td></td><td>1</td><td></td><td>1</td><td></td></tr>
+                                    <tr><td>American Coot</td><td>Fulica americana</td><td>Brown</td><td>Flocking</td><td>Tuck a [card] from your hand behind this bird. If you do, draw 1 [card].</td><td></td><td>X</td><td></td><td>3</td><td>Platform</td><td>5</td><td>61</td><td></td><td></td><td>X</td><td></td><td>1</td><td></td><td></td><td></td><td>1</td></tr>
+                                    <tr><td>American Crow</td><td>Corvus brachyrhynchos</td><td>Brown</td><td>Food from Supply</td><td>Discard 1 [egg] from any of your other birds to gain 1 [wild] from the supply.</td><td></td><td></td><td></td><td>4</td><td>Platform</td><td>2</td><td>99</td><td>X</td><td>X</td><td>X</td><td></td><td></td><td></td><td></td><td></td><td>1</td></tr>
+                                </tbody>
+                            </table>
+                        </Drawer>
+                        <p>The Wingspan Dataset used through the project contains datapoints for the literal wingspan of each species, which was piped directly into the viz.</p>
+                        <Drawer title="The Viz" buttonTextCollapsed="View Code ›" buttonTextExpanded="Hide Code ⌄" linkText="Github" linkURL="">
+                            <CodeBlock language="jsx" showLineNumbers={true} text={WingspanSnippet}/>
+                        </Drawer>
+                        <p>This module provided the most hands on work with SVGs. The basic shape is courtesy of Jennifer Cahalane, and was manipulated through various transform effects. Although it may not be readily apparent, the width of the svg is a 1-to-1 match between the cm measurement of the wingspan to the pixel width of the SVG. In order to provide a relative size reference, the California Condor and Hummingbird, the largest and smallest birds in the dataset, were overlaid in the module. This had the added benefit of not having to worry about SVGs overlapping in strange ways, as they would always fall between those two points.</p>
+                        <p>The idea of relative size was expanded upon in the pop-up modal, providing references against [other species] </p>
+                    </section>
+                </section>
+
+                <section id="reflections">
+                    <h2>Reflections</h2>
+                    <h3>Understimation</h3>
+                    <p>This project was a lot more work that expected. Mainly because every single dataset I worked with came with its own unique challenges and quirks</p>
+                </section>
+                
+                <section>
+                    <h2 id="future">Future Work</h2>
+                    <h3>AR</h3>
+                    <p>Being able to pipe in the actual cards to land on a page would be fun</p>
+
+                    <h3>Collaboartion</h3>
+                    <p>It would be amazing to be able to work with the Wingspan game team to help inform the project and the things that they think would work well. Having their asset library would also be a great boon</p>
+                </section>    
+
+                <section>
+                    <h2 id="related">Other Data Viz Projects</h2>
+                    <ul className={css.related}>
+                        <Card key={"bird-map"} {...projectInfo["bird-map"]}/>   
+                        <Card key={"bird-network"} {...projectInfo["bird-network"]}/>   
+                        <Card key={"nz-rent"} {...projectInfo["nz-rent"]}/> 
+                    </ul>  
+                </section> 
             </>
         ),
         headings: [
@@ -261,265 +289,249 @@ export const caseStudies = {
         id: "dnd-ui",
         title: "Cannoneers & Dragons",
         subtitle:"Creating a Web-based Adventure Game Based on the Dungeons and Dragons API",
-        blurb: "A technology project",
+        blurb: "Cannoneers & Dragons is a technology focused, web-based app based on the Dungeons & Dragons RPG. It combines Python on the back-end to generate characters, monsters, and mazes, with JavaScript on the front-end to render it all on the page and allow the user to interact with it. Along the way it queries an API, exposes one via Flask, and even attempts to create an enjoyable experience for the player.",
         image:"/images/study-dnd-banner.jpg",
         link: "https://puis22.netlify.app/",
+        code: "https://github.com/tkcram/programming-final",
         isVisible: true,
         markup: (
             <>
                 <img alt="" src="/images/study-dnd-banner.jpg" className={css.banner}></img>
-                <h1 id="introduction">Cannoneers & Dragons: Creating a Web-based Adventure Game Based on the Dungeons and Dragons API</h1>
-                <a className="button" target="_blank" href="https://puis22.netlify.app/" rel="noreferrer">Play the Game</a>
-                <p>Intro intro intro</p>
 
-                <h2 id="background">Background</h2>
-                <h3>The Project</h3>
-                <p>This project was created as the final project of two seperate classes. INFO 664: Programming for Cultural Heritage provided the back-end. INFO 6xx: Programming User Interfaces provided the front-end</p>
-                <p>For inclusion for this portfolio, additional work has been done to improve the code, and the assets.</p>
+                <section id="introduction">
+                    <h1>Cannoneers & Dragons: Creating a Web-based Adventure Game Based on the Dungeons and Dragons API</h1>
+                    <a className="button" target="_blank" href="https://puis22.netlify.app/" rel="noreferrer">Play the Game</a>
+                    <p>Cannoneers & Dragons is a small, browser based game, based on the tabletop roleplaying game Dungeons and Dragons (D&D) by Wizards of the Coast. It consists of two parts: A Python app connected to a D&D API that generates a character to play as and a dungeon to explore; and a Javascript app that renders the game elements in the browser and affords user interaction.</p>
+                </section>
 
-                <h3>The Client (DnD)</h3>
-                <div className={css.textLogo}>
-                    <img alt="" className={css.logo} src="/images/study-dnd-dnd.png"/>
-                    <p>Dungeons and Dragons (D&D) is a game about Dungeons and Dragons.</p>
-                </div>
+                <section id="background">
+                    <h2>Background</h2>
+                    <h3>The Project</h3>
+                    <p>This project was created as the final of two seperate classes. INFO 664: Programming for Cultural Heritage provided the back-end, and INFO 637: Programming User Interfaces provided the front-end. The goal was to demonstrate a variety of coding skills, such as calling APIS and rendering elements to the DOM, in such a way that provided a unified product at the end of the project. I opted to work with D&D both because it is a game system I know well and belive would be engaging to a general audience, and also because the complexities and nuiances within the rules system provided ample opportunity to test my skills.</p>
 
-                <h2 id="back-end">Back-end</h2>
-                <h3>Resources</h3>
-                <h4>Python</h4>
-                <div className={css.textLogo}>
-                    <img alt="" className={css.logo} src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png"/>
-                    <p>We called the API using Python, and it was all terribly exciting</p>
-                </div>
-
-                <h4>DnD API</h4>
-                <div className={css.textLogo}>
-                    <img alt="" className={css.logo} src="http://www.dnd5eapi.co/public/favicon.ico"/>
-                    <p>The D&D API is a thing that we used. Thanks SRD!</p>
-                </div>
-
-                <h4>Flask</h4>
-                <div className={css.textLogo}>
-                    <img alt="" className={css.logo} src="/images/study-dnd-flask.png"/>
-                    <p>Because the front and back ends were written in two different languages, JavaScript and Python respective, there needed to be an intermediary layer.</p>
-                </div>
-
-                <h3>Code Files</h3>
-                <h4>character.py</h4>
-                <figure className={css.figure}>
-                    <div className={css.figureObject}>
-                        <div className={css.codeModule}>  
-                            <button className="button">Output</button> 
-                            <button className="button">Code</button> 
-                            <a href="/">Github</a>            
-                        </div>
-                        <CodeBlock language="jsx" showLineNumbers={true} text={"This will eventually be a JSON blob called from the code"}/>
-                        <CodeBlock language="python" showLineNumbers={true} text={"This will eventually be the Python code, with a button to switch between"}/>
+                    <h3>The Client (DnD)</h3>
+                    <div className={css.textLogo}>
+                        <img alt="" className={css.logo} src="/images/study-dnd-dnd.png"/>
+                        <p>Dungeons and Dragons is a game wherein players come together around a table, take control of a character, and embark on an adventure devised by an additional group member, aka the Dungeon Master. Originally created by Gary Gygagx and published in 1974, currently in its 5th edition, the game has been played by millions of people around the world.</p>
                     </div>
-                    <figcaption className={css.figureCaption}>The NY Philharmonic UX Team</figcaption>
-                </figure>
-                <p>This is the bulk of the code, it's all about creating a randomly generated character. It makes so many different calls it's kinda silly</p>
+                </section>
 
-                <h4>items.py</h4>
-                <figure className={css.figure}>
-                    <div className={css.figureObject}>
-                        <div className={css.codeModule}>  
-                            <button className="button">Output</button> 
-                            <button className="button">Code</button> 
-                            <a href="/">Github</a>            
-                        </div>
-                        <CodeBlock language="jsx" showLineNumbers={true} text={"This will eventually be a JSON blob called from the code"}/>
-                        <CodeBlock language="python" showLineNumbers={true} text={"This will eventually be the Python code, with a button to switch between"}/>
+                <section id="back-end">
+                    <h2>Back-end</h2>
+                    <h3>Resources</h3>
+                    <h4>Python</h4>
+                    <div className={css.textLogo}>
+                        <img alt="" className={css.logo} src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png"/>
+                        <p>The backend code for this project was written in Python, built entirely from scratch. Several packages were imported: 'requests' and 'json' for getting data from the API and being able to manipulate it; 'math' and 'random' for making decisions when the API offered multiple options, and 're' for dealing with D&D dice notation (e.g. two six sided die would be rendered 2d6).</p>
                     </div>
-                    <figcaption className={css.figureCaption}>The NY Philharmonic UX Team</figcaption>
-                </figure>
-                <p>This code does two things. The first is to create items that the characters can equip</p>
-                <p>The second is to populate the maze with items</p>
 
-                <h4>monsters.py</h4>
-                <figure className={css.figure}>
-                    <div className={css.figureObject}>
-                        <div className={css.codeModule}>  
-                            <button className="button">Output</button> 
-                            <button className="button">Code</button> 
-                            <a href="/">Github</a>            
-                        </div>
-                        <CodeBlock language="jsx" showLineNumbers={true} text={"This will eventually be a JSON blob called from the code"}/>
-                        <CodeBlock language="python" showLineNumbers={true} text={"This will eventually be the Python code, with a button to switch between"}/>
+                    <h4>D&D API</h4>
+                    <div className={css.textLogo}>
+                        <img alt="" className={css.logo} src="http://www.dnd5eapi.co/public/favicon.ico"/>
+                        <p>The D&D 5e API was created Fergus Bentley and makes the freely available D&D resources available through a RESTful API. Although this content only scratches the surface of what D&D has to offer, it provides more than enough to get started and provide all the templates that this project needs.</p>
                     </div>
-                    <figcaption className={css.figureCaption}>The NY Philharmonic UX Team</figcaption>
-                </figure>
-                <p>This creates a monster, go figure</p>
 
-                <h4>maze.py</h4>
-                <figure className={css.figure}>
-                    <div className={css.figureObject}>
-                        <div className={css.codeModule}>  
-                            <button className="button">Output</button> 
-                            <button className="button">Code</button> 
-                            <a href="/">Github</a>            
-                        </div>
-                        <CodeBlock language="jsx" showLineNumbers={true} text={"This will eventually be a JSON blob called from the code"}/>
-                        <CodeBlock language="python" showLineNumbers={true} text={"This will eventually be the Python code, with a button to switch between"}/>
+                    <h4>Flask</h4>
+                    <div className={css.textLogo}>
+                        <img alt="" className={css.logo} src="/images/study-dnd-flask.png"/>
+                        <p>Due to the nature of the project straddling two different classes, and thus two different languages, a program layer was needed to allow them to talk to each other. Flask.py was chosen, as I felt it would be the easiest to implement. Although this was still one of the more challenging aspects of the project as it was the part I had the least experience with.</p>
                     </div>
-                    <figcaption className={css.figureCaption}>The NY Philharmonic UX Team</figcaption>
-                </figure>
-                <p>The maze itself is created by a depth first search</p>
-                <p>Once the maze is created, it populates it with monsters and loot</p>
 
-                <h2 id="front-end">Front-end</h2>
-                <h3>Resources</h3>
-                <h4>JavaScript</h4>
-                <div className={css.textLogo}>
-                    <img alt="" className={css.logo} src="/images/study-dnd-js.png"/>
-                    <p>We called the API using Python, and it was all terribly exciting</p>
-                </div>
+                    <h3>Code Files</h3>
+                    <Drawer title="character.py" buttonTextCollapsed="View Code/Output ›" buttonTextExpanded="Hide Code/Output ⌄" linkText="Github" linkURL="">
+                            <CodeBlock language="jsx" showLineNumbers={true} text={"This will eventually be a JSON blob called from the code"}/>
+                            <CodeBlock language="python" showLineNumbers={true} text={"This will eventually be the Python code, with a button to switch between"}/>
+                    </Drawer>
 
-                <h4>Assets</h4>
-                <p>Tk Can't draw. It's fine.</p>
+                    <p>The character creator is the largest of the backend files, due mostly to the wide variety of traits a single character needs. It works by initially defining the character template, and filling in each section in turn. The first three it calls defines (i.e. Race, Class, and Background) all require calling the API for the complete list of possible options, and choosing one at random. These are called first as they each modify later parts of the template. Thankfully, the Fifth Edition rules do not contain any logic as to race/class combinations, so choosing completely blind is a valid approach</p>
+                    <p>Next come the character statistics and skills. Although there are a variety of ways within the rules to calculate this, I opted for the "3d6" approach, or the sum of three numbers each between 1 and 6. This is repeated for each of the six key statistics in the game, and modified based on data from the characters race. Skills are then calculated based on which on the six statistics they're based on, modified by any factors from the class or background.</p>
+                    <p>Equipment and combat actions follow, which proved significantly more complex than the previous sections. The main challenge came from the breadth of equipment the game has on offer, and all the different combinations that a character could possess. [...]. Once the equipment list was sorted, it was then reasonably straight forward to calculate the hit points and other combat details.</p>
+                    <p>Lastly came spellcasting. And mate I though equipment was bad [...].</p>
 
-                <h3>Code Files</h3>
-                <Drawer title="control.js" buttonTextCollapsed="View Code ›" buttonTextExpanded="Hide Code ⌄" linkText="Github" linkURL="">
-                    <CodeBlock language="jsx" showLineNumbers={true} text={"Hello World"}/>
-                </Drawer>
-                <p>The control script is all about calling the API and building out the game itself</p>
-                <p>It also controls any other interactions on the page, such as switching between tabs</p>
+                    <Drawer title="items.py" buttonTextCollapsed="View Code/Output ›" buttonTextExpanded="Hide Code/Output ⌄" linkText="Github" linkURL="">
+                            <CodeBlock language="jsx" showLineNumbers={true} text={"This will eventually be a JSON blob called from the code"}/>
+                            <CodeBlock language="python" showLineNumbers={true} text={"This will eventually be the Python code, with a button to switch between"}/>
+                    </Drawer>
+                    <p>This code does two things. The first is to create items that the characters can equip</p>
+                    <p>The second is to populate the maze with items</p>
 
-                <Drawer title="builder.js" buttonTextCollapsed="View Code ›" buttonTextExpanded="Hide Code ⌄" linkText="Github" linkURL="">
-                    <CodeBlock language="jsx" showLineNumbers={true} text={"Hello World"}/>
-                </Drawer>
-                <p>Takes the API call from the backend and renders it on the page</p>
+                    <Drawer title="monsters.py" buttonTextCollapsed="View Code/Output ›" buttonTextExpanded="Hide Code/Output ⌄" linkText="Github" linkURL="">
+                            <CodeBlock language="jsx" showLineNumbers={true} text={"This will eventually be a JSON blob called from the code"}/>
+                            <CodeBlock language="python" showLineNumbers={true} text={"This will eventually be the Python code, with a button to switch between"}/>
+                    </Drawer>
+                    <p>Compared to creating a character, creation a monster is a relatively straightforward process. Each monster comes with a pregenerated block of statistics, and so this code mostly focuses on converting those details into something that the frontend can process. I also captured more details than were strictly needed, but allow a certain amount of future proofing if I ever decide to add those features to the game. There was a minor issue where some Monsters had abilities that did not fit into the well defined boxes, but for the purposes of this project it was simpler to exclude them rather than try and work through every edge case.</p>
 
-                <Drawer title="interactions.js" buttonTextCollapsed="View Code ›" buttonTextExpanded="Hide Code ⌄" linkText="Github" linkURL="">
-                    <CodeBlock language="jsx" showLineNumbers={true} text={"Hello World"}/>
-                </Drawer>
-                <p>Once the maze has been built, you have to interact with it!</p>
-                <p>Movement!</p>
-                <p>Combat!</p>
-                <p>Loot!</p>
+                     <Drawer title="maze.py" buttonTextCollapsed="View Code/Output ›" buttonTextExpanded="Hide Code/Output ⌄" linkText="Github" linkURL="">
+                            <CodeBlock language="jsx" showLineNumbers={true} text={"This will eventually be a JSON blob called from the code"}/>
+                            <CodeBlock language="python" showLineNumbers={true} text={"This will eventually be the Python code, with a button to switch between"}/>
+                    </Drawer>
+                    <p>The maze itself is created by a depth first search</p>
+                    <p>Once the maze has been generated, the second part of the code moves through each cell and has a chance to populate it. It does this by generating a random number, which above a certain threshold adds something to the cell, such as a monster of an appropriate level for the maze, or equipement based on how high the random generator scores.</p>
+                </section>
 
-                <Drawer title="exporter.js" buttonTextCollapsed="View Code ›" buttonTextExpanded="Hide Code ⌄" linkText="Github" linkURL="">
-                    <CodeBlock language="jsx" showLineNumbers={true} text={"Hello World"}/>
-                </Drawer>
-                <p>Any time the game area updates something else on the page, it goes here</p>
+                <section id="front-end">
+                    <h2>Front-end</h2>
+                    <h3>Resources</h3>
+                    <h4>JavaScript</h4>
+                    <div className={css.textLogo}>
+                        <img alt="" className={css.logo} src="/images/study-dnd-js.png"/>
+                        <p>We called the API using Python, and it was all terribly exciting</p>
+                    </div>
 
-                <h2 id="reflections">Reflections</h2>
-                <p>I really did choose the hardest way of doing this. All so very verbose</p>
-                <p>Also switching between languages really sucks</p>
+                    <h4>Assets</h4>
+                    <p>Tk Can't draw. It's fine.</p>
 
-                <h2 id="future">Future Work</h2>
-                <p>Honestly this game could be built out basically infinitely. The rules for D&D are so rich there's so much more that could be added</p>
-                <p>The D&D API on the other hand only has a limited amount of content. So expanding on that could be good</p>
-                <p>Or we just diverge from that entirely and try create our own game</p>
-                <p>Honestly a complete rebuild is probably in order</p>
+                    <h3>Code Files</h3>
+                    <Drawer title="control.js" buttonTextCollapsed="View Code ›" buttonTextExpanded="Hide Code ⌄" linkText="Github" linkURL="">
+                        <CodeBlock language="jsx" showLineNumbers={true} text={"Hello World"}/>
+                    </Drawer>
+                    <p>The control script is all about calling the API and building out the game itself</p>
+                    <p>It also controls any other interactions on the page, such as switching between tabs</p>
 
-                <h2 id="related">Other Technology Projects</h2>
-                <ul className={css.related}>
-                    <Card key={"wingspan"} {...projectInfo["wingspan"]}/>   
-                    <Card key={"personal-site"} {...projectInfo["personal-site"]}/> 
-                    <Card key={"dog-ui"} {...projectInfo["dog-ui"]}/>   
-                </ul>   
+                    <Drawer title="builder.js" buttonTextCollapsed="View Code ›" buttonTextExpanded="Hide Code ⌄" linkText="Github" linkURL="">
+                        <CodeBlock language="jsx" showLineNumbers={true} text={"Hello World"}/>
+                    </Drawer>
+                    <p>Takes the API call from the backend and renders it on the page</p>
+
+                    <Drawer title="interactions.js" buttonTextCollapsed="View Code ›" buttonTextExpanded="Hide Code ⌄" linkText="Github" linkURL="">
+                        <CodeBlock language="jsx" showLineNumbers={true} text={"Hello World"}/>
+                    </Drawer>
+                    <p>Once the maze has been built, you have to interact with it!</p>
+                    <p>Movement!</p>
+                    <p>Combat!</p>
+                    <p>Loot!</p>
+
+                    <Drawer title="exporter.js" buttonTextCollapsed="View Code ›" buttonTextExpanded="Hide Code ⌄" linkText="Github" linkURL="">
+                        <CodeBlock language="jsx" showLineNumbers={true} text={"Hello World"}/>
+                    </Drawer>
+                    <p>Any time the game area updates something else on the page, it goes here</p>
+                </section>
+
+                <section id="reflections">
+                    <h2>Reflections</h2>
+                    <p>I really did choose the hardest way of doing this. All so very verbose</p>
+                    <p>Also switching between languages really sucks</p>
+                </section>
+
+                <section id="future">
+                    <h2>Future Work</h2>
+                    <p>Honestly this game could be built out basically infinitely. The rules for D&D are so rich there's so much more that could be added</p>
+                    <p>The D&D API on the other hand only has a limited amount of content. So expanding on that could be good</p>
+                    <p>Or we just diverge from that entirely and try create our own game</p>
+                    <p>Honestly a complete rebuild is probably in order</p>
+                </section>
+
+                <section id="related">
+                    <h2>Other Technology Projects</h2>
+                    <ul className={css.related}>
+                        <Card key={"wingspan"} {...projectInfo["wingspan"]}/>   
+                        <Card key={"personal-site"} {...projectInfo["personal-site"]}/> 
+                        <Card key={"dog-ui"} {...projectInfo["dog-ui"]}/>   
+                    </ul>  
+                </section> 
             </>
-            ),
-        headings: [
-            {   
-                text: "Introduction",
-                ref: "#introduction"
-            },
-            {   
-                text: "Background",
-                ref: "#background"
-            },
-            {   
-                text: "Back-end",
-                ref: "#back-end"
-            },
-            {   
-                text: "Front-end",
-                ref: "#front-end"
-            },
-            {   
-                text: "Reflections",
-                ref: "#reflections"
-            },
-            {   
-                text: "Future Work",
-                ref: "#future"
-            },
-            {   
-                text: "Related Projects",
-                ref: "#related"
-            },
-        ]
-    },
+        ),
+            headings: [
+                {   
+                    text: "Introduction",
+                    ref: "#introduction"
+                },
+                {   
+                    text: "Background",
+                    ref: "#background"
+                },
+                {   
+                    text: "Back-end",
+                    ref: "#back-end"
+                },
+                {   
+                    text: "Front-end",
+                    ref: "#front-end"
+                },
+                {   
+                    text: "Reflections",
+                    ref: "#reflections"
+                },
+                {   
+                    text: "Future Work",
+                    ref: "#future"
+                },
+                {   
+                    text: "Related Projects",
+                    ref: "#related"
+                },
+            ]
+        },
 
     "ids": {
-        id: "ids",
-        title: "IDS & Open Data",
-        subtitle:"Reviewing the Tensions and Potential Resolutions Between Two Ideologies",
-        blurb: "A critial perspectives project",
-        image:"/images/study-ids-banner.png",
-        link: "/documents/ids.pdf",
-        isVisible: true,
-        markup: (
-            <>
-                <img src="/images/study-ids-banner.png" className={css.banner} alt=""/>
-                <h1 id="introduction">Indigenous Data Sovereignty & Open Data: Tensions and Resolutions</h1>
-                <a className="button" target="_blank" href="/documents/ids.pdf" rel="noreferrer">Read the Report</a>
-                <p>(Original Abstract) In the age of big data an array of questions are being asked as to how our data is created, controlled, and distributed. Two movements that have manifested to answer these questions are Indigenous Data Sovereignty (IDS) and the Open Data Movement (ODM). IDS examines these questions through an indigenous perspective, focusing on the reclamation of data about, with, or by indigenous peoples. ODM, on the other hand, believes that data should be freely available without restrictions. While both of these movements come with lofty ambitions, the ways they approach data may not inherently be harmonious. The goal of this paper is to examine what tensions exist between these two movements, as well as what steps can be taken to have them coexist and potentially even support one another</p>
+            id: "ids",
+            title: "IDS & Open Data",
+            subtitle:"Reviewing the Tensions and Potential Resolutions Between Two Ideologies",
+            blurb: "Indigenous Data Sovereignty is a burgeoning field of scholarship that examines the role of indigenous peoples in data ownership and control. The Open Data Movement however exerts that data should be available and usable to all by default. This research paper conducts a literature review investigating what these movements stand for, where their tenets may conflict, and proposes several ways that they may be able to exist harmoniously.",
+            image:"/images/study-ids-banner.png",
+            link: "/documents/ids.pdf",
+            code: "",
+            isVisible: true,
+            markup: (
+                <>
+                    <img src="/images/study-ids-banner.png" className={css.banner} alt=""/>
+                    <h1 id="introduction">Indigenous Data Sovereignty & Open Data: Tensions and Resolutions</h1>
+                    <a className="button" target="_blank" href="/documents/ids.pdf" rel="noreferrer">Read the Report</a>
+                    <p>(Original Abstract) In the age of big data an array of questions are being asked as to how our data is created, controlled, and distributed. Two movements that have manifested to answer these questions are Indigenous Data Sovereignty (IDS) and the Open Data Movement (ODM). IDS examines these questions through an indigenous perspective, focusing on the reclamation of data about, with, or by indigenous peoples. ODM, on the other hand, believes that data should be freely available without restrictions. While both of these movements come with lofty ambitions, the ways they approach data may not inherently be harmonious. The goal of this paper is to examine what tensions exist between these two movements, as well as what steps can be taken to have them coexist and potentially even support one another</p>
 
-                <h2 id="background">Background</h2>
-                <h3>The Project</h3>
-                <p>This project was originally created for INFO 601: Foundations of Information with Prof Debbie Rabina. As an indigenous person myself, I felt this was an important topic to dive into. It was almost entirely a literature review</p>
-                <p>It is also currently out for review for publication (At the time of this writing, will update if published)</p>
+                    <h2 id="background">Background</h2>
+                    <h3>The Project</h3>
+                    <p>This project was originally created for INFO 601: Foundations of Information with Prof Debbie Rabina. As an indigenous person myself, I felt this was an important topic to dive into. It was almost entirely a literature review</p>
+                    <p>It is also currently out for review for publication (At the time of this writing, will update if published)</p>
 
-                <h3>Indigenous Data Soveriegnty</h3>
-                <p>Indigenous peoples are people who are indigenous. I know I use this a lot for my placeholder text, but in this instance it's actually about as accurate a definition as anything else</p>
-                <p>In recent years, there has been a growing discourse in these communities about their rights in the modern world. Including their data Soveriegnty</p>
+                    <h3>Indigenous Data Soveriegnty</h3>
+                    <p>Indigenous peoples are people who are indigenous. I know I use this a lot for my placeholder text, but in this instance it's actually about as accurate a definition as anything else</p>
+                    <p>In recent years, there has been a growing discourse in these communities about their rights in the modern world. Including their data Soveriegnty</p>
 
-                <h3>The Open Data Movement</h3>
-                <p>While the notion of open data is almost a hundred years old, the current incarnation is closer to maybe 30. It has its roots in research data, but this study mostly focuses on administrative data. That is, data the government collects about its peoples</p>
+                    <h3>The Open Data Movement</h3>
+                    <p>While the notion of open data is almost a hundred years old, the current incarnation is closer to maybe 30. It has its roots in research data, but this study mostly focuses on administrative data. That is, data the government collects about its peoples</p>
 
-                <h2 id="tensions">Tensions</h2>
-                <h3>About Openness</h3>
-                <h4>Ownership, Control, & Access</h4>
-                <p>This is where a lot of the literature exists, talking about what openness and control are all about. Hell people have been talking about this since there's been data. We love to talk about the Raja</p>
+                    <h2 id="tensions">Tensions</h2>
+                    <h3>About Openness</h3>
+                    <h4>Ownership, Control, & Access</h4>
+                    <p>This is where a lot of the literature exists, talking about what openness and control are all about. Hell people have been talking about this since there's been data. We love to talk about the Raja</p>
 
-                <h3>About Data</h3>
-                <h4>Context, Bias, & Absence</h4>
-                <p>It also seemed important to talk about the quality of the data. This speaks a lot to me as someone who works with data. There can be so many assumptions about the truth of data that are plainly falsifiable.</p>
+                    <h3>About Data</h3>
+                    <h4>Context, Bias, & Absence</h4>
+                    <p>It also seemed important to talk about the quality of the data. This speaks a lot to me as someone who works with data. There can be so many assumptions about the truth of data that are plainly falsifiable.</p>
 
-                <h2 id="resolutions">Resolutions</h2>
-                <h3>IDS - Involvement</h3>
-                <p>I'm gonna be honest, most of the literature around what indigenous people want is to just be included, and at every step of the way. People are sick of having others make decisions about them.</p>
+                    <h2 id="resolutions">Resolutions</h2>
+                    <h3>IDS - Involvement</h3>
+                    <p>I'm gonna be honest, most of the literature around what indigenous people want is to just be included, and at every step of the way. People are sick of having others make decisions about them.</p>
 
-                <h3>ODM - 50 Shades of Grey</h3>
-                <p>ODM likes to make big, utopian claims, but really it's not so simple. There's so many moving parts that a lot more needs to be done to dig deeper, and part of that is acknowledging the current hegemony.</p>
+                    <h3>ODM - 50 Shades of Grey</h3>
+                    <p>ODM likes to make big, utopian claims, but really it's not so simple. There's so many moving parts that a lot more needs to be done to dig deeper, and part of that is acknowledging the current hegemony.</p>
 
-                <h2 id="reflections">Reflections</h2>
-                <h3>Something New</h3>
-                <p>Both of these are emerging fields, and there has been very little work intersecting the two of them. So by literature review standards, it required a lot of thinking</p>
+                    <h2 id="reflections">Reflections</h2>
+                    <h3>Something New</h3>
+                    <p>Both of these are emerging fields, and there has been very little work intersecting the two of them. So by literature review standards, it required a lot of thinking</p>
 
-                <h3>Bias abound</h3>
-                <p>Oh man are people racist. Like I'm not just talking about the old timey judges saying deplorable things, but even some of the writing now is a lot</p>
+                    <h3>Bias abound</h3>
+                    <p>Oh man are people racist. Like I'm not just talking about the old timey judges saying deplorable things, but even some of the writing now is a lot</p>
 
-                <h2 id="future">Future Work</h2>
-                <p>So goddamn much</p>
+                    <h2 id="future">Future Work</h2>
+                    <p>So goddamn much</p>
 
-                <h3>Data Literals</h3>
-                <p>A reconnection of IDS within the larger DS movement would be good. Having our data on server racks in the canaries is a problem</p>
+                    <h3>Data Literals</h3>
+                    <p>A reconnection of IDS within the larger DS movement would be good. Having our data on server racks in the canaries is a problem</p>
 
-                <h3>We the peoples</h3>
-                <p>As mentioned, there's so much grey area in both of these movements, so being able to view a more diverse range of voices in them is a start</p>
+                    <h3>We the peoples</h3>
+                    <p>As mentioned, there's so much grey area in both of these movements, so being able to view a more diverse range of voices in them is a start</p>
 
-                <h3>MAAAAAM</h3>
-                <p>Big government is one thing, big tech is a whole other beast.</p>
+                    <h3>MAAAAAM</h3>
+                    <p>Big government is one thing, big tech is a whole other beast.</p>
 
-                <h2 id="related">Other Research Project</h2>
-                <ul className={css.related}>
-                    <Card key={""} {...projectInfo[""]}/>   
-                    <Card key={""} {...projectInfo[""]}/>   
-                    <Card key={""} {...projectInfo[""]}/>   
-                </ul>   
+                    <h2 id="related">Other Research Project</h2>
+                    <ul className={css.related}>
+                        <Card key={""} {...projectInfo[""]}/>   
+                        <Card key={""} {...projectInfo[""]}/>   
+                        <Card key={""} {...projectInfo[""]}/>   
+                    </ul>   
             </>
             ),
         headings: [
@@ -558,9 +570,10 @@ export const caseStudies = {
         id: "nyphil-eval",
         title: "Updating the Archive",
         subtitle:"Conducting Moderated User Testing to Improve the New York Philharmonic's Digital Archives",
-        blurb: "A client based ux evaluation project ",
+        blurb: "As the New York Philharmonic Archive works to improve their user interface, we were called upon to perform user research on the current version. Our team performed a conducted a series of moderated user tests, and used the results to inform our recommendations for potential areas of improvement. The full report was presented to the client, allowing them to ensure the interface followed a user centred design.",
         image:"/images/study-nyp-banner.png",
         link: "/documents/nyphil.pdf",
+        code: "",
         isVisible: true,
         markup: (
             <>
@@ -767,10 +780,11 @@ export const caseStudies = {
     "nyc-parks": {      
         id: "nyc-parks",
         title: "Parks of New York City",
-        subtitle:"Revitilising the Design of the New York City Parks Website",
-        blurb: "A design project",
+        subtitle:"Revitalising the Design of the New York City Parks Website",
+        blurb: "The Parks of NYC project is a user centred redesign of the nycgovparks.org website. It involved a top-down resign of the entire interface, informed by user testing at every step of the process. This included initial surveying and profiling of potential users, card sorting and tree testing the knowledge organisation, and wireframe testing early prototypes. As a result, a high-fidelity prototype of the new design was created in Figma",
         image:"/images/study-parks-banner.png",
         link: "https://www.figma.com/proto/xmNITLhxfF5bXdZQ643M8g/Prototypes?node-id=122%3A18202&scaling=scale-down&page-id=117%3A17343&starting-point-node-id=122%3A18202",
+        code:"",
         isVisible: true,
         markup: (
             <>
