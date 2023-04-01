@@ -3,7 +3,7 @@ import css from './ProjectModal.module.css'
 
 const ProjectModal = ({ projectId, closeModal }) => {
 	const project = projectInfo[projectId]
-	
+	console.log(project)
 	if (!project) {
 		closeModal()
 	}

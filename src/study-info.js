@@ -8,6 +8,7 @@ import Wingspan, { WingspanSnippet } from './WingspanWingspan'
 import { projectInfo } from './project-info'
 import Card from './Card'
 import Drawer from './Drawer'
+import RelatedStudies from './RelatedStudies'
 
 export const caseStudies = {
     "wingspan": {
@@ -16,6 +17,7 @@ export const caseStudies = {
         subtitle:"Creating an Avian Information Dashboard Based on the Wingspan Boardgame",
         blurb: "The Birds of Wingspan is a technology driven data visualization project. Built using React and D3.js, the project uses the boardgame Wingspan as a starting point for users to explore the world of ornithology. The apps draws on learnings from previous work in information visualization to build out a compelling dashboard featuring a breakdown of a species diet and lifespan, biographical and game mechanic descriptions, and a map of millions of self-reported sightings.  ",
         image:"/images/study-wingspan-banner.jpg",
+        caseStudy: true,
         link: "https://ivf22.netlify.app",
         code: "https://github.com/tkcram/bird-viz",
         isVisible: true,
@@ -26,14 +28,13 @@ export const caseStudies = {
                 <section id="introduction">
                     <h1>Birds of Wingspan: Creating an Avian Information Dashboard Based on the Wingspan Boardgame</h1>
                     <a className="button" target="_blank" href="https://ivf22.netlify.app" rel="noreferrer">View the Dashboard</a>
-                    <p>A personal favourite, Wingspan is a boardgame based around collecting a variety of bird species. Each bird comes with several different datapoints, including diet, range, and nesting behaviour. But what if we wanted to find out more? This project aims to use Wingspan as a jumping off point to learn more about the beautiful birds that exist in the world around us, and hopefully increase appreciation of our feathered friends.</p>
+                    <p>A personal favourite, Wingspan is a boardgame based around collecting a variety of bird species. In the game, each bird comes with several different datapoints, including diet, range, and nesting behaviour. But what if we wanted to find out more? This project aims to use Wingspan as a jumping off point to learn more about the beautiful birds that exist in the world around us, and hopefully increase appreciation for our feathered friends.</p>
                 </section>
                 
                 <section id="background">
                     <h2>Background</h2>
                     <h3>The Project</h3>
-                    <p>This project was originally created for INFO 616: Programming Interactive Visualization. The goal of the project was to use D3.js to create a web-based data visualisation with an interactive component. Specifically, I opted to create an online dashboard where you could learn more about a specific bird species. This allowed me to bring together multiple disparate datasets, including aviandietdb and cornell ebird, demostrate a range of technical skills, and discuss a topic I personally enjoy. In order to tie it all together, I drew upon the boardgame Wingspan - this provided an entry point for users as well as a framing device for how the dashboard should be laid out</p>
-                    {/*<p>For inclusion in this portfolio, the project was later expanded upon in three key ways. The first was to generalise the datasets to include a significantly wider selection of bird species. The second was to create modals for each module, allowing for more in depth exploration and drawing on previous work from INFO 658: Information Visualization. Thirdly, additional polish has been done to improve both the interface and the code that belies it.</p>*/}
+                    <p>This project was originally created for INFO 616: Programming Interactive Visualization. The goal of the project was to use D3.js to create a web-based data visualisation with an interactive component. Specifically, I opted to create an online dashboard where you could learn more about a different bird species. This allowed me to bring together multiple disparate datasets, including aviandietdb and cornell ebird, to demostrate a range of technical skills and discuss a topic I personally enjoy. In order to tie it all together, I drew inspiration from the boardgame Wingspan - it provided an entry point for users as well as a framing device for how the dashboard should be laid out.</p>
                     
                     <h3>Wingspan</h3>
                     <div className={css.textLogo}>
@@ -52,19 +53,19 @@ export const caseStudies = {
                     <h3>Design: Wingspan</h3>
                     <div className={css.textLogo}>
                         <img alt="" className={css.logo} src="https://cf.geekdo-images.com/yLZJCVLlIx4c7eJEWUNJ7w__opengraph/img/d5aVUcak3R6QOHz5y-fvQdc8pwU=/fit-in/1200x630/filters:strip_icc()/pic4458123.jpg"/>
-                        <p>As the cards create a facsimile to the birds, so too does this visualisation create a facsimile to the cards. The visualisation is designed as a dashboard, with each module roughly correlating to a mechanical/ graphical aspect of the card. This allows users to get a wide overview of the information, even at a glance, as they orient themselves based on the game pieces. The interactive elements allow the user to dig deeper into the information, learning more about specific parts of the data, or create additional insights. </p>
+                        <p>As the cards create a facsimile to the birds, so too does this visualisation create a facsimile to the cards. The visualisation is designed as a dashboard, with each module roughly correlating to a mechanical/ graphical aspect of the card. This allows users to get a wide overview of the information, even at a glance, as they orient themselves based on the game pieces. The interactive elements allow the user to dig deeper into the information, learn more about specific parts of the data, or create additional insights. </p>
                     </div>
 
                     <h3>Base Case: D3</h3>
                     <div className={css.textLogo}>
                         <img alt="" className={css.logo} src="https://raw.githubusercontent.com/d3/d3-logo/master/d3.png"/>
-                        <p>Each module was built using D3.js, a JavaScript library primarily used for creating dynamic, interactive data visualisations on the web. The library contains many useful fuctions for our purposes, including a csv reader, templates for standard charts and maps, and the ability to easily implement interactive elements such as tooltips and filters. </p>
+                        <p>Each module was built using D3.js, a JavaScript library primarily used for creating dynamic, interactive data visualisations on the web. The library contains many useful fuctions for our purposes, including a csv reader, templates for standard charts and maps, and the ability to easily implement interactive elements such as tooltips and filters. Initially, a sample data set was used containing only information for a single species.</p>
                     </div>
 
                     <h3>Generalisation: React</h3>
                     <div className={css.textLogo}>
                         <img alt="" className={css.logo} src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"/>
-                        <p>Once all the modules had been completed with the sample data, the next step was to generalise it for any bird species. To accomplish this, the code was split out using the React JavaScript Library. This allowed me to create a template page that could be populated by filtering the data for the specific bird species. Doing so also helped solved the issue with searching, as users could be directed to the appropriate page based on their input, or receive error handling.</p>
+                        <p>Once all the modules had been completed with the sample data, the next step was to generalise it for any bird species. To accomplish this, the code was split out using the React JavaScript Library. This allowed for the creation of templates that could be populated by filtering the data for any species. Doing so also solved the issue with searching, as users could be directed to the appropriate page based on their input, as well as receive error handling.</p>
                     </div>
                 </section>
                 
@@ -72,7 +73,7 @@ export const caseStudies = {
                     <h2>Results</h2>
 
                     <section>
-                        <p>In all, two seperate web pages were created. The first being a simple landing screen containing information about the project, and instructions on how to interact with it. For the initial submission, the only way to find a bird was to enter its name into the search field, and see if it returned a result. Later iterations switched to an autocomlete field, as well as providing tiles for several example bird species.</p>
+                        <p>In all, two seperate web pages were created. The first being a simple landing screen containing information about the project, and instructions on how to interact with it. For the initial submission, the only way to find a bird was to enter its name into the search field, and see if it returned a result. Later work includes adding autocompletion, as well as providing tiles for example bird species.</p>
                         <figure className={css.figure}>
                             <img className={css.figureObject} src="/images/study-wingspan-dashboard.png" alt="Luke, I am your caption..."/>
                             <figcaption className={css.figureCaption}>Screen capture of the dashboard for a Bald Eagle</figcaption>
@@ -82,174 +83,214 @@ export const caseStudies = {
 
                     <section>
                         <h3>Module 1: Biography</h3>
-                        <Drawer title="The Data" buttonTextCollapsed="View Data ›" buttonTextExpanded="Hide Data ⌄" linkText="Download" linkURL="">
+                        <Drawer title="The Data" buttonTextCollapsed="View Sample ›" buttonTextExpanded="Hide Sample ⌄" linkText="" linkURL="">
                             <table className={css.drawerTable}>
                                 <thead>
-                                    <tr><th>Common name</th><th>Scientific name</th><th>Color</th><th>Power Category</th><th>Power text</th><th>Predator</th><th>Flocking</th><th>Bonus card</th><th>Victory points</th><th>Nest type</th><th>Egg capacity</th><th>Wingspan</th><th>Forest</th><th>Grassland</th><th>Wetland</th><th>Invertebrate</th><th>Seed</th><th>Fish</th><th>Fruit</th><th>Rodent</th><th>Wild (food)</th></tr>
+                                    <tr><th>Common name</th><th>Hero Href</th><th>Description</th><th>Scientific name</th><th>Color</th><th>PowerCategory</th><th>Power text</th><th>Predator</th><th>Flocking</th><th>Bonus card</th><th>Victory points</th><th>Nest type</th><th>Egg capacity</th><th>Wingspan</th><th>Forest</th><th>Grassland</th><th>Wetland</th><th>Invertebrate</th><th>Seed</th><th>Fish</th><th>Fruit</th><th>Rodent</th><th>Nectar</th><th>Wild (food)</th></tr>
                                 </thead>
                                 <tbody>
-                                    <tr><td>Abbott's Booby</td><td>Papasula abbotti</td><td>White</td><td></td><td>Draw 3 bonus cards, then discard 2. You may discard bonus cards you did not draw this turn.</td><td></td><td></td><td>X</td><td>5</td><td>Platform</td><td>1</td><td>190</td><td></td><td></td><td>X</td><td></td><td></td><td>2</td><td></td><td></td><td></td></tr>
-                                    <tr><td>Acorn Woodpecker</td><td>Melanerpes formicivorus</td><td>Brown</td><td>Caching Food</td><td>Gain 1 [seed] from the birdfeeder (if available). You may cache it on this card.</td><td></td><td></td><td></td><td>5</td><td>Cavity</td><td>4</td><td>46</td><td>X</td><td></td><td></td><td></td><td>3</td><td></td><td></td><td></td><td></td></tr>
-                                    <tr><td>American Avocet</td><td>Recurvirostra americana</td><td>Pink</td><td>Egg-laying</td><td>When another player takes the "lay eggs" action, this bird lays 1 [egg] on another bird with a [ground] nest.</td><td></td><td></td><td></td><td>6</td><td>Ground</td><td>2</td><td>79</td><td></td><td></td><td>X</td><td>2</td><td>1</td><td></td><td></td><td></td><td></td></tr>
-                                    <tr><td>American Bittern</td><td>Botaurus lentiginosus</td><td>Brown</td><td>Card-drawing</td><td>Player(s) with the fewest [wetland] birds: draw 1 [card].</td><td></td><td></td><td></td><td>7</td><td>Platform</td><td>2</td><td>107</td><td></td><td></td><td>X</td><td>1</td><td></td><td>1</td><td></td><td>1</td><td></td></tr>
-                                    <tr><td>American Coot</td><td>Fulica americana</td><td>Brown</td><td>Flocking</td><td>Tuck a [card] from your hand behind this bird. If you do, draw 1 [card].</td><td></td><td>X</td><td></td><td>3</td><td>Platform</td><td>5</td><td>61</td><td></td><td></td><td>X</td><td></td><td>1</td><td></td><td></td><td></td><td>1</td></tr>
-                                    <tr><td>American Crow</td><td>Corvus brachyrhynchos</td><td>Brown</td><td>Food from Supply</td><td>Discard 1 [egg] from any of your other birds to gain 1 [wild] from the supply.</td><td></td><td></td><td></td><td>4</td><td>Platform</td><td>2</td><td>99</td><td>X</td><td>X</td><td>X</td><td></td><td></td><td></td><td></td><td></td><td>1</td></tr>
+                                    <tr><td>Greater roadrunner</td><td>https://www.allaboutbirds.org/guide/assets/photo/75362461-1280px.jpg</td><td>A bird born to run, the Greater Roadrunner can outrace a human, kill a rattlesnake, and thrive in the harsh landscapes of the Desert Southwest. Roadrunners reach two feet from sturdy bill to white tail tip, with a bushy blue-black crest and mottled plumage that blends well with dusty shrubs. As they run, they hold their lean frames nearly parallel to the ground and rudder with their long tails. They have recently extended their range eastward into Missouri and Louisiana.</td><td>Geococcyx californianus</td><td>Brown</td><td>Hunting/Fishing</td><td>Look at a [card] from the deck. If &lt;50cm, tuck it behind this bird. If not, discard it.</td><td>X</td><td></td><td></td><td>7</td><td>Platform</td><td>2</td><td>56</td><td></td><td>X</td><td></td><td>1</td><td></td><td></td><td></td><td>1</td><td></td><td>1</td></tr>
+                                    <tr><td>Blue jay</td><td>https://www.allaboutbirds.org/guide/assets/photo/75265841-1280px.jpg</td><td>This common, large songbird is familiar to many people, with its perky crest; blue, white, and black plumage; and noisy calls. Blue Jays are known for their intelligence and complex social systems with tight family bonds. Their fondness for acorns is credited with helping spread oak trees after the last glacial period.</td><td>Cyanocitta cristata</td><td>Brown</td><td>Caching Food</td><td>Gain 1 [seed] from the birdfeeder (if available). You may cache it on this card.</td><td></td><td></td><td></td><td>3</td><td>Bowl</td><td>2</td><td>41</td><td>X</td><td></td><td></td><td></td><td>1</td><td></td><td></td><td></td><td></td><td>1</td></tr>
+                                    <tr><td>Northern cardinal</td><td>https://www.allaboutbirds.org/guide/assets/photo/75224371-1280px.jpg</td><td>The male Northern Cardinal is perhaps responsible for getting more people to open up a field guide than any other bird. They're a perfect combination of familiarity, conspicuousness, and style: a shade of red you can't take your eyes off. Even the brown females sport a sharp crest and warm red accents. Cardinals don't migrate and they don't molt into a dull plumage, so they're still breathtaking in winter's snowy backyards. In summer, their sweet whistles are one of the first sounds of the morning.</td><td>Cardinalis cardinalis</td><td>Brown</td><td>Food from Supply</td><td>Gain 1 [fruit] from the supply.</td><td></td><td></td><td></td><td>3</td><td>Bowl</td><td>5</td><td>30</td><td>X</td><td></td><td></td><td></td><td>1</td><td></td><td>1</td><td></td><td></td><td></td></tr>
+                                    <tr><td>Trumpeter swan</td><td>https://www.allaboutbirds.org/guide/assets/photo/75226411-1900px.jpg</td><td>Trumpeter Swans demand superlatives: they're our biggest native waterfowl, stretching to 6 feet in length and weighing more than 25 pounds - almost twice as massive as a Tundra Swan. Getting airborne requires a lumbering takeoff along a 100-yard runway. Despite their size, this once-endangered, now recovering species is as elegant as any swan, with a graceful neck and snowy-white plumage. They breed on wetlands in remote Alaska, Canada, and the northwestern U.S., and winter on ice-free coastal and inland waters.</td><td>Cygnus buccinator</td><td></td><td></td><td></td><td></td><td></td><td></td><td>9</td><td>Ground</td><td>2</td><td>203</td><td></td><td></td><td>X</td><td></td><td>2</td><td></td><td></td><td></td><td></td><td>1</td></tr>
+                                    <tr><td>Dickcissel</td><td>https://www.allaboutbirds.org/guide/assets/photo/75340431-1900px.jpg</td><td>The curt song of the Dickcissel sounds like the bird's name, and it's part of the soundtrack of the North American prairies. This chunky grassland bunting is colored like a miniature meadowlark, with a black V on a yellow chest. These birds are erratic wanderers‚Äîcommon across the middle of the continent, and a pleasant surprise whenever they turn up in pastures and fields elsewhere in the central and eastern United States. Dickcissels can form enormous flocks on migration and in winter.</td><td>Spiza americana</td><td>Brown</td><td>Flocking</td><td>Tuck a [card] from your hand behind this bird. If you do, also lay 1 [egg] on this bird.</td><td></td><td>X</td><td></td><td>4</td><td>Ground</td><td>3</td><td>25</td><td></td><td>X</td><td></td><td>1</td><td>2</td><td></td><td></td><td></td><td></td><td></td></tr>
+                                    <tr><td>Bald eagle</td><td>https://www.allaboutbirds.org/guide/assets/photo/75258921-1900px.jpg</td><td>The Bald Eagle has been the national emblem of the United States since 1782 and a spiritual symbol for native people for far longer than that. These regal birds aren't really bald, but their white-feathered heads gleam in contrast to their chocolate-brown body and wings. Look for them soaring in solitude, chasing other birds for their food, or gathering by the hundreds in winter. Once endangered by hunting and pesticides, Bald Eagles have flourished under protection.</td><td>Haliaeetus leucocephalus</td><td>White</td><td>Food from Birdfeeder</td><td>Gain all [fish] that are in the birdfeeder.</td><td></td><td></td><td></td><td>9</td><td>Platform</td><td>1</td><td>203</td><td></td><td></td><td>X</td><td></td><td></td><td>2</td><td></td><td>1</td><td></td><td></td></tr>
+                                    <tr><td>Purple Gallinule</td><td>https://www.allaboutbirds.org/guide/assets/photo/75229331-1900px.jpg</td><td>Lurking in the marshes of the extreme southeastern U.S. lives one of the most vividly colored birds in all of North America. Purple Gallinules combine cherry red, sky blue, moss green, aquamarine, indigo, violet, and school-bus yellow, a color palette that blends surprisingly well with tropical and subtropical wetlands. Watch for these long-legged, long-toed birds stepping gingerly across water lilies and other floating vegetation as they hunt frogs and invertebrates or pick at tubers.</td><td>Porphyrio martinicus</td><td>Brown</td><td>Card-drawing</td><td>All players draw 1 [card] from the deck.</td><td></td><td></td><td></td><td>7</td><td>Platform</td><td>4</td><td>56</td><td></td><td></td><td>X</td><td></td><td>1</td><td></td><td>1</td><td></td><td></td><td>1</td></tr>
+                                    <tr><td>Atlantic puffin</td><td>https://www.allaboutbirds.org/guide/assets/photo/75224141-1900px.jpg</td><td>A sharply dressed black-and-white seabird with a huge, multicolored bill, the Atlantic Puffin is often called the clown of the sea. It breeds in burrows on islands in the North Atlantic, and winters at sea. In flight, puffins flap their small wings frantically to stay aloft‚Äîbut underwater those wings become powerful flippers that allow the birds to catch small fish one by one until they have a beak full. This long-lived bird, once widely hunted, is reestablishing its small range in the U.S., although warming ocean waters are causing breeding failures in other parts of the North Atlantic.</td><td>Fratercula arctica</td><td>White</td><td>Other</td><td>Draw 2 new bonus cards and keep 1.</td><td></td><td></td><td>X</td><td>8</td><td>Wild</td><td>1</td><td>53</td><td></td><td></td><td>X</td><td></td><td></td><td>3</td><td></td><td></td><td></td><td></td></tr>
+                                    <tr><td>Mallard</td><td>https://www.allaboutbirds.org/guide/assets/photo/75711041-1900px.jpg</td><td>If someone at a park is feeding bread to ducks, chances are there are Mallards in the fray. Perhaps the most familiar of all ducks, Mallards occur throughout North America and Eurasia in ponds and parks as well as wilder wetlands and estuaries. The male's gleaming green head, gray flanks, and black tail-curl arguably make it the most easily identified duck. Mallards have long been hunted for the table, and almost all domestic ducks come from this species.</td><td>Anas platyrhynchos</td><td>Brown</td><td>Card-drawing</td><td>Draw 1 [card].</td><td></td><td></td><td></td><td>0</td><td>Ground</td><td>4</td><td>89</td><td></td><td></td><td>X</td><td>1</td><td>1</td><td></td><td></td><td></td><td></td><td></td></tr>
+                                    <tr><td>Scissor-tailed flycatcher</td><td>https://www.allaboutbirds.org/guide/assets/photo/75365381-1900px.jpg</td><td>An elegant gray and salmon-pink flycatcher festooned with an absurdly long tail, the Scissor-tailed Flycatcher is the bird to look for on fence wires in the south-central United States. They typically perch in the open, where their long, forked tails make an unmistakable silhouette. The tail proves useful as they expertly catch insects on the wing with sharp midair twists and turns. In late summer and early fall, scissor-tails gather in large, bickering flocks to migrate to Mexico and Central America.</td><td>Tyrannus forficatus</td><td>Brown</td><td>Food from Supply</td><td>All players gain 1 [invertebrate] from the supply.</td><td></td><td></td><td></td><td>8</td><td>Bowl</td><td>2</td><td>38</td><td></td><td>X</td><td></td><td>2</td><td></td><td></td><td>1</td><td></td><td></td><td></td></tr>
                                 </tbody>
                             </table>
                         </Drawer>
-                        <p>Most of the top banner is pulled from a wingspan dataset, compiled by a fan from the original game data. It’s missing a few key pieces of information, such as when abilities were activated, but proved sufficeint for our purposes. Given the time to expand on the project, entering more information into the dataset from the game would allow for more detailed mechanical descriptions.</p>
-                        <p>The long form descritions and imagesof the birds were taken from <a href="https://www.allaboutbirds.org/" rel="noreferrer">All About Birds</a> by Cornell. As they don't expose a public API, the data was scraped by hand for the selected sample of birds. To expand on the project, either a more robust scraping or an alternate datasource would be in order.</p>
+                        <p>The majority of the top banner is pulled from a wingspan dataset, compiled by a fan from the original game data. It’s missing a few key pieces of information, such as when abilities were activated, but proved sufficient for our purposes. Given the time to expand on the project, entering more information into the dataset from the game would allow for more detailed mechanical descriptions.</p>
+                        <p>The long form descritions and images of the birds were taken from <a href="https://www.allaboutbirds.org/" rel="noreferrer">All About Birds</a> by Cornell. As they don't expose a public API, the data was scraped by hand for the selected sample of birds. To expand on the project, either a more robust scraping or an alternate datasource would be in order.</p>
+
                         <h4>The Viz</h4>
-                        <p>There were two references I used when trying to decide how to display this information. The first comes from the book “Celebrating birds” which is a companion guide to the game itself. The second is All About Birds by Cornell</p>
+                        <figure className={css.figure}>
+                            <div>
+                                <img className={css.figureObject} src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/91R4ZQhdq5L._AC_UF1000,1000_QL80_.jpg" alt=""/>
+                            </div>
+                            <figcaption className={css.figureCaption}>Biographic information for a Barn Owl, from <a href="https://www.nataliarojasart.com/celebrating-birds">Celebrating Birds</a></figcaption>
+                        </figure>
+                        <p>The visual reference for the biographical data comes from the book <a href="https://www.nataliarojasart.com/celebrating-birds">Celebrating Birds</a> which is a companion guide to the game itself. The idea is to use a hero image to show the bird itself, placed side by side with the biography. The title should be in bold, with the taxonomy data in buckets. Overall I belive the basic layout works, but the individual components need refining, such as by modulating the line weights and fonts.</p>
                     </section>
 
                     <section>
                         <h3>Module 2: Diet</h3>
+                        <Drawer title="The Data" buttonTextCollapsed="View Sample ›" buttonTextExpanded="Hide Sample ⌄" linkText="" linkURL="">
+                            <table className={css.drawerTable}>
+                                <thead>
+                                    <tr><th>species</th><th>query_type</th><th>region</th><th>season</th><th>start_year</th><th>end_year</th><th>prey_level</th><th>taxon</th><th>pct_items</th><th>pct_wt_or_vol</th><th>pct_occurrence</th><th>pct_unspecified</th><th>database_timestamp</th></tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr><td>Blue Jay</td><td>Prey</td><td>all regions</td><td>all seasons</td><td>1915</td><td>1993</td><td>Class</td><td>Magnoliopsida [dicots]</td><td></td><td>9.75</td><td>95</td><td></td><td>December 18, 2022 00:00:05 UTC</td></tr>
+                                    <tr><td>Blue Jay</td><td>Prey</td><td>all regions</td><td>all seasons</td><td>1915</td><td>1993</td><td>Class</td><td>Insecta [insects]</td><td></td><td>3</td><td>60</td><td></td><td>December 18, 2022 00:00:05 UTC</td></tr>
+                                    <tr><td>Blue Jay</td><td>Prey</td><td>all regions</td><td>all seasons</td><td>1915</td><td>1993</td><td>Class</td><td>Other</td><td></td><td>87.25</td><td></td><td></td><td>December 18, 2022 00:00:05 UTC</td></tr>
+                                    <tr><td>Northern Cardinal</td><td>Prey</td><td>all regions</td><td>all seasons</td><td>1908</td><td>1961</td><td>Class</td><td>Magnoliopsida [dicots]</td><td></td><td>20</td><td>17.8</td><td></td><td>December 18, 2022 00:00:05 UTC</td></tr>
+                                    <tr><td>Northern Cardinal</td><td>Prey</td><td>all regions</td><td>all seasons</td><td>1908</td><td>1961</td><td>Class</td><td>Insecta [insects]</td><td></td><td>3.8</td><td>15.7</td><td></td><td>December 18, 2022 00:00:05 UTC</td></tr>
+                                    <tr><td>Northern Cardinal</td><td>Prey</td><td>all regions</td><td>all seasons</td><td>1908</td><td>1961</td><td>Class</td><td>Other</td><td></td><td>76.2</td><td>0.1</td><td></td><td>December 18, 2022 00:00:05 UTC</td></tr>
+                                    <tr><td>Trumpeter Swan</td><td>Prey</td><td>all regions</td><td>all seasons</td><td>1937</td><td>1995</td><td>Class</td><td>Magnoliopsida [dicots]</td><td>71.1</td><td>67</td><td>34.8</td><td></td><td>December 18, 2022 00:00:05 UTC</td></tr>
+                                    <tr><td>Trumpeter Swan</td><td>Prey</td><td>all regions</td><td>all seasons</td><td>1937</td><td>1995</td><td>Class</td><td>Bryopsida [true mosses]</td><td></td><td>32</td><td></td><td></td><td>December 18, 2022 00:00:05 UTC</td></tr>
+                                    <tr><td>Trumpeter Swan</td><td>Prey</td><td>all regions</td><td>all seasons</td><td>1937</td><td>1995</td><td>Class</td><td>Other</td><td></td><td>1</td><td></td><td></td><td>December 18, 2022 00:00:05 UTC</td></tr>
+                                    <tr><td>Ruby-throated Hummingbird</td><td>Prey</td><td>all regions</td><td>all seasons</td><td>1912</td><td>1916</td><td>Class</td><td>Insecta [insects]</td><td></td><td>46.9</td><td></td><td></td><td>December 18, 2022 00:00:05 UTC</td></tr>
+                                </tbody>
+                            </table>
+                        </Drawer>
+                        <div></div>
+                        <figure className={css.figure}>
+                            <div>
+                                <img className={css.figureObject} src="/images/study-wingspan-aviandietdb.png" alt=""/>
+                            </div>
+                            <figcaption className={css.figureCaption}>Diet information for a Bald Eagle, from the <a href="https://aviandiet.unc.edu/">Avian Diet Database</a></figcaption>
+                        </figure>
+                        <p>The data for this module comes from the <a href="https://aviandiet.unc.edu/">Avian Diet Database</a> which contains records from ~1000 studies detailing diets of various bird species. The website provides a species lookup, and breaks down prey by taxon and percent of diet. The data lacks any sort of consistency however, with some birds listing prey only by weight, others by item, others both. And sometimes the taxonomy was either listed at the wrong level (species in the class level) or simply not useful (“Unidentified Animalia”). The data was accuired by looking up each special in the sample and using the "Download Data" function, although the complete dataset is available in an R package if the project were to be expanded.</p>
+
+                        <Drawer title="The Viz" buttonTextCollapsed="View Code ›" buttonTextExpanded="Hide Code ⌄" linkText="Github" linkURL="https://github.com/tkcram/bird-viz/blob/main/src/Diet.js">
+                            <CodeBlock language="jsx" showLineNumbers={true} text={DietSnippet}/>
+                        </Drawer>
                         <figure className={css.figure}>
                             <div className={css.figureObject}>
                                 <Diet/>
                             </div>
                             <figcaption className={css.figureCaption}>Try me!</figcaption>
                         </figure>
-                        <Drawer title="The Data" buttonTextCollapsed="View Data ›" buttonTextExpanded="Hide Data ⌄" linkText="Download" linkURL="">
-                            <table className={css.drawerTable}>
-                                <thead>
-                                    <tr><th>Common name</th><th>Scientific name</th><th>Color</th><th>Power Category</th><th>Power text</th><th>Predator</th><th>Flocking</th><th>Bonus card</th><th>Victory points</th><th>Nest type</th><th>Egg capacity</th><th>Wingspan</th><th>Forest</th><th>Grassland</th><th>Wetland</th><th>Invertebrate</th><th>Seed</th><th>Fish</th><th>Fruit</th><th>Rodent</th><th>Wild (food)</th></tr>
-                                </thead>
-                                <tbody>
-                                    <tr><td>Abbott's Booby</td><td>Papasula abbotti</td><td>White</td><td></td><td>Draw 3 bonus cards, then discard 2. You may discard bonus cards you did not draw this turn.</td><td></td><td></td><td>X</td><td>5</td><td>Platform</td><td>1</td><td>190</td><td></td><td></td><td>X</td><td></td><td></td><td>2</td><td></td><td></td><td></td></tr>
-                                    <tr><td>Acorn Woodpecker</td><td>Melanerpes formicivorus</td><td>Brown</td><td>Caching Food</td><td>Gain 1 [seed] from the birdfeeder (if available). You may cache it on this card.</td><td></td><td></td><td></td><td>5</td><td>Cavity</td><td>4</td><td>46</td><td>X</td><td></td><td></td><td></td><td>3</td><td></td><td></td><td></td><td></td></tr>
-                                    <tr><td>American Avocet</td><td>Recurvirostra americana</td><td>Pink</td><td>Egg-laying</td><td>When another player takes the "lay eggs" action, this bird lays 1 [egg] on another bird with a [ground] nest.</td><td></td><td></td><td></td><td>6</td><td>Ground</td><td>2</td><td>79</td><td></td><td></td><td>X</td><td>2</td><td>1</td><td></td><td></td><td></td><td></td></tr>
-                                    <tr><td>American Bittern</td><td>Botaurus lentiginosus</td><td>Brown</td><td>Card-drawing</td><td>Player(s) with the fewest [wetland] birds: draw 1 [card].</td><td></td><td></td><td></td><td>7</td><td>Platform</td><td>2</td><td>107</td><td></td><td></td><td>X</td><td>1</td><td></td><td>1</td><td></td><td>1</td><td></td></tr>
-                                    <tr><td>American Coot</td><td>Fulica americana</td><td>Brown</td><td>Flocking</td><td>Tuck a [card] from your hand behind this bird. If you do, draw 1 [card].</td><td></td><td>X</td><td></td><td>3</td><td>Platform</td><td>5</td><td>61</td><td></td><td></td><td>X</td><td></td><td>1</td><td></td><td></td><td></td><td>1</td></tr>
-                                    <tr><td>American Crow</td><td>Corvus brachyrhynchos</td><td>Brown</td><td>Food from Supply</td><td>Discard 1 [egg] from any of your other birds to gain 1 [wild] from the supply.</td><td></td><td></td><td></td><td>4</td><td>Platform</td><td>2</td><td>99</td><td>X</td><td>X</td><td>X</td><td></td><td></td><td></td><td></td><td></td><td>1</td></tr>
-                                </tbody>
-                            </table>
-                        </Drawer>
-                        <div></div>
-                        <p>(Source: Avian Diet Database) The data lacks any sort of consistency however, with some birds listing prey only by weight, others by item, others both. And sometimes the taxonomy was either listed at the wrong level (species in the class level) or simply not useful (“Unidentified Animalia”).</p>
-                        <Drawer title="The Viz" buttonTextCollapsed="View Code ›" buttonTextExpanded="Hide Code ⌄" linkText="Github" linkURL="">
-                            <CodeBlock language="jsx" showLineNumbers={true} text={DietSnippet}/>
-                        </Drawer>
-                        <p>TBD what the pop-up is gonna look like</p>   
+                        <p>This particular visualisation went through several rounds of development. A pie chart was chosen as it seemed most bird species only consumed a small varierty of prey, with one or two making up the vast majority. Initially, there was to be an image of the prey, pulled via wikidata, and sit on top of the chart. Even though this idea proved out of scope for this project, the space in the middle where it would have been positioned remained, creating a donut chart. Ideally the colouring would be done based on the Wingspan cards (e.g. black for other birds, grey for mammals) but the taxonomy was not 1-1 and concerns arose around overlapping colours, as well as how to codify the types.</p>
+                        <p>Another idea that was omitted due to time constraints was the ability to navigate down the taxonomy. For instance if the user clicked on "Mammalia", the chart would filter down to only show mammals, and provide a breakdown of the individual species preyed upon. Beyond time, the inconsistency in the data made this a difficult challenge to tackle, as well as uncertainty around the quality of the user experience. In the end, the intereractive element of the module was scaled back to a simple tooltip and highlight functionality.</p> 
                     </section>
 
                     <section>
                         <h3>Module 3: Lifecycle</h3>
+                        <Drawer title="The Data" buttonTextCollapsed="View Sample ›" buttonTextExpanded="Hide Sample ⌄" linkText="" linkURL="">
+                            <table className={css.drawerTable}>
+                                <thead>
+                                    <tr><th>Common name</th><th>Clutch Size</th><th>Egg Dimension</th><th>Egg Description</th><th>Incubation Period</th><th>Nestling Period</th><th>Hatchling description</th><th>Mating age</th><th>Monogamous</th><th>Lifespan (Days)</th><th>Lifespan (Years)</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Greater roadrunner</td><td>2-6 eggs</td><td>3.5x2.8cm</td><td>White covered with a chalky yellow film, sometimes stained with brown or gray.</td><td>19</td><td></td><td>Eyes closed but chick strong and active, with black skin and white down along the feather tracts.</td><td>730</td><td>1</td><td>2555</td><td>7</td></tr>
+                                    <tr><td>Blue jay</td><td>2-7 eggs</td><td>2.5x1.8cm</td><td>Bluish or light brown with brownish spots.</td><td>17</td><td>34</td><td>Naked and helpless, eyes closed, mouth lining red.</td><td>365</td><td>1</td><td>2555</td><td>7</td></tr>
+                                    <tr><td>Northern cardinal</td><td>2-5 eggs</td><td>2.2x1.7cm</td><td>Grayish white, buffy white, or greenish white speckled with pale gray to brown.</td><td>11</td><td>18</td><td>Naked except for sparse tufts of grayish down, eyes closed, clumsy.</td><td>365</td><td>0</td><td>1095</td><td>3</td></tr>
+                                    <tr><td>Trumpeter swan</td><td>4-6 eggs</td><td>10.1x6.2cm</td><td>Creamy to dull white, often stained brown in the nest.</td><td>32</td><td>33</td><td>Eyes partially open, covered in mouse-gray or occasionally white down. Leaves nest within 24 hours of hatching and has the ability to swim and feed. Is able to fly at 90 - 122 days after hatching.</td><td>1460</td><td>1</td><td>9125</td><td>25</td></tr>
+                                    <tr><td>Dickcissel</td><td>3-6 eggs</td><td>2x1.6cm</td><td>Unmarked, pale blue.</td><td>12</td><td>20</td><td>Nearly naked with sparse white down, helpless.</td><td></td><td>0</td><td>1825</td><td>5</td></tr>
+                                    <tr><td>Bald eagle</td><td>1-3 eggs</td><td>5.8x4.7cm</td><td>Dull white, usually without markings.</td><td>34</td><td>90</td><td>Covered with light-gray down; eyes brown; gape, legs, and skin pink.</td><td>1460</td><td>1</td><td>7300</td><td>20</td></tr>
+                                    <tr><td>Purple Gallinule</td><td>6-8 eggs</td><td>3.3x2.2cm</td><td>Creamy white with small, irregular brown spots.</td><td>20</td><td>21</td><td>Covered with black down, able to leave nest within one day. Fed by parents.
+                                    </td><td>730</td><td>1</td><td>2555</td><td>7</td></tr>
+                                    <tr><td>Atlantic puffin</td><td>1 egg</td><td>5.9x4.4cm</td><td>Dull white.</td><td>36</td><td>74</td><td>Covered in dark gray down.</td><td>1825</td><td>1</td><td>10950</td><td>30</td></tr>
+                                    <tr><td>Mallard</td><td>1-13 eggs</td><td>5.3x3.9cm</td><td>Unmarked creamy to grayish or greenish buff.</td><td>23</td><td>24</td><td>Newly hatched birds are covered in down and alert; they are ready to leave the nest within 13‚Äì16 hours.</td><td>365</td><td>1</td><td>1825</td><td>5</td></tr>
+                                    <tr><td>Scissor-tailed flycatcher</td><td>3-6 eggs</td><td>2x1.5cm</td><td>White or creamy with dark red, reddish brown, or purple blotches.</td><td>13</td><td>27</td><td>Helpless, with reddish brown skin and sparse white down.</td><td>365</td><td>1</td><td>3650</td><td>10</td></tr>
+
+                                </tbody>
+                            </table>
+                        </Drawer>
+                        <figure className={css.figure}>
+                            <div>
+                                <img className={css.figureObject} src="https://m.media-amazon.com/images/I/71N9PGXlSxL.jpg" alt=""/>
+                            </div>
+                            <figcaption className={css.figureCaption}>Information for a Hammerkop & Scarlet Ibis, from the <a href="https://www.amazon.com/Encyclopedia-Birds-Christiansen/dp/178274715X">Encyclopedia of Birds by Per Christiansen</a></figcaption>
+                        </figure>
+                        <p>Data collection for this module proved challenging as no single source offered all the information that it required. All About Birds was used for the nesting data, but didn't codify information about later development stages. Towards the end of the project, I was gifted a bird encyclopaedia, which serendipitously happen to contain this information. However being a book, this data had to be entered by hand, further exasperating the issues previously encountered using All About Birds (See Module 1). While the book provides valuable information, encoding the entire tomb would not be an insignificant amount of effort, and so other avenues should be explored before such an undertaking.</p>
+
+                        <Drawer title="The Viz" buttonTextCollapsed="View Code ›" buttonTextExpanded="Hide Code ⌄" linkText="Github" linkURL="https://github.com/tkcram/bird-viz/blob/main/src/Lifecycle.js">
+                            <CodeBlock language="jsx" showLineNumbers={true} text={LifecycleSnippet}/>
+                        </Drawer>
                         <figure className={css.figure}>
                             <div className={css.figureObject}>
                                 <Lifecycle/>
                             </div>
                             <figcaption className={css.figureCaption}>Try me!</figcaption>
                         </figure>
-                        <Drawer title="The Data" buttonTextCollapsed="View Data ›" buttonTextExpanded="Hide Data ⌄" linkText="Download" linkURL="">
-                            <table className={css.drawerTable}>
-                                <thead>
-                                    <tr><th>Common name</th><th>Scientific name</th><th>Color</th><th>Power Category</th><th>Power text</th><th>Predator</th><th>Flocking</th><th>Bonus card</th><th>Victory points</th><th>Nest type</th><th>Egg capacity</th><th>Wingspan</th><th>Forest</th><th>Grassland</th><th>Wetland</th><th>Invertebrate</th><th>Seed</th><th>Fish</th><th>Fruit</th><th>Rodent</th><th>Wild (food)</th></tr>
-                                </thead>
-                                <tbody>
-                                    <tr><td>Abbott's Booby</td><td>Papasula abbotti</td><td>White</td><td></td><td>Draw 3 bonus cards, then discard 2. You may discard bonus cards you did not draw this turn.</td><td></td><td></td><td>X</td><td>5</td><td>Platform</td><td>1</td><td>190</td><td></td><td></td><td>X</td><td></td><td></td><td>2</td><td></td><td></td><td></td></tr>
-                                    <tr><td>Acorn Woodpecker</td><td>Melanerpes formicivorus</td><td>Brown</td><td>Caching Food</td><td>Gain 1 [seed] from the birdfeeder (if available). You may cache it on this card.</td><td></td><td></td><td></td><td>5</td><td>Cavity</td><td>4</td><td>46</td><td>X</td><td></td><td></td><td></td><td>3</td><td></td><td></td><td></td><td></td></tr>
-                                    <tr><td>American Avocet</td><td>Recurvirostra americana</td><td>Pink</td><td>Egg-laying</td><td>When another player takes the "lay eggs" action, this bird lays 1 [egg] on another bird with a [ground] nest.</td><td></td><td></td><td></td><td>6</td><td>Ground</td><td>2</td><td>79</td><td></td><td></td><td>X</td><td>2</td><td>1</td><td></td><td></td><td></td><td></td></tr>
-                                    <tr><td>American Bittern</td><td>Botaurus lentiginosus</td><td>Brown</td><td>Card-drawing</td><td>Player(s) with the fewest [wetland] birds: draw 1 [card].</td><td></td><td></td><td></td><td>7</td><td>Platform</td><td>2</td><td>107</td><td></td><td></td><td>X</td><td>1</td><td></td><td>1</td><td></td><td>1</td><td></td></tr>
-                                    <tr><td>American Coot</td><td>Fulica americana</td><td>Brown</td><td>Flocking</td><td>Tuck a [card] from your hand behind this bird. If you do, draw 1 [card].</td><td></td><td>X</td><td></td><td>3</td><td>Platform</td><td>5</td><td>61</td><td></td><td></td><td>X</td><td></td><td>1</td><td></td><td></td><td></td><td>1</td></tr>
-                                    <tr><td>American Crow</td><td>Corvus brachyrhynchos</td><td>Brown</td><td>Food from Supply</td><td>Discard 1 [egg] from any of your other birds to gain 1 [wild] from the supply.</td><td></td><td></td><td></td><td>4</td><td>Platform</td><td>2</td><td>99</td><td>X</td><td>X</td><td>X</td><td></td><td></td><td></td><td></td><td></td><td>1</td></tr>
-                                </tbody>
-                            </table>
-                        </Drawer>
-                        <p>I was unable to find a single dataset with all the information that this module needed publically available. For prototyping purposes, data was sourced manually and entered into a spreadsheet. Early stages of development were found at AllAboutBirds, but they didn't codify later stages such as mating or lifespan, which had to be sought out on google. I was serendipitously gifted an encyclopaedia on birds, which provided all the information the module needed. The book itself is slightly dated, as taxonomies are ever shifting, but it provides good enough information for this project. Unfortunately, it being a paper book meant a significant amout of manual data entry.</p>
-                        <p>Should probably write something about the tooltip info</p>
-                        <Drawer title="The Viz" buttonTextCollapsed="View Code ›" buttonTextExpanded="Hide Code ⌄" linkText="Github" linkURL="">
-                            <CodeBlock language="jsx" showLineNumbers={true} text={LifecycleSnippet}/>
-                        </Drawer>
-                        <p>This module is the one that was changed most frequently during development. The first attempt involved using a tree diagram and pruning it until it resembled a timeline. The second involved using a newtwork graph, which proved completely off base. The final approach was to use a one-dimensional scatterplot. The dates are scaled on a log, as early stages in development are measured in weeks, whereas later stages can take decades, and a log allowed them to be draw with less space in between</p>    
-                        <p>I wonder what the pop-up for this one will look like. Probably rolling the tooltips into it</p>      
+                        <p>Much like Module 2, this module changed frequently during development. The first attempt involved using a tree diagram and pruning it until it resembled a timeline. The second involved using a newtwork graph, which proved completely off base. The final approach was to use a one-dimensional scatterplot. The dates are scaled on a log, as early stages in development are measured in weeks, whereas later stages can take decades, and a log allowed them to be drawn with less space in between.</p>    
+                        <p>The tooltip displays additional information about each stage of development, such as clutch size and nest descriptions, as this information was present within the Wingspan cards and so should to be included. It was set as a sticky to differentiate it from the tooltips in Module 2, although user testing should be done to determine which works better and unify the experience.</p>      
                    </section>
 
                     <section>
                         <h3>Module 4: Range</h3>
+                        <Drawer title="The Data" buttonTextCollapsed="View Sample ›" buttonTextExpanded="Hide Sample ⌄" linkText="" linkURL="">
+                            <table className={css.drawerTable}>
+                                <thead>
+                                    <tr><th>COUNTY_CODE</th><th>BALD_EAGLES</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>2013</td><td>129</td></tr>
+                                    <tr><td>2016</td><td>777</td></tr>
+                                    <tr><td>2020</td><td>2077</td></tr>
+                                    <tr><td>2050</td><td>29</td></tr>
+                                    <tr><td>2060</td><td>49</td></tr>
+                                    <tr><td>2068</td><td>92</td></tr>
+                                    <tr><td>2070</td><td>13</td></tr>
+                                    <tr><td>2090</td><td>346</td></tr>
+                                    <tr><td>2100</td><td>29</td></tr>
+                                    <tr><td>2110</td><td>2609</td></tr>
+                                </tbody>
+                            </table>
+                        </Drawer>
+                        <figure className={css.figure}>
+                            <div>
+                                <img className={css.figureObject} src="/images/study-wingspan-map.png" alt=""/>
+                            </div>
+                            <figcaption className={css.figureCaption}>Geographic information for a Bald Eagle, from <a href="https://ebird.org/map/baleag?neg=true&env.minX=&env.minY=&env.maxX=&env.maxY=&zh=false&gp=false&ev=Z&excludeExX=false&excludeExAll=false&mr=1-12&bmo=1&emo=12&yr=all&byr=1900&eyr=2023">eBird</a></figcaption>
+                        </figure>
+                        <p>A Cornell Lab of Ornithology project, eBird allows users to document bird sightings, which are then collected for use by registered users. During prototyping the sightings for ~20 birds over 2021 was manually downloaded. Aggregating the data was all done using a python script that would loop through all the files, sum up the number of sighting instances for a given county code, and export as a JSON blob. Unfortunately the location data included isn't an exact match to standard FIPS encoding, e.g. instead of 01143 it uses AZ-143. This had to be changed in order to properly reference the positioning on the map.</p>
+                        <p>However when trying to generalise the project, it became apparent that pre-processing the entire dataset wouldn't be suitable. If nothing else, even when narrowing the raw data to only the USA for a single year, it was over 100gb in size. eBird does expose an API, which will allow for more birds to be included in future. The downside was that a) it required more processing on the dashboard itself, lowering performance and b) it only provides the last 30 days worth of sighting, making it incomplete for migratory species.</p>
+                        <Drawer title="The Viz" buttonTextCollapsed="View Code ›" buttonTextExpanded="Hide Code ⌄" linkText="Github" linkURL="https://github.com/tkcram/bird-viz/blob/main/src/Range.js">
+                            <CodeBlock language="jsx" showLineNumbers={true} text={RangeSnippet}/>
+                        </Drawer>
                         <figure className={css.figure}>
                             <div className={css.figureObject}><Range/></div>
                             <figcaption className={css.figureCaption}>Try me!</figcaption>
                         </figure>
-                        <Drawer title="The Data" buttonTextCollapsed="View Data ›" buttonTextExpanded="Hide Data ⌄" linkText="Download" linkURL="">
-                            <table className={css.drawerTable}>
-                                <thead>
-                                    <tr><th>Common name</th><th>Scientific name</th><th>Color</th><th>Power Category</th><th>Power text</th><th>Predator</th><th>Flocking</th><th>Bonus card</th><th>Victory points</th><th>Nest type</th><th>Egg capacity</th><th>Wingspan</th><th>Forest</th><th>Grassland</th><th>Wetland</th><th>Invertebrate</th><th>Seed</th><th>Fish</th><th>Fruit</th><th>Rodent</th><th>Wild (food)</th></tr>
-                                </thead>
-                                <tbody>
-                                    <tr><td>Abbott's Booby</td><td>Papasula abbotti</td><td>White</td><td></td><td>Draw 3 bonus cards, then discard 2. You may discard bonus cards you did not draw this turn.</td><td></td><td></td><td>X</td><td>5</td><td>Platform</td><td>1</td><td>190</td><td></td><td></td><td>X</td><td></td><td></td><td>2</td><td></td><td></td><td></td></tr>
-                                    <tr><td>Acorn Woodpecker</td><td>Melanerpes formicivorus</td><td>Brown</td><td>Caching Food</td><td>Gain 1 [seed] from the birdfeeder (if available). You may cache it on this card.</td><td></td><td></td><td></td><td>5</td><td>Cavity</td><td>4</td><td>46</td><td>X</td><td></td><td></td><td></td><td>3</td><td></td><td></td><td></td><td></td></tr>
-                                    <tr><td>American Avocet</td><td>Recurvirostra americana</td><td>Pink</td><td>Egg-laying</td><td>When another player takes the "lay eggs" action, this bird lays 1 [egg] on another bird with a [ground] nest.</td><td></td><td></td><td></td><td>6</td><td>Ground</td><td>2</td><td>79</td><td></td><td></td><td>X</td><td>2</td><td>1</td><td></td><td></td><td></td><td></td></tr>
-                                    <tr><td>American Bittern</td><td>Botaurus lentiginosus</td><td>Brown</td><td>Card-drawing</td><td>Player(s) with the fewest [wetland] birds: draw 1 [card].</td><td></td><td></td><td></td><td>7</td><td>Platform</td><td>2</td><td>107</td><td></td><td></td><td>X</td><td>1</td><td></td><td>1</td><td></td><td>1</td><td></td></tr>
-                                    <tr><td>American Coot</td><td>Fulica americana</td><td>Brown</td><td>Flocking</td><td>Tuck a [card] from your hand behind this bird. If you do, draw 1 [card].</td><td></td><td>X</td><td></td><td>3</td><td>Platform</td><td>5</td><td>61</td><td></td><td></td><td>X</td><td></td><td>1</td><td></td><td></td><td></td><td>1</td></tr>
-                                    <tr><td>American Crow</td><td>Corvus brachyrhynchos</td><td>Brown</td><td>Food from Supply</td><td>Discard 1 [egg] from any of your other birds to gain 1 [wild] from the supply.</td><td></td><td></td><td></td><td>4</td><td>Platform</td><td>2</td><td>99</td><td>X</td><td>X</td><td>X</td><td></td><td></td><td></td><td></td><td></td><td>1</td></tr>
-                                </tbody>
-                            </table>
-                        </Drawer>
-                        <p>A Cornell Lab of Ornithology project, eBird allows users to document bird sightings, which are then collected for use by registered users. [something something more about the data].</p>
-                        <p>During prototyping I manually downloaded the sightings for ~20 birds over 2021. Aggregating the data was all done using a python script that would loop through all the files, and sum up the number of sighting instances for a given county code. Unfortunately the location data included isn't an exact match to standard FIPS encoding, e.g. instead of 01143 it uses AZ-143. This had to be changed in order to properly reference the positioning on the map.</p>
-                        <p>However when trying to generalise the project, it became apparent that pre-processing the entire dataset wouldn't be suitable. If nothing else, even when narrowing the raw data to only the USA for a single year, it was over 100gb in size. Instead I switched to using the eBird API. The upside of this was that it allowed for lightweight access to the dataset. The downside was that a) it required more processing on the dashboard itself, lowering performance and b) it only provides the last 30 days worth of sighting, making it incomplete for migratory species</p>
-                        <Drawer title="The Viz" buttonTextCollapsed="View Code ›" buttonTextExpanded="Hide Code ⌄" linkText="Github" linkURL="">
-                            <CodeBlock language="jsx" showLineNumbers={true} text={RangeSnippet}/>
-                        </Drawer>
-                        <p>The initial plan for this module involved converting all the points into a single shape file to represent the range, and overlaying it atop the map. Although possible, the amount of manual work meant the approach was unsuitable for generalisation. Instead, upon consultation with a classmate, I instead opted to aggregate the data into regions, and use D3's built in mapping functionality to create a chloropleth. Some discussion was had about whether to aggregate to the county or state level, but the former felt better suited. Scale was also much debated, as the data ranged from single sightings to tens of thousands, and so a log scale was chosen to show that granularity.</p>
-                        <p>The map used for the base layer was 10m</p>
-                        <p>The addition of a pop-up modal provided the opportunity for significantly more user interaction, such as the ability to zoom and filter by time. This also provided the ability to switch between aggregate and descrete points (that the data provided). With that, i integrated work from [a previous project] to not only display the points, but also allow the user to view them in a sped up real time (???)</p>
+                        <p>The initial plan for this module involved converting all the points into a single shape file to represent the range, and overlaying it atop the map. Although possible, the amount of manual work meant the approach was unsuitable for generalisation. Instead, upon consultation with a classmate, I opted to aggregate the data into regions, and use D3's built in mapping functionality to create a chloropleth. Some discussion was had about whether to aggregate to the county or state level, but the former felt better suited. Scale was also much debated, as the data ranged from single sightings to tens of thousands, and so a log scale was chosen to show that granularity.</p>
+                        <p>The map used for the base layer was 10m, which was recommended as a standard for this sort of chart. Beyond interfacing well with D3, it also contains a wealth of geographic information to pull on for interaction. Specifically, users can hover over any given country and be provided with where that county is, as well as the total sightings within the data.</p>
+                        <p>In future, it would be worth investigating how to add a temporal aspect to this visualisation, as the range of many migratory species change drastically throughout the year. Previous work has been done on this topic (see <a href="http://ivs22.netlify.app">here</a>) based on the same dataset in a New Zealand context, and showing the sightings as a series of animated points. Other options could include a filter on the data, based on season or month.</p>
                     </section>
 
                     <section>
                         <h3>Module 5: Wingspan</h3>
+        
+                        <h4>The Data</h4>
+                        <p>The simplest of the datasets, the data for bird wingspan comes from the Wingspan game's data (see Module 1), and is done by table lookup for the relevant species. The other points that appear in the visualisation are also in the data, but are instead hard coded. It would be interesting to draw on additional datasources to better demonstate the scale, such as by using an average human or a blue whale, but that remains for future work.</p>
+                        <Drawer title="The Viz" buttonTextCollapsed="View Code ›" buttonTextExpanded="Hide Code ⌄" linkText="Github" linkURL="https://github.com/tkcram/bird-viz/blob/main/src/Wingspan.js">
+                            <CodeBlock language="jsx" showLineNumbers={true} text={WingspanSnippet}/>
+                        </Drawer>
                         <figure className={css.figure}>
                             <div className={css.figureObject}><Wingspan/></div>
                             <figcaption className={css.figureCaption}>Try me!</figcaption>
-                        </figure>           
-                        <Drawer title="The Data" buttonTextCollapsed="View Data ›" buttonTextExpanded="Hide Data ⌄" linkText="Download" linkURL="">
-                            <table className={css.drawerTable}>
-                                <thead>
-                                    <tr><th>Common name</th><th>Scientific name</th><th>Color</th><th>Power Category</th><th>Power text</th><th>Predator</th><th>Flocking</th><th>Bonus card</th><th>Victory points</th><th>Nest type</th><th>Egg capacity</th><th>Wingspan</th><th>Forest</th><th>Grassland</th><th>Wetland</th><th>Invertebrate</th><th>Seed</th><th>Fish</th><th>Fruit</th><th>Rodent</th><th>Wild (food)</th></tr>
-                                </thead>
-                                <tbody>
-                                    <tr><td>Abbott's Booby</td><td>Papasula abbotti</td><td>White</td><td></td><td>Draw 3 bonus cards, then discard 2. You may discard bonus cards you did not draw this turn.</td><td></td><td></td><td>X</td><td>5</td><td>Platform</td><td>1</td><td>190</td><td></td><td></td><td>X</td><td></td><td></td><td>2</td><td></td><td></td><td></td></tr>
-                                    <tr><td>Acorn Woodpecker</td><td>Melanerpes formicivorus</td><td>Brown</td><td>Caching Food</td><td>Gain 1 [seed] from the birdfeeder (if available). You may cache it on this card.</td><td></td><td></td><td></td><td>5</td><td>Cavity</td><td>4</td><td>46</td><td>X</td><td></td><td></td><td></td><td>3</td><td></td><td></td><td></td><td></td></tr>
-                                    <tr><td>American Avocet</td><td>Recurvirostra americana</td><td>Pink</td><td>Egg-laying</td><td>When another player takes the "lay eggs" action, this bird lays 1 [egg] on another bird with a [ground] nest.</td><td></td><td></td><td></td><td>6</td><td>Ground</td><td>2</td><td>79</td><td></td><td></td><td>X</td><td>2</td><td>1</td><td></td><td></td><td></td><td></td></tr>
-                                    <tr><td>American Bittern</td><td>Botaurus lentiginosus</td><td>Brown</td><td>Card-drawing</td><td>Player(s) with the fewest [wetland] birds: draw 1 [card].</td><td></td><td></td><td></td><td>7</td><td>Platform</td><td>2</td><td>107</td><td></td><td></td><td>X</td><td>1</td><td></td><td>1</td><td></td><td>1</td><td></td></tr>
-                                    <tr><td>American Coot</td><td>Fulica americana</td><td>Brown</td><td>Flocking</td><td>Tuck a [card] from your hand behind this bird. If you do, draw 1 [card].</td><td></td><td>X</td><td></td><td>3</td><td>Platform</td><td>5</td><td>61</td><td></td><td></td><td>X</td><td></td><td>1</td><td></td><td></td><td></td><td>1</td></tr>
-                                    <tr><td>American Crow</td><td>Corvus brachyrhynchos</td><td>Brown</td><td>Food from Supply</td><td>Discard 1 [egg] from any of your other birds to gain 1 [wild] from the supply.</td><td></td><td></td><td></td><td>4</td><td>Platform</td><td>2</td><td>99</td><td>X</td><td>X</td><td>X</td><td></td><td></td><td></td><td></td><td></td><td>1</td></tr>
-                                </tbody>
-                            </table>
-                        </Drawer>
-                        <p>The Wingspan Dataset used through the project contains datapoints for the literal wingspan of each species, which was piped directly into the viz.</p>
-                        <Drawer title="The Viz" buttonTextCollapsed="View Code ›" buttonTextExpanded="Hide Code ⌄" linkText="Github" linkURL="">
-                            <CodeBlock language="jsx" showLineNumbers={true} text={WingspanSnippet}/>
-                        </Drawer>
+                        </figure>   
                         <p>This module provided the most hands on work with SVGs. The basic shape is courtesy of Jennifer Cahalane, and was manipulated through various transform effects. Although it may not be readily apparent, the width of the svg is a 1-to-1 match between the cm measurement of the wingspan to the pixel width of the SVG. In order to provide a relative size reference, the California Condor and Hummingbird, the largest and smallest birds in the dataset, were overlaid in the module. This had the added benefit of not having to worry about SVGs overlapping in strange ways, as they would always fall between those two points.</p>
-                        <p>The idea of relative size was expanded upon in the pop-up modal, providing references against [other species] </p>
                     </section>
                 </section>
 
                 <section id="reflections">
                     <h2>Reflections</h2>
-                    <h3>Understimation</h3>
-                    <p>This project was a lot more work that expected. Mainly because every single dataset I worked with came with its own unique challenges and quirks</p>
+                    <h3>Data Wrangling</h3>
+                    <p>One of the biggest challenges for this project was the amount of data that had to be wrangled for it to all come together. Even though it needn't be interoperable, each dataset came with it's own set of challenges, such as being incomplete, strangely constructed, or simply not readily available. In future more time should be spent during the initial data collection stage to collect and clean what's available, and rescope the project based on what's not.</p>
+
+                    <h3>Technology</h3>
+                    <p>This has been my largest undertaking in D3, and my first time using React. While both are powerful tools, and I'm excited to work with them going forward, there were no shortage of teething issues. D3 can create the standard array of visualisations well, but when trying to push those boundaries it can quickly seize up, with high quality examples hard to come by (especially with the rise of Observable). React on the other hand has a high barrier to entry, and had me relying heavily on outside help to have it working at all.</p>
+
+                    <h3>It's a bird; it's a plane</h3>
+                    <p>I adore being able to work on these sorts of projects, as sharing a topic I'm passionate about and hopefully incentivizing others to learn are both wonderful. While the project can certainly use more polish, and there's many more features I'd love to add, I'm ultimately happy with what I was able to deliver.</p>
                 </section>
                 
                 <section>
                     <h2 id="future">Future Work</h2>
-                    <h3>AR</h3>
-                    <p>Being able to pipe in the actual cards to land on a page would be fun</p>
+                    <h3>More Data</h3>
+                    <p>As mentioned, the dashboard only exists for a small selection of bird species. Being able to fully generalise the project would be an interesting experiment.</p>
 
                     <h3>Collaboartion</h3>
-                    <p>It would be amazing to be able to work with the Wingspan game team to help inform the project and the things that they think would work well. Having their asset library would also be a great boon</p>
+                    <p>It would be amazing to be able to work with the Wingspan game team to help inform the project and the things that they think would work well. Having their asset library would also be a great boon.</p>
+
+                    <h3>AR</h3>
+                    <p>Given that the Wingspan game is the way into this dashboard, it would be interesting to find a way to easily transition participants from one to the other. To that end, a small web application could be developed to scan the game cards and launch the dashboard to the appropriate page.</p>
                 </section>    
 
                 <section>
                     <h2 id="related">Other Data Viz Projects</h2>
-                    <ul className={css.related}>
+                    <RelatedStudies>
                         <Card key={"bird-map"} {...projectInfo["bird-map"]}/>   
                         <Card key={"bird-network"} {...projectInfo["bird-network"]}/>   
                         <Card key={"nz-rent"} {...projectInfo["nz-rent"]}/> 
-                    </ul>  
+                    </RelatedStudies>  
                 </section> 
             </>
         ),
@@ -290,6 +331,7 @@ export const caseStudies = {
         title: "Cannoneers & Dragons",
         subtitle:"Creating a Web-based Adventure Game Based on the Dungeons and Dragons API",
         blurb: "Cannoneers & Dragons is a technology focused, web-based app based on the Dungeons & Dragons RPG. It combines Python on the back-end to generate characters, monsters, and mazes, with JavaScript on the front-end to render it all on the page and allow the user to interact with it. Along the way it queries an API, exposes one via Flask, and even attempts to create an enjoyable experience for the player.",
+        caseStudy: false,
         image:"/images/study-dnd-banner.jpg",
         link: "https://puis22.netlify.app/",
         code: "https://github.com/tkcram/programming-final",
@@ -423,11 +465,11 @@ export const caseStudies = {
 
                 <section id="related">
                     <h2>Other Technology Projects</h2>
-                    <ul className={css.related}>
+                    <RelatedStudies>
                         <Card key={"wingspan"} {...projectInfo["wingspan"]}/>   
                         <Card key={"personal-site"} {...projectInfo["personal-site"]}/> 
                         <Card key={"dog-ui"} {...projectInfo["dog-ui"]}/>   
-                    </ul>  
+                    </RelatedStudies>  
                 </section> 
             </>
         ),
@@ -469,6 +511,7 @@ export const caseStudies = {
             subtitle:"Reviewing the Tensions and Potential Resolutions Between Two Ideologies",
             blurb: "Indigenous Data Sovereignty is a burgeoning field of scholarship that examines the role of indigenous peoples in data ownership and control. The Open Data Movement however exerts that data should be available and usable to all by default. This research paper conducts a literature review investigating what these movements stand for, where their tenets may conflict, and proposes several ways that they may be able to exist harmoniously.",
             image:"/images/study-ids-banner.png",
+            caseStudy: false,
             link: "/documents/ids.pdf",
             code: "",
             isVisible: true,
@@ -527,11 +570,11 @@ export const caseStudies = {
                     <p>Big government is one thing, big tech is a whole other beast.</p>
 
                     <h2 id="related">Other Research Project</h2>
-                    <ul className={css.related}>
+                    <RelatedStudies>
                         <Card key={""} {...projectInfo[""]}/>   
                         <Card key={""} {...projectInfo[""]}/>   
                         <Card key={""} {...projectInfo[""]}/>   
-                    </ul>   
+                    </RelatedStudies>   
             </>
             ),
         headings: [
@@ -570,175 +613,220 @@ export const caseStudies = {
         id: "nyphil-eval",
         title: "Updating the Archive",
         subtitle:"Conducting Moderated User Testing to Improve the New York Philharmonic's Digital Archives",
-        blurb: "As the New York Philharmonic Archive works to improve their user interface, we were called upon to perform user research on the current version. Our team performed a conducted a series of moderated user tests, and used the results to inform our recommendations for potential areas of improvement. The full report was presented to the client, allowing them to ensure the interface followed a user centred design.",
+        blurb: "As the New York Philharmonic Archive works to improve their user interface, we were called upon to perform user research on the current version. Our team conducted a series of moderated user tests, and used the results to inform our recommendations for potential areas of improvement. The full report was presented to the client, allowing them to ensure the interface followed a user centred design.",
         image:"/images/study-nyp-banner.png",
+        caseStudy: true,
         link: "/documents/nyphil.pdf",
         code: "",
         isVisible: true,
         markup: (
             <>
-            <img className={css.banner} alt="" src="/images/study-nyp-banner.png"/>
-            <h1 id="introduction">Conducting Moderated User Testing to Improve the New York Philharmonic's Digital Archives</h1>
-            <a className="button" href="/documents/nyphil.pdf" target="_blank" rel="noreferrer">Read the Report</a>
-            <p>The New York Philharmonic is one of the city’s most prestigious institutions, and its archive represents over 180 years of cultural heritage. In 2011, the Philharmonic founded the Shelby White & Leon Levy Digital Archive to undertake the herculean effort of digitising the contents, including thousands of scores, programs, and photographs, and making them publicly accessible. 10 years on, the Digital Archive contains over six million pages of material. The interface, however, remains the same. This project works with users to explore both what makes the Digital Archives interface wonderful, and also to identify ways that it can be improved, as they seek to revitalise the entire site.</p>
+                <img className={css.banner} alt="" src="/images/study-nyp-banner.png"/>
 
-            <h2 id="background">Background</h2>
-            <h3>The Project</h3>
+                <section>
+                    <h1 id="introduction">Conducting Moderated User Testing to Improve the New York Philharmonic's Digital Archives</h1>
+                    <a className="button" href="/documents/nyphil.pdf" target="_blank" rel="noreferrer">Read the Report</a>
+                    <p>The New York Philharmonic is one of the city’s most prestigious institutions, and its archive represents over 180 years of cultural heritage. In 2011, the Philharmonic founded the Shelby White & Leon Levy Digital Archive to undertake the herculean effort of digitising the contents, including thousands of scores, programs, and photographs, and making them publicly accessible. 10 years on, the Digital Archive contains over six million pages of material. The interface, however, remains the same. This project works with users to explore both what makes the Digital Archives interface wonderful, and also to identify ways that it can be improved, as they seek to revitalise the entire site.</p>
+                </section>
 
-            <p>This was the final project in INFO 644: Usability Theory & Practice. The goal was to blah blah blah. We worked as a team of grad students from various programs</p>
+                <section id="background">
+                    <h2>Background</h2>
+                    <h3>The Project</h3>
 
-            <figure className={css.figure}>
-                <img className={css.figureObject} src="/images/study-nyp-headshots.png" alt=""/>
-                <figcaption className={css.figureCaption}>The NY Philharmonic UX Team</figcaption>
-            </figure>
+                    <p>This was the final project in INFO 644: Usability Theory & Practice. The goal was to gain experience working with a real clients and stakeholders, as part of the <a href="https://prattdx.org/">Center for Digital Experiences</a>. Specifically, our team worked with the New York Philharmonic's Digital Archive as they continue to improve their user interface. Although the archive itself only consists of a handful of unique pages, the breadth of the user base and the depth of the archived material were both challenges we were eager to sink our teeth into.</p>
 
-            <h3>The New York Philharmonic</h3>
+                    <figure className={css.figure}>
+                        <img className={css.figureObject} src="/images/study-nyp-headshots.png" alt=""/>
+                        <figcaption className={css.figureCaption}>The NY Philharmonic UX Team</figcaption>
+                    </figure>
 
-            <div className={css.textLogo}>
-                <img alt="" className={css.logo} src="https://nyphil.org/nyphil/assets/website/images/new-logo.svg"/>
-                <p>The NY Phil[...]</p> 
-            </div>
+                    <p>The team for this project comprised of four graduate students at Pratt's School of Information, guided by <a href="https://www.pratt.edu/people/iris-bierlein/">Professor Iris Bierlein</a>. Myself and Anna Feldman came from the Data Analytics and Visualization program, Sayali Nikumbh from Information Experience Design, and Tess Porter from Museums and Digital Culture.</p>
 
-            <div className={css.textLogo}>
-                <img alt="" className={css.logo} src="https://archives.nyphil.org/images/digital-archives-lockup@2x.png"/>
-                <p>The team at the New York Philharmonic Digital Archives contacted the Pratt Center for Digital Experiences (Pratt dx) in the fall of 2022. As part of a National Endowment for the Humanities grant, the Digital Archives was to undergo a redesign, and they wanted user testing done to inform where they should best direct their efforts. The project was passed along to our team, a group of graduate students at the Pratt School of Information currently studying Usability Theory and Practice.</p>
-            </div>
+                    <h3>The New York Philharmonic</h3>
 
-            <h2 id="testing">User Testing</h2>  
-            <h3>Initial Consultation</h3>
-            <p>An initial meeting was set up to discuss its scope and goals. From this meeting, we established the following two ideas.</p>
-            <p>The first was that Moderated Remote User Testing would be best suited to their needs. This is a form of lab experiment that involves users as participants, is conducted in a controlled environment, and is actively moderated by a usability expert. This is widely considered the gold standard for user testing research, as it gives the evaluator more control of the test, such as asking follow up questions or directing participants through pain points. It also provides richer information, as evaluators can observe actions and body language and engage in follow up discussion. Although it is a time intensive approach, it is balanced by the quality of the results.</p>
-            <p>The second point was that the scope of the project was incredibly broad. While it would all be contained within the Digital Archives interface, there was a want to explore all the features the Digital Archive had to offer. The same was true for their users - although a couple of distinct user groups were identified (see below), the only limiting factor for our participants was that they could access the site. Some key pieces of information were gleaned from the meeting, such as a focus on both accessibility and discoverability of content.</p>     
+                    <div className={css.textLogo}>
+                        <img alt="" className={css.logo} src="/images/study-nyp-logo-main.svg"/>
+                        <p>The New York Philharmonic in amongst both the oldest and largest orchestras in the United States of America. Known as one of the "<a href="https://starkconductor.com/big-five-orchestras/">Big Five</a>", they have performed over 14,000 concerts across a storied 181 year history. </p> 
+                    </div>
 
-            <h3>Preparation</h3>
-            <p>After our initial meeting with the Digital Archives, the team got to work. We decided the efficient use of our time would be to divide out the initial tasks between us, and reconvene periodically to review each other’s work. While my teammates got to work on creating the communications, surveys, and testing material, I began formulating the user profiles.</p>
-            <p>As mentioned, the Digital Archives wanted to test their interface on as broad a user group as possible, meaning that we didn’t need to account for demographics or psychographics. However, in our initial consultation they did state how they wanted it to be intuitive for new users, but powerful enough for established ones. Amateur Alice and Professor Polly were the first two user profiles created, looking to capture those two user groups. A third profile, Explorer Ethan, was was made to cover those that existed between the two groups. However during testing, we determined that the key factor was whether they were experienced with archives, and so the distinction between Ethan and Alice became less relevant.</p>
-            <figure className={css.figure}>
-                <table className={classnames(css.drawerTable,css.figureObject)}>
-                    <thead>
-                        <tr><th>Category</th><th>Amateur Alice</th><th>Explorer Ethan</th><th>Professor Polly</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Occupation</td><td>Student</td><td>Young Professional</td><td>Researcher/ Archivist</td></tr>
-                        <tr><td>Product Familiarity</td><td>Never visited the site</td><td>Familiar with NYP, but not archive</td><td>Familiar with the archive</td></tr>
-                        <tr><td>Search Experience</td><td>Google, TikTok</td><td>Google</td><td>Archives, Research Libraries, NYP Archive</td></tr>
-                        <tr><td>Cultural Experience</td><td>Trained musician</td><td>NYP attendee/donor</td><td>Deeply immersed in the field</td></tr>
-                        <tr><td>Engagement</td><td>Get in, get out</td><td>Take time to look around</td><td>Will work to find what they're looking for</td></tr>
-                        <tr><td>Goals</td><td>Find specific resources</td><td>See what the archives have on offer</td><td>Find out everything they can about a subject</td></tr>
-                        <tr><td>Site requirements</td><td>Save/Share archive files</td><td>Easy navigation, discoverability</td><td>Cross reference, in-depth search</td></tr>
-                        <tr><td>Recruiment goal</td><td>2-3 Participants</td><td>2-3 Participants</td><td>2-3 Participants</td></tr>
-                    </tbody>
-                </table>
-                <figcaption className={css.figureCaption}>User profiles for recruitment</figcaption>
-            </figure>
-            <p>After a few rounds of edits on everyone’s material, to get it to a place that we were all satisfied with, we moved on to the next stage of preparation. I paired with the author of the tasks to develop the testing script. We decided on using a reasonably strict script, to ensure minimal variance across evaluators due to confidence, language proficiency, or simply our own natural cadence. However this style of script also required a significant amount more testing and refinement for the tests to go smoothly when read entirely verbatim. We did this by running a series of pilots, initially by ourselves and then with family members, revising and tightening the language at every step. We also touched based with the Digital Archives to ensure we were capturing the data they were looking for, and wound up adding an additional task to our script.</p>
-            <p>During this same period, the other two members of our group had been working on recruitment. They had created both the communication templates, as well as the screening questionnaires for participants to express interest. These were circulated initially on the Pratt internal mailing list, and later by members of the Digital Archives team. Once participants had signed up and met our current recruitment needs, they were sent an invite with a link to schedule a testing time.</p>
-            <figure className={css.figure}>
-                <img className={css.figureObject} src="/images/study-nyp-consent.png" alt=""/>
-                <figcaption className={css.figureCaption}>Consent form</figcaption>
-            </figure>
-            <h3>Testing</h3>
-            <p>In total 10 moderated user tests were performed, with three matching the “Professor Polly” profile, and seven matching a combination of the others. All team members both moderated and spectated an equal amount. Tests typically took the expected amount of time, approximately 30-45 minutes, with our highly proficient users taking the least amount of time.</p>
-            <p>Abridged versions of the tasks are listed below. Initially we had considered modifying the tasks based on which user profile the participant matched, but ultimately decided that we would receive better data noting how novice vs expert users solved the same tasks. Each task also featured two follow ups - “How difficult was this task to complete” and “How successful do you feel you were in completing this task”.</p>
-            
-            <figure className={css.figure}>
-                <dl className={classnames(css.figureObject,css.figureText)}>
-                    <dt>Task 1:</dt>
-                    <dd>Find a program and a photo that includes William Lincer, a member of the New York Philharmonic orchestra in the mid 1900s</dd>
+                    <div className={css.textLogo}>
+                        <img alt="" className={css.logo} src="/images/study-nyp-logo-archive.png"/>
+                        <p>In 2011 the Philharmonic launced their digital archive. Comprising over four million records dating back to the orchestras earliest days, the archive consists of musical scores, programs, images, and audio recordings. As part of a National Endowment for the Humanities grant, the Digital Archives was to undergo a redesign, and wanted user testing done to inform where they should best direct their efforts.</p>
+                    </div>
+                </section>
 
-                    <dt>Task 2:</dt>
-                    <dd>Find the sheet music and clarinet piece for Tchaikovsky's Nutcracker Ballet.</dd>
+                <section id="testing">
+                    <h2>User Testing</h2>  
 
-                    <dt>Task 3:</dt>
-                    <dd>Find the digital exhibition about its first female musician, and where said musician was born</dd>
+                    <section>
+                        <h3>Initial Consultation</h3>
+                        <p>A meeting was set up to discuss the scope and goals for the project. From this, we established the following:</p>
+                        <p>Moderated Remote User Testing would best suit their needs. This is a form of lab experiment that involves users as participants, is conducted in a controlled environment, and is actively moderated by a usability expert. This is widely considered the gold standard for user testing research, as it gives the evaluator more control of the test, such as asking follow0up questions or directing participants through pain points. It also provides richer information, as evaluators can observe actions and body language, and engage in follow up discussion. Although it is a time and resource intensive approach, it is balanced by the quality of the results.</p>
+                        <p>The scope of the project was incredibly broad. While it would all be contained within the Digital Archives interface, there was a want to explore all the features the it had to offer. The same was true for their users - although a couple of distinct user groups were identified (see below), the only limiting factor for potential participants was that they could access the site. </p>  
+                        <p>Several areas were discussed that we knew the client wanted specific information on. This includes the discoverability of content, the linking of records, and overall accessibility of the site</p>
+                    </section>
 
-                    <dt>Task 4:</dt>
-                    <dd>Find the newly digitized set of press clipping scrapbooks, which are featured on their homepage, and specifically one from the park concert series</dd>
+                    <section>   
+                        <h3>Preparation</h3>
+                        <p>After our initial meeting with the Digital Archives, the team got to work. We decided the most efficient use of our time would be to divide out the tasks between us, and reconvene periodically to review each other’s work. As my teammates got to work on creating the communications, surveys, and testing material, I began formulating the user profiles.</p>
+                        <p>Given that the Digital Archives wanted to test their interface on as broad a user group as possible, we didn’t need to account for demographics. However, in our initial consultation they did state how they wanted it to be intuitive for new users, but powerful enough for established ones. Amateur Alice and Professor Polly were the first two user profiles created, looking to capture those two user groups. A third profile, Explorer Ethan, was was made to cover those that existed between the two groups. However, during testing we determined that the key factor was whether they were experienced with archives, and so the distinction between Ethan and Alice became less relevant.</p>
+                        <figure className={css.figure}>
+                            <table className={classnames(css.drawerTable,css.figureObject)}>
+                                <thead>
+                                    <tr><th>Category</th><th>Amateur Alice</th><th>Explorer Ethan</th><th>Professor Polly</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Occupation</td><td>Student</td><td>Young Professional</td><td>Researcher/ Archivist</td></tr>
+                                    <tr><td>Product Familiarity</td><td>Never visited the site</td><td>Familiar with NYP, but not archive</td><td>Familiar with the archive</td></tr>
+                                    <tr><td>Search Experience</td><td>Google, TikTok</td><td>Google</td><td>Archives, Research Libraries, NYP Archive</td></tr>
+                                    <tr><td>Cultural Experience</td><td>Trained musician</td><td>NYP attendee/donor</td><td>Deeply immersed in the field</td></tr>
+                                    <tr><td>Engagement</td><td>Get in, get out</td><td>Take time to look around</td><td>Will work to find what they're looking for</td></tr>
+                                    <tr><td>Goals</td><td>Find specific resources</td><td>See what the archives have on offer</td><td>Find out everything they can about a subject</td></tr>
+                                    <tr><td>Site requirements</td><td>Save/Share archive files</td><td>Easy navigation, discoverability</td><td>Cross reference, in-depth search</td></tr>
+                                    <tr><td>Recruiment goal</td><td>2-3 Participants</td><td>2-3 Participants</td><td>2-3 Participants</td></tr>
+                                </tbody>
+                            </table>
+                            <figcaption className={css.figureCaption}>User profiles for recruitment</figcaption>
+                        </figure>
+                        <p>After a few rounds of edits on everyone’s material, we moved on to the next stage of preparation. I paired with the tasks author, Tess Porter, to develop the testing script. We decided on using a tight script (i.e. one to be followed exactly) to ensure minimal variance across evaluators due to confidence, language proficiency, or our natural cadence. However this style of script also required a significant amount more testing and refinement for the tests to go smoothly when read entirely verbatim. We did this by running a series of pilots, initially by ourselves and then with family members, revising and tightening the language at every step. We also touched base with the Digital Archives to ensure we were capturing the data they were looking for, leading us to add an additional task to our script.</p>
+                        <p>During this same period, the other two team members had been working on recruitment. They had created both the communication templates, as well as the screening questionnaires for participants to express interest. These were circulated initially on Pratt's internal mailing list, and later by members of the Digital Archives team. Once participants had signed up and selected based on our current recruitment needs, they were sent an invite to schedule a testing time, as well as a consent form to be signed.</p>
+                        <figure className={css.figure}>
+                            <img className={css.figureObject} src="/images/study-nyp-consent.png" alt=""/>
+                            <figcaption className={css.figureCaption}>Consent form</figcaption>
+                        </figure>
+                    </section>
 
-                    <dt>Task 5:</dt>
-                    <dd>Find a recording of one of the virtual performances offered by the Philharmonic in the first few months of the pandemic, and which soloist performed the most during this time</dd>
-                </dl>
-                <figcaption className={css.figureCaption}>User Testing Task List</figcaption>
-            </figure>
+                    <section>   
+                        <h3>Testing</h3>
+                        <p>In total, 10 moderated user tests were performed, with three matching the “Professor Polly” profile, and seven matching a combination of the other two. All team members moderated and spectated an equal amount. Tests on average took the expected amount of time, approximately 30-45 minutes, with our highly proficient users taking the least amount of time.</p>
+                        <p>Abridged versions of the tasks are listed below. Initially we had considered modifying the tasks based on which user profile the participant matched, but ultimately decided that we would receive better data noting how novice vs expert users solved the same tasks. Each task also featured two follow ups - “How difficult was this task to complete” and “How successful do you feel you were in completing this task”.</p>
+                        
+                        <figure className={css.figure}>
+                            <dl className={classnames(css.figureObject,css.figureText)}>
+                                <dt>Task 1:</dt>
+                                <dd>Find a program and a photo that includes William Lincer, a member of the New York Philharmonic orchestra in the mid 1900s</dd>
 
-            <p>At the completion of the five tasks, participants were asked to complete a post-test questionnaire based on the System Usability Scale. Users were also asked about their emotional response to the interface, but due to an error in the initial survey this data is incomplete.</p>
+                                <dt>Task 2:</dt>
+                                <dd>Find the sheet music and clarinet piece for Tchaikovsky's Nutcracker Ballet.</dd>
 
-            <h3>Analysis</h3>
-            <p>after all participants completed testing, the team reconvened to discuss our findings. Our participants had provided us with a wealth of information, and after some initial discussion we decided on using a Rainbow Chart to analyse the information. This involved each of us reviewing our notes and listing any issues the participants encountered, before pulling the list into a single spreadsheet. We then consolidated the items, combining any that were functionally the same and which participants encountered it. </p>
-            <figure className={css.figure}>
-                <img className={css.figureObject} src="/images/study-nyp-rainbow.png" alt=""/>
-                <figcaption className={css.figureCaption}>Sample of the rainbow chart used in analysis</figcaption>
-            </figure>
-            <p>We used several other tools to help inform our recommendations. The System Usability Scale data from the questionnaires was analysed, for a benchmark score of 60.3/100 ("okay"). Myself and another teammate also sat down with an accessibility domain expert to run an ad-hoc audit on the Digital Archives website, giving us insight into specific accessibility issues that could be remedied.</p>
+                                <dt>Task 3:</dt>
+                                <dd>Find the digital exhibition about its first female musician, and where said musician was born</dd>
 
-            <h2 id="recommendations">Recommendations</h2>
-            <p>There were a few pages a lot of people visited, and a lot of pages a few people visited. This set out the narrative for our report, targeting the areas that were most commonly visited while also keeping notes on all other potential improvements. In particular, we found users spent the majority of their time on either the main landing page or on the search results page.</p>
+                                <dt>Task 4:</dt>
+                                <dd>Find the newly digitized set of press clipping scrapbooks, which are featured on their homepage, and specifically one from the park concert series</dd>
 
-            <h3>Homepage</h3>
-            <p>The first recommendation involved updates to the homepage. While initially only presented as one recommendation, we soon discovered that the two main areas of improvement, the navigation and the carousel, had little commonality between them. This led to us splitting the recommendation into two seperate items.</p>
-            <figure className={css.figure}>
-                <div>
-                    <img className={css.figureObject} src="/images/study-nyp-navigation-before.png" alt=""/>
-                    <img className={css.figureObject} src="/images/study-nyp-navigation-after.png" alt=""/>
-                </div>
-                <figcaption className={css.figureCaption}>Navigation Before/After</figcaption>
-            </figure>
-            <p>Recommendation 1 focused on the navigation menu, and was mostly intended to be small, actionable items. This included several accessibility minded updates, including increasing colour contrast and adding hover states, and renaming some labels that our participants found confusing - such as changing ‘features’ to ‘exhibits’.</p>
-            <figure className={css.figure}>
-                <div>
-                    <img className={css.figureObject} src="/images/study-nyp-carousel-before.png" alt=""/>
-                    <img className={css.figureObject} src="/images/study-nyp-carousel-after.png" alt=""/>
-                </div>
-                <figcaption className={css.figureCaption}>carousel Before/After</figcaption>
-            </figure>
+                                <dt>Task 5:</dt>
+                                <dd>Find a recording of one of the virtual performances offered by the Philharmonic in the first few months of the pandemic, and which soloist performed the most during this time</dd>
+                            </dl>
+                            <figcaption className={css.figureCaption}>User Testing Task List</figcaption>
+                        </figure>
 
-            <p>Recommendation 2 involved the carousel, which the Digital Archives had indicated was an area of interest. Again we opted for simple solutions mainly focused around usability. However compared to the navigation bar, we were surprised when the client requested grander changes on how the carousel could be resigned from scratch. This led to us updating our report to include other examples of carousels and alternate ways of displaying this information.</p>
+                        <p>At the completion of the five tasks, participants were asked to complete a post-test questionnaire based on the System Usability Scale. Users were also asked about their emotional response to the interface, but due to an error in the initial survey this data is incomplete.</p>
+                    </section>
 
-            <h3>Search Results Page</h3>
-            <p>Much like the main landing, it was evident that the findings from the search results page warranted being two seperate recommendations, one about the overall layout, and one specifically targeting the filter modal.</p>
-            <figure className={css.figure}>
-                <div>
-                    <img className={css.figureObject} src="/images/study-nyp-results-before.png" alt=""/>
-                    <img className={css.figureObject} src="/images/study-nyp-results-after.png" alt=""/>
-                </div>
-                <figcaption className={css.figureCaption}>results Before/After</figcaption>
-            </figure>
-            <p>Recommendation 3 was about making sure the search results page better matched the users' mental model. The most substantive change was to create a consolidated results page, rather than the current version where it is pre-filtered. Several visual changes were made to help create consistency between the different filters, namely grouping all the filters together in a single place, as well as formatting all results in the same style.</p>
-            <figure className={css.figure}>
-                <div className={classnames(css.figMulti, css.figDouble)}>
-                    <img className={css.figureObject} src="/images/study-nyp-filter-before.png" alt=""/>
-                    <img className={css.figureObject} src="/images/study-nyp-filter-after.png" alt=""/>
-                </div>
-                <figcaption className={css.figureCaption}>filter Before/After</figcaption>
-            </figure>
-            <p>Recommendation 4, the filter modal, was the screen that was displayed when selecting filters. The team was aware this was a problem area, as users were consistently overwhelmed by the sheer volume of filters (sometimes over 200 pages), but didn't know how to best resolve it. Options included changing the pagination to a scroll function, reordering the results, and creating different modals for few vs many results. In the end we decided that the simplest option was to allow users to search through the filters to find the one they were looking for. We also moved this view to the sidebar, to help create the consistency that we mentioned in recommendation 3.</p>
+                    <section>   
+                        <h3>Analysis</h3>
+                        <p>After all participants completed testing, the team reconvened to discuss the findings. Our participants had provided us with a wealth of information, and after some initial discussion we settled on using a Rainbow Chart to analyse the information. This involved each of us reviewing our notes and listing any issues the participants encountered, before pulling the list into a single spreadsheet. We then consolidated the items, combining any that were functionally the same and which participants encountered it. </p>
+                        <figure className={css.figure}>
+                            <img className={css.figureObject} src="/images/study-nyp-rainbow.png" alt=""/>
+                            <figcaption className={css.figureCaption}>Sample of the rainbow chart used in analysis</figcaption>
+                        </figure>
+                        <p>We used several other tools to help inform our recommendations. The System Usability Scale data from the questionnaires was analysed, for a benchmark score of 60.3/100 ("okay"). Myself and Tess Porter also sat down with an accessibility domain expert to run an ad-hoc audit on the Digital Archives website, giving us insight into specific accessibility issues that could be remedied.</p>
+                    </section>
+                </section>
 
-            <h3>Everything Else</h3>
-            <p>While I personally was involved in the discussion around the other recommendations, my main task was focused on how to convey the miscellany of other insights we gleaned from our user testing. While many narrative structures were attempted, a tabular format proved to be the most efficient. None of these recommendations alone have much depth nor a mockup. 5 broad categories were created:</p>
-            <dl>
-                <dt><h4>Accessibility</h4></dt><dd><p>This was something that was important to the Digital Archives per our meetings. We aimed to incorporate as much as possible into our other recommendations, but we wanted to state that these were items that should be updated site wide</p></dd>
-                <dt><h4>Metadata</h4></dt><dd><p>With Google being such a feature of modern life, novice users typically ran into roadblocks with stricter search queries. Terms like “ballet” or “image” weren’t indexed, and there was no fallback state for the user.</p></dd>
-                <dt><h4>User Interface</h4></dt><dd><p>Some items we described were intentional design choices, this category was for the rest. Object overflows, loading times, etc.</p></dd>
-                <dt><h4>Links and Labels</h4></dt><dd><p>Naming things is difficult. This section also gave us the chance to offer further testing opportunities through A/B testing.</p></dd>
-                <dt><h4>Knowledge organisation</h4></dt><dd><p>Again, structuring information is a hard problem to solve. This again offered future testing opportunities, for instance a Tree Test</p></dd>
-            </dl>
+                <section id="recommendations">
+                    <h2>Recommendations</h2>
+                    <p>There were a few pages a lot of people visited, and a lot of pages a few people visited. This set out the narrative for our report, targeting the areas that were most commonly visited while also keeping notes on all other potential improvements. In particular, we found users spent the majority of their time on either the main landing page or on the search results page.</p>
 
-            <h2 id="handoff">Client Handoff</h2>
-            <p>After a significant number of revisions, we had our report in hand. The next step was to present it to the client.  We tried to showcase our work in the nicest format, but refining the content of the report took longer than anticipated, leading us to run out of time for slide formatting. However we tried our best to present the intense amount of information in a concise and understandable manner.</p>
-            <p>We each presented a section, with myself doing the introductions and methods, followed by a discussion session. Although the sentiment in the room was positive, it was obvious that there was a significant amount of information for the client to digest. One surprise, as mentioned when discussing recommendation 2, was how much interest they had in 'Blue Sky' approaches. As they were actively in the middle of a redesign, the Digital Archives was also interested in larger improvements that could be made to the overall design, in addition to smaller, easy to implement fixes. While we added some items to the appendix of the report, this remains a topic for future work.</p>
+                    <section>   
+                        <h3>Homepage</h3>
+                        <p>The first recommendation involved updates to the homepage. While initially only presented as one recommendation, we soon discovered that the two main areas of improvement, the navigation and the carousel, had little commonality between them. This led to us splitting the recommendation into two seperate items.</p>
+                        <figure className={css.figure}>
+                            <div>
+                                <img className={css.figureObject} src="/images/study-nyp-navigation-before.png" alt=""/>
+                                <img className={css.figureObject} src="/images/study-nyp-navigation-after.png" alt=""/>
+                            </div>
+                            <figcaption className={css.figureCaption}>Navigation Before/After</figcaption>
+                        </figure>
+                        <p>Recommendation 1 focused on the navigation menu, and was mostly intended to be small, actionable items. This included several accessibility minded updates, including increasing colour contrast and adding hover states, and renaming some labels that our participants found confusing - such as changing ‘features’ to ‘exhibits’.</p>
+                        <figure className={css.figure}>
+                            <div>
+                                <img className={css.figureObject} src="/images/study-nyp-carousel-before.png" alt=""/>
+                                <img className={css.figureObject} src="/images/study-nyp-carousel-after.png" alt=""/>
+                            </div>
+                            <figcaption className={css.figureCaption}>Carousel Before/After</figcaption>
+                        </figure>
 
-            <h2 id="reflections">Reflections</h2>
-            <p>I'm eternally thankful to have worked with such an amazing team throughout this project, and wouldn't hesitate to collaborate with them again. I learnt a lot about how to trust the work of others, and knowing when to let them handle the work. Time management was an issue on the project, as even with the best of coordination, working with teammates, participants, and clients all requires a lot of moving parts. But being aware of it, I've learnt how to build in more time for unexpected delays in the future.</p>
+                        <p>Recommendation 2 involved the carousel, which the Digital Archives had indicated was an area of interest. Again we opted for simple solutions mainly focused around usability. However compared to the navigation bar, we were surprised when the client requested grander changes on how the carousel could be resigned from scratch. This led to us updating our report to include other examples of carousels and alternate ways of displaying this information.</p>
+                    </section>
 
-            <h2 id="future">Future Work</h2>
-            <p>The Digital Archives has walked away with a lot of information, and a report totalling almost 50 pages. But even with that, there's still more testing to be done. A/B testing on the labels, Tree testing the sitemap, and completing an official accessibility audit should all be on their roadmap. Once the changes outlined in our report are implemented, they should themselves be testing to ensure they achieved the desired effect.</p>
+                    <section>   
+                        <h3>Search Results Page</h3>
+                        <p>Much like the main landing, it was evident that the findings from the search results page warranted being two seperate recommendations, one about the overall layout, and one specifically targeting the filter modal.</p>
+                        <figure className={css.figure}>
+                            <div>
+                                <img className={css.figureObject} src="/images/study-nyp-results-before.png" alt=""/>
+                                <img className={css.figureObject} src="/images/study-nyp-results-after.png" alt=""/>
+                            </div>
+                            <figcaption className={css.figureCaption}>Results Before/After</figcaption>
+                        </figure>
+                        <p>Recommendation 3 was about making sure the search results page better matched the users' mental model. The most substantive change was to create a consolidated results page, rather than the current version where it is pre-filtered. Several visual changes were made to help create consistency between the different filters, namely grouping all the filters together in a single place, as well as formatting all results in the same style.</p>
+                        <figure className={css.figure}>
+                            <div className={classnames(css.figMulti, css.figDouble)}>
+                                <img className={css.figureObject} src="/images/study-nyp-filter-before.png" alt=""/>
+                                <img className={css.figureObject} src="/images/study-nyp-filter-after.png" alt=""/>
+                            </div>
+                            <figcaption className={css.figureCaption}>Filter Before/After</figcaption>
+                        </figure>
+                        <p>Recommendation 4, the filter modal, was the screen that was displayed when selecting filters. The team was aware this was a problem area, as users were consistently overwhelmed by the sheer volume of filters (sometimes over 200 pages), but didn't know how to best resolve it. Options included changing the pagination to a scroll function, reordering the results, and creating different modals for few vs many results. In the end we decided that the simplest option was to allow users to search through the filters to find the one they were looking for. We also moved this view to the sidebar, to help create the consistency that we mentioned in recommendation 3.</p>
+                    </section>
 
-            <h2 id="related">Other UX Projects</h2>
-            <ul className={css.related}>
-                <Card key={"wak-eval"} {...projectInfo["wak-eval"]}/>
-                <Card key={"food-eval"} {...projectInfo["food-eval"]}/>     
-                <Card key={"bnz-eval"} {...projectInfo["bnz-eval"]}/>   
-            </ul>
+                    <section>   
+                        <h3>Everything Else</h3>
+                        <p>While I personally was involved in the discussion around the other recommendations, my main task was focused on how to convey the miscellany of other insights we gleaned from our user testing. While many narrative structures were attempted, a tabular format proved to be the most efficient. None of these recommendations alone have much depth nor a mockup. 5 broad categories were created:</p>
+                        <dl>
+                            <dt><h4>Accessibility</h4></dt><dd><p>This was something that was important to the Digital Archives per our meetings. We aimed to incorporate as much as possible into our other recommendations, but we wanted to state that these were items that should be updated site wide</p></dd>
+                            <dt><h4>Metadata</h4></dt><dd><p>With Google being such a feature of modern life, novice users typically ran into roadblocks with stricter search queries. Terms like “ballet” or “image” weren’t indexed, and there was no fallback state for the user.</p></dd>
+                            <dt><h4>User Interface</h4></dt><dd><p>Some items we described were intentional design choices, this category was for the rest. Object overflows, loading times, etc.</p></dd>
+                            <dt><h4>Links and Labels</h4></dt><dd><p>Naming things is difficult. This section also gave us the chance to offer further testing opportunities through A/B testing.</p></dd>
+                            <dt><h4>Knowledge organisation</h4></dt><dd><p>Again, structuring information is a hard problem to solve. This again offered future testing opportunities, for instance a Tree Test</p></dd>
+                        </dl>
+                    </section>
+                </section>
+
+                <section id="handoff">
+                    <h2>Client Handoff</h2>
+                    <p>After a significant number of revisions, we had our report in hand. The next step was to present it to the client.  We tried to showcase our work in the nicest format, but refining the content of the report took longer than anticipated, leading us to run out of time for slide formatting. However we tried our best to present the intense amount of information in a concise and understandable manner.</p>
+                    <p>We each presented a section, with myself doing the introductions and methods, followed by a discussion session. Although the sentiment in the room was positive, it was obvious that there was a significant amount of information for the client to digest. One surprise, as mentioned when discussing recommendation 2, was how much interest they had in 'Blue Sky' approaches. As they were actively in the middle of a redesign, the Digital Archives was also interested in larger improvements that could be made to the overall design, in addition to smaller, easy to implement fixes. While we added some items to the appendix of the report, this remains a topic for future work.</p>
+                </section>
+
+                <section id="reflections">
+                    <h2>Reflections</h2>
+                    <h3>Teamwork Makes the Dream Work</h3>
+                    <p>I'm eternally thankful to have worked with such an amazing team throughout this project, and wouldn't hesitate to collaborate with them again. I learnt a lot about how to trust the work of others, and knowing when to let them handle the work.</p>
+
+                    <h3>So Much to Do, so Little Time</h3>
+                    <p>Time management was an issue on the project, as even with the best of coordination, working with teammates, participants, and clients all requires a lot of moving parts. But being aware of it, I've learnt how to build in more time for unexpected delays in the future.</p>
+                </section>
+
+                <section id="future">
+                    <h2>Future Work</h2>
+                    <h3>Testing testing</h3>
+                    <p>The Digital Archives has walked away with a lot of information, and a report totalling almost 50 pages. But even with that, there's still more testing to be done. A/B testing on the labels, Tree testing the sitemap, and completing an official accessibility audit should all be on their roadmap.</p>
+
+                    <h3>Continued Evolution</h3>
+                    <p>Once the changes outlined in our report are implemented, they should themselves be testing to ensure they achieved the desired effect.</p>
+                </section>
+
+                <section id="related">
+                    <h2>Other UX Projects</h2>
+                    <RelatedStudies>
+                        <Card key={"wak-eval"} {...projectInfo["wak-eval"]}/>
+                        <Card key={"food-eval"} {...projectInfo["food-eval"]}/>     
+                        <Card key={"bnz-eval"} {...projectInfo["bnz-eval"]}/>   
+                    </RelatedStudies>
+                </section>
             </>
             ),
         headings: [
@@ -781,7 +869,8 @@ export const caseStudies = {
         id: "nyc-parks",
         title: "Parks of New York City",
         subtitle:"Revitalising the Design of the New York City Parks Website",
-        blurb: "The Parks of NYC project is a user centred redesign of the nycgovparks.org website. It involved a top-down resign of the entire interface, informed by user testing at every step of the process. This included initial surveying and profiling of potential users, card sorting and tree testing the knowledge organisation, and wireframe testing early prototypes. As a result, a high-fidelity prototype of the new design was created in Figma",
+        blurb: "The Parks of NYC project is a user centred redesign of the nycgovparks.org website. It involved a top-down resign of the entire interface, informed by user testing at every step of the process. This included initial surveying and profiling of potential users, card sorting and tree testing the knowledge organisation, and wireframe testing early prototypes. As a result, a high-fidelity prototype of the new design was created in Figma.",
+        caseStudy: false,
         image:"/images/study-parks-banner.png",
         link: "https://www.figma.com/proto/xmNITLhxfF5bXdZQ643M8g/Prototypes?node-id=122%3A18202&scaling=scale-down&page-id=117%3A17343&starting-point-node-id=122%3A18202",
         code:"",
@@ -940,11 +1029,11 @@ export const caseStudies = {
                 <p>I'm sure if we made a final build of this for reals, there'd be all sorts of weird cases that's on the current park website that we haven't accounted for</p>
 
                 <h2 id="related">Other Design Projects (TBD)</h2>
-                <ul className={css.related}>
+                <RelatedStudies>
                     <Card key={""} {...projectInfo[""]}/>   
                     <Card key={""} {...projectInfo[""]}/>   
                     <Card key={""} {...projectInfo[""]}/>   
-                </ul>   
+                </RelatedStudies>   
             </>
             ),
         headings: [
