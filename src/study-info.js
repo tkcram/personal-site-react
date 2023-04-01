@@ -14,7 +14,7 @@ export const caseStudies = {
     "wingspan": {
         id: "wingspan",
         title: "The Birds of Wingspan",
-        subtitle:"Creating an Avian Information Dashboard Based on the Wingspan Boardgame",
+        subtitle:"An Avian Information Dashboard Based on the Wingspan Boardgame",
         blurb: "The Birds of Wingspan is a technology driven data visualization project. Built using React and D3.js, the project uses the boardgame Wingspan as a starting point for users to explore the world of ornithology. The apps draws on learnings from previous work in information visualization to build out a compelling dashboard featuring a breakdown of a species diet and lifespan, biographical and game mechanic descriptions, and a map of millions of self-reported sightings.  ",
         image:"/images/study-wingspan-banner.jpg",
         caseStudy: true,
@@ -329,8 +329,9 @@ export const caseStudies = {
     "dnd-ui": {
         id: "dnd-ui",
         title: "Cannoneers & Dragons",
-        subtitle:"Creating a Web-based Adventure Game Based on the Dungeons and Dragons API",
+        subtitle:"A Web-based Adventure Game Based on the Dungeons and Dragons API",
         blurb: "Cannoneers & Dragons is a technology focused, web-based app based on the Dungeons & Dragons RPG. It combines Python on the back-end to generate characters, monsters, and mazes, with JavaScript on the front-end to render it all on the page and allow the user to interact with it. Along the way it queries an API, exposes one via Flask, and even attempts to create an enjoyable experience for the player.",
+        note: "N.b: Due to a recent update to the API, certain features of this project no longer function as expected. Character and Maze generation have been temporarily disabled, with pre-generated values inserted into the code.",
         caseStudy: false,
         image:"/images/study-dnd-banner.jpg",
         link: "https://puis22.netlify.app/",
