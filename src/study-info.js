@@ -6,6 +6,7 @@ import Lifecycle, { LifecycleSnippet } from './WingspanLifecycle'
 import Range, { RangeSnippet } from './WingspanRange'
 import Wingspan, { WingspanSnippet } from './WingspanWingspan'
 import { projectInfo } from './project-info'
+import { snippets } from './snippets-info'
 import Card from './Card'
 import Drawer from './Drawer'
 import RelatedStudies from './RelatedStudies'
@@ -33,7 +34,6 @@ export const caseStudies = {
                 
                 <section id="background">
                     <h2>Background</h2>
-                    <h3>The Project</h3>
                     <p>This project was originally created for INFO 616: Programming Interactive Visualization. The goal of the project was to use D3.js to create a web-based data visualisation with an interactive component. Specifically, I opted to create an online dashboard where you could learn more about a different bird species. This allowed me to bring together multiple disparate datasets, including aviandietdb and cornell ebird, to demostrate a range of technical skills and discuss a topic I personally enjoy. In order to tie it all together, I drew inspiration from the boardgame Wingspan - it provided an entry point for users as well as a framing device for how the dashboard should be laid out.</p>
                     
                     <h3>Wingspan</h3>
@@ -83,7 +83,7 @@ export const caseStudies = {
 
                     <section>
                         <h3>Module 1: Biography</h3>
-                        <Drawer title="The Data" buttonTextCollapsed="View Sample ›" buttonTextExpanded="Hide Sample ⌄" linkText="" linkURL="">
+                        <Drawer title="The Data" buttonTextCollapsed="View Sample Data ›" buttonTextExpanded="Hide Sample Data ⌄" linkText="" linkURL="">
                             <table className={css.drawerTable}>
                                 <thead>
                                     <tr><th>Common name</th><th>Hero Href</th><th>Description</th><th>Scientific name</th><th>Color</th><th>PowerCategory</th><th>Power text</th><th>Predator</th><th>Flocking</th><th>Bonus card</th><th>Victory points</th><th>Nest type</th><th>Egg capacity</th><th>Wingspan</th><th>Forest</th><th>Grassland</th><th>Wetland</th><th>Invertebrate</th><th>Seed</th><th>Fish</th><th>Fruit</th><th>Rodent</th><th>Nectar</th><th>Wild (food)</th></tr>
@@ -117,7 +117,7 @@ export const caseStudies = {
 
                     <section>
                         <h3>Module 2: Diet</h3>
-                        <Drawer title="The Data" buttonTextCollapsed="View Sample ›" buttonTextExpanded="Hide Sample ⌄" linkText="" linkURL="">
+                        <Drawer title="The Data" buttonTextCollapsed="View Sample Data ›" buttonTextExpanded="Hide Sample Data ⌄" linkText="" linkURL="">
                             <table className={css.drawerTable}>
                                 <thead>
                                     <tr><th>species</th><th>query_type</th><th>region</th><th>season</th><th>start_year</th><th>end_year</th><th>prey_level</th><th>taxon</th><th>pct_items</th><th>pct_wt_or_vol</th><th>pct_occurrence</th><th>pct_unspecified</th><th>database_timestamp</th></tr>
@@ -161,7 +161,7 @@ export const caseStudies = {
 
                     <section>
                         <h3>Module 3: Lifecycle</h3>
-                        <Drawer title="The Data" buttonTextCollapsed="View Sample ›" buttonTextExpanded="Hide Sample ⌄" linkText="" linkURL="">
+                        <Drawer title="The Data" buttonTextCollapsed="View Sample Data ›" buttonTextExpanded="Hide Sample Data ⌄" linkText="" linkURL="">
                             <table className={css.drawerTable}>
                                 <thead>
                                     <tr><th>Common name</th><th>Clutch Size</th><th>Egg Dimension</th><th>Egg Description</th><th>Incubation Period</th><th>Nestling Period</th><th>Hatchling description</th><th>Mating age</th><th>Monogamous</th><th>Lifespan (Days)</th><th>Lifespan (Years)</th></tr>
@@ -205,7 +205,7 @@ export const caseStudies = {
 
                     <section>
                         <h3>Module 4: Range</h3>
-                        <Drawer title="The Data" buttonTextCollapsed="View Sample ›" buttonTextExpanded="Hide Sample ⌄" linkText="" linkURL="">
+                        <Drawer title="The Data" buttonTextCollapsed="View Sample Data ›" buttonTextExpanded="Hide Sample Data ⌄" linkText="" linkURL="">
                             <table className={css.drawerTable}>
                                 <thead>
                                     <tr><th>COUNTY_CODE</th><th>BALD_EAGLES</th></tr>
@@ -332,7 +332,7 @@ export const caseStudies = {
         subtitle:"A Web-based Adventure Game Based on the Dungeons and Dragons API",
         blurb: "Cannoneers & Dragons is a technology focused, web-based app based on the Dungeons & Dragons RPG. It combines Python on the back-end to generate characters, monsters, and mazes, with JavaScript on the front-end to render it all on the page and allow the user to interact with it. Along the way it queries an API, exposes one via Flask, and even attempts to create an enjoyable experience for the player.",
         note: "N.b: Due to a recent update to the API, certain features of this project no longer function as expected. Character and Maze generation have been temporarily disabled, with pre-generated values inserted into the code.",
-        caseStudy: false,
+        caseStudy: true,
         image:"/images/study-dnd-banner.jpg",
         link: "https://puis22.netlify.app/",
         code: "https://github.com/tkcram/programming-final",
@@ -349,10 +349,9 @@ export const caseStudies = {
 
                 <section id="background">
                     <h2>Background</h2>
-                    <h3>The Project</h3>
                     <p>This project was created as the final of two seperate classes. INFO 664: Programming for Cultural Heritage provided the back-end, and INFO 637: Programming User Interfaces provided the front-end. The goal was to demonstrate a variety of coding skills, such as calling APIS and rendering elements to the DOM, in such a way that provided a unified product at the end of the project. I opted to work with D&D both because it is a game system I know well and belive would be engaging to a general audience, and also because the complexities and nuiances within the rules system provided ample opportunity to test my skills.</p>
 
-                    <h3>The Client (DnD)</h3>
+                    <h3>Dungeons & Dragons</h3>
                     <div className={css.textLogo}>
                         <img alt="" className={css.logo} src="/images/study-dnd-dnd.png"/>
                         <p>Dungeons and Dragons is a game wherein players come together around a table, take control of a character, and embark on an adventure devised by an additional group member, aka the Dungeon Master. Originally created by Gary Gygagx and published in 1974, currently in its 5th edition, the game has been played by millions of people around the world.</p>
@@ -361,55 +360,71 @@ export const caseStudies = {
 
                 <section id="back-end">
                     <h2>Back-end</h2>
-                    <h3>Resources</h3>
-                    <h4>Python</h4>
-                    <div className={css.textLogo}>
-                        <img alt="" className={css.logo} src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png"/>
-                        <p>The backend code for this project was written in Python, built entirely from scratch. Several packages were imported: 'requests' and 'json' for getting data from the API and being able to manipulate it; 'math' and 'random' for making decisions when the API offered multiple options, and 're' for dealing with D&D dice notation (e.g. two six sided die would be rendered 2d6).</p>
-                    </div>
+                    <section>
+                        <h3>Resources</h3>
+                        <h4>Python</h4>
+                        <div className={css.textLogo}>
+                            <img alt="" className={css.logo} src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png"/>
+                            <p>The backend code for this project was written in Python, built entirely from scratch. Several packages were imported: 'requests' and 'json' for getting data from the API and being able to manipulate it; 'math' and 'random' for making decisions when the API offered multiple options, and 're' for dealing with D&D dice notation (e.g. two six sided die would be rendered 2d6).</p>
+                        </div>
 
-                    <h4>D&D API</h4>
-                    <div className={css.textLogo}>
-                        <img alt="" className={css.logo} src="http://www.dnd5eapi.co/public/favicon.ico"/>
-                        <p>The D&D 5e API was created Fergus Bentley and makes the freely available D&D resources available through a RESTful API. Although this content only scratches the surface of what D&D has to offer, it provides more than enough to get started and provide all the templates that this project needs.</p>
-                    </div>
+                        <h4>D&D API</h4>
+                        <div className={css.textLogo}>
+                            <img alt="" className={css.logo} src="http://www.dnd5eapi.co/public/favicon.ico"/>
+                            <p>The D&D 5e API was created Fergus Bentley and makes the freely available D&D resources available through a RESTful API. Although this content only scratches the surface of what D&D has to offer, it provides more than enough to get started and provide all the templates that this project needs.</p>
+                        </div>
 
-                    <h4>Flask</h4>
-                    <div className={css.textLogo}>
-                        <img alt="" className={css.logo} src="/images/study-dnd-flask.png"/>
-                        <p>Due to the nature of the project straddling two different classes, and thus two different languages, a program layer was needed to allow them to talk to each other. Flask.py was chosen, as I felt it would be the easiest to implement. Although this was still one of the more challenging aspects of the project as it was the part I had the least experience with.</p>
-                    </div>
+                        <h4>Flask</h4>
+                        <div className={css.textLogo}>
+                            <img alt="" className={css.logo} src="/images/study-dnd-flask.png"/>
+                            <p>Due to the nature of the project straddling two different classes, and thus two different languages, a program layer was needed to allow them to talk to each other. Flask.py was chosen, as I felt it would be the easiest to implement. Although this was still one of the more challenging aspects of the project as it was the part I had the least experience with.</p>
+                        </div>
+                    </section>
 
-                    <h3>Code Files</h3>
-                    <Drawer title="character.py" buttonTextCollapsed="View Code/Output ›" buttonTextExpanded="Hide Code/Output ⌄" linkText="Github" linkURL="">
-                            <CodeBlock language="jsx" showLineNumbers={true} text={"This will eventually be a JSON blob called from the code"}/>
-                            <CodeBlock language="python" showLineNumbers={true} text={"This will eventually be the Python code, with a button to switch between"}/>
-                    </Drawer>
+                    <section>
+                        <h3>Code Files</h3>
+                        <section>
+                            <Drawer title="character.py" buttonTextCollapsed="View Sample Output ›" buttonTextExpanded="Hide Sample Output ⌄" linkText="Github" linkURL="https://github.com/tkcram/pfchs22/blob/master/src/create_character.py">
+                                    <CodeBlock language="json" showLineNumbers={true} text={JSON.stringify(snippets['tempChar'], null, 2)}/>
+                                   {/*<CodeBlock language="python" showLineNumbers={true} text={"This will eventually be the Python code, with a button to switch between"}/>*/}
+                            </Drawer>
 
-                    <p>The character creator is the largest of the backend files, due mostly to the wide variety of traits a single character needs. It works by initially defining the character template, and filling in each section in turn. The first three it calls defines (i.e. Race, Class, and Background) all require calling the API for the complete list of possible options, and choosing one at random. These are called first as they each modify later parts of the template. Thankfully, the Fifth Edition rules do not contain any logic as to race/class combinations, so choosing completely blind is a valid approach</p>
-                    <p>Next come the character statistics and skills. Although there are a variety of ways within the rules to calculate this, I opted for the "3d6" approach, or the sum of three numbers each between 1 and 6. This is repeated for each of the six key statistics in the game, and modified based on data from the characters race. Skills are then calculated based on which on the six statistics they're based on, modified by any factors from the class or background.</p>
-                    <p>Equipment and combat actions follow, which proved significantly more complex than the previous sections. The main challenge came from the breadth of equipment the game has on offer, and all the different combinations that a character could possess. [...]. Once the equipment list was sorted, it was then reasonably straight forward to calculate the hit points and other combat details.</p>
-                    <p>Lastly came spellcasting. And mate I though equipment was bad [...].</p>
+                            <p>The character creator is the largest of the backend files, due mostly to the wide variety of traits a single character needs. It works by initially defining the character template, and filling in each section in turn. The first three it calls defines (i.e. Race, Class, and Background) all require calling the API for the complete list of possible options, and choosing one at random. These are called first as they each modify later parts of the template. Thankfully, the Fifth Edition rules do not contain any logic as to race/class combinations, so choosing completely blind is a valid approach.</p>
+                            <p>Next come the character statistics and skills. Although there are a variety of ways within the rules to calculate this, I opted for the "3d6" approach, or the sum of three numbers each between 1 and 6. This is repeated for each of the six key statistics in the game, and modified based on data from the characters race. Skills are then calculated based on which on the six statistics they're based on, modified by any factors from the class or background.</p>
+                            <p>Equipment and combat actions follow, which proved significantly more complex than the previous sections. The main challenge came from the breadth of equipment the game has on offer, and all the different combinations that a character could possess. Once the equipment list was sorted, it was then reasonably straight forward to calculate the hit points and other combat details.</p>
+                            <p>Lastly, and most complexly, came spellcasting. The complexity here stems from the fact that there is minimal uniformity between spellcasting classes. Some casters learn new spells as they level up for instance, while others simply gain the ability to use more spells in one burst. This resulted in a significant amount of error handling and special cases, but ultimately proved functional. The biggest impact it had on the code was needing to have each level calculated in sequence from level 0, rather than being able to calculate backwards from a given level. Thus it forced the creation of a levelling up system, which proved useful to be able to pass back and forth between the front and back ends.</p>
+                        </section>
 
-                    <Drawer title="items.py" buttonTextCollapsed="View Code/Output ›" buttonTextExpanded="Hide Code/Output ⌄" linkText="Github" linkURL="">
-                            <CodeBlock language="jsx" showLineNumbers={true} text={"This will eventually be a JSON blob called from the code"}/>
-                            <CodeBlock language="python" showLineNumbers={true} text={"This will eventually be the Python code, with a button to switch between"}/>
-                    </Drawer>
-                    <p>This code does two things. The first is to create items that the characters can equip</p>
-                    <p>The second is to populate the maze with items</p>
+                        <section>
+                            <Drawer title="items.py" buttonTextCollapsed="View Sample Output ›" buttonTextExpanded="View Sample Output ⌄" linkText="Github" linkURL="https://github.com/tkcram/pfchs22/blob/master/src/create_equipment.py">
+                                    <CodeBlock language="jsx" showLineNumbers={true} text={JSON.stringify(snippets['tempItem'], null, 2)}/>
+                                    {/*<CodeBlock language="python" showLineNumbers={true} text={"This will eventually be the Python code, with a button to switch between"}/>*/}
+                            </Drawer>
+                            <p>This code does two things. The first is to format equipment the character receives into a usable format. It does this by taking the desired item and the current inventory, fetching that item from the API, transforming the data into a flat dict, and appending it onto the invetory before returning said list. The key challenge was figuring out how to tackle the wide variety of items. Weapons and armour were both relevant to gameplay and thus needed their statistics saved, whereas all other items were simply returned as strings. This is something to expand upon in future work. </p>
+                            <p>The second is to populate the maze with items. In addition to the weapon and armour categories listed above, the code also includes a custom built potion category to help players as they progress through the game, allowing them to recover health or improve their character's statistics. It also allowed for all items to receive a bonus based on both the level of the maze and a random number generator. Otherwise, item selection works based on randomly selecting an item category, calling the API for all items in that category, choosing one at random, and then running the above equipment code. Merging of loot and current equipment is to be handled on the front-end.</p>
+                        </section>
 
-                    <Drawer title="monsters.py" buttonTextCollapsed="View Code/Output ›" buttonTextExpanded="Hide Code/Output ⌄" linkText="Github" linkURL="">
-                            <CodeBlock language="jsx" showLineNumbers={true} text={"This will eventually be a JSON blob called from the code"}/>
-                            <CodeBlock language="python" showLineNumbers={true} text={"This will eventually be the Python code, with a button to switch between"}/>
-                    </Drawer>
-                    <p>Compared to creating a character, creation a monster is a relatively straightforward process. Each monster comes with a pregenerated block of statistics, and so this code mostly focuses on converting those details into something that the frontend can process. I also captured more details than were strictly needed, but allow a certain amount of future proofing if I ever decide to add those features to the game. There was a minor issue where some Monsters had abilities that did not fit into the well defined boxes, but for the purposes of this project it was simpler to exclude them rather than try and work through every edge case.</p>
+                        <section>
+                            <Drawer title="monsters.py" buttonTextCollapsed="View Sample Output ›" buttonTextExpanded="Hide Sample Output ⌄" linkText="Github" linkURL="https://github.com/tkcram/pfchs22/blob/master/src/create_monster.py">
+                                    <CodeBlock language="jsx" showLineNumbers={true} text={JSON.stringify(snippets['tempMon'], null, 2)}/>
+                                    {/*<CodeBlock language="python" showLineNumbers={true} text={"This will eventually be the Python code, with a button to switch between"}/>*/}
+                            </Drawer>
+                            <p>Compared to creating a character, creating a monster is a relatively straightforward process. Each monster comes with a pregenerated block of statistics, and so this code mostly focuses on transforming those details into something that the front-end can process. I also captured more details than were strictly needed, to allow a certain amount of future proofing if I ever decide to add those features to the game. There was a minor issue where some Monsters had abilities that did not fit into the well defined boxes, but for the purposes of this project it was simpler to exclude them rather than try and work through every edge case.</p>
+                        </section>
 
-                     <Drawer title="maze.py" buttonTextCollapsed="View Code/Output ›" buttonTextExpanded="Hide Code/Output ⌄" linkText="Github" linkURL="">
-                            <CodeBlock language="jsx" showLineNumbers={true} text={"This will eventually be a JSON blob called from the code"}/>
-                            <CodeBlock language="python" showLineNumbers={true} text={"This will eventually be the Python code, with a button to switch between"}/>
-                    </Drawer>
-                    <p>The maze itself is created by a depth first search</p>
-                    <p>Once the maze has been generated, the second part of the code moves through each cell and has a chance to populate it. It does this by generating a random number, which above a certain threshold adds something to the cell, such as a monster of an appropriate level for the maze, or equipement based on how high the random generator scores.</p>
+                        <section>
+                             <Drawer title="maze.py" buttonTextCollapsed="View Sample Output ›" buttonTextExpanded="Hide Sample Output ⌄" linkText="Github" linkURL="https://github.com/tkcram/pfchs22/blob/master/src/create_maze.py">
+                                    <CodeBlock language="jsx" showLineNumbers={true} text={JSON.stringify(snippets['tempMaze'], null, 2)}/>
+                                    {/*<CodeBlock language="python" showLineNumbers={true} text={"This will eventually be the Python code, with a button to switch between"}/>*/}
+                            </Drawer>
+                            <p>The maze itself is created using a randomised depth first search. This involves creating an X by X grid of cells, with X determined by an input, and placing a marker at an "entrance" position. The marker then traverses the grid, choosing random which direction to go at each step, until it is presented with no valid options. It then steps back along it's path until it finds a previously unvisited cell, and repeats this process. The process terminates when the marker finds itself back at the 'entrance, having visited all available cells. As it traverses it also keeps a note of the single longest pathway it has taken, and at the end of that path places the 'exit' cell.</p>
+                            <figure className={css.figure}>
+                                <img className={css.figureObject} src="https://plaxdev.files.wordpress.com/2017/08/depth-first-quad2.gif?w=200" alt=""/>
+                                <figcaption className={css.figureCaption}>Example of Depth First Search Maze Generation</figcaption>
+                            </figure>
+                            <p>Once the maze has been generated, the second part of the code moves through each cell and has a chance to populate it. It does this by generating a random number, which above a certain threshold adds something to the cell, such as a monster of an appropriate level for the maze, or equipement based on how high the random generator scores. These call either monsters.py or items.py to handle the API calls and data transformation. The maze is then exported as a single JSON object.</p>
+                        </section>
+                    </section>
                 </section>
 
                 <section id="front-end">
@@ -418,50 +433,59 @@ export const caseStudies = {
                     <h4>JavaScript</h4>
                     <div className={css.textLogo}>
                         <img alt="" className={css.logo} src="/images/study-dnd-js.png"/>
-                        <p>We called the API using Python, and it was all terribly exciting</p>
+                        <p>The front-end code for this project was written in JavaScript, with a simple index.html page to serve as the anchor. Although some discussion was had about using React or some other JS library, I opted to code entirely in vanilla as I wanted to develop a good understanding of the fundamental principles of a language I hadn't used much of previously. </p>
                     </div>
 
                     <h4>Assets</h4>
-                    <p>Tk Can't draw. It's fine.</p>
+                    <div className={css.textLogo}>
+                        <img alt="" className={css.logo} src="https://github.com/tkcram/puis22/blob/master/images/Hero.png?raw=true"/>
+                        <p>Assets for this project were developed either by myself or my partner Jennifer Cahalane. The rudimentary style was used partially to impart character on the project, and partially due to my own lack of illustrative accumen. Additional sprites were drawn for the project, but due to time constraints it was easier to rely on only basic hero & monsters sprites.</p>
+                    </div>
 
                     <h3>Code Files</h3>
-                    <Drawer title="control.js" buttonTextCollapsed="View Code ›" buttonTextExpanded="Hide Code ⌄" linkText="Github" linkURL="">
-                        <CodeBlock language="jsx" showLineNumbers={true} text={"Hello World"}/>
+                    <Drawer title="control.js" buttonTextCollapsed="View Code ›" buttonTextExpanded="Hide Code ⌄" linkText="Github" linkURL="https://github.com/tkcram/puis22/blob/master/scripts/control_script.js">
+                        <CodeBlock language="jsx" showLineNumbers={true} text={"Coming Soon!"}/>
                     </Drawer>
-                    <p>The control script is all about calling the API and building out the game itself</p>
-                    <p>It also controls any other interactions on the page, such as switching between tabs</p>
+                    <p>The control code does what you might expect - operates all top level functionality of the code. This primarily involves reading the initial input (i.e character level, maze size, difficulty), calling the back-end to generate the appropriate files, and then passing those files to the game engine. It also controls any non-game related functionality on the page, such as swtiching between menus. Desipte being relatively straightforward, learning the nuiances of async await functions provided a good learning experience.</p>
+                    <p><i>N.b. due to changes in the D&D API, generation has been temporarily disabled. The code currently reads in several local files with pregenerated code.</i></p>
 
-                    <Drawer title="builder.js" buttonTextCollapsed="View Code ›" buttonTextExpanded="Hide Code ⌄" linkText="Github" linkURL="">
-                        <CodeBlock language="jsx" showLineNumbers={true} text={"Hello World"}/>
+                    <Drawer title="builder.js" buttonTextCollapsed="View Code ›" buttonTextExpanded="Hide Code ⌄" linkText="Github" linkURL="https://github.com/tkcram/puis22/blob/master/scripts/maze_builder.js">
+                        <CodeBlock language="jsx" showLineNumbers={true} text={"Coming Soon!"}/>
                     </Drawer>
-                    <p>Takes the API call from the backend and renders it on the page</p>
+                    <p>If ever there was a reason to switch to React, it would be this code block, which is responsible for converting the maze from JSON to HTML. Since components aren't available in vanilla JS, the workaround was to render each block of HTML in a template string. Thus, the code iterates through each cell, and using a series of conditionals it converts each field in the JSON to a string of HTML code, combines the code all together, and injects the entire string to the page. Once rendered on the page, the code then queries each clickable element type (e.g. 'Monsters', 'doors') and gives them the associated click event. Given the chance to refactor the project, it would be worth persuing better ways of approaching this problem.</p>
 
-                    <Drawer title="interactions.js" buttonTextCollapsed="View Code ›" buttonTextExpanded="Hide Code ⌄" linkText="Github" linkURL="">
-                        <CodeBlock language="jsx" showLineNumbers={true} text={"Hello World"}/>
+                    <Drawer title="interactions.js" buttonTextCollapsed="View Code ›" buttonTextExpanded="Hide Code ⌄" linkText="Github" linkURL="https://github.com/tkcram/puis22/blob/master/scripts/maze_exporter.js">
+                        <CodeBlock language="jsx" showLineNumbers={true} text={"Coming Soon!"}/>
                     </Drawer>
-                    <p>Once the maze has been built, you have to interact with it!</p>
-                    <p>Movement!</p>
-                    <p>Combat!</p>
-                    <p>Loot!</p>
+                    <p>Once everything has been taken in from the API and rendered on the page, this code block defines all the ways in which you can interact with it. As well as a 'dice roller' that functions as the game random number generator, interactions are broadly sorted into three categories: maze, monster, and item.</p>
+                    <p><b>Maze Interactions:</b> This is how a player reveals new rooms, and moves between them. The main thing to note about how this works is that the entire maze is rendered all at once. So instead of rendering each room as the pplayer moves into it, the rooms are prerendered and the view is moved based on where the player is located. It was initially implemented this way as the idea was to have the entire maze visible on screen, but was switched to a single room view late in development. Not to say it is without benefit, as it allows for rapid load times, and the ability to easily animate movement between rooms. </p>
+                    <p><b>Monster Interactions aka Combat:</b> As to be expected in a game about fighting monsters, combat uses a significant amount of math and logic, which is defined based on the ruleset of Dungeons and Dragons. So when a monster is interacted with, both them and the player character attempt to attack, with 'initiative' determining who goes first. A random number between one and twenty is set, and the attacker's abilities and weapons add to it. If the total number exceeds the defenders 'ac', or if the random number is a 20, the attack succeeds and damage is calculated.</p>
+                    <p>Damage is where things get complicated from a computational standpoint. Within the game rules damage is given as 'xDy+z', i.e roll x dice with y sides and add z. Here regex is used to tease apart the details, and the dice roller function is called x times, with y being passed as the maximum. Once the dice rolls are summed, and z is added, the total number is subtracted from the defenders health. Finally, if their health is below zero they are removed from the game (gameover if this is the player), otherwise it resets back to the initial state.</p>
+                    <p><b>Item Interaction:</b> Comparitively, item interaction is straightforward. The data for the items is already loaded, so when clicking on an item it is removed from the map and it's data added to the player's inventory. However it's of little use if all it does is sit there, so a player needs to be able to use it. This is done by clicking the icon for it in the player's information, which isn't well highlighted, and the code rerolls all relevant statistics. Unfortunely, since the code for doing this on the back-end it required either passing the information back and forth, or reduplicating the code. I opted for the latter.</p>
 
-                    <Drawer title="exporter.js" buttonTextCollapsed="View Code ›" buttonTextExpanded="Hide Code ⌄" linkText="Github" linkURL="">
-                        <CodeBlock language="jsx" showLineNumbers={true} text={"Hello World"}/>
+                    <Drawer title="exporter.js" buttonTextCollapsed="View Code ›" buttonTextExpanded="Hide Code ⌄" linkText="Github" linkURL="https://github.com/tkcram/puis22/blob/master/scripts/maze_interactions.js">
+                        <CodeBlock language="jsx" showLineNumbers={true} text={"Coming Soon!"}/>
                     </Drawer>
-                    <p>Any time the game area updates something else on the page, it goes here</p>
+                    <p>This code is responsible for passing any updates in game states into the information modals. Thus whenever a character takes damage it is reflected in their health total, or if they explore a new room it is visible on the minimap. The biggest part of this is listing any actions the player takes in the action log. This allows players to both keep track of what has been happening in the game, but also know that their interactions on the page are having an effect. Combined with animations, this means the player should always have feedback on their actions, improving the user experience.</p>
                 </section>
 
                 <section id="reflections">
                     <h2>Reflections</h2>
-                    <p>I really did choose the hardest way of doing this. All so very verbose</p>
-                    <p>Also switching between languages really sucks</p>
+                    <h3>Constraints</h3>
+                    <p>A significant amount of complexity for this project came from the various constraints, both self imposed and as part of the curriculum. Using only vanilla JavaScript meant that several creative workounds were needed to what would be easily accomplishable using React. And having to work in both JavaScript and Python meant ensuring they could talk to each other in some way, and passing data back and forth proved challenging. </p>
+                    <p>Beyond the lack of interoperability, another challenge of working across two languages was remembering the syntax for each. Frequently I would encounter errors because I switched print() for console.log(), or len(string) for string.length(). While both languages have their unique advantages, and solving these challnges was rewards, using a single coding language for the entire stack is likely the way to go when possible.</p>
+
+                    <h3>Ornithopters and Aeroplanes</h3>
+                    <p>It was interesting trying to directly adapt the rules for Dungeons and Dragons into a digital format. Things such as rolling dice or adding bonuses are relatively straightforward using pen and paper, but can require much more involved computaiton. Similarly, in a tabletop setting most players need only track their specific requirements, and so edge cases are less noticable, but this is not the case for a project like this. Thus, there's a tension between wanting to stay as close to the original rules as possible, and trying to do what works best in the medium. I tended towards the former, but exploring the latter could be interesting.</p>
                 </section>
 
                 <section id="future">
                     <h2>Future Work</h2>
-                    <p>Honestly this game could be built out basically infinitely. The rules for D&D are so rich there's so much more that could be added</p>
-                    <p>The D&D API on the other hand only has a limited amount of content. So expanding on that could be good</p>
-                    <p>Or we just diverge from that entirely and try create our own game</p>
-                    <p>Honestly a complete rebuild is probably in order</p>
+                    <h3>Complete Refactor</h3>
+                    <p>In all, I would consider this a solid prototype. But given all the lessons learnt from the project, I believe the best future for it would be to start again from scratch, without all the constraints imposed on it. Mainly, this would involve writing the entire game in React. I would also expect to give the asset and animation library a makeover, likely drawing from external sources.</p>
+
+                    <h3>More Features</h3>
+                    <p>Dungeons and Dragons is a vast ruleset, with the 5th edition resources spread accross dozens of books. Although a portion of that content, such as races or classes, isn't available in the API, there's still a wealth of features to draw on. Whether this is character abilities, spells, or even just a save function, there's plenty of opportunity for growth for this project</p>
                 </section>
 
                 <section id="related">
@@ -632,16 +656,16 @@ export const caseStudies = {
 
                 <section id="background">
                     <h2>Background</h2>
-                    <h3>The Project</h3>
+                    {/*<h3>The Project</h3>*/}
 
                     <p>This was the final project in INFO 644: Usability Theory & Practice. The goal was to gain experience working with a real clients and stakeholders, as part of the <a href="https://prattdx.org/">Center for Digital Experiences</a>. Specifically, our team worked with the New York Philharmonic's Digital Archive as they continue to improve their user interface. Although the archive itself only consists of a handful of unique pages, the breadth of the user base and the depth of the archived material were both challenges we were eager to sink our teeth into.</p>
 
+                    <h3>PrattDX</h3>
+                    <p>The team for this project comprised of four graduate students at Pratt's School of Information, guided by <a href="https://www.pratt.edu/people/iris-bierlein/">Professor Iris Bierlein</a>. Myself and Anna Feldman came from the Data Analytics and Visualization program, Sayali Nikumbh from Information Experience Design, and Tess Porter from Museums and Digital Culture.</p>
                     <figure className={css.figure}>
                         <img className={css.figureObject} src="/images/study-nyp-headshots.png" alt=""/>
                         <figcaption className={css.figureCaption}>The NY Philharmonic UX Team</figcaption>
                     </figure>
-
-                    <p>The team for this project comprised of four graduate students at Pratt's School of Information, guided by <a href="https://www.pratt.edu/people/iris-bierlein/">Professor Iris Bierlein</a>. Myself and Anna Feldman came from the Data Analytics and Visualization program, Sayali Nikumbh from Information Experience Design, and Tess Porter from Museums and Digital Culture.</p>
 
                     <h3>The New York Philharmonic</h3>
 
@@ -871,7 +895,7 @@ export const caseStudies = {
         title: "Parks of New York City",
         subtitle:"Revitalising the Design of the New York City Parks Website",
         blurb: "The Parks of NYC project is a user centred redesign of the nycgovparks.org website. It involved a top-down resign of the entire interface, informed by user testing at every step of the process. This included initial surveying and profiling of potential users, card sorting and tree testing the knowledge organisation, and wireframe testing early prototypes. As a result, a high-fidelity prototype of the new design was created in Figma.",
-        caseStudy: false,
+        caseStudy: true,
         image:"/images/study-parks-banner.png",
         link: "https://www.figma.com/proto/xmNITLhxfF5bXdZQ643M8g/Prototypes?node-id=122%3A18202&scaling=scale-down&page-id=117%3A17343&starting-point-node-id=122%3A18202",
         code:"",
@@ -879,162 +903,177 @@ export const caseStudies = {
         markup: (
             <>
                 <img alt="" src="/images/study-parks-banner.png" className={css.banner}></img>
-                <h1 id="introduction">Parks of NYC: Revitilising the Design of the New York City Parks Website</h1>
-                <a className="button" target="_blank" href="https://www.figma.com/proto/xmNITLhxfF5bXdZQ643M8g/Prototypes?node-id=122%3A18202&scaling=scale-down&page-id=117%3A17343&starting-point-node-id=122%3A18202" rel="noreferrer">Desktop</a>
-                <a className="button" target="_blank" href="https://www.figma.com/proto/xmNITLhxfF5bXdZQ643M8g/Prototypes?node-id=67%3A14014&scaling=scale-down&page-id=1%3A110&starting-point-node-id=67%3A14014" rel="noreferrer">Mobile</a>
-                <p>Intro intro intro</p>
 
-                <h2 id="background">Background</h2>
-                <h3>The Team</h3>
-                <p>This project was created for INFO 643: Information Architecture & Interaction Design</p>
+                <section id="introduction">
+                    <h1>Parks of NYC: Revitilising the Design of the New York City Parks Website</h1>
+                    <a className="button" target="_blank" href="https://www.figma.com/proto/xmNITLhxfF5bXdZQ643M8g/Prototypes?node-id=122%3A18202&scaling=scale-down&page-id=117%3A17343&starting-point-node-id=122%3A18202" rel="noreferrer">Desktop Prototype</a>
+                    <a className="button" target="_blank" href="https://www.figma.com/proto/xmNITLhxfF5bXdZQ643M8g/Prototypes?node-id=67%3A14014&scaling=scale-down&page-id=1%3A110&starting-point-node-id=67%3A14014" rel="noreferrer">Mobile Prototype</a>
+                    <p>From Central Park to Prospect Park, Coney Island to the Bronx Zoo, the parks of New York City are some of the greatest in the world. All of these fall under the banner of the New York City Department of Parks and Recreation whose <a href="https://www.nycgovparks.org/">website</a> serves as a repository for information about the parks themselves, as well as events and facilities within them. Unfortunately, the current version of the website features a cluttered navigation, dated designs, and is overall in need of an update. This project intends to redesign the interface from the bottom up, using appropriate testing methodologies to ensure a strong user centered design.</p>
+                </section>
 
-                <figure className={css.figure}>
-                    <img className={css.figureObject} src="/images/study-nyp-headshots.png" alt=""/>
-                    <figcaption className={css.figureCaption}>The NY Parks Team Group 3 (Eventually)</figcaption>
-                </figure>
+                <section id="background">
+                    <h2>Background</h2>
+                    <p>This project was created for INFO 643: Information Architecture & Interaction Design. The goal was completely redesign a website to target a specific user group, using methods such as card sorting and wireframe tests to inform our every step. Specifially, we were to redesign <a href="nycgovparks.org">nycgovparks.org</a>, the website for the NYC parks department. The website offered us an abundance of information that would need to be included in a sensible way, while also lacking major branding constraints.</p>
+                    <h3>The Team</h3>
+                    <p>The team for this project consisted of four graduate students from within the Pratt School of Information. Myself, cmoing from the Data Analytics and Visualization program, as well as Rishi Mudaliar, Anne Kuo, Jennie Lin, all from the Information Experience Design program.</p>
 
-                <h3>New York City Parks</h3>
-                <div className={css.textLogo}>
-                    <img alt="" className={css.logo} src="/images/study-parks-logo.png"/>
-                    <p>The NYC Parks deptartment takes care of the parks in NYC. Original site is <a href="https://www.nycgovparks.org/">here</a>. I should probably take a snapshot of it...</p>    
-                </div>
+                    <figure className={css.figure}>
+                        <img className={css.figureObject} src="/images/study-parks-group.jpeg" alt=""/>
+                        <figcaption className={css.figureCaption}>The NY Parks Team Group 3 (Eventually)</figcaption>
+                    </figure>
 
-                <h2 id="profiles">Step 1: Understanding Users</h2>
-                <a className="button" target="_blank" href="/articles/nycp-1.pdf" rel="noreferrer">Go To Report</a>
-                <a target="_blank" href="/documents/nycp-1.pdf" rel="noreferrer">PDF</a>
-                <h3>Methodology</h3>
-                <p>The first thing to do in any redesign is to determine who your users are, and what they need. As NYC Parks serves a wide range of communities, this project focused on young adults who were new residents of the city.</p>
-                <p>In order to determine their needs, we well... we asked them. Each group member 3-4 individuals they knew that fit the target user group, and conducted semi structured interviews with them. The group members then came together to compare notes</p>
+                    <h3>New York City Department of Parks & Recreation</h3>
+                    <div className={css.textLogo}>
+                        <img alt="" className={css.logo} src="/images/study-parks-logo.png"/>
+                        <p>NYC Parks maintains ~1700 public spaces spread throughout the five boroughs. This ranges from parks, skating rinks, zoos, beaches, and more. They do so either independently, or in agreement with local community organisations (e.g. <a href="https://www.prospectpark.org/">The Prospect Park Alliance</a>). A snapshot of the version of the website we were working with can be found <a href="https://web.archive.org/web/20220901042417/https://www.nycgovparks.org/">here</a>.</p>    
+                    </div>
+                </section>
 
-                <h3>Results</h3>
-                <h4>Insights (Me)</h4>
-                <p>Our analysis of the results showed 4 key insights</p>
-                <ul>
-                    <li><p>Location was the primary decision point in choosing a park</p></li>
-                    <li><p>Participants would travel to a park, but only if given a reason to</p></li>
-                    <li><p>Search engines were a vital source of information</p></li>
-                    <li><p>Safety and comfort were always on participants’ minds</p></li>
-                </ul>
+                <section id="profiles">
+                    <h2>Step 1: Understanding Users</h2>
+                    {/*<a className="button" target="_blank" href="/articles/nycp-1.pdf" rel="noreferrer">Go To Report</a>*/}
+                    <a className="button" target="_blank" href="/documents/nycp-1.pdf" rel="noreferrer">Full Report</a>
+                    <h3>Methodology</h3>
+                    <p>The first thing to do in any redesign is to determine who your users are, and what they need. Given the broad range of peoples and communities NYC Parks serves, our focus was to be narrow to a specific subsection. After discussing amongst the group, we opted to focus on young adults who were new residents of the city. The idea being that these were individuals who were mostly likely to lack institutional knowledge of the system, while also the highest aptitude for researching information online.</p>
+                    <p>The next step was to select and interview members of our chosen user group. We each reached out to our networks, and set up 3-4 interviews each. These interviews were to be semi structured, guided by a predetermined set of questions. Each team member shared their notes in a Google Drive folder, and the group met together to discuss our findings and how we should present them.</p>
 
-                <h4>Personas</h4>
-                <p>Two Personas were developed (Jennie & Anne)</p>
-                <figure className={css.figure}>
-                    <img className={css.figureObject} src="/images/study-parks-persona1.png" alt=""/>
-                    <img className={css.figureObject} src="/images/study-parks-persona2.png" alt=""/>
-                    <figcaption className={css.figureCaption}>Personas</figcaption>
-                </figure>
+                    <h3>Results</h3>
+                    <p>With our findings in hand, we needed to transform them into materials that we could use to inform our design decisions. Splitting the work between us, I was tasked with drawing up the written report around key insights. Anne and Jennie set about creating a a pair of personas, and Rishi created a storyboard of a potential use case.</p>
+                    <p>Across all interviews, we were able to draw four key insights about our users:</p>
+                    <ul>
+                        <li><p>Location was the primary decision point in choosing a park</p></li>
+                        <li><p>Participants would travel to a park, but only if given a reason to</p></li>
+                        <li><p>Search engines were a vital source of information</p></li>
+                        <li><p>Safety and comfort were always on participants’ minds</p></li>
+                    </ul>
+                    <p>The following material was also created:</p>
 
-                <h4>Storyboard (Rishi)</h4>
-                <p>And a partridge in a pear tree</p>
-                <figure className={css.figure}>
-                    <img className={css.figureObject} src="/images/study-parks-storyboard.png" alt=""/>
-                    <figcaption className={css.figureCaption}>Storyboard</figcaption>
-                </figure>
+                    <figure className={css.figure}>
+                        <div className={classnames(css.figMulti, css.figDouble)}>
+                            <img className={css.figureObject} src="/images/study-parks-persona1.png" alt=""/>
+                            <img className={css.figureObject} src="/images/study-parks-persona2.png" alt=""/>
+                        </div>
+                        <figcaption className={css.figureCaption}>Personas</figcaption>
+                    </figure>
 
+                    <figure className={css.figure}>
+                        <img className={css.figureObject} src="/images/study-parks-storyboard.png" alt=""/>
+                        <figcaption className={css.figureCaption}>Storyboard</figcaption>
+                    </figure>
+                </section>
 
-                <h2 id="sitemap">Step 2: Sitemap</h2>
-                <a className="button" target="_blank" href="/articles/nycp-2.pdf" rel="noreferrer">Go To Report</a>
-                <a target="_blank" href="/documents/nycp-2.pdf" rel="noreferrer">PDF</a>
-                <h3>Methodology</h3>
-                <h4>Card Sorting</h4>
-                <p>Card sorting is a UX method where users sort cards. Shout out to UserTesting.Com</p>
+                <section id="sitemap">
+                    <h2>Step 2: Sitemap</h2>
+                    {/*<a className="button" target="_blank" href="/articles/nycp-2.pdf" rel="noreferrer">Go To Report</a>*/}
+                    <a className="button" target="_blank" href="/documents/nycp-2.pdf" rel="noreferrer">Full Report</a>
+                    <h3>Methodology</h3>
+                    <h4>Card Sorting</h4>
+                    <p>Card sorting is a UX method where users are presented with a deck of cards, each one with the heading of a potential webpage. Users then group the cards into buckets that are either preset by the testers (closed sort) or that the user determines (open sort). The testing method provides a good overview of how users may group topics, and requires minimal set-up and time investment. For more information, see <a href="https://www.optimalworkshop.com/optimalsort/">here</a>.</p>
 
-                <figure className={css.figure}>
-                    <img className={css.figureObject} src="https://www.usertesting.com/sites/default/files/inline-images/Closed%20card%20sorting.png" alt=""/>
-                    <figcaption className={css.figureCaption}>Card Sorting</figcaption>
-                </figure>
+                    <figure className={css.figure}>
+                        <img className={css.figureObject} src="https://www.usertesting.com/sites/default/files/inline-images/Closed%20card%20sorting.png" alt=""/>
+                        <figcaption className={css.figureCaption}>Example Card Sorting</figcaption>
+                    </figure>
 
-                <p>We used an open card sort, with a bunch of people</p>
+                    <p>We used <a href="https://www.optimalworkshop.com/">Optimal Workshop</a> to perform the testing, and opted for a hybrid sort (i.e. predetermined buckets, but allowing the user to also create their own). 150 cards were initially created, but quickly curated down to 42 as we didn't want to overwhelm the user and risk them not completing. The link to the test was then circulated on Pratt's internal mail server, as well as amongst the teams personal network. 22 people completed the test, which revealed a high level of ambiguity between "events", "activities", and "facilities", as well as the need to expand the footer links. With the results in hand, we began to draft what the sitemap may look like. </p>
 
-                <figure className={css.figure}>
-                    <img className={css.figureObject} src="" alt=""/>
-                    <figcaption className={css.figureCaption}>Our Results</figcaption>
-                </figure>
-                
-                <h4>Tree Testing</h4>
-                <p>The card sorting fed back into our sitemap, which we then tested using tree testing</p>
+                    <figure className={css.figure}>
+                        <img className={css.figureObject} src="/images/study-parks-card.png" alt=""/>
+                        <figcaption className={css.figureCaption}>Our Results</figcaption>
+                    </figure>
+                    
+                    <h4>Tree Testing</h4>
+                    <p>In order to ensure we were on the right track, we returned to Optimal Workshop to conduct a Tree Test on our draft sitemap. Slightly more involved than a card sort, a tree test involves presenting the user with the sitemap, and having them move through it from the top down in order to find a specific heading. The test tracks not only if they correctly find it, but also whether they believe they do, and what pathway(s) the took to get there. This sort of testing is useful as it allows the team to determine whether someone who has never encountered the interface before can navigate it, as opposed to the researchers who are familiar with it. For more information, see <a href="https://www.optimalworkshop.com/treejack/">here</a>.</p>
 
-                <figure className={css.figure}>
-                    <img className={css.figureObject} src="https://help.usertesting.com/hc/article_attachments/360088640912/Tree_Test_Save_Tree_08.png" alt=""/>
-                    <figcaption className={css.figureCaption}>Tree Testing</figcaption>
-                </figure>
-               
-               <p>It went well</p>
+                    <figure className={css.figure}>
+                        <img className={css.figureObject} src="https://help.usertesting.com/hc/article_attachments/360088640912/Tree_Test_Save_Tree_08.png" alt=""/>
+                        <figcaption className={css.figureCaption}>Tree Testing</figcaption>
+                    </figure>
+                   
+                   <p>21 people completed the six tasks that were involved in the test. The main issue revealed was the continued ambiguity between 'events' and 'activities', which continued to haunt us despite our best efforts. Instead of attempting to relabel them, we instead opted to rethink the basic structure, and combine them under a single "Things to do" heading. While it wouldn't eliminate confusion or errors, we hoped that it would at least minimise them.</p>
 
-                <figure className={css.figure}>
-                    <img className={css.figureObject} src="" alt=""/>
-                    <figcaption className={css.figureCaption}>Testing Results</figcaption>
-                </figure>
+                    <figure className={css.figure}>
+                        <img className={css.figureObject} src="/images/study-parks-tree.png" alt=""/>
+                        <figcaption className={css.figureCaption}>Testing Results</figcaption>
+                    </figure>
 
-                <h3>Results</h3>
-                <p>With all our results in hand, we came back together to discuss them. Then we made a site map</p>
+                    <h3>Results</h3>
+                    {/*<p>With all our results in hand, we came back together to discuss them. Then we made a site map</p>*/}
 
-                <figure className={css.figure}>
-                    <img className={css.figureObject} src="/images/study-parks-sitemap.jpg" alt=""/>
-                    <figcaption className={css.figureCaption}>Sitemap</figcaption>
-                </figure>
+                    <figure className={css.figure}>
+                        <img className={css.figureObject} src="/images/study-parks-sitemap.jpg" alt=""/>
+                        <figcaption className={css.figureCaption}>Sitemap</figcaption>
+                    </figure>
+                </section>
 
-                <h2 id="wireframes">Step 3: Wireframes</h2>
-                <a className="button" target="_blank" href="/articles/nycp-3.pdf" rel="noreferrer">Go To Report</a>
-                <a target="_blank" href="/documents/nycp-3.pdf" rel="noreferrer">PDF</a>
-                <h3>Methodology</h3>
-                <p>With our idea for a sitemap in hand, we started working on the low-fidelity mock-ups, aka wireframes.</p>
-                <p>We each took on a different park of the wireframe, I got the permit flow</p>
-                <figure className={css.figure}>
-                    <img className={css.figureObject} src="/images/study-parks-wireframe.png" alt=""/>
-                    <figcaption className={css.figureCaption}><a href="https://www.figma.com/file/oVclnLV83krHsb57ZvwEcH/Wireframes?node-id=416%3A12486&t=N">View full wireframe</a></figcaption>
-                </figure>
-                <p>Once we had our wireframes created, we got to testing them. This involved sitting down with users and having them try and complete the flows we created</p>
+                <section id="wireframes">
+                    <h2>Step 3: Wireframes</h2>
+                    {/*<a className="button" target="_blank" href="/articles/nycp-3.pdf" rel="noreferrer">Go To Report</a>*/}
+                    <a className="button" target="_blank" href="/documents/nycp-3.pdf" rel="noreferrer">Full Report</a>
+{/*                    <h3>Methodology</h3>
+                    <p>With our idea for a sitemap in hand, we started working on the low-fidelity mock-ups, aka wireframes.</p>
+                    <p>We each took on a different park of the wireframe, I got the permit flow</p>*/}
+                    <figure className={css.figure}>
+                        <img className={css.figureObject} src="/images/study-parks-wireframe.png" alt=""/>
+                        <figcaption className={css.figureCaption}><a href="https://www.figma.com/file/oVclnLV83krHsb57ZvwEcH/Wireframes?node-id=416%3A12486&t=N">View full wireframe</a></figcaption>
+                    </figure>
+{/*                    <p>Once we had our wireframes created, we got to testing them. This involved sitting down with users and having them try and complete the flows we created</p>
 
-                <h3>Results</h3>
-                <h4>Flow 1: Find a Park</h4>
-                <p>We observed some things, and made some adjustments</p>
+                    <h3>Results</h3>
+                    <h4>Flow 1: Find a Park</h4>
+                    <p>We observed some things, and made some adjustments</p>
 
-                <h4>Flow 2: Find an Event</h4>
-                <p>We observed some things, and made some adjustments</p>
+                    <h4>Flow 2: Find an Event</h4>
+                    <p>We observed some things, and made some adjustments</p>
 
-                <h4>Flow 3: Find a Permit (ME!)</h4>
-                <p>We observed some things, and made some adjustments</p>
+                    <h4>Flow 3: Find a Permit (ME!)</h4>
+                    <p>We observed some things, and made some adjustments</p>*/}
+                </section>
 
-                <h2 id="prototype">Step 4: Final Prototype</h2>
-                <a className="button" target="_blank" href="/articles/nycp-4.pdf" rel="noreferrer">Go To Report</a>
-                <a target="_blank" href="/documents/nycp-4.pdf" rel="noreferrer">PDF</a>
-                <h3>Methodology</h3>
-                <p>Once we had all our user data, the next step is to create the high fidelity prototypes</p>
-                <p>Some changes still got made, based on internal design decisions. Such as me splitting up the parks flow</p>
+                <section id="prototype">
+                    <h2>Step 4: Final Prototype</h2>
+                    {/*<a className="button" target="_blank" href="/articles/nycp-4.pdf" rel="noreferrer">Go To Report</a>*/}
+                    <a className="button" target="_blank" href="/documents/nycp-4.pdf" rel="noreferrer">Full Report</a>
+{/*                    <h3>Methodology</h3>
+                    <p>Once we had all our user data, the next step is to create the high fidelity prototypes</p>
+                    <p>Some changes still got made, based on internal design decisions. Such as me splitting up the parks flow</p>
 
-                <h3>Results</h3>
-                <p>We created the high fidelity prototypes</p>
+                    <h3>Results</h3>
+                    <p>We created the high fidelity prototypes</p>*/}
 
-                <figure className={css.figure}>
-                    <img className={css.figureObject} src="/images/study-parks-final.png" alt=""/>
-                    <figcaption className={css.figureCaption}><a href="https://www.figma.com/file/xmNITLhxfF5bXdZQ643M8g/Prototypes?node-id=122%3A18202">View full final.</a></figcaption>
-                    <figcaption className={css.figureCaption}>I wonder if you can embed this...</figcaption>
-                </figure>
+                    <figure className={css.figure}>
+                        <img className={css.figureObject} src="/images/study-parks-final.png" alt=""/>
+                        <figcaption className={css.figureCaption}><a href="https://www.figma.com/file/xmNITLhxfF5bXdZQ643M8g/Prototypes?node-id=122%3A18202">View full final.</a></figcaption>
+                        {/*<figcaption className={css.figureCaption}>I wonder if you can embed this...</figcaption>*/}
+                    </figure>
+                </section>
 
-                <h2 id="reflections">Reflections</h2>
-                <h3>Teamwork makes the dream work</h3>
-                <p>I mean I suppose they were alright</p>
+                <section  id="reflections">
+                    <h2>Reflections</h2>
+                    <h3>No I in Team</h3>
+                    <p>Working with a new team is often a learning curve. We each come with different backgrounds, experiences, and skillsets. And with no designated project manager, it falls to the group to figure itself out. Thankfully we had the length of the semester to work on this, and by the end of it we were a well oiled machine.</p>
 
-                <h3>What is design</h3>
-                <p>Oh man, those early research stages were breezy, but as soon as we got into the actual design phase I was completely lost</p>
+                    <h3>UX Design vs UI Design</h3>
+                    <p>I found myself in my confort zone during the initial stages of testing, as my background was in research. Even as the prototype began to come together, most of what we were constructing were UX elements based on user feedback. However, towards the end of the wireframing, and fully into the high fidelity prototype, it was clear that it would require a certain amount of UI design that I had yet to develop. The exact ratio of image to text, the rounding on the buttons, the margins between elements all eluded me. Thankfully Anne was able to help me through it, but it certainly highlighted an area for growth.</p>
+                </section>
 
-                <h2 id="future">Future Work</h2>
-                <h3>Iteration</h3>
-                <p>As with any of these sorts of projects, it would be nice to do EVEN MORE TESTING to help refine it. Especially since we only targetted one specific group</p>
+                <section id="future">
+                    <h2>Future Work</h2>
+                    <h3>Iteration</h3>
+                    <p>As with any project, more testing is often in order. The overall structure of the website is in good shape, but there's still plenty more to do. Likely this would involve A/B testing on a variety of elements, all things that could be done on a production build of the site.</p>
 
-                <h3>The Real Deal</h3>
-                <p>It would be interesting to build this out into an actual website.</p>
+                    <h3>The Real Deal</h3>
+                    <p>With the prototype in hand, the next step would be to develop a live version of the website. This would likely involve creating the components from the prototype based on the static data we have been using so far, before plugging it in to the main database. And as always with the handoff from design to development, new issues will arise and more challnges will need to be solved.</p>
+                </section>
 
-                <h3>Edge cases</h3>
-                <p>I'm sure if we made a final build of this for reals, there'd be all sorts of weird cases that's on the current park website that we haven't accounted for</p>
-
-                <h2 id="related">Other Design Projects (TBD)</h2>
-                <RelatedStudies>
-                    <Card key={""} {...projectInfo[""]}/>   
-                    <Card key={""} {...projectInfo[""]}/>   
-                    <Card key={""} {...projectInfo[""]}/>   
-                </RelatedStudies>   
+{/*                <section id="related">
+                    <h2>Other Design Projects (TBD)</h2>
+                    <RelatedStudies>
+                        <Card key={""} {...projectInfo[""]}/>   
+                        <Card key={""} {...projectInfo[""]}/>   
+                        <Card key={""} {...projectInfo[""]}/>   
+                    </RelatedStudies> 
+                </section>*/}
             </>
             ),
         headings: [
@@ -1059,7 +1098,7 @@ export const caseStudies = {
                 ref: "#wireframes"
             },
             {   
-                text: "Step 4: Final Prototype",
+                text: "Step 4: Hi-Fi Prototype",
                 ref: "#prototype"
             },
             {   
@@ -1070,10 +1109,10 @@ export const caseStudies = {
                 text: "Future Work",
                 ref: "#future"
             },
-            {   
-                text: "Related Projects",
-                ref: "#related"
-            },
+            // {   
+            //     text: "Related Projects",
+            //     ref: "#related"
+            // },
         ]
     },
 }
