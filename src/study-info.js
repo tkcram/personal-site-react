@@ -12,6 +12,98 @@ import Drawer from './Drawer'
 import RelatedStudies from './RelatedStudies'
 
 export const caseStudies = {
+    "wcs-zoos": {
+        id: "wcs-zoos",
+        title: "The Birds of Wingspan",
+        subtitle:"An Avian Information Dashboard Based on the Wingspan Boardgame",
+        blurb: "The Birds of Wingspan is a technology driven data visualization project. Built using React and D3.js, the project uses the boardgame Wingspan as a starting point for users to explore the world of ornithology. The apps draws on learnings from previous work in information visualization to build out a compelling dashboard featuring a breakdown of a species diet and lifespan, biographical and game mechanic descriptions, and a map of millions of self-reported sightings.  ",
+        image:"/images/study-wingspan-banner.jpg",
+        caseStudy: true,
+        link: "https://ivf22.netlify.app",
+        code: "https://github.com/tkcram/bird-viz",
+        isVisible: false,
+        markup: (
+            <>
+            </>
+        ),
+        headings: [
+            {   
+                text: "Introduction",
+                ref: "#introduction"
+            },
+            {   
+                text: "Background",
+                ref: "#background"
+            },
+            {   
+                text: "Methodology",
+                ref: "#methodology"
+            },
+            {   
+                text: "Results",
+                ref: "#results"
+            },
+            {   
+                text: "Reflections",
+                ref: "#reflections"
+            },
+            {   
+                text: "Future Work",
+                ref: "#future"
+            },
+            {   
+                text: "Related Projects",
+                ref: "#related"
+            },
+        ]
+    },
+
+    "lego-history": {
+        id: "lego-history",
+        title: "The Birds of Wingspan",
+        subtitle:"An Avian Information Dashboard Based on the Wingspan Boardgame",
+        blurb: "The Birds of Wingspan is a technology driven data visualization project. Built using React and D3.js, the project uses the boardgame Wingspan as a starting point for users to explore the world of ornithology. The apps draws on learnings from previous work in information visualization to build out a compelling dashboard featuring a breakdown of a species diet and lifespan, biographical and game mechanic descriptions, and a map of millions of self-reported sightings.  ",
+        image:"/images/study-wingspan-banner.jpg",
+        caseStudy: true,
+        link: "https://ivf22.netlify.app",
+        code: "https://github.com/tkcram/bird-viz",
+        isVisible: false,
+        markup: (
+            <>
+            </>
+        ),
+        headings: [
+            {   
+                text: "Introduction",
+                ref: "#introduction"
+            },
+            {   
+                text: "Background",
+                ref: "#background"
+            },
+            {   
+                text: "Methodology",
+                ref: "#methodology"
+            },
+            {   
+                text: "Results",
+                ref: "#results"
+            },
+            {   
+                text: "Reflections",
+                ref: "#reflections"
+            },
+            {   
+                text: "Future Work",
+                ref: "#future"
+            },
+            {   
+                text: "Related Projects",
+                ref: "#related"
+            },
+        ]
+    },
+
     "wingspan": {
         id: "wingspan",
         title: "The Birds of Wingspan",

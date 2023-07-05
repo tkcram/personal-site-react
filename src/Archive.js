@@ -28,7 +28,7 @@ const Archive = (props) => {
 			<main>
 				{modalId && <ProjectModal closeModal={() => setModalId(null)} projectId={modalId}/>}
 				<Blurb>
-					<p> This section is all about what I've been working on the last few years, both for work and school. Topics range from avian distributions and rental housing, through to D&D and my dog Pascal.</p>
+					<p>I've worked on a wide variety of projects the last few years and use this space to collect them all. Topics range from avian distributions and rental housing, through to D&D and my dog Pascal.</p>
 				</Blurb>
 				<div>
 					{Object.values(sections).map(section => {
