@@ -14,7 +14,7 @@ const Header = () => {
 				<nav>
 					<ul className={css.navigation}>
 						<li className={classnames(css.portfolio, css.item)}>
-							<NavLink to="/portfolio" className={({isActive}) => classnames(css.text, {"portfolio": isActive})}>Portfolio</NavLink>
+							<NavLink to="/" className={({isActive}) => classnames(css.text, {"portfolio": isActive})}>Portfolio</NavLink>
 							<ul className={css.dropdown}>
 							{Object.values(caseStudies).map(caseStudies => (
 								caseStudies?.isVisible && 
@@ -39,7 +39,7 @@ const Header = () => {
 									<a href="documents/resume.pdf" target="_blank" className={css.text}>Resume</a>
 								</li>
 								<li className={classnames(css.about, css.item)}>
-									<a href="mailto:scram142@pratt.edu" className={css.text}>Contact</a>
+									<a href="mailto:tk.cram@icloud.com" className={css.text}>Contact</a>
 								</li>
 							</ul>
 						</li> 			
@@ -47,7 +47,7 @@ const Header = () => {
 				</nav>
 			</div>
 
-			{pathname !== "/" && <div className={css.bar}/>}
+			<div className={css.bar}/>
 
 		</header>
 	);

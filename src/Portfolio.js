@@ -11,7 +11,7 @@ const Portfolio = () => {
 			<Header/>
 			<main>
 				<Blurb>
-					<p> I've been hard at work during my time at Pratt. The following case studies are written to showcase some of the best and biggest projects I've worked on, and demonstrate a wide variety of skills</p>
+					<p> I've been hard at work during my time at Pratt. The following case studies are written to showcase some of the best and biggest projects I've worked on and demonstrate a wide variety of skills</p>
 				</Blurb>
 				{Object.values(caseStudies).map((study) => (
 					study?.isVisible &&
