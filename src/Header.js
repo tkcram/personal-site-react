@@ -5,7 +5,7 @@ import { caseStudies } from './study-info'
 
 
 const Header = () => {
-	const { pathname } = useLocation();
+	// const { pathname } = useLocation();
 	return (
 		<header >
 			<div className={css.header}>
